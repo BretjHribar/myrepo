@@ -2,9 +2,69 @@
 
 **Status: exploratory toy-model experiment, not a chemical accuracy result.**
 
+**Current reading:** in this 1D toy, field supervision improves held-out energies, densities and potentials once the fields are actually learned, at the cost of harder SCF convergence. It does not fix stretched-bond static correlation.
+
 Tests a tightly controlled hypothesis: does adding *electron-density self-consistency* and *exchange-correlation (XC) potential* supervision help a small learned XC functional generalize beyond systems on which it was trained?
 
-## Results (five paired seeds)
+> **Update, 2026-11-16.** The original five-seed table further down is not a valid test of the hypothesis: the field-supervised arm never learned the fields. The rerun in the next section fixes that. Read the rerun first.
+
+## Rerun: field supervision with the fields actually learned
+
+Scripts, raw outputs and logs are in [`rerun/`](rerun/). They import `prototype.py` unchanged.
+
+### What was wrong with the original run
+
+- **The field weight was too low.** With weights of 0.2 the logged potential loss is 0.086 at step 0 and 0.087 at step 129. It stays flat even with 1,000 training steps (two seeds, `rerun/out/b_F02_*.json`).
+- **130 steps is too few.** The energy loss was still swinging between about 0.02 and 0.7 when training stopped, so the reported energy gaps are snapshots of an unconverged optimizer.
+- **Neither arm had learned the potential.** A functional with zero correlation scores a long-bond potential RMSE of 0.1045 Ha (`rerun/logs/baselines.jsonl`). The original arms scored 0.1046 and 0.1009.
+- **The architecture was not the limit.** Trained on the potential alone for 4,000 steps, the same 769-parameter functional reaches an in-range potential RMSE of 0.004–0.007 Ha, against 0.032 in the original runs (`rerun/out/cap_*.json`).
+
+### Rerun settings
+
+Same data, seeds, architecture and losses as the original. Changes: 1,000 Adam steps with cosine learning-rate decay (0.003 down to 2% of that), and field weights of 5 instead of 0.2 for the field arm. The weight of 5 was a single untuned choice. Long-bond energies were evaluated with a more careful SCF (3,000 iterations, mixing 0.03) because the default evaluation SCF did not always converge there.
+
+### Results (five paired seeds)
+
+| Held-out metric | Energy only | Energy + fields | Change | Field wins |
+|---|---:|---:|---:|---:|
+| In-range energy MAE | 1.73 kcal | 1.23 kcal | −29% | 4/5 (p = 0.17) |
+| In-range density L1 error | 0.036 | 0.015 | −59% | 5/5 |
+| In-range potential RMSE | 0.032 Ha | 0.013 Ha | −59% | 5/5 |
+| Long-bond energy MAE (careful SCF) | 21.4 kcal | 16.9 kcal | −21% | 5/5 (p < 0.001) |
+| Long-bond potential RMSE | 0.093 Ha | 0.060 Ha | −36% | 5/5 |
+
+Long-bond energy MAE by seed, in Ha (energy only → fields): 0.0139 → 0.0061, 0.0325 → 0.0251, 0.0666 → 0.0621, 0.0296 → 0.0210, 0.0282 → 0.0202. P-values are paired t-tests over five seeds and should be read loosely.
+
+**Reading:** once the fields are learned, field supervision improves every held-out metric in this toy. The in-range energy gain is not statistically solid. The long-bond energy gain is consistent, about 4.6 kcal in every seed.
+
+### Costs and limits found in the rerun
+
+- **SCF stability got worse.** At the original evaluation settings (250 iterations, mixing 0.15) the field-trained functional failed to converge on 9 long-bond cases, against 2 for energy-only. Scored that way it looks 90% worse on long-bond energy. All cases converge with the careful SCF. In a timed benchmark this is extra CPU time.
+- **Stretched near-symmetric bonds are still 25–70 kcal off in both arms.** Fields reduce that by roughly 5–15%. This is static correlation and a loss change does not fix it (`rerun/logs/longbond_careful_scf.log`).
+- **Fields improve densities and potentials about 2.5×, energies about 1.3×.**
+- **The low-data run (4 training systems) was unstable.** One seed's in-range energy error was 40× worse with fields, and 13 long-bond cases did not converge at default SCF settings. No conclusion is drawn (`rerun/out/c_*.json`).
+- **No ablation yet.** The density and potential terms were not separated, and the weight was not swept.
+- Repeated runs of the same seed differ by about 1–2% on long-bond energy, so small differences are noise.
+
+### Reproduce the rerun
+
+```bash
+cd rerun
+# one run: <arm> <seed> <steps> <cosine 0/1> <potential weight> <density weight> <n_train, 0 = all 28> <output>
+python3 diag.py .. run energy_only 20261116 1000 1 0 0 0 out/a_E_20261116.json
+python3 diag.py .. run fields      20261116 1000 1 5 5 0 out/a_F5_20261116.json
+# the full job list used here is logs/jobs.txt
+python3 diag.py .. baseline                      # zero-correlation and untrained baselines
+python3 diag.py .. run potential_only 20261116 4000 1 1 0 0 out/cap_20261116.json   # capacity test
+python3 diag2.py .. 20261116 20261117 20261118 20261119 20261120                    # careful-SCF long-bond check
+python3 analyze.py                               # paired-seed summary of out/
+```
+
+Run on Python 3 with PyTorch 2.15.0, NumPy 2.5.3, SciPy 1.18.1, single thread. Each 1,000-step run takes about two minutes on one CPU core.
+
+## Original results (five paired seeds, superseded)
+
+These numbers are kept for the record. They compare two arms that were both effectively energy-only; see the rerun above.
 
 All errors are evaluated after a fresh self-consistent Kohn–Sham calculation. Lower is better.
 
@@ -89,11 +149,17 @@ The experiment takes tens of seconds per seed on a single virtual CPU in the pro
 - The field-supervised arm uses two additional loss terms, so comparisons establish the combined effect, not which term is responsible.
 - Model selection, likelihood calibration, and uncertainty quantification are not yet validated at larger scale.
 
-## Next experiments
+## Next steps
 
-1. **Ablation:** energy-only vs energy+potential vs energy+density vs both, all with independent held-out chemistry.
-2. **Through-SCF training:** implicit differentiation or converged-SCF gradients, not only a one-step density residual.
-3. **Fractional-charge dissociation tests:** force the functional to respect exact charge-transfer behavior and examine KS potential steps.
-4. **3D translation:** a real small molecule set with finite-basis inversion/reference densities and matched computational budgets before claiming competition relevance.
+Updated after the rerun, in order.
+
+1. **Convergence-checked SCF.** Use it in both training and evaluation (adaptive damping or DIIS, with a residual threshold), and report the number of unconverged cases and iterations as metrics alongside accuracy. Training currently runs 24 fixed iterations with no check, so energy gradients can be taken at unconverged densities.
+2. **Weight sweep and ablation.** Sweep the field weight (for example 0.2, 1, 5, 25) on a separate validation split, and compare energy-only, energy + potential, energy + density, and both.
+3. **Low-data rerun.** Repeat the 4-training-system test after step 1, then trace a curve over 2, 4, 8, 16 and 28 systems. The claim to test is the same error with several times less data.
+4. **Score energy differences.** Report errors on energy differences along each bond curve, not only total energies, because WTMAD-2 is built on relative energies.
+5. **Attack the stretched-bond error.** Add fractional-charge and fractional-spin constraints and longer-range descriptors, and examine the KS potential steps at dissociation.
+6. **Composition shift.** Train on H₂-like systems and test on HeH⁺-like and three-centre (H₃⁺-like) systems. Both are still two-electron, so the exact solver works unchanged.
+7. **Through-SCF training.** Implicit differentiation or converged-SCF gradients, not only a one-step density residual.
+8. **3D translation.** A real small-molecule set with finite-basis inversion, reference densities and matched computational budgets before claiming competition relevance.
 
 The kill-test criterion should be **reliable, substantial held-out gains at the same SCF success rate and runtime**, not merely lower training error.
