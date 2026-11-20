@@ -255,6 +255,44 @@ from 1.31 to 1.30.
   0.3; atomization energies of small main-group molecules say nothing about
   barriers, binding energies or metals.
 
+### Regularisation is not the lever
+
+Scanning the ridge strength over six orders of magnitude for the 97-coefficient
+model (793 benchmark reactions, 206 outside molecules) leaves the transfer
+numbers flat until the fit itself degrades: cross-validation with a subset
+held out stays at 2.3 to 2.5 and the outside atomization error at 2.7 to 3.2
+for strengths from 1e-7 to 1e-4 [measured, `xcgpu.scan_lambda`]. With
+benchmark-only training this model class has saturated near 1.4 (random folds)
+and 2.3 (subset held out). Broader training data is the lever that has moved
+the transfer number.
+
+### Training outside the benchmark (in preparation)
+
+Protocol: fit only on public reference data that is not GMTKN55, test on
+GMTKN55. Code: `xcgpu.prep_accdb`, `xcgpu.fit_general`.
+
+- Source: ACCDB (github.com/peverati/ACCDB, commit `bd1f689`, GPL-3.0), a
+  collection of MGCDB84, Minnesota 2015B, W4-17 and transition-metal sets,
+  plus the MSR-ACC/TAE25 atomization energies already in use. Cite the original
+  database papers listed in ACCDB's READMEs for any published use.
+- Overlap rules. A reaction is excluded from training if its subset shares a
+  name with a GMTKN55 subset, or if every structure in it is a copy of a
+  GMTKN55 structure (same elements, charge, multiplicity and interatomic
+  distances to 0.01 Angstrom). A stricter tier also drops any reaction that
+  shares a structure of more than four atoms with the benchmark.
+- Counts [measured, bookkeeping]: 6,809 reactions parsed; 3,499 overlap the
+  benchmark and are excluded; 31 unusable (41 geometries have no def2-QZVP
+  basis, 2 files missing); **3,279 usable in 94 sets**, of which 2,212 pass the
+  strict tier. They need 3,474 new structures; 2,328 further structures are
+  reused from the benchmark runs. 1,050 reactions need only structures of at
+  most 500 basis functions, including 179 from transition-metal sets.
+- Regularisation for outside-only fits is chosen by cross-validation inside
+  the outside pool, never by looking at the benchmark.
+
+No result yet. An early shake-out with atomization energies only (259
+molecules) gave benchmark errors between 2.7 and 7.5 depending on the
+regularisation strength, which is why that selection rule exists.
+
 Reading, with its limits:
 
 - The fitted models are far below PBE on these reactions, and the 97-parameter

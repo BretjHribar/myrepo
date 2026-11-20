@@ -10,7 +10,7 @@ import time
 import traceback
 from pathlib import Path
 
-from .common import BASIS, BULK, dataset_dir, dataset_structures, pin_one_core, row_mol
+from .common import BASIS, BULK, claim, dataset_dir, dataset_structures, pin_one_core, row_mol
 
 pin_one_core()
 import numpy as np
@@ -197,7 +197,10 @@ def main():
             follow = outdir / args.pace_with / "results"
             while len(list((outdir / "results").glob("*.json"))) - len(list(follow.glob("*.json"))) > args.max_lead:
                 time.sleep(20)
+        marker = dest.with_suffix(".inprogress")
         try:
+            if not claim(marker):
+                raise RuntimeError("earlier processes died twice on this structure (probably out of memory); not retried")
             res = run_one(args.dataset, row, outdir, args.xc, args.grid_level, args.conv_tol, not args.no_orbitals)
         except Exception as exc:  # keep every failure visible
             res = {"id": row["id"], "converged": False, "finite": False, "error": repr(exc)[:500],
@@ -206,6 +209,7 @@ def main():
         tmp = dest.with_suffix(".tmp")
         tmp.write_text(json.dumps(res, indent=1))
         tmp.replace(dest)
+        marker.unlink(missing_ok=True)
         done += 1
         print(json.dumps({"i": i + 1, "n": len(rows), "id": row["id"], "nao": res.get("nao"), "conv": res.get("converged"),
                           "e": res.get("e_tot"), "s": res.get("seconds"), "err": res.get("error"),

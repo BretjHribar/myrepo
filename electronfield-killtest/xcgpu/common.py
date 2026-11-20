@@ -91,3 +91,14 @@ def row_mol(dataset, row, verbose=0):
 
 def file_stem(structure_id):
     return structure_id.replace("/", "__")
+
+
+def claim(marker, max_attempts=2):
+    """Unattended-run guard. Returns False when earlier processes already died on this structure
+    max_attempts times (for example killed for memory), so the caller records an error and moves on
+    instead of crashing on it forever. A manual stop only costs one attempt."""
+    n = int(marker.read_text() or 0) if marker.exists() else 0
+    if n >= max_attempts:
+        return False
+    marker.write_text(str(n + 1))
+    return True

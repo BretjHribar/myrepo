@@ -14,7 +14,7 @@ import time
 import traceback
 from pathlib import Path
 
-from .common import BULK, dataset_dir, dataset_structures, pin_one_core, row_mol
+from .common import BULK, claim, dataset_dir, dataset_structures, pin_one_core, row_mol
 
 pin_one_core()
 import numpy as np
@@ -449,8 +449,12 @@ def main():
                 waiting += 1
                 continue  # SCF not done yet; picked up on the next scan
             scf = json.loads(scf_json.read_text())
+            marker = dest.with_suffix(".inprogress")
             if not scf.get("converged"):
                 res, arrays = {"id": row["id"], "error": "SCF input not converged"}, None
+            elif not claim(marker):
+                res, arrays = {"id": row["id"], "nao": row["nao"], "error":
+                               "earlier processes died twice on this structure (probably out of memory); not retried"}, None
             else:
                 try:
                     try:
@@ -475,6 +479,7 @@ def main():
             tmp = dest.with_suffix(".tmp")
             tmp.write_text(json.dumps(res, indent=1))
             tmp.replace(dest)
+            marker.unlink(missing_ok=True)
             new += 1
             print(json.dumps({"i": i + 1, "n": len(rows), "id": row["id"], "nao": res.get("nao"), "ex": res.get("e_x_exact"),
                               "xc_mismatch": res.get("e_xc_mismatch"), "singles": (res.get("singles") or {}).get("0"),
