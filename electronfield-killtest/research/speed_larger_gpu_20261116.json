@@ -1,0 +1,249 @@
+{
+  "created_utc": "2026-11-17T03:08:52.754077+00:00",
+  "device": "cuda",
+  "protocol": {
+    "authority": "Latest user instruction: speed up while testing larger",
+    "method": "Exact matrix-free antisymmetric four-particle/hole tensor, cached operator images in Ritz completion",
+    "scope": "Numerical backend for own research; not a learned prediction or general-electron breakthrough claim",
+    "device": "CUDA float64, one-core host orchestration; no CPU timing workload",
+    "cached_equivalence_and_timing_cases": [
+      "H2O_closed_0.957",
+      "H2S_closed_1.336"
+    ],
+    "larger_basis": "cc-pvdz",
+    "larger_cases": [
+      {
+        "id": "LiH_neutral_1.595",
+        "atom": "Li 0 0 0; H 0 0 1.595",
+        "charge": 0,
+        "spin": 0,
+        "electrons": 4
+      },
+      {
+        "id": "LiH_neutral_2.50",
+        "atom": "Li 0 0 0; H 0 0 2.50",
+        "charge": 0,
+        "spin": 0,
+        "electrons": 4
+      },
+      {
+        "id": "Be_neutral",
+        "atom": "Be 0 0 0",
+        "charge": 0,
+        "spin": 0,
+        "electrons": 4
+      }
+    ],
+    "maximum_ritz_dimension": 192,
+    "state_residual_tolerance": 1e-08,
+    "equivalence_tolerance_hartree": 1e-09,
+    "timing": "CUDA events, 5 warmup calls, 50 timed calls; report kernel time separately from setup/solver time",
+    "assessment": "Reuse old cached physical operators and predictions for equivalence/timing only, without recomputing their references. New larger-basis labels use Hamiltonian residual stopping, never reference-energy errors.",
+    "limitations": [
+      "Exactly four particles or four holes",
+      "Larger cc-pVDZ tests have four electrons",
+      "Finite basis, not CBS",
+      "No claim of universal density-only XC or challenge performance"
+    ]
+  },
+  "protocol_sha256": "f55c7cad9470f655703e58b32a319865de2d3614f752446889c5706fbbb445e2",
+  "cached_equivalence_timings": [
+    {
+      "id": "H2O_closed_0.957",
+      "electrons": 10,
+      "spatial_orbitals": 7,
+      "particle_hole_conjugated": true,
+      "action_max_error_hartree": 1.2789769243681803e-13,
+      "mapping_roundtrip_max_error": 0.0,
+      "antisymmetry_contraction_error_hartree": 7.105427357601002e-15,
+      "dense_matvec_ms": 0.03391488075256348,
+      "naive_matrix_free_ms": 2.6665164184570314,
+      "antisymmetric_matrix_free_ms": 1.778769989013672,
+      "contraction_speedup": 1.4990788212789754,
+      "dense_to_matrix_free_kernel_speedup": 0.0190664790625174,
+      "dense_hamiltonian_bytes": 1555848,
+      "new_hamiltonian_bytes": 19608,
+      "reference_recomputed": false,
+      "timing_scope": "GPU operator application only; not full calculation timing"
+    },
+    {
+      "id": "H2S_closed_1.336",
+      "electrons": 18,
+      "spatial_orbitals": 11,
+      "particle_hole_conjugated": true,
+      "action_max_error_hartree": 1.2505552149377763e-12,
+      "mapping_roundtrip_max_error": 0.0,
+      "antisymmetry_contraction_error_hartree": 5.684341886080802e-14,
+      "dense_matvec_ms": 0.37296127319335937,
+      "naive_matrix_free_ms": 1.7983488464355468,
+      "antisymmetric_matrix_free_ms": 1.2952166748046876,
+      "contraction_speedup": 1.388454056698065,
+      "dense_to_matrix_free_kernel_speedup": 0.28795280391954503,
+      "dense_hamiltonian_bytes": 73205000,
+      "new_hamiltonian_bytes": 118104,
+      "reference_recomputed": false,
+      "timing_scope": "GPU operator application only; not full calculation timing"
+    }
+  ],
+  "larger_results": [
+    {
+      "id": "LiH_neutral_1.595",
+      "electrons": 4,
+      "basis": "cc-pvdz",
+      "spatial_orbitals": 19,
+      "complete_stated_basis": true,
+      "sector_dimension": 29241,
+      "state_tensor_entries": 130321,
+      "converged": true,
+      "state_residual": 8.09391128703899e-09,
+      "total_energy_hartree": -8.01472802678063,
+      "lowering_from_input_kcal": -19.523175012049915,
+      "input_reference_status": {
+        "converged": true,
+        "cycles": 11,
+        "residual": 7.261969150471698e-08
+      },
+      "independent_wick_error_hartree": 1.7763568394002505e-15,
+      "independent_final_action_energy_error_hartree": 0.0,
+      "naive_matrix_free_ms": 3.462840270996094,
+      "antisymmetric_matrix_free_ms": 1.7304780578613281,
+      "contraction_speedup": 2.0010888062202685,
+      "dense_hamiltonian_bytes_avoided_estimate": 6840288648,
+      "operator_bytes": 1045464,
+      "basis_image_bytes": 120937888,
+      "operator_applications": 58,
+      "ritz_dimension": 58,
+      "preparation_seconds": 8.137942575999997,
+      "solve_seconds": 0.9062606730000056,
+      "total_seconds": 9.373950599,
+      "reference_role": "New full-basis physical reference for original model research; not model transfer error",
+      "history": [
+        {
+          "dimension": 1,
+          "energy_hartree": -7.983615867010992,
+          "residual": 0.23215649825704762
+        },
+        {
+          "dimension": 25,
+          "energy_hartree": -8.014727699465713,
+          "residual": 0.0007240115274832393
+        },
+        {
+          "dimension": 50,
+          "energy_hartree": -8.01472802678059,
+          "residual": 2.8146087003284996e-07
+        },
+        {
+          "dimension": 58,
+          "energy_hartree": -8.01472802678063,
+          "residual": 8.09391128703899e-09
+        }
+      ]
+    },
+    {
+      "id": "LiH_neutral_2.50",
+      "electrons": 4,
+      "basis": "cc-pvdz",
+      "spatial_orbitals": 19,
+      "complete_stated_basis": true,
+      "sector_dimension": 29241,
+      "state_tensor_entries": 130321,
+      "converged": true,
+      "state_residual": 9.470064031214817e-09,
+      "total_energy_hartree": -7.978237789503122,
+      "lowering_from_input_kcal": -22.10161641139764,
+      "input_reference_status": {
+        "converged": true,
+        "cycles": 12,
+        "residual": 2.0010914435546395e-08
+      },
+      "independent_wick_error_hartree": 1.7763568394002505e-15,
+      "independent_final_action_energy_error_hartree": 2.6645352591003757e-15,
+      "naive_matrix_free_ms": 3.3937612915039064,
+      "antisymmetric_matrix_free_ms": 1.990635528564453,
+      "contraction_speedup": 1.704863217201452,
+      "dense_hamiltonian_bytes_avoided_estimate": 6840288648,
+      "operator_bytes": 1045464,
+      "basis_image_bytes": 137618976,
+      "operator_applications": 66,
+      "ritz_dimension": 66,
+      "preparation_seconds": 0.903558665999995,
+      "solve_seconds": 0.9728707520000057,
+      "total_seconds": 2.1986840129999976,
+      "reference_role": "New full-basis physical reference for original model research; not model transfer error",
+      "history": [
+        {
+          "dimension": 1,
+          "energy_hartree": -7.943016621812196,
+          "residual": 0.21049542725811454
+        },
+        {
+          "dimension": 25,
+          "energy_hartree": -7.978230669699099,
+          "residual": 0.003577105426978542
+        },
+        {
+          "dimension": 50,
+          "energy_hartree": -7.978237789502226,
+          "residual": 1.343830321391266e-06
+        },
+        {
+          "dimension": 66,
+          "energy_hartree": -7.978237789503122,
+          "residual": 9.470064031214817e-09
+        }
+      ]
+    },
+    {
+      "id": "Be_neutral",
+      "electrons": 4,
+      "basis": "cc-pvdz",
+      "spatial_orbitals": 14,
+      "complete_stated_basis": true,
+      "sector_dimension": 8281,
+      "state_tensor_entries": 38416,
+      "converged": true,
+      "state_residual": 9.131592850734598e-09,
+      "total_energy_hartree": -14.617409506553727,
+      "lowering_from_input_kcal": -28.283028950185557,
+      "input_reference_status": {
+        "converged": true,
+        "cycles": 11,
+        "residual": 1.8023021063335161e-09
+      },
+      "independent_wick_error_hartree": 1.7763568394002505e-15,
+      "independent_final_action_energy_error_hartree": 0.0,
+      "naive_matrix_free_ms": 1.7803059387207032,
+      "antisymmetric_matrix_free_ms": 1.5347917175292969,
+      "contraction_speedup": 1.159965823627609,
+      "dense_hamiltonian_bytes_avoided_estimate": 548599688,
+      "operator_bytes": 308904,
+      "basis_image_bytes": 16595712,
+      "operator_applications": 27,
+      "ritz_dimension": 27,
+      "preparation_seconds": 0.5900996780000014,
+      "solve_seconds": 0.147422087999999,
+      "total_seconds": 0.9248966970000012,
+      "reference_role": "New full-basis physical reference for original model research; not model transfer error",
+      "history": [
+        {
+          "dimension": 1,
+          "energy_hartree": -14.57233763095335,
+          "residual": 0.17809936659240952
+        },
+        {
+          "dimension": 25,
+          "energy_hartree": -14.617409506553724,
+          "residual": 1.4446772504725724e-07
+        },
+        {
+          "dimension": 27,
+          "energy_hartree": -14.617409506553727,
+          "residual": 9.131592850734598e-09
+        }
+      ]
+    }
+  ],
+  "failures": [],
+  "peak_cuda_bytes": 522868224
+}

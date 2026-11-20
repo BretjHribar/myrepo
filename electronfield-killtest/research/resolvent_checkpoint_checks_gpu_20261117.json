@@ -1,0 +1,12 @@
+{
+  "created_utc": "2026-11-17T14:33:11.365049+00:00",
+  "device": "cuda",
+  "passed": true,
+  "interrupted_after_iteration": 0,
+  "completed_iteration": 100,
+  "analytic_state_error": 3.939165717299813e-11,
+  "gap_hartree": 7.242068056356743e-12,
+  "duplicate_history_steps": 0,
+  "completed_checkpoint_required_new_steps": false,
+  "new_chemical_or_reference_solve": false
+}

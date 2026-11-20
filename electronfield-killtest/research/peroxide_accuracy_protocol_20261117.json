@@ -1,0 +1,22 @@
+{
+  "purpose": "New 18-electron composition after freezing charge/spin block rules; accuracy only",
+  "case": {
+    "id": "H2O2_skew_new",
+    "atom": "O -0.73 0 0; H -1.03 0.83 0.42; O 0.73 0 0; H 1.03 -0.83 0.42",
+    "charge": 0,
+    "spin": 0,
+    "electrons": 18,
+    "basis": "sto-3g",
+    "first_block_atoms": 2
+  },
+  "model": "Unchanged local number/spin multiplets, exact fermionic action, input Schmidt support and Hamiltonian-residual completion",
+  "initial_multiplets": 16,
+  "maximum_adaptive_updates": 32,
+  "stopping": "Original full-state residual target 1e-5 Hartree, never reference-energy error",
+  "reference": "New independent full same-basis CUDA singlet reference using six-hole physical action; generated only after prediction",
+  "maximum_reference_ritz_dimension": 384,
+  "reference_residual_tolerance": 1e-8,
+  "new_backend_checks": "Fock/tensor roundtrip, direct 21-term first-quantized action and input Wick energy before reference use; no speed benchmarking",
+  "assessment": "Retain all numerical/accuracy failures. No geometry, parameter or seed changes after reading the label.",
+  "limits": ["Complete minimal basis only", "State rather than finished density-only XC functional", "Single new peroxide geometry, not an optimized torsional barrier", "Not full GMTKN55 or challenge confirmation"]
+}

@@ -1,0 +1,44 @@
+{
+  "created_utc": "2026-11-17T11:04:26.591546+00:00",
+  "device": "cuda",
+  "results": [
+    {
+      "id": "BeH2_631g_1.65_new",
+      "passed": true,
+      "electrons": 6,
+      "projection_error": 1.942890293094024e-16,
+      "response_image_error": 1.0408340855860843e-17,
+      "independent_particle_hole_action_error": 1.919277431973492e-15,
+      "ensemble_density_error": 2.220446049250313e-16,
+      "number_error": 1.7763568394002505e-15,
+      "occupation_link_bytes": 70671744,
+      "new_reference_generated": false
+    },
+    {
+      "id": "H2F_plus_new",
+      "passed": true,
+      "electrons": 10,
+      "projection_error": 9.992007221626409e-16,
+      "response_image_error": 5.551115123125783e-17,
+      "independent_particle_hole_action_error": 1.3252181916289058e-14,
+      "ensemble_density_error": 6.661338147750939e-16,
+      "number_error": 0.0,
+      "occupation_link_bytes": 211680,
+      "new_reference_generated": false
+    },
+    {
+      "id": "H2O2_skew_new",
+      "passed": true,
+      "electrons": 18,
+      "projection_error": 3.3306690738754696e-16,
+      "response_image_error": 1.734723475976807e-17,
+      "independent_particle_hole_action_error": 2.1536891880605006e-14,
+      "ensemble_density_error": 1.1102230246251565e-15,
+      "number_error": 0.0,
+      "occupation_link_bytes": 52272000,
+      "new_reference_generated": false
+    }
+  ],
+  "passed": true,
+  "peak_cuda_bytes": 418334208
+}

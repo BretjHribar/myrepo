@@ -1,0 +1,26 @@
+{
+  "python": "3.12.3",
+  "pyscf": "2.15.0",
+  "torch": "2.7.1+cu126",
+  "device": "cuda",
+  "cuda_runtime": "12.6",
+  "cpu_affinity": [
+    0
+  ],
+  "torch_threads": 1,
+  "basis": "cc-pvdz",
+  "molecule": "H2, 0.74 Angstrom",
+  "calculations": {
+    "cpu_pbe": {
+      "energy_hartree": -1.1598466866228259,
+      "converged": true,
+      "seconds": 0.04854612500000144
+    },
+    "cpu_r2scan": {
+      "energy_hartree": -1.1658616192511069,
+      "converged": true,
+      "seconds": 0.06178677599999105
+    }
+  },
+  "gpu4pyscf_error": "ImportError: libcusolver.so.11: cannot open shared object file: No such file or directory"
+}

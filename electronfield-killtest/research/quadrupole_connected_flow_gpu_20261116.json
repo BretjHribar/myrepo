@@ -1,0 +1,100 @@
+{
+  "created_utc": "2026-11-17T00:05:56.274856+00:00",
+  "device": "cuda",
+  "scope": "Connected angular moment family through rank two; three-electron development test, not broad chemical validation",
+  "training_targets": "Hamiltonian expectation only; reference energies used for reporting",
+  "steps": 300,
+  "cases": [
+    {
+      "id": "H3_neutral_1.00",
+      "nelec": [
+        2,
+        1
+      ],
+      "energy_hartree": -1.6424597225759934,
+      "reference_hartree": -1.6449265469125076,
+      "error_kcal": 1.5479556418564493,
+      "antisymmetry_residual": 6.38378239159465e-16,
+      "doublet_spin_residual": 7.216449660063518e-16,
+      "variational_bound_satisfied": true,
+      "physical_state_block": 2,
+      "parameters": 9,
+      "history": [
+        {
+          "step": 1,
+          "error_kcal": 1.5610032273000858,
+          "gradient_norm": 0.0006447837541042457,
+          "seconds": 1.9697774470000011
+        },
+        {
+          "step": 100,
+          "error_kcal": 1.5479768461766399,
+          "gradient_norm": 1.920557896288067e-06,
+          "seconds": 13.112384223000003
+        },
+        {
+          "step": 200,
+          "error_kcal": 1.547960715087044,
+          "gradient_norm": 1.0073810270085016e-06,
+          "seconds": 32.41339204
+        },
+        {
+          "step": 300,
+          "error_kcal": 1.5479556437204742,
+          "gradient_norm": 1.0550646595524771e-06,
+          "seconds": 54.778245543
+        }
+      ],
+      "seconds": 54.796063917
+    },
+    {
+      "id": "H3_neutral_1.80",
+      "nelec": [
+        2,
+        1
+      ],
+      "energy_hartree": -1.5364156615359004,
+      "reference_hartree": -1.537763436574059,
+      "error_kcal": 0.8457416052651874,
+      "antisymmetry_residual": 9.688430613330468e-16,
+      "doublet_spin_residual": 1.2280758007743309e-15,
+      "variational_bound_satisfied": true,
+      "physical_state_block": 2,
+      "parameters": 9,
+      "history": [
+        {
+          "step": 1,
+          "error_kcal": 0.8692480380896908,
+          "gradient_norm": 0.0001306789964696243,
+          "seconds": 0.21299509900000402
+        },
+        {
+          "step": 100,
+          "error_kcal": 0.8457429402664841,
+          "gradient_norm": 4.085096994771685e-07,
+          "seconds": 21.240101491000004
+        },
+        {
+          "step": 200,
+          "error_kcal": 0.8457418110190902,
+          "gradient_norm": 8.697279200329867e-08,
+          "seconds": 42.534268557000004
+        },
+        {
+          "step": 300,
+          "error_kcal": 0.8457416066911427,
+          "gradient_norm": 8.732633063182593e-08,
+          "seconds": 62.608174339
+        }
+      ],
+      "seconds": 62.624915195
+    }
+  ],
+  "failures": [],
+  "summary": {
+    "cases": 2,
+    "mae_kcal": 1.1968486235608182,
+    "maximum_error_kcal": 1.5479556418564493
+  },
+  "peak_cuda_bytes": 29396992
+}

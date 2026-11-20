@@ -1,0 +1,1486 @@
+{
+  "created_utc": "2026-11-17T14:58:19.300079+00:00",
+  "device": "cuda",
+  "scope": "Finite-basis development/application evidence, not full chemistry or challenge accuracy",
+  "latest_state_results": [
+    {
+      "id": "He2_R3.00",
+      "electrons": 4,
+      "basis": "cc-pvdz",
+      "energy_error_kcal": 1.3760733808485524e-09,
+      "total_energy_hartree": -5.7751952814302605,
+      "reference_energy_hartree": -5.775195281432453,
+      "full_residual": 4.106382888030278e-06,
+      "projected_residual": 4.224507097645398e-09,
+      "physical_validity_passed": true,
+      "projected_dimension": 1281,
+      "full_fixed_sz_dimension": 2025,
+      "latest_source": "charge_spin_accuracy_gpu_20261117.json"
+    },
+    {
+      "id": "H4_parallel_far",
+      "electrons": 4,
+      "basis": "cc-pvdz",
+      "energy_error_kcal": 8.208509013016395e-09,
+      "total_energy_hartree": -2.326423947298909,
+      "reference_energy_hartree": -2.32642394731199,
+      "full_residual": 8.533543219095297e-06,
+      "projected_residual": 6.097909414028577e-09,
+      "physical_validity_passed": true,
+      "projected_dimension": 14952,
+      "full_fixed_sz_dimension": 36100,
+      "latest_source": "stationary_panel_completion_gpu_20261117.json"
+    },
+    {
+      "id": "H4_square_close",
+      "electrons": 4,
+      "basis": "cc-pvdz",
+      "energy_error_kcal": 9.446919321742796e-09,
+      "total_energy_hartree": -2.0968064363278223,
+      "reference_energy_hartree": -2.096806436342877,
+      "full_residual": 8.780777338997937e-06,
+      "projected_residual": 7.022637643298837e-09,
+      "physical_validity_passed": true,
+      "projected_dimension": 17626,
+      "full_fixed_sz_dimension": 36100,
+      "latest_source": "charge_spin_continuation_gpu_20261117.json"
+    },
+    {
+      "id": "BeH2_neutral_1.33",
+      "electrons": 6,
+      "basis": "sto-3g",
+      "energy_error_kcal": 4.771948273319282e-09,
+      "total_energy_hartree": -15.595117562565497,
+      "reference_energy_hartree": -15.595117562573101,
+      "full_residual": 6.701215331857475e-06,
+      "projected_residual": 6.521275789012378e-09,
+      "physical_validity_passed": true,
+      "projected_dimension": 431,
+      "full_fixed_sz_dimension": 1225,
+      "latest_source": "charge_spin_accuracy_gpu_20261117.json"
+    },
+    {
+      "id": "BeH2_neutral_2.10",
+      "electrons": 6,
+      "basis": "sto-3g",
+      "energy_error_kcal": 3.3440422377850607e-12,
+      "total_energy_hartree": -15.420518551167996,
+      "reference_energy_hartree": -15.420518551168001,
+      "full_residual": 4.0366903699846334e-07,
+      "projected_residual": 9.202955237185188e-09,
+      "physical_validity_passed": true,
+      "projected_dimension": 435,
+      "full_fixed_sz_dimension": 1225,
+      "latest_source": "charge_spin_accuracy_gpu_20261117.json"
+    },
+    {
+      "id": "BH3_planar_1.19",
+      "electrons": 8,
+      "basis": "sto-3g",
+      "energy_error_kcal": -1.7834891934853657e-11,
+      "total_energy_hartree": -26.122370542644003,
+      "reference_energy_hartree": -26.122370542643974,
+      "full_residual": 7.270978466668572e-09,
+      "projected_residual": 7.2709041074906484e-09,
+      "physical_validity_passed": true,
+      "projected_dimension": 3168,
+      "full_fixed_sz_dimension": 4900,
+      "latest_source": "stationary_panel_completion_gpu_20261117.json"
+    },
+    {
+      "id": "NH3_pyramidal",
+      "electrons": 10,
+      "basis": "sto-3g",
+      "energy_error_kcal": 8.917445967426829e-10,
+      "total_energy_hartree": -55.51948551265728,
+      "reference_energy_hartree": -55.519485512658704,
+      "full_residual": 5.46947400270772e-06,
+      "projected_residual": 8.451213429362775e-09,
+      "physical_validity_passed": true,
+      "projected_dimension": 2463,
+      "full_fixed_sz_dimension": 3136,
+      "latest_source": "stationary_panel_completion_gpu_20261117.json"
+    },
+    {
+      "id": "NH3_planar",
+      "electrons": 10,
+      "basis": "sto-3g",
+      "energy_error_kcal": 5.261293120781829e-10,
+      "total_energy_hartree": -55.49777877324874,
+      "reference_energy_hartree": -55.49777877324958,
+      "full_residual": 5.268345297767731e-06,
+      "projected_residual": 9.77911344790587e-09,
+      "physical_validity_passed": true,
+      "projected_dimension": 2007,
+      "full_fixed_sz_dimension": 3136,
+      "latest_source": "stationary_panel_completion_gpu_20261117.json"
+    },
+    {
+      "id": "H2F_plus_new",
+      "electrons": 10,
+      "basis": "sto-3g",
+      "energy_error_kcal": 3.4778039272964633e-10,
+      "total_energy_hartree": -98.90120554596417,
+      "reference_energy_hartree": -98.90120554596473,
+      "full_residual": 5.0379379027748015e-06,
+      "projected_residual": 7.912738199667024e-09,
+      "physical_validity_passed": true,
+      "projected_dimension": 257,
+      "full_fixed_sz_dimension": 441,
+      "latest_source": "stationary_panel_completion_gpu_20261117.json"
+    },
+    {
+      "id": "H2O2_skew_new",
+      "electrons": 18,
+      "basis": "sto-3g",
+      "energy_error_kcal": 3.388629467622195e-09,
+      "total_energy_hartree": -148.86241621527356,
+      "reference_energy_hartree": -148.86241621527896,
+      "full_residual": 8.348307866800352e-06,
+      "projected_residual": 9.824869376308614e-09,
+      "physical_validity_passed": true,
+      "projected_dimension": 37154,
+      "full_fixed_sz_dimension": 48400,
+      "latest_source": "peroxide_completion_gpu_20261117.json"
+    },
+    {
+      "id": "BeH2_631g_1.65_new",
+      "electrons": 6,
+      "basis": "6-31g",
+      "energy_error_kcal": 6.691428517807907e-09,
+      "total_energy_hartree": -15.769192300831044,
+      "reference_energy_hartree": -15.769192300841707,
+      "full_residual": 8.585648553789507e-06,
+      "projected_residual": 7.8857274407923e-09,
+      "physical_validity_passed": true,
+      "projected_dimension": 11019,
+      "full_fixed_sz_dimension": 81796,
+      "latest_source": "larger_charge_spin_accuracy_gpu_20261117.json"
+    },
+    {
+      "id": "BeH2_631g_2.75_new",
+      "electrons": 6,
+      "basis": "6-31g",
+      "energy_error_kcal": 6.409414289088033e-09,
+      "total_energy_hartree": -15.61478121723462,
+      "reference_energy_hartree": -15.614781217244834,
+      "full_residual": 6.137421816424791e-06,
+      "projected_residual": 7.64401887688529e-09,
+      "physical_validity_passed": true,
+      "projected_dimension": 10865,
+      "full_fixed_sz_dimension": 81796,
+      "latest_source": "larger_charge_spin_accuracy_gpu_20261117.json"
+    }
+  ],
+  "maximum_absolute_same_basis_error_kcal": 9.446919321742796e-09,
+  "balanced_contrast_errors_kcal": {
+    "H4_geometries_ccpvdz": 1.2384103087264008e-09,
+    "BeH2_stretch_sto3g": -4.768604231081497e-09,
+    "NH3_geometries_sto3g": -3.656152846645e-10,
+    "BeH2_new_stretch_631g": -2.8201422871987386e-10
+  },
+  "original_four_update_panel_passed": false,
+  "original_close_h4_error_kcal": 4.146434699595615,
+  "original_peroxide_32_update_result": {
+    "full_residual": 1.5931884767530044e-05,
+    "energy_error_kcal": 1.5748209578475778e-08
+  },
+  "peroxide_continuation_is_post_label_development": true,
+  "universal_functional_interface": {
+    "status": "failed",
+    "converged": false,
+    "error": "RuntimeError: Interacting potential solve failed its state residual: 2.5211328836083376e-05; S2-state norm: 7.208640327629373e-16",
+    "xc_energy_available": false
+  },
+  "universal_interface_last_accepted_density_step": [
+    {
+      "update": 2,
+      "universal_functional_hartree": 21.428625633147455,
+      "density_residual": 3.522441874433189,
+      "state_residual": 8.697746195218914e-09,
+      "ground_state_evaluations": 3
+    }
+  ],
+  "unfinished_physical_residuals": [],
+  "state_case_failures": [],
+  "checks": {
+    "tensor_export": {
+      "source": "spin_tensor_state_checks_gpu_20261117.json",
+      "failures": [],
+      "results": [
+        {
+          "id": "H4_square_close",
+          "electrons": 4,
+          "representation_valid": true,
+          "norm_error": 9.103828801926284e-15,
+          "state_l2_error": 1.6404520820375648e-14,
+          "energy_difference_hartree": 4.440892098500626e-16,
+          "spin_lower_norm": 4.956178691829362e-16,
+          "global_fock_coefficients": 36100,
+          "highest_multiplet_and_bond_parameters": 28424
+        },
+        {
+          "id": "H2O2_skew_new",
+          "electrons": 18,
+          "representation_valid": true,
+          "norm_error": 2.5757174171303632e-14,
+          "state_l2_error": 2.265939513623196e-13,
+          "energy_difference_hartree": 0.0,
+          "spin_lower_norm": 9.419659733898394e-16,
+          "global_fock_coefficients": 48400,
+          "highest_multiplet_and_bond_parameters": 33062
+        },
+        {
+          "id": "H2F_plus_new",
+          "electrons": 10,
+          "representation_valid": true,
+          "norm_error": 2.220446049250313e-16,
+          "state_l2_error": 2.5372110848969685e-12,
+          "energy_difference_hartree": 1.4210854715202004e-14,
+          "spin_lower_norm": 1.9191372516080638e-16,
+          "global_fock_coefficients": 441,
+          "highest_multiplet_and_bond_parameters": 329
+        }
+      ]
+    },
+    "rejected_coulomb_gram_frame": {
+      "source": "intrinsic_density_certificate_gpu_20261117.json",
+      "failures": [],
+      "results": [
+        {
+          "id": "BeH2_631g_1.65_new",
+          "certificate_passed": false,
+          "density_frame_dimension": 88,
+          "symmetric_matrix_dimension": 91,
+          "retained_coulomb_modes": 87,
+          "coulomb_null_threshold": 4.596463979918884e-13,
+          "external_span_error_hartree": 1.7090762226695482e-05,
+          "orbital_covariance_projector_error": 0.012231898312607613,
+          "rotated_frame_dimension": 88,
+          "number_error": 8.881784197001252e-16,
+          "minimum_occupation": 6.0599378396117175e-05,
+          "maximum_occupation": 1.999852443640291,
+          "kinetic_density_residual": 2.7621091595991835e-10,
+          "ks_commutator_residual": 2.289505210567337e-05,
+          "same_density_total_minus_state_hartree": 5.565611331803666e-07,
+          "kinetic_entropy_allowance_hartree": 1e-05,
+          "xc_energy_hartree": -3.4121135752195233,
+          "interacting_search_repeated": false,
+          "new_reference_generated": false,
+          "off_shell_derivative_tested": false
+        },
+        {
+          "id": "BeH2_631g_2.75_new",
+          "certificate_passed": false,
+          "density_frame_dimension": 83,
+          "symmetric_matrix_dimension": 91,
+          "retained_coulomb_modes": 82,
+          "coulomb_null_threshold": 4.287112152671302e-13,
+          "external_span_error_hartree": 2.0918525793733914e-07,
+          "orbital_covariance_projector_error": 1.306572499441771e-08,
+          "rotated_frame_dimension": 83,
+          "number_error": 8.881784197001252e-16,
+          "minimum_occupation": 6.266024858881181e-05,
+          "maximum_occupation": 1.9998554846960461,
+          "kinetic_density_residual": 4.1192422938828493e-10,
+          "ks_commutator_residual": 2.7867207781986194e-07,
+          "same_density_total_minus_state_hartree": 2.296492931819216e-06,
+          "kinetic_entropy_allowance_hartree": 1e-05,
+          "xc_energy_hartree": -3.3622710505840967,
+          "interacting_search_repeated": false,
+          "new_reference_generated": false,
+          "off_shell_derivative_tested": false
+        }
+      ]
+    },
+    "spatial_density_frame": {
+      "source": "spatial_density_certificate_gpu_20261117.json",
+      "failures": [],
+      "results": [
+        {
+          "id": "BeH2_631g_1.65_new",
+          "certificate_passed": true,
+          "density_frame_dimension": 88,
+          "symmetric_matrix_dimension": 91,
+          "retained_coulomb_modes": null,
+          "retained_product_modes": 88,
+          "null_threshold": 2.224816686963302e-10,
+          "independent_density_product_validation_error": 3.983876072873812e-14,
+          "external_span_error_hartree": 4.4346679806211873e-13,
+          "orbital_covariance_projector_error": 4.292871905428364e-13,
+          "rotated_frame_dimension": 88,
+          "number_error": 8.881784197001252e-16,
+          "minimum_occupation": 6.0599378396117175e-05,
+          "maximum_occupation": 1.999852443640291,
+          "kinetic_density_residual": 2.8295806284948497e-10,
+          "ks_commutator_residual": 2.0154860762672453e-13,
+          "same_density_total_minus_state_hartree": 5.561417566468663e-07,
+          "kinetic_entropy_allowance_hartree": 1e-05,
+          "xc_energy_hartree": -3.4121135757486183,
+          "interacting_search_repeated": false,
+          "new_reference_generated": false,
+          "off_shell_derivative_tested": false
+        },
+        {
+          "id": "BeH2_631g_2.75_new",
+          "certificate_passed": true,
+          "density_frame_dimension": 87,
+          "symmetric_matrix_dimension": 91,
+          "retained_coulomb_modes": null,
+          "retained_product_modes": 87,
+          "null_threshold": 2.2400934203878899e-10,
+          "independent_density_product_validation_error": 5.70145555121864e-14,
+          "external_span_error_hartree": 7.461979066798796e-13,
+          "orbital_covariance_projector_error": 4.031831480739615e-13,
+          "rotated_frame_dimension": 87,
+          "number_error": 8.881784197001252e-16,
+          "minimum_occupation": 6.266024858881181e-05,
+          "maximum_occupation": 1.9998554846960461,
+          "kinetic_density_residual": 2.9852059746514534e-10,
+          "ks_commutator_residual": 2.4695111084440437e-13,
+          "same_density_total_minus_state_hartree": 2.3005762788130824e-06,
+          "kinetic_entropy_allowance_hartree": 1e-05,
+          "xc_energy_hartree": -3.3622917494050384,
+          "interacting_search_repeated": false,
+          "new_reference_generated": false,
+          "off_shell_derivative_tested": false
+        }
+      ]
+    },
+    "spatial_density_derivative": {
+      "source": "spatial_derivative_gpu_20261117.json",
+      "failures": [],
+      "results": [
+        {
+          "id": "BeH2_631g_1.65_new",
+          "directional_derivative_passed": true,
+          "scalar_directional_derivative": 0.02008167501443836,
+          "potential_directional_derivative": 0.020081539234181368,
+          "absolute_difference_hartree": 1.3578025699276242e-07,
+          "density_path_derivative_norm": 1.857373433703625,
+          "state_residuals": [
+            7.45211530860192e-10,
+            7.372098060291824e-10
+          ],
+          "kinetic_density_residuals": [
+            2.581633772901339e-10,
+            2.669526760296462e-10
+          ],
+          "central_optimization_repeated": false,
+          "new_reference_labels_generated": false
+        },
+        {
+          "id": "BeH2_631g_2.75_new",
+          "directional_derivative_passed": true,
+          "scalar_directional_derivative": 0.0724374938121386,
+          "potential_directional_derivative": 0.07243755125482432,
+          "absolute_difference_hartree": 5.7442685719166775e-08,
+          "density_path_derivative_norm": 1.7265654251087674,
+          "state_residuals": [
+            8.6908855284084e-10,
+            8.445369200503175e-10
+          ],
+          "kinetic_density_residuals": [
+            4.764033828483303e-10,
+            2.678400510441963e-10
+          ],
+          "central_optimization_repeated": false,
+          "new_reference_labels_generated": false
+        }
+      ]
+    },
+    "singlet_projection": {
+      "created_utc": "2026-11-17T10:52:10.258864+00:00",
+      "device": "cuda",
+      "passed": true,
+      "independent_spin_tests": [
+        {
+          "independent_cg_total_spin": 0,
+          "casimir_state_error": 3.411749667559014e-23,
+          "singlet_retention_or_rejection_error": 6.733764151448916e-24
+        },
+        {
+          "independent_cg_total_spin": 1,
+          "casimir_state_error": 5.4761803974213024e-24,
+          "singlet_retention_or_rejection_error": 8.60857980408211e-25
+        },
+        {
+          "independent_cg_total_spin": 2,
+          "casimir_state_error": 1.0138464949786727e-26,
+          "singlet_retention_or_rejection_error": 4.181894037616811e-21
+        },
+        {
+          "independent_cg_total_spin": 3,
+          "casimir_state_error": 0.0,
+          "singlet_retention_or_rejection_error": 9.471293938208234e-21
+        }
+      ],
+      "idempotence_error": 1.2203226697229497e-16,
+      "hermiticity_error": 0.0,
+      "physical_hamiltonian_commutator_norm": 4.78373751772766e-15,
+      "ground_state_or_reference_generated": false,
+      "peak_cuda_bytes": 893138944
+    },
+    "density_links": {
+      "created_utc": "2026-11-17T11:04:26.591546+00:00",
+      "device": "cuda",
+      "results": [
+        {
+          "id": "BeH2_631g_1.65_new",
+          "passed": true,
+          "electrons": 6,
+          "projection_error": 1.942890293094024e-16,
+          "response_image_error": 1.0408340855860843e-17,
+          "independent_particle_hole_action_error": 1.919277431973492e-15,
+          "ensemble_density_error": 2.220446049250313e-16,
+          "number_error": 1.7763568394002505e-15,
+          "occupation_link_bytes": 70671744,
+          "new_reference_generated": false
+        },
+        {
+          "id": "H2F_plus_new",
+          "passed": true,
+          "electrons": 10,
+          "projection_error": 9.992007221626409e-16,
+          "response_image_error": 5.551115123125783e-17,
+          "independent_particle_hole_action_error": 1.3252181916289058e-14,
+          "ensemble_density_error": 6.661338147750939e-16,
+          "number_error": 0.0,
+          "occupation_link_bytes": 211680,
+          "new_reference_generated": false
+        },
+        {
+          "id": "H2O2_skew_new",
+          "passed": true,
+          "electrons": 18,
+          "projection_error": 3.3306690738754696e-16,
+          "response_image_error": 1.734723475976807e-17,
+          "independent_particle_hole_action_error": 2.1536891880605006e-14,
+          "ensemble_density_error": 1.1102230246251565e-15,
+          "number_error": 0.0,
+          "occupation_link_bytes": 52272000,
+          "new_reference_generated": false
+        }
+      ],
+      "passed": true,
+      "peak_cuda_bytes": 418334208
+    },
+    "positive_ensemble_primitive": {
+      "created_utc": "2026-11-17T11:15:03.708510+00:00",
+      "device": "cuda",
+      "results": [
+        {
+          "rank_deficient_face": false,
+          "passed": true,
+          "energy_error_hartree": 9.769974829154648e-10,
+          "constraint_residual": 5.551115123125783e-17,
+          "primal_dual_gap_hartree": 9.769974829154648e-10,
+          "iterations": 100
+        },
+        {
+          "rank_deficient_face": true,
+          "passed": true,
+          "energy_error_hartree": 1.887379141862766e-15,
+          "constraint_residual": 1.5548363981308478e-15,
+          "primal_dual_gap_hartree": 1.9984014443252818e-15,
+          "iterations": 100
+        }
+      ],
+      "passed": true
+    },
+    "density_resolvent": {
+      "created_utc": "2026-11-17T11:29:43.048314+00:00",
+      "device": "cuda",
+      "passed": true,
+      "closed_form_moment_error": 5.551115123125783e-17,
+      "directional_derivative_error": 1.1435297153639112e-14,
+      "exact_external_counterterm_error_hartree": 0.0,
+      "closed_form_pauli_density_error": 1.0348029034938504e-15,
+      "interacting_gap": 1.1102230246251565e-16,
+      "noninteracting_gap": 2.6645352591003757e-15,
+      "physical_density_distinguished_from_auxiliary": true
+    },
+    "response_rank_before_repair": {
+      "created_utc": "2026-11-17T11:48:58.902615+00:00",
+      "device": "cuda",
+      "exact_rank_one_added": 46,
+      "expected_rank_one_added": 1,
+      "complete_degenerate_triplet_added": 3,
+      "expected_degenerate_added": 3,
+      "unexpected_capacity": false,
+      "passed": false,
+      "new_ground_state_or_reference": false
+    },
+    "response_rank_after_repair": {
+      "created_utc": "2026-11-17T11:50:26.107307+00:00",
+      "device": "cuda",
+      "exact_rank_one_added": 1,
+      "expected_rank_one_added": 1,
+      "complete_degenerate_triplet_added": 3,
+      "expected_degenerate_added": 3,
+      "unexpected_capacity": false,
+      "passed": true,
+      "new_ground_state_or_reference": false
+    },
+    "auxiliary_spin_failure": {
+      "created_utc": "2026-11-17T12:00:07.934714+00:00",
+      "device": "cuda",
+      "id": "BeH2_631g_1.65_new",
+      "reported_rejected_total_hartree": -42.03064436132981,
+      "unprojected_physical_total_hartree": -13.546512306371056,
+      "energy_evaluation_error_hartree": 28.484132054958756,
+      "ensemble_spin_squared": 5.544894819307777,
+      "ensemble_singlet_weight": 0.00013248985199434003,
+      "basis_orthogonality_error": 1.780469243198475e-14,
+      "projection_removed_universal_energy_hartree": 0.0021268754492398895,
+      "new_fit_or_reference_generated": false,
+      "conclusion": "Use the full physical Hamiltonian for energy and explicitly purify every trial-space extension; reject spin leakage immediately"
+    },
+    "auxiliary_spin_guard": {
+      "created_utc": "2026-11-17T12:04:38.248704+00:00",
+      "device": "cuda",
+      "passed": true,
+      "independent_triplet_casimir_error": 4.523157921092555e-22,
+      "triplet_extension_removed": true,
+      "invalid_space_rejected_before_energy": true,
+      "raw_triplet_energy_hartree": 3.7000013034743877,
+      "independent_full_hamiltonian_error_hartree": 0.0,
+      "new_ground_state_or_reference": false
+    },
+    "purified_tensor_operator": {
+      "source": "purified_operator_checks_gpu_20261117.json",
+      "passed": true,
+      "failures": [],
+      "results": [
+        {
+          "check": "full_operator",
+          "maximum_matrix_difference_hartree": 3.9968028886505635e-15,
+          "hermiticity_error_hartree": 1.3877787807814457e-17,
+          "passed": true,
+          "sites": 4,
+          "input_fermion_words": 832,
+          "canonical_product_words": 360,
+          "mpo_bond_dimensions": [
+            1,
+            16,
+            66,
+            54,
+            1
+          ],
+          "sparse_edges": 496,
+          "cuda_operator_storage_bytes": 24912,
+          "full_occupation_vector_allocated": false,
+          "integral_truncation_threshold": 0.0
+        },
+        {
+          "check": "mixed_state_physics_and_gradient",
+          "electrons": 4,
+          "twice_spin": 0,
+          "passed": true,
+          "norm_difference": 1.0842021724855044e-19,
+          "energy_difference_hartree": 8.881784197001252e-16,
+          "maximum_parameter_gradient_difference": 4.440892098500626e-16,
+          "minimum_density_eigenvalue": -3.4777892098846485e-17,
+          "purity": 0.5397256265380308,
+          "number_sector_error": 0.0,
+          "magnetic_sector_error": 0.0,
+          "total_spin_sector_error": 2.5534512025832615e-16
+        },
+        {
+          "check": "mixed_state_physics_and_gradient",
+          "electrons": 3,
+          "twice_spin": 1,
+          "passed": true,
+          "norm_difference": 2.710505431213761e-20,
+          "energy_difference_hartree": 2.220446049250313e-16,
+          "maximum_parameter_gradient_difference": 4.996003610813204e-16,
+          "minimum_density_eigenvalue": -4.2630142371776916e-17,
+          "purity": 0.25830787844870085,
+          "number_sector_error": 0.0,
+          "magnetic_sector_error": 0.0,
+          "total_spin_sector_error": 6.243048717336388e-17
+        },
+        {
+          "check": "pure_state_special_case",
+          "state_difference": 0.0,
+          "passed": true
+        },
+        {
+          "check": "same_family_fragment_embedding",
+          "fragments": 3,
+          "electrons": 12,
+          "energy_difference_hartree": 1.7763568394002505e-15,
+          "norm_difference": 8.470329472543003e-22,
+          "passed": true
+        },
+        {
+          "check": "independent_fragment_product_without_global_vector",
+          "fragments": 8,
+          "sites": 24,
+          "electrons": 32,
+          "energy_additivity_error_hartree": 4.884981308350689e-15,
+          "hypothetical_fixed_sz_dimension": 540917591841,
+          "hypothetical_global_vector_bytes": 4327340734728,
+          "physical_tensor_parameter_count": 576,
+          "maximum_state_bond_dimension": 8,
+          "passed": true,
+          "input_fermion_words": 2016,
+          "canonical_product_words": 936,
+          "mpo_bond_dimensions": [
+            1,
+            16,
+            40,
+            2,
+            16,
+            40,
+            2,
+            16,
+            40,
+            2,
+            16,
+            40,
+            2,
+            16,
+            40,
+            2,
+            16,
+            40,
+            2,
+            16,
+            40,
+            2,
+            16,
+            40,
+            1
+          ],
+          "sparse_edges": 1398,
+          "cuda_operator_storage_bytes": 63920,
+          "full_occupation_vector_allocated": false,
+          "integral_truncation_threshold": 0.0
+        }
+      ]
+    },
+    "tensor_response_initial_test_cap_failure": {
+      "source": "spin_response_checks_gpu_20261117.json",
+      "passed": false,
+      "failures": [
+        {
+          "error": "RuntimeError: Physical tensor response failed its exact-image or sector check"
+        }
+      ],
+      "results": [
+        {
+          "case": {
+            "electrons": 4,
+            "twice_spin": 0
+          },
+          "variant": "untruncated",
+          "passed": true,
+          "relative_image_difference": 2.0763292801952502e-14,
+          "number_sector_error": 0.0,
+          "magnetic_sector_error": 0.0,
+          "total_spin_sector_error": 1.8029365440297274e-16,
+          "norm_difference": 0.0,
+          "different_bond_cross_hamiltonian_error_hartree": 1.7763568394002505e-15,
+          "cross_overlap_error": 4.440892098500626e-16,
+          "maximum_state_bond": 152,
+          "capacity_limited": false,
+          "maximum_isometry_error": 2.2651785537438305e-13,
+          "compression_indicator_is_global_error_bound": false
+        },
+        {
+          "case": {
+            "electrons": 4,
+            "twice_spin": 0
+          },
+          "variant": "bounded",
+          "passed": true,
+          "relative_image_difference": 0.9606065174399226,
+          "number_sector_error": 0.0,
+          "magnetic_sector_error": 0.0,
+          "total_spin_sector_error": 2.205583298841918e-16,
+          "norm_difference": 1.1102230246251565e-16,
+          "different_bond_cross_hamiltonian_error_hartree": 1.1102230246251565e-16,
+          "cross_overlap_error": 1.3877787807814457e-17,
+          "maximum_state_bond": 6,
+          "capacity_limited": true,
+          "maximum_isometry_error": 1.556884567146966e-15,
+          "compression_indicator_is_global_error_bound": false
+        },
+        {
+          "case": {
+            "electrons": 3,
+            "twice_spin": 1
+          },
+          "variant": "untruncated",
+          "passed": false,
+          "relative_image_difference": 0.000882999367518105,
+          "number_sector_error": 0.0,
+          "magnetic_sector_error": 0.0,
+          "total_spin_sector_error": 2.5450830011641844e-16,
+          "norm_difference": 1.7763568394002505e-15,
+          "different_bond_cross_hamiltonian_error_hartree": 3.552713678800501e-15,
+          "cross_overlap_error": 4.440892098500626e-16,
+          "maximum_state_bond": 256,
+          "capacity_limited": true,
+          "maximum_isometry_error": 1.5208523775449336e-13,
+          "compression_indicator_is_global_error_bound": false
+        }
+      ]
+    },
+    "tensor_response_test_capacity_completion": {
+      "source": "spin_response_capacity_completion_gpu_20261117.json",
+      "passed": true,
+      "failures": [],
+      "results": [
+        {
+          "case": {
+            "electrons": 4,
+            "twice_spin": 0
+          },
+          "variant": "untruncated",
+          "passed": true,
+          "relative_image_difference": 2.0763292801952502e-14,
+          "number_sector_error": 0.0,
+          "magnetic_sector_error": 0.0,
+          "total_spin_sector_error": 1.8029365440297274e-16,
+          "norm_difference": 0.0,
+          "different_bond_cross_hamiltonian_error_hartree": 1.7763568394002505e-15,
+          "cross_overlap_error": 4.440892098500626e-16,
+          "maximum_state_bond": 152,
+          "capacity_limited": false,
+          "maximum_isometry_error": 2.2651785537438305e-13,
+          "compression_indicator_is_global_error_bound": false
+        },
+        {
+          "case": {
+            "electrons": 4,
+            "twice_spin": 0
+          },
+          "variant": "bounded",
+          "passed": true,
+          "relative_image_difference": 0.9606065174399226,
+          "number_sector_error": 0.0,
+          "magnetic_sector_error": 0.0,
+          "total_spin_sector_error": 2.205583298841918e-16,
+          "norm_difference": 1.1102230246251565e-16,
+          "different_bond_cross_hamiltonian_error_hartree": 1.1102230246251565e-16,
+          "cross_overlap_error": 1.3877787807814457e-17,
+          "maximum_state_bond": 6,
+          "capacity_limited": true,
+          "maximum_isometry_error": 1.556884567146966e-15,
+          "compression_indicator_is_global_error_bound": false
+        },
+        {
+          "case": {
+            "electrons": 3,
+            "twice_spin": 1
+          },
+          "variant": "untruncated",
+          "passed": true,
+          "relative_image_difference": 1.2957084712255838e-14,
+          "number_sector_error": 0.0,
+          "magnetic_sector_error": 0.0,
+          "total_spin_sector_error": 2.387457808013423e-16,
+          "norm_difference": 0.0,
+          "different_bond_cross_hamiltonian_error_hartree": 1.7763568394002505e-15,
+          "cross_overlap_error": 0.0,
+          "maximum_state_bond": 262,
+          "capacity_limited": false,
+          "maximum_isometry_error": 1.5662024321441853e-13,
+          "compression_indicator_is_global_error_bound": false
+        },
+        {
+          "case": {
+            "electrons": 3,
+            "twice_spin": 1
+          },
+          "variant": "bounded",
+          "passed": true,
+          "relative_image_difference": 0.8518142438075735,
+          "number_sector_error": 0.0,
+          "magnetic_sector_error": 0.0,
+          "total_spin_sector_error": 5.066141524789134e-17,
+          "norm_difference": 1.3322676295501878e-15,
+          "different_bond_cross_hamiltonian_error_hartree": 8.881784197001252e-16,
+          "cross_overlap_error": 0.0,
+          "maximum_state_bond": 6,
+          "capacity_limited": true,
+          "maximum_isometry_error": 2.3837985842888605e-15,
+          "compression_indicator_is_global_error_bound": false
+        }
+      ]
+    },
+    "tensor_physical_response_metric": {
+      "source": "physical_response_metric_checks_gpu_20261117.json",
+      "passed": true,
+      "failures": [],
+      "results": [
+        {
+          "case": {
+            "electrons": 4,
+            "twice_spin": 0
+          },
+          "variant": "untruncated",
+          "passed": true,
+          "full_image_error_norm": 3.5687727037521365e-15,
+          "image_squared_error_identity_difference": 1.2736138611046336e-29,
+          "exact_full_norm_identity_difference": 1.7763568394002505e-15,
+          "spin_sector_error": 1.3077434507227133e-17,
+          "number_sector_error": 0.0,
+          "magnetic_sector_error": 0.0,
+          "projection_bound_valid": true
+        },
+        {
+          "case": {
+            "electrons": 4,
+            "twice_spin": 0
+          },
+          "variant": "bounded",
+          "passed": true,
+          "full_image_error_norm": 0.3057515386162123,
+          "image_squared_error_identity_difference": 8.049116928532385e-16,
+          "exact_full_norm_identity_difference": 1.7763568394002505e-15,
+          "spin_sector_error": 0.0,
+          "number_sector_error": 0.0,
+          "magnetic_sector_error": 0.0,
+          "projection_bound_valid": true
+        },
+        {
+          "case": {
+            "electrons": 3,
+            "twice_spin": 1
+          },
+          "variant": "untruncated",
+          "passed": true,
+          "full_image_error_norm": 2.5722533283017203e-15,
+          "image_squared_error_identity_difference": 3.552713678800507e-15,
+          "exact_full_norm_identity_difference": 0.0,
+          "spin_sector_error": 2.6637669263063097e-17,
+          "number_sector_error": 0.0,
+          "magnetic_sector_error": 0.0,
+          "projection_bound_valid": true
+        },
+        {
+          "case": {
+            "electrons": 3,
+            "twice_spin": 1
+          },
+          "variant": "bounded",
+          "passed": true,
+          "full_image_error_norm": 0.8611043489031285,
+          "image_squared_error_identity_difference": 1.2212453270876722e-15,
+          "exact_full_norm_identity_difference": 0.0,
+          "spin_sector_error": 0.0,
+          "number_sector_error": 0.0,
+          "magnetic_sector_error": 0.0,
+          "projection_bound_valid": true
+        }
+      ]
+    },
+    "tensor_density": {
+      "source": "tensor_density_checks_gpu_20261117.json",
+      "passed": true,
+      "failures": [],
+      "results": [
+        {
+          "electrons": 4,
+          "twice_spin": 0,
+          "passed": true,
+          "maximum_self_density_difference": 8.881784197001252e-16,
+          "maximum_cross_density_difference": 1.3877787807814457e-17,
+          "number_error": 0.0,
+          "cross_number_identity_error": 1.3877787807814457e-17,
+          "minimum_spatial_occupation": 0.6665884178288695,
+          "maximum_spatial_occupation": 1.4042235880144178
+        },
+        {
+          "electrons": 3,
+          "twice_spin": 1,
+          "passed": true,
+          "maximum_self_density_difference": 1.1102230246251565e-16,
+          "maximum_cross_density_difference": 2.0816681711721685e-17,
+          "number_error": 4.440892098500626e-16,
+          "cross_number_identity_error": 1.3877787807814457e-17,
+          "minimum_spatial_occupation": 0.2759667355348443,
+          "maximum_spatial_occupation": 1.0791967281317425
+        }
+      ]
+    },
+    "local_tensor_conditional_functional": {
+      "created_utc": "2026-11-17T13:45:42.752332+00:00",
+      "device": "cuda",
+      "protocol": {
+        "purpose": "Verify the conditional physical tensor compiler, positive auxiliary-density search and scalar derivative before molecular functional work",
+        "seed": 17112048,
+        "sites": 4,
+        "center": 1,
+        "state_cases": [
+          {
+            "electrons": 4,
+            "twice_spin": 0
+          },
+          {
+            "electrons": 3,
+            "twice_spin": 1
+          }
+        ],
+        "ancilla": 2,
+        "channels": 2,
+        "epsilon_inverse_hartree": 1.0,
+        "local_metric_null_tolerance": 1e-12,
+        "maximum_embedding_bytes": 1500000000,
+        "maximum_local_operator_bytes": 2000000000,
+        "maximum_environment_bytes": 1500000000,
+        "maximum_reduced_iterations": 4000,
+        "reduced_gap_tolerance_hartree": 1e-11,
+        "operator_identity_tolerance": 1e-09,
+        "derivative_step": 0.001,
+        "derivative_tolerance_hartree": 1e-05,
+        "universal_keys": [
+          "kinetic",
+          "eri",
+          "operators",
+          "electrons",
+          "twice_spin"
+        ],
+        "no_chemical_labels_or_external_potential": true,
+        "no_parameter_or_seed_sweep": true,
+        "scope": "Synthetic fixed-context conditional functional and physical installation; no complete universal search, molecular accuracy or speed claim"
+      },
+      "results": [
+        {
+          "case": {
+            "electrons": 4,
+            "twice_spin": 0
+          },
+          "passed": true,
+          "external_key_rejected": true,
+          "physical_local_dimension": 40,
+          "reduced_coordinate_count": 40,
+          "literal_hamiltonian_error_hartree": 3.552713678800501e-15,
+          "density_operator_error": 3.3306690738754696e-15,
+          "independent_overlap_metric_error": 1.1882834570659541e-14,
+          "input_retention_error": 1.3860072448216576e-16,
+          "local_conditional_gap_hartree": 3.3644198538240744e-12,
+          "installation": {
+            "discarded_probability": 2.187339787024282e-16,
+            "new_local_ancilla": 2,
+            "norm_error": 1.1102230246251565e-16,
+            "verification_performed": true,
+            "density_moment_error": 5.979539231207454e-16,
+            "universal_energy_error_hartree": 1.3322676295501878e-15,
+            "particle_number_error": 0.0,
+            "minimum_spatial_occupation": 0.2591824511368056,
+            "maximum_spatial_occupation": 1.700184506550596
+          },
+          "xc_derivative": {
+            "finite_difference": 0.11819656890849073,
+            "analytic": 0.11819662023280406,
+            "absolute_difference_hartree": 5.132431332710574e-08,
+            "passed": true,
+            "surrounding_context_refitted": false
+          },
+          "global_tensor_stationarity_certified": false,
+          "chemical_accuracy_measured": false
+        },
+        {
+          "case": {
+            "electrons": 3,
+            "twice_spin": 1
+          },
+          "passed": true,
+          "external_key_rejected": true,
+          "physical_local_dimension": 36,
+          "reduced_coordinate_count": 36,
+          "literal_hamiltonian_error_hartree": 3.552713678800501e-15,
+          "density_operator_error": 8.881784197001252e-16,
+          "independent_overlap_metric_error": 1.9329173118599023e-14,
+          "input_retention_error": 2.758136302330154e-16,
+          "local_conditional_gap_hartree": 9.283240842705709e-12,
+          "installation": {
+            "discarded_probability": 7.883321493105821e-17,
+            "new_local_ancilla": 4,
+            "norm_error": 1.6653345369377348e-15,
+            "verification_performed": true,
+            "density_moment_error": 2.3689184603855677e-15,
+            "universal_energy_error_hartree": 4.218847493575595e-15,
+            "particle_number_error": 8.881784197001252e-16,
+            "minimum_spatial_occupation": 0.09707877019042581,
+            "maximum_spatial_occupation": 1.4998524001903906
+          },
+          "xc_derivative": null,
+          "global_tensor_stationarity_certified": false,
+          "chemical_accuracy_measured": false
+        }
+      ],
+      "failures": [],
+      "status": "completed",
+      "passed": true,
+      "peak_cuda_bytes": 32796672
+    },
+    "proximal_optimizer_checkpoint": {
+      "created_utc": "2026-11-17T14:33:11.365049+00:00",
+      "device": "cuda",
+      "passed": true,
+      "interrupted_after_iteration": 0,
+      "completed_iteration": 100,
+      "analytic_state_error": 3.939165717299813e-11,
+      "gap_hartree": 7.242068056356743e-12,
+      "duplicate_history_steps": 0,
+      "completed_checkpoint_required_new_steps": false,
+      "new_chemical_or_reference_solve": false
+    },
+    "completed_tensor_section_recovery": {
+      "created_utc": "2026-11-17T14:51:01.692309+00:00",
+      "device": "cuda",
+      "passed": true,
+      "compiled_density_chunks_restored": 35,
+      "local_operator_matrices_recompiled": 0,
+      "universal_mpo_rebuilt_from_saved_TW": true,
+      "new_optimizer_iterations": 0,
+      "completed_iteration": 1100,
+      "physical_state_difference": 0.0,
+      "auxiliary_gradient_difference": 0.0,
+      "conditional_scalar_difference_hartree": 0.0,
+      "independently_recomputed_conditional_gap_hartree": 5.524469770534779e-12,
+      "new_chemical_or_reference_solve": false,
+      "peak_cuda_bytes": 2259911680
+    }
+  },
+  "functional_interface_passed": false,
+  "functional_interface_passed_scope": "Earlier cold hard-physical-density inverse; remains failed and closed",
+  "closed_hard_density_ensemble_routes": {
+    "thermal": {
+      "source": "ensemble_spatial_search_gpu_20261117.json",
+      "protocol_closed": true,
+      "failures": [],
+      "results": [
+        {
+          "id": "BeH2_631g_1.65_new",
+          "converged": false,
+          "status": "density_dual_failed_kept_feasible",
+          "density_residual": 2.603556274623444e-11,
+          "universal_energy_minus_saved_oracle_kcal": 63.43127083805589,
+          "xc_energy_available": false,
+          "xc_potential_available": false
+        },
+        {
+          "id": "BeH2_631g_2.75_new",
+          "converged": false,
+          "status": "density_dual_failed_kept_feasible",
+          "density_residual": 4.4386276924159284e-11,
+          "universal_energy_minus_saved_oracle_kcal": 190.15486748880454,
+          "xc_energy_available": false,
+          "xc_potential_available": false
+        }
+      ]
+    },
+    "positive_primal": {
+      "source": "positive_ensemble_spatial_gpu_20261117.json",
+      "protocol_closed": true,
+      "failures": [],
+      "results": [
+        {
+          "id": "BeH2_631g_1.65_new",
+          "converged": false,
+          "status": "positive_primal_limit_kept_feasible",
+          "density_residual": 2.603556274623444e-11,
+          "universal_energy_minus_saved_oracle_kcal": 63.43127083805589,
+          "xc_energy_available": false,
+          "xc_potential_available": false
+        },
+        {
+          "id": "BeH2_631g_2.75_new",
+          "converged": false,
+          "status": "positive_primal_limit_kept_feasible",
+          "density_residual": 4.4386276924159284e-11,
+          "universal_energy_minus_saved_oracle_kcal": 190.15486748880454,
+          "xc_energy_available": false,
+          "xc_potential_available": false
+        }
+      ]
+    }
+  },
+  "auxiliary_functional_interface": {
+    "source": "auxiliary_stationary_gpu_20261117.json",
+    "results": [
+      {
+        "id": "BeH2_631g_1.65_new",
+        "prediction_valid": true,
+        "self_consistent": true,
+        "physical_total_energy_hartree": -15.769192300810406,
+        "energy_error_kcal": 1.9641789424003518e-08,
+        "reference_energy_hartree": -15.769192300841707,
+        "number_error": 8.881784197001252e-16,
+        "minimum_physical_occupation": 6.059846581940458e-05,
+        "maximum_physical_occupation": 1.999852443154458,
+        "kinetic_converged": true,
+        "kinetic_gap_hartree": 1.3322676295501878e-14,
+        "ks_commutator_norm": 1.2397324993535543e-07,
+        "global_check": {
+          "converged": true,
+          "state_residual": 8.89606400199653e-09,
+          "full_oracle_frank_wolfe_gap_hartree": 3.054800856716611e-11,
+          "spin_squared_basis_norm": 2.018187984803696e-15,
+          "passed": true,
+          "limit": "Ritz lowest-state evidence, not a rigorous lower bound from an independent Hamiltonian implementation"
+        },
+        "xc_potential_accepted": true,
+        "new_reference_generated": false,
+        "oracle_density_used_for_prediction": false,
+        "post_interruption_development_completion": true,
+        "final_stationarity": {
+          "update": 1,
+          "physical_total_energy_hartree": -15.769192300810406,
+          "potential_self_consistency_residual": 7.008240517982023e-08,
+          "outside_stationarity_residual": 9.279177187414354e-06,
+          "reduced_gap_hartree": 1.7719159473017498e-13,
+          "basis_dimension": 29,
+          "physical_energy_identity_error_hartree": 1.666662647309625e-14
+        }
+      },
+      {
+        "id": "BeH2_631g_2.75_new",
+        "prediction_valid": true,
+        "self_consistent": true,
+        "physical_total_energy_hartree": -15.614781217168328,
+        "energy_error_kcal": 4.800818504638826e-08,
+        "reference_energy_hartree": -15.614781217244834,
+        "number_error": 7.105427357601002e-15,
+        "minimum_physical_occupation": 6.265544886576522e-05,
+        "maximum_physical_occupation": 1.9998554839527412,
+        "kinetic_converged": true,
+        "kinetic_gap_hartree": 6.217248937900877e-15,
+        "ks_commutator_norm": 1.1117200717848628e-08,
+        "global_check": {
+          "converged": true,
+          "state_residual": 8.808004004531027e-09,
+          "full_oracle_frank_wolfe_gap_hartree": 7.52136131154657e-11,
+          "spin_squared_basis_norm": 1.165209291757739e-15,
+          "passed": true,
+          "limit": "Ritz lowest-state evidence, not a rigorous lower bound from an independent Hamiltonian implementation"
+        },
+        "xc_potential_accepted": true,
+        "new_reference_generated": false,
+        "oracle_density_used_for_prediction": false,
+        "post_interruption_development_completion": true,
+        "final_stationarity": {
+          "update": 10,
+          "physical_total_energy_hartree": -15.614781217168328,
+          "potential_self_consistency_residual": 1.1014992358895052e-08,
+          "outside_stationarity_residual": 6.74509161781446e-06,
+          "reduced_gap_hartree": 9.098055642198233e-12,
+          "basis_dimension": 191,
+          "physical_energy_identity_error_hartree": 1.7824233422335762e-14
+        }
+      }
+    ],
+    "passed_at_reported_development_points": true,
+    "derivative_check": {
+      "created_utc": "2026-11-17T12:24:13.277797+00:00",
+      "device": "cuda",
+      "results": [
+        {
+          "id": "BeH2_631g_1.65_new",
+          "passed": true,
+          "scalar_directional_derivative": -2.231511557155841,
+          "potential_directional_derivative": -2.2315115729434636,
+          "absolute_difference_hartree": 1.57876227646625e-08,
+          "fixed_response_dimension": 29,
+          "maximum_allowed_difference_hartree": 1e-05,
+          "points": [
+            {
+              "xc_energy": -215.94725007825085,
+              "interacting_converged": true,
+              "kinetic_converged": true,
+              "interacting_gap": 9.023004565733572e-12,
+              "kinetic_gap": 1.4850343177386094e-12,
+              "trace_error": 2.220446049250313e-16,
+              "minimum_ensemble_occupation": -1.3411243355513815e-23,
+              "maximum_kinetic_occupation": 2.0000000000000013
+            },
+            {
+              "xc_energy": -215.95171310136516,
+              "interacting_converged": true,
+              "kinetic_converged": true,
+              "interacting_gap": 6.764366844436154e-12,
+              "kinetic_gap": 1.4921397450962104e-12,
+              "trace_error": 1.1102230246251565e-16,
+              "minimum_ensemble_occupation": -3.842193855493493e-24,
+              "maximum_kinetic_occupation": 2.0000000000000004
+            }
+          ],
+          "response_space_refitted": false,
+          "molecular_potential_passed_to_universal_evaluation": false,
+          "new_reference_generated": false
+        },
+        {
+          "id": "BeH2_631g_2.75_new",
+          "passed": true,
+          "scalar_directional_derivative": -4.385874828130909,
+          "potential_directional_derivative": -4.385874968911628,
+          "absolute_difference_hartree": 1.407807186382115e-07,
+          "fixed_response_dimension": 191,
+          "maximum_allowed_difference_hartree": 1e-05,
+          "points": [
+            {
+              "xc_energy": -216.2099525671427,
+              "interacting_converged": true,
+              "kinetic_converged": true,
+              "interacting_gap": 6.750155989720952e-12,
+              "kinetic_gap": 6.181721801112872e-13,
+              "trace_error": 4.440892098500626e-16,
+              "minimum_ensemble_occupation": -2.303459955991942e-22,
+              "maximum_kinetic_occupation": 2.0000000000000004
+            },
+            {
+              "xc_energy": -216.21872431679895,
+              "interacting_converged": true,
+              "kinetic_converged": true,
+              "interacting_gap": 7.841283178322556e-12,
+              "kinetic_gap": 4.4941828036826337e-13,
+              "trace_error": 2.220446049250313e-16,
+              "minimum_ensemble_occupation": -2.8774385714605837e-22,
+              "maximum_kinetic_occupation": 1.9999999999999991
+            }
+          ],
+          "response_space_refitted": false,
+          "molecular_potential_passed_to_universal_evaluation": false,
+          "new_reference_generated": false
+        }
+      ],
+      "failures": [],
+      "scope": "One new auxiliary-coordinate direction per geometry, fixed compiled physical response space; not a nuclear derivative or full-space path-accuracy test",
+      "passed": true,
+      "peak_cuda_bytes": 794014720
+    },
+    "derivative_scope": "Frozen response spaces, one auxiliary direction per geometry; not nuclear forces or full-space path accuracy",
+    "development_completion": true,
+    "general_out_of_sample_accuracy_established": false,
+    "auxiliary_coordinate_is_physical_density": false,
+    "unchanged_conventional_ks_plugin": false,
+    "challenge_eligibility_verified": false,
+    "balanced_stretch_contrast_error_kcal": 2.8366395622384743e-08
+  },
+  "resource_usage": {
+    "created_utc": "2026-11-17T14:56:19.730314+00:00",
+    "affinity": [
+      0
+    ],
+    "project_bytes": 21129756997,
+    "project_gb": 21.1298,
+    "volume_free_gb": 93.955,
+    "reserved_growth_gb": 0.0,
+    "hard_limit_bytes": 40000000000,
+    "working_ceiling_bytes": 32000000000,
+    "external_accounted_paths": [
+      "C:/Users/breth/AppData/Local/Temp/wsl-crashes",
+      "C:/Users/breth/AppData/Local/Temp/swap.vhdx",
+      "C:/Windows/Temp/swap.vhdx"
+    ],
+    "legacy_external_upper_bound_bytes": 1073741824,
+    "wsl_runtime": {
+      "distribution": "XCResearch",
+      "memory_limit_gib": 6,
+      "swap_limit_gib": 1,
+      "swap_file": "C:/Users/breth/myrepo/.research/wsl-swap.vhdx",
+      "virtual_processors_available": 4,
+      "compute_affinity": "taskset core 0; one host core and one numerical-library thread",
+      "recovery_record": "auxiliary_environment_recovery_20261117.json"
+    },
+    "additional_drive_assumed": false,
+    "scientific_numerical_work_device": "CUDA only"
+  },
+  "new_tensor_scope": {
+    "functional_optimizer_integrated": false,
+    "general_chemical_accuracy_measured": false,
+    "physical_product_response_error_measured_without_global_vector": true,
+    "correlated_candidate_full_stationarity_certified": false,
+    "water_original": {
+      "source": "tensor_water_scope_gpu_20261117.json",
+      "physical_scope_passed": true,
+      "total_energy_hartree": -76.02713740636966,
+      "input_total_energy_hartree": -76.02403866536444,
+      "lowering_from_input_kcal": -1.9444893382500061,
+      "particle_number": 10.000000000000002,
+      "particle_number_variance": -4.263256414560601e-14,
+      "spin_squared": 0.0,
+      "energy_identity_error_hartree": 1.2533377113932431e-16,
+      "hermiticity_error_hartree": 6.280369834735101e-16,
+      "state_bond_dimensions": [
+        5,
+        12,
+        23,
+        38,
+        57,
+        65,
+        65,
+        65,
+        65,
+        65,
+        65,
+        65,
+        65,
+        65,
+        65,
+        65,
+        65,
+        65,
+        65,
+        65,
+        65,
+        65,
+        22,
+        1
+      ],
+      "full_fixed_sz_dimension": 1806590016,
+      "full_occupation_vector_allocated": false,
+      "new_reference_generated_or_loaded": false,
+      "full_stationarity_certified": false,
+      "chemical_accuracy_measured": false,
+      "xc_functional_evaluated": false,
+      "wtmad2_measured": false,
+      "goal_accuracy_achieved": false,
+      "raw_channel_metric_closed": true
+    },
+    "water_physical_metric": {
+      "source": "tensor_water_physical_metric_gpu_20261117.json",
+      "physical_scope_passed": true,
+      "total_energy_hartree": -76.1692023250996,
+      "input_total_energy_hartree": -76.02403866536444,
+      "lowering_from_input_kcal": -91.09157176432582,
+      "particle_number": 9.999999999999998,
+      "particle_number_variance": 0.0,
+      "spin_squared": -2.6020852139652103e-18,
+      "energy_identity_error_hartree": 1.5931700403370996e-14,
+      "hermiticity_error_hartree": 0.0,
+      "state_bond_dimensions": [
+        5,
+        12,
+        23,
+        38,
+        56,
+        64,
+        65,
+        65,
+        65,
+        65,
+        65,
+        65,
+        63,
+        61,
+        59,
+        57,
+        55,
+        53,
+        48,
+        38,
+        23,
+        12,
+        5,
+        1
+      ],
+      "full_fixed_sz_dimension": 1806590016,
+      "full_occupation_vector_allocated": false,
+      "new_reference_generated_or_loaded": false,
+      "full_stationarity_certified": false,
+      "chemical_accuracy_measured": false,
+      "xc_functional_evaluated": false,
+      "wtmad2_measured": false,
+      "goal_accuracy_achieved": false,
+      "full_image_relative_error_upper_estimate": 0.11788821361486553,
+      "original_span_retained_squared_image_norm_fraction": 0.0270647585833906,
+      "physical_span_retained_squared_image_norm_fraction": 0.9861023690908096,
+      "physical_image_projection_bound_consistent": true,
+      "peak_cuda_bytes": 793477120
+    },
+    "saved_water_density": {
+      "created_utc": "2026-11-17T13:20:14.920125+00:00",
+      "device": "cuda",
+      "id": "H2O_ccpvdz_tensor_scope_new",
+      "passed": true,
+      "spatial_orbitals": 24,
+      "electrons": 10,
+      "number_error": 1.7763568394002505e-15,
+      "hermiticity_error": 0.0,
+      "minimum_spatial_occupation": 3.574059327323515e-05,
+      "maximum_spatial_occupation": 1.9983801568858295,
+      "physical_density_method": "Fixed-state derivative of the complete literal one-body tensor operator",
+      "global_occupation_vector_allocated": false,
+      "state_solve_repeated": false,
+      "new_reference_generated_or_loaded": false,
+      "xc_functional_evaluated": false,
+      "chemical_accuracy_measured": false,
+      "wtmad2_measured": false,
+      "peak_cuda_bytes": 102744064
+    },
+    "conditional_optimizer_integrated": true,
+    "full_tensor_universal_optimizer_integrated": false,
+    "water_conditional_functional": {
+      "source": "tensor_water_conditional_gpu_20261117.json",
+      "status": "completed",
+      "passed_at_frozen_context": true,
+      "result": {
+        "conditional_functional_passed": true,
+        "local_physical_dimension": 692,
+        "density_coordinate_count": 279,
+        "conditional_gap_hartree": 5.524469770534779e-12,
+        "kinetic_gap_hartree": 1.4210854715202004e-14,
+        "physical_total_energy_hartree": -76.21160243602567,
+        "original_total_energy_hartree": -76.16920232508933,
+        "physical_energy_identity_error_hartree": 5.59223999573033e-13,
+        "derivative_error_hartree": 7.3669461642111855e-09,
+        "finite_difference": 13.575458728155354,
+        "analytic_directional_derivative": 13.5754587355223,
+        "installation": {
+          "discarded_probability": 1.1823629582322842e-16,
+          "new_local_ancilla": 1,
+          "norm_error": 4.907185768843192e-14,
+          "verification_performed": true,
+          "density_moment_error": 1.9458364945768105e-13,
+          "universal_energy_error_hartree": 5.5706550483591855e-12,
+          "particle_number_error": 1.7763568394002505e-15,
+          "minimum_spatial_occupation": 0.00015123292509323653,
+          "maximum_spatial_occupation": 1.9998568668130423
+        },
+        "external_potential_passed_to_universal_evaluator": false,
+        "global_tensor_stationarity_certified": false,
+        "self_consistent_global_xc_model": false,
+        "chemical_accuracy_measured": false,
+        "new_reference_generated_or_loaded": false,
+        "wtmad2_measured": false,
+        "goal_accuracy_achieved": false
+      },
+      "same_saved_model_state_energy_identity_error_hartree": 1.0274447959091049e-11,
+      "same_saved_model_state_energy_identity_passed": true,
+      "completed_recovery_passed": true,
+      "peak_cuda_bytes": 1639926784,
+      "scope": "Frozen surrounding tensors and one local positive ensemble; no global tensor stationarity or chemical reference error"
+    }
+  },
+  "unmeasured_tensor_scope_full_residuals": [
+    "H2O_ccpvdz_tensor_scope_new",
+    "H2O_ccpvdz_conditional_center6_state"
+  ],
+  "general_functional_accuracy_gate_passed": false,
+  "no_numerical_solve_repeated": true,
+  "speed_work_authorized": false,
+  "goal_accuracy_achieved": false,
+  "wtmad2_measured": false,
+  "limitations": [
+    "Same finite-basis references, not CBS/GMTKN55",
+    "Accepted auxiliary functional still uses global Fock vectors",
+    "Some selected spaces approach the full Hilbert space",
+    "Accepted auxiliary targets only even-N singlets; tensor primitives also cover odd spin",
+    "Conditional tensor universal optimization connected, but global tensor stationarity/context independence unproved",
+    "Frozen-context XC derivative checks do not include surrounding-tensor or nuclear/basis response",
+    "Exact tensor response metric currently requires a product source; the correlated molecular state is unconverged",
+    "Cold hard-density interface and both bounded ensemble solvers failed and remain closed",
+    "Auxiliary functional evidence covers two inspected finite-basis points and frozen-space derivatives",
+    "Regularized KS challenge integration and fixed-continuum metric remain unverified",
+    "No learned/amortized inference or broad reaction-family generalization",
+    "References use the shared physical Hamiltonian backend; not independent integral implementations",
+    "Locked composition-confirmation panel remains withheld"
+  ]
+}

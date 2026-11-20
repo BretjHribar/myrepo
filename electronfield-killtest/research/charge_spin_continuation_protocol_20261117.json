@@ -1,0 +1,10 @@
+{
+  "purpose": "Reach the original physical convergence criterion after the accuracy-first user instruction",
+  "selection": "The case with the largest remaining full Hamiltonian residual in the first panel; do not select from reference-energy errors",
+  "initial_state": "Saved physical state; recover its local Schmidt support and retain the input determinant, without repeating previous optimization cycles",
+  "maximum_adaptive_updates": 32,
+  "full_state_residual_target_hartree": 1e-5,
+  "unchanged": ["Physical Hamiltonian", "Charge/spin multiplets", "Two residual directions per sector, with complete boundary degeneracy", "Reference-free source and stopping rule", "Projected Ritz residual tolerance"],
+  "reference_use": "Post-prediction assessment only, no new reference generation",
+  "limits": "Development continuation of an unfinished residual solve; not new blind confirmation or a broad WTMAD-2 claim"
+}

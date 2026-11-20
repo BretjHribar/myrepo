@@ -1,0 +1,45 @@
+{
+  "created_utc": "2026-11-17T23:26:24.386566+00:00",
+  "device": "cuda",
+  "protocol": {
+    "purpose": "Required physical-operator implementation change after the full public target-basis domain audit; not a speed benchmark, new functional or accuracy result",
+    "seed": 17112070,
+    "small_sites": 4,
+    "small_electrons": 4,
+    "small_coulomb_factors": 5,
+    "small_center": 1,
+    "large_sites": 40,
+    "large_electrons": 40,
+    "large_coulomb_factors": 1,
+    "matrix_tolerance_hartree": 2e-10,
+    "large_product_energy_tolerance_hartree": 1e-08,
+    "minimum_wrong_projected_square_difference_hartree": 1e-05,
+    "maximum_product_storage_bytes": 500000000,
+    "maximum_environment_bytes": 1500000000,
+    "scope": "Exact supplied-factor Hamiltonians: independent all-Fock-matrix and correlated local-section actions; a larger provided-product energy check is not a coupled 40-electron prediction",
+    "missing_scope": "No complete large-basis GPU factor producer, ECP, triplet/quartet molecular validation, learned transfer, global XC callable, model WTMAD-2 or private test pass",
+    "speed_work_authorized": false,
+    "frontier_replication_performed": false
+  },
+  "status": "interrupted_invalid_matrix_basis_order_comparison",
+  "checks": [
+    {
+      "name": "all_number_and_spin_sectors_full_fermion_matrix",
+      "maximum_absolute_error_hartree": 5.483379075211923,
+      "passed": false
+    },
+    {
+      "name": "direct_one_body_jordan_wigner_signs",
+      "maximum_absolute_error_hartree": 6.065358860406824,
+      "passed": false
+    },
+    {
+      "name": "correlated_tensor_literal_energy",
+      "maximum_absolute_error_hartree": 1.1102230246251565e-15,
+      "passed": true
+    }
+  ],
+  "failures": [],
+  "interruption_utc": "2026-11-17T23:27:42.464671+00:00",
+  "reason": "Diagnostic matrix prepends the newest site, already matching low-site-bit-first Fock order. The validation incorrectly reversed site order. Literal correlated tensor comparison independently passed. Preserve this unaccepted report before correcting only the comparison; no model parameters, Hamiltonian, seed or tolerance changed."
+}

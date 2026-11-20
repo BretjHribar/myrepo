@@ -1,0 +1,20 @@
+{
+  "purpose": "Required physical-operator implementation change after the full public target-basis domain audit; not a speed benchmark, new functional or accuracy result",
+  "seed": 17112070,
+  "small_sites": 4,
+  "small_electrons": 4,
+  "small_coulomb_factors": 5,
+  "small_center": 1,
+  "large_sites": 40,
+  "large_electrons": 40,
+  "large_coulomb_factors": 1,
+  "matrix_tolerance_hartree": 2e-10,
+  "large_product_energy_tolerance_hartree": 1e-8,
+  "minimum_wrong_projected_square_difference_hartree": 1e-5,
+  "maximum_product_storage_bytes": 500000000,
+  "maximum_environment_bytes": 1500000000,
+  "scope": "Exact supplied-factor Hamiltonians: independent all-Fock-matrix and correlated local-section actions; a larger provided-product energy check is not a coupled 40-electron prediction",
+  "missing_scope": "No complete large-basis GPU factor producer, ECP, triplet/quartet molecular validation, learned transfer, global XC callable, model WTMAD-2 or private test pass",
+  "speed_work_authorized": false,
+  "frontier_replication_performed": false
+}

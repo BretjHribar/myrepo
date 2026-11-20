@@ -1,0 +1,146 @@
+{
+  "created_utc": "2026-11-17T12:52:16.550025+00:00",
+  "device": "cuda",
+  "protocol": {
+    "purpose": "Verify a compositional positive number/spin state and literal fermionic Hamiltonian action before larger accuracy work",
+    "source_of_physics": "Own synthetic spin-independent one-/two-electron Hamiltonians; positive Coulomb pair matrices, fixed CUDA seed",
+    "seed": 17112042,
+    "dense_operator_check_sites": 4,
+    "state_cases": [
+      {
+        "electrons": 4,
+        "twice_spin": 0
+      },
+      {
+        "electrons": 3,
+        "twice_spin": 1
+      }
+    ],
+    "ancilla_dimension": 2,
+    "channels_per_quantum_sector": 2,
+    "operator_and_energy_tolerance_hartree": 1e-10,
+    "gradient_tolerance": 1e-09,
+    "physical_constraint_tolerance": 1e-10,
+    "independent_product_test": "Eight separate 4-electron/3-orbital singlet mixed states, 32 electrons in 24 orbitals; additive supplied independent Hamiltonian, no global occupation enumeration",
+    "family_embedding_test": "Three fragment purifications embedded in the same reduced CG tensor family, compared with direct concatenation",
+    "legacy_special_case": "Ancilla dimension one must match the unchanged pure-state family after exact parameter copying",
+    "no_optimization_or_reference_fit": true,
+    "no_frontier_replication": true,
+    "failure_policy": "Record any failed operator, gradient or physical invariant before using this backend for chemistry; no energy-only acceptance",
+    "scope": "New representation/operator tests, not a chemical-accuracy, WTMAD-2, learned-transfer or speed benchmark",
+    "resource_limit": "One CUDA job, one host orchestration core; under 1 GB new disk and existing 40 GB total allocation"
+  },
+  "results": [
+    {
+      "check": "full_operator",
+      "maximum_matrix_difference_hartree": 3.9968028886505635e-15,
+      "hermiticity_error_hartree": 1.3877787807814457e-17,
+      "passed": true,
+      "sites": 4,
+      "input_fermion_words": 832,
+      "canonical_product_words": 360,
+      "mpo_bond_dimensions": [
+        1,
+        16,
+        66,
+        54,
+        1
+      ],
+      "sparse_edges": 496,
+      "cuda_operator_storage_bytes": 24912,
+      "full_occupation_vector_allocated": false,
+      "integral_truncation_threshold": 0.0
+    },
+    {
+      "check": "mixed_state_physics_and_gradient",
+      "electrons": 4,
+      "twice_spin": 0,
+      "passed": true,
+      "norm_difference": 1.0842021724855044e-19,
+      "energy_difference_hartree": 8.881784197001252e-16,
+      "maximum_parameter_gradient_difference": 4.440892098500626e-16,
+      "minimum_density_eigenvalue": -3.4777892098846485e-17,
+      "purity": 0.5397256265380308,
+      "number_sector_error": 0.0,
+      "magnetic_sector_error": 0.0,
+      "total_spin_sector_error": 2.5534512025832615e-16
+    },
+    {
+      "check": "mixed_state_physics_and_gradient",
+      "electrons": 3,
+      "twice_spin": 1,
+      "passed": true,
+      "norm_difference": 2.710505431213761e-20,
+      "energy_difference_hartree": 2.220446049250313e-16,
+      "maximum_parameter_gradient_difference": 4.996003610813204e-16,
+      "minimum_density_eigenvalue": -4.2630142371776916e-17,
+      "purity": 0.25830787844870085,
+      "number_sector_error": 0.0,
+      "magnetic_sector_error": 0.0,
+      "total_spin_sector_error": 6.243048717336388e-17
+    },
+    {
+      "check": "pure_state_special_case",
+      "state_difference": 0.0,
+      "passed": true
+    },
+    {
+      "check": "same_family_fragment_embedding",
+      "fragments": 3,
+      "electrons": 12,
+      "energy_difference_hartree": 1.7763568394002505e-15,
+      "norm_difference": 8.470329472543003e-22,
+      "passed": true
+    },
+    {
+      "check": "independent_fragment_product_without_global_vector",
+      "fragments": 8,
+      "sites": 24,
+      "electrons": 32,
+      "energy_additivity_error_hartree": 4.884981308350689e-15,
+      "hypothetical_fixed_sz_dimension": 540917591841,
+      "hypothetical_global_vector_bytes": 4327340734728,
+      "physical_tensor_parameter_count": 576,
+      "maximum_state_bond_dimension": 8,
+      "passed": true,
+      "input_fermion_words": 2016,
+      "canonical_product_words": 936,
+      "mpo_bond_dimensions": [
+        1,
+        16,
+        40,
+        2,
+        16,
+        40,
+        2,
+        16,
+        40,
+        2,
+        16,
+        40,
+        2,
+        16,
+        40,
+        2,
+        16,
+        40,
+        2,
+        16,
+        40,
+        2,
+        16,
+        40,
+        1
+      ],
+      "sparse_edges": 1398,
+      "cuda_operator_storage_bytes": 63920,
+      "full_occupation_vector_allocated": false,
+      "integral_truncation_threshold": 0.0
+    }
+  ],
+  "failures": [],
+  "status": "completed",
+  "passed": true,
+  "peak_cuda_bytes": 50879488,
+  "scope": "Representation/operator/gradient tests only; synthetic Hamiltonians and supplied independent fragments, no chemical-accuracy or automatic size-consistency claim"
+}

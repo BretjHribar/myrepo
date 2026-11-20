@@ -1,0 +1,731 @@
+{
+  "created_utc": "2026-11-17T12:06:48.793458+00:00",
+  "device": "cuda",
+  "protocol": {
+    "purpose": "Recover the original valid occupied states and enforce the singlet domain on every extension while evaluating the literal full Hamiltonian",
+    "cases": [
+      "BeH2_631g_1.65_new",
+      "BeH2_631g_2.75_new"
+    ],
+    "original_protocol": "research/auxiliary_forward_protocol_20261117.json",
+    "strict_spin_recovery": true,
+    "checkpoint_folder": "data/auxiliary_strict",
+    "maximum_additional_updates": 32,
+    "source": "Original auxiliary_forward checkpoints, not the later rejected spin-contaminated candidates",
+    "correctness_repairs": [
+      "Machine-precision-aware response rank",
+      "Every new basis direction explicitly singlet projected and reorthogonalized",
+      "Basis spin guard before Hamiltonian projection",
+      "Full unprojected physical Hamiltonian for every energy",
+      "Occupied-state, density, number and energy retention checked during recovery"
+    ],
+    "outer_solver": "Exact auxiliary-coordinate elimination in the unchanged variational total functional",
+    "unchanged": "epsilon=1, response-space cap 192, response counts, self-consistency/stationarity tolerances and global checks",
+    "preconditions": [
+      "Independent exact-rank and degenerate-source checks",
+      "Independent triplet injection must be removed/rejected",
+      "Raw triplet energy must match the independent full fermion-word operator"
+    ],
+    "reference_use": "Only after prediction/checks stop; no reference objective or new labels",
+    "limits": [
+      "Development repair, not a blind benchmark",
+      "Global Fock vectors and finite orbital bases",
+      "No trained model, broad WTMAD-2 result or speed work",
+      "Regularized KS integration and challenge eligibility unresolved"
+    ]
+  },
+  "status": "completed",
+  "original_recovered": [
+    {
+      "id": "BeH2_631g_1.65_new",
+      "saved_update": 32,
+      "physical_total_energy_hartree": -15.768529933365553,
+      "potential_self_consistency_residual": 1.912861747537802e-05,
+      "outside_stationarity_residual": 0.03887857952373901,
+      "reduced_gap_hartree": 3.1663560662309465e-13,
+      "kinetic_converged": true,
+      "kinetic_gap_hartree": 5.206501896282134e-12,
+      "old_optimization_repeated": false,
+      "energy_error_kcal": 0.41564186655645374
+    },
+    {
+      "id": "BeH2_631g_2.75_new",
+      "saved_update": 27,
+      "physical_total_energy_hartree": -15.592312374881612,
+      "potential_self_consistency_residual": 0.0026124420499730526,
+      "outside_stationarity_residual": 0.15305810901659503,
+      "reduced_gap_hartree": 1.7763568394002505e-15,
+      "kinetic_converged": true,
+      "kinetic_gap_hartree": 0.0,
+      "old_optimization_repeated": false,
+      "energy_error_kcal": 14.099411452734769
+    }
+  ],
+  "results": [
+    {
+      "id": "BeH2_631g_1.65_new",
+      "prediction_valid": false,
+      "self_consistent": false,
+      "physical_total_energy_hartree": -15.769192300601187,
+      "energy_error_kcal": 1.50928887679445e-07,
+      "reference_energy_hartree": -15.769192300841707,
+      "number_error": 2.6645352591003757e-15,
+      "minimum_physical_occupation": 6.0599319093507084e-05,
+      "maximum_physical_occupation": 1.9998524442118022,
+      "kinetic_converged": true,
+      "kinetic_gap_hartree": 8.881784197001252e-15,
+      "ks_commutator_norm": 4.82618521864525e-12,
+      "global_check": null,
+      "restart_checks": {
+        "passed": true,
+        "old_dimension": 175,
+        "restarted_dimension": 2,
+        "retained_ensemble_channels": 1,
+        "discarded_trace": 6.661338147750939e-16,
+        "ensemble_operator_error": 8.649410355642178e-16,
+        "universal_energy_change_hartree": 0.0,
+        "density_change_norm": 2.6627510795358862e-15,
+        "input_retention_error": 8.376312121364213e-17,
+        "saved_occupied_spin_squared_norm": 2.4775911575593457e-11,
+        "full_physical_hamiltonian_used": true
+      },
+      "history": [
+        {
+          "update": 0,
+          "physical_total_energy_hartree": -15.768895554226773,
+          "potential_self_consistency_residual": 0.0016299512874632335,
+          "outside_stationarity_residual": 0.023506670061167394,
+          "reduced_gap_hartree": 4.256150987203e-12,
+          "basis_dimension": 20,
+          "physical_energy_identity_error_hartree": 7.32860207388426e-14
+        },
+        {
+          "update": 1,
+          "physical_total_energy_hartree": -15.76907976265823,
+          "potential_self_consistency_residual": 0.002557767067859257,
+          "outside_stationarity_residual": 0.01385028750939726,
+          "reduced_gap_hartree": 5.758060694915912e-12,
+          "basis_dimension": 38,
+          "physical_energy_identity_error_hartree": 1.6969545733202694e-14
+        },
+        {
+          "update": 2,
+          "physical_total_energy_hartree": -15.76915848565244,
+          "potential_self_consistency_residual": 0.0019892102275496718,
+          "outside_stationarity_residual": 0.010039561951099039,
+          "reduced_gap_hartree": 3.2431834995350073e-12,
+          "basis_dimension": 56,
+          "physical_energy_identity_error_hartree": 5.3051593710228256e-14
+        },
+        {
+          "update": 3,
+          "physical_total_energy_hartree": -15.769184087287194,
+          "potential_self_consistency_residual": 0.0007748676419649844,
+          "outside_stationarity_residual": 0.00434970007135781,
+          "reduced_gap_hartree": 3.6277647552651615e-12,
+          "basis_dimension": 74,
+          "physical_energy_identity_error_hartree": 2.2794073774339745e-14
+        },
+        {
+          "update": 4,
+          "physical_total_energy_hartree": -15.769190442222946,
+          "potential_self_consistency_residual": 0.00019757203158402053,
+          "outside_stationarity_residual": 0.0023454385189634833,
+          "reduced_gap_hartree": 9.9333874459262e-12,
+          "basis_dimension": 92,
+          "physical_energy_identity_error_hartree": 5.430198791595534e-14
+        },
+        {
+          "update": 5,
+          "physical_total_energy_hartree": -15.769191960482015,
+          "potential_self_consistency_residual": 7.507196103219448e-05,
+          "outside_stationarity_residual": 0.0012237355403503646,
+          "reduced_gap_hartree": 3.679279103607769e-12,
+          "basis_dimension": 110,
+          "physical_energy_identity_error_hartree": 2.2179704900377933e-14
+        },
+        {
+          "update": 6,
+          "physical_total_energy_hartree": -15.769192248042721,
+          "potential_self_consistency_residual": 1.7319900229331304e-05,
+          "outside_stationarity_residual": 0.00043735969151658495,
+          "reduced_gap_hartree": 7.560618797697316e-12,
+          "basis_dimension": 128,
+          "physical_energy_identity_error_hartree": 1.8769453789756265e-14
+        },
+        {
+          "update": 7,
+          "physical_total_energy_hartree": -15.769192291051489,
+          "potential_self_consistency_residual": 9.57460898315082e-06,
+          "outside_stationarity_residual": 0.0001922331735195303,
+          "reduced_gap_hartree": 4.689582056016661e-12,
+          "basis_dimension": 146,
+          "physical_energy_identity_error_hartree": 5.383399894988681e-14
+        },
+        {
+          "update": 8,
+          "physical_total_energy_hartree": -15.769192299263498,
+          "potential_self_consistency_residual": 2.231350995429623e-06,
+          "outside_stationarity_residual": 7.972831972603644e-05,
+          "reduced_gap_hartree": 4.987121826616203e-12,
+          "basis_dimension": 164,
+          "physical_energy_identity_error_hartree": 3.098576667243798e-14
+        },
+        {
+          "update": 9,
+          "physical_total_energy_hartree": -15.769192300598963,
+          "potential_self_consistency_residual": 5.228171043229057e-07,
+          "outside_stationarity_residual": 3.3690031799789436e-05,
+          "reduced_gap_hartree": 1.8256507416936074e-12,
+          "basis_dimension": 186,
+          "physical_energy_identity_error_hartree": 5.439684865726004e-15
+        },
+        {
+          "update": 10,
+          "physical_total_energy_hartree": -15.769192300601187,
+          "potential_self_consistency_residual": 1.7920625497637395e-16,
+          "outside_stationarity_residual": 3.340077508815507e-05,
+          "reduced_gap_hartree": 0.0,
+          "basis_dimension": 186,
+          "physical_energy_identity_error_hartree": 7.105427357601002e-15
+        },
+        {
+          "update": 11,
+          "physical_total_energy_hartree": -15.769192300601187,
+          "potential_self_consistency_residual": 1.7920625497637395e-16,
+          "outside_stationarity_residual": 3.340077508815507e-05,
+          "reduced_gap_hartree": 0.0,
+          "basis_dimension": 186,
+          "physical_energy_identity_error_hartree": 7.105427357601002e-15
+        },
+        {
+          "update": 12,
+          "physical_total_energy_hartree": -15.769192300601187,
+          "potential_self_consistency_residual": 1.7920625497637395e-16,
+          "outside_stationarity_residual": 3.340077508815507e-05,
+          "reduced_gap_hartree": 0.0,
+          "basis_dimension": 186,
+          "physical_energy_identity_error_hartree": 7.105427357601002e-15
+        },
+        {
+          "update": 13,
+          "physical_total_energy_hartree": -15.769192300601187,
+          "potential_self_consistency_residual": 1.7920625497637395e-16,
+          "outside_stationarity_residual": 3.340077508815507e-05,
+          "reduced_gap_hartree": 0.0,
+          "basis_dimension": 186,
+          "physical_energy_identity_error_hartree": 7.105427357601002e-15
+        },
+        {
+          "update": 14,
+          "physical_total_energy_hartree": -15.769192300601187,
+          "potential_self_consistency_residual": 1.7920625497637395e-16,
+          "outside_stationarity_residual": 3.340077508815507e-05,
+          "reduced_gap_hartree": 0.0,
+          "basis_dimension": 186,
+          "physical_energy_identity_error_hartree": 7.105427357601002e-15
+        },
+        {
+          "update": 15,
+          "physical_total_energy_hartree": -15.769192300601187,
+          "potential_self_consistency_residual": 1.7920625497637395e-16,
+          "outside_stationarity_residual": 3.340077508815507e-05,
+          "reduced_gap_hartree": 0.0,
+          "basis_dimension": 186,
+          "physical_energy_identity_error_hartree": 7.105427357601002e-15
+        },
+        {
+          "update": 16,
+          "physical_total_energy_hartree": -15.769192300601187,
+          "potential_self_consistency_residual": 1.7920625497637395e-16,
+          "outside_stationarity_residual": 3.340077508815507e-05,
+          "reduced_gap_hartree": 0.0,
+          "basis_dimension": 186,
+          "physical_energy_identity_error_hartree": 7.105427357601002e-15
+        },
+        {
+          "update": 17,
+          "physical_total_energy_hartree": -15.769192300601187,
+          "potential_self_consistency_residual": 1.7920625497637395e-16,
+          "outside_stationarity_residual": 3.340077508815507e-05,
+          "reduced_gap_hartree": 0.0,
+          "basis_dimension": 186,
+          "physical_energy_identity_error_hartree": 7.105427357601002e-15
+        },
+        {
+          "update": 18,
+          "physical_total_energy_hartree": -15.769192300601187,
+          "potential_self_consistency_residual": 1.7920625497637395e-16,
+          "outside_stationarity_residual": 3.340077508815507e-05,
+          "reduced_gap_hartree": 0.0,
+          "basis_dimension": 186,
+          "physical_energy_identity_error_hartree": 7.105427357601002e-15
+        },
+        {
+          "update": 19,
+          "physical_total_energy_hartree": -15.769192300601187,
+          "potential_self_consistency_residual": 1.7920625497637395e-16,
+          "outside_stationarity_residual": 3.340077508815507e-05,
+          "reduced_gap_hartree": 0.0,
+          "basis_dimension": 186,
+          "physical_energy_identity_error_hartree": 7.105427357601002e-15
+        },
+        {
+          "update": 20,
+          "physical_total_energy_hartree": -15.769192300601187,
+          "potential_self_consistency_residual": 1.7920625497637395e-16,
+          "outside_stationarity_residual": 3.340077508815507e-05,
+          "reduced_gap_hartree": 0.0,
+          "basis_dimension": 186,
+          "physical_energy_identity_error_hartree": 7.105427357601002e-15
+        },
+        {
+          "update": 21,
+          "physical_total_energy_hartree": -15.769192300601187,
+          "potential_self_consistency_residual": 1.7920625497637395e-16,
+          "outside_stationarity_residual": 3.340077508815507e-05,
+          "reduced_gap_hartree": 0.0,
+          "basis_dimension": 186,
+          "physical_energy_identity_error_hartree": 7.105427357601002e-15
+        },
+        {
+          "update": 22,
+          "physical_total_energy_hartree": -15.769192300601187,
+          "potential_self_consistency_residual": 1.7920625497637395e-16,
+          "outside_stationarity_residual": 3.340077508815507e-05,
+          "reduced_gap_hartree": 0.0,
+          "basis_dimension": 186,
+          "physical_energy_identity_error_hartree": 7.105427357601002e-15
+        },
+        {
+          "update": 23,
+          "physical_total_energy_hartree": -15.769192300601187,
+          "potential_self_consistency_residual": 1.7920625497637395e-16,
+          "outside_stationarity_residual": 3.340077508815507e-05,
+          "reduced_gap_hartree": 0.0,
+          "basis_dimension": 186,
+          "physical_energy_identity_error_hartree": 7.105427357601002e-15
+        },
+        {
+          "update": 24,
+          "physical_total_energy_hartree": -15.769192300601187,
+          "potential_self_consistency_residual": 1.7920625497637395e-16,
+          "outside_stationarity_residual": 3.340077508815507e-05,
+          "reduced_gap_hartree": 0.0,
+          "basis_dimension": 186,
+          "physical_energy_identity_error_hartree": 7.105427357601002e-15
+        },
+        {
+          "update": 25,
+          "physical_total_energy_hartree": -15.769192300601187,
+          "potential_self_consistency_residual": 1.7920625497637395e-16,
+          "outside_stationarity_residual": 3.340077508815507e-05,
+          "reduced_gap_hartree": 0.0,
+          "basis_dimension": 186,
+          "physical_energy_identity_error_hartree": 7.105427357601002e-15
+        },
+        {
+          "update": 26,
+          "physical_total_energy_hartree": -15.769192300601187,
+          "potential_self_consistency_residual": 1.7920625497637395e-16,
+          "outside_stationarity_residual": 3.340077508815507e-05,
+          "reduced_gap_hartree": 0.0,
+          "basis_dimension": 186,
+          "physical_energy_identity_error_hartree": 7.105427357601002e-15
+        },
+        {
+          "update": 27,
+          "physical_total_energy_hartree": -15.769192300601187,
+          "potential_self_consistency_residual": 1.7920625497637395e-16,
+          "outside_stationarity_residual": 3.340077508815507e-05,
+          "reduced_gap_hartree": 0.0,
+          "basis_dimension": 186,
+          "physical_energy_identity_error_hartree": 7.105427357601002e-15
+        },
+        {
+          "update": 28,
+          "physical_total_energy_hartree": -15.769192300601187,
+          "potential_self_consistency_residual": 1.7920625497637395e-16,
+          "outside_stationarity_residual": 3.340077508815507e-05,
+          "reduced_gap_hartree": 0.0,
+          "basis_dimension": 186,
+          "physical_energy_identity_error_hartree": 7.105427357601002e-15
+        },
+        {
+          "update": 29,
+          "physical_total_energy_hartree": -15.769192300601187,
+          "potential_self_consistency_residual": 1.7920625497637395e-16,
+          "outside_stationarity_residual": 3.340077508815507e-05,
+          "reduced_gap_hartree": 0.0,
+          "basis_dimension": 186,
+          "physical_energy_identity_error_hartree": 7.105427357601002e-15
+        },
+        {
+          "update": 30,
+          "physical_total_energy_hartree": -15.769192300601187,
+          "potential_self_consistency_residual": 1.7920625497637395e-16,
+          "outside_stationarity_residual": 3.340077508815507e-05,
+          "reduced_gap_hartree": 0.0,
+          "basis_dimension": 186,
+          "physical_energy_identity_error_hartree": 7.105427357601002e-15
+        },
+        {
+          "update": 31,
+          "physical_total_energy_hartree": -15.769192300601187,
+          "potential_self_consistency_residual": 1.7920625497637395e-16,
+          "outside_stationarity_residual": 3.340077508815507e-05,
+          "reduced_gap_hartree": 0.0,
+          "basis_dimension": 186,
+          "physical_energy_identity_error_hartree": 7.105427357601002e-15
+        },
+        {
+          "update": 32,
+          "physical_total_energy_hartree": -15.769192300601187,
+          "potential_self_consistency_residual": 1.7920625497637395e-16,
+          "outside_stationarity_residual": 3.340077508815507e-05,
+          "reduced_gap_hartree": 0.0,
+          "basis_dimension": 186,
+          "physical_energy_identity_error_hartree": 7.105427357601002e-15
+        }
+      ],
+      "xc_potential_accepted": false,
+      "new_reference_generated": false,
+      "oracle_density_used_for_prediction": false,
+      "post_interruption_development_completion": true
+    },
+    {
+      "id": "BeH2_631g_2.75_new",
+      "prediction_valid": false,
+      "self_consistent": false,
+      "physical_total_energy_hartree": -15.614780296865579,
+      "energy_error_kcal": 0.0005775467024840825,
+      "reference_energy_hartree": -15.614781217244834,
+      "number_error": 6.217248937900877e-15,
+      "minimum_physical_occupation": 6.414192950422421e-05,
+      "maximum_physical_occupation": 1.9998552919027754,
+      "kinetic_converged": true,
+      "kinetic_gap_hartree": 2.6645352591003757e-15,
+      "ks_commutator_norm": 9.750653417321823e-13,
+      "global_check": null,
+      "restart_checks": {
+        "passed": true,
+        "old_dimension": 186,
+        "restarted_dimension": 2,
+        "retained_ensemble_channels": 1,
+        "discarded_trace": 8.881784197001252e-16,
+        "ensemble_operator_error": 1.1651706286473188e-15,
+        "universal_energy_change_hartree": 1.7763568394002505e-14,
+        "density_change_norm": 1.6395269035563863e-15,
+        "input_retention_error": 2.3737364012460554e-16,
+        "saved_occupied_spin_squared_norm": 9.034018823397714e-11,
+        "full_physical_hamiltonian_used": true
+      },
+      "history": [
+        {
+          "update": 0,
+          "physical_total_energy_hartree": -15.598615579729437,
+          "potential_self_consistency_residual": 0.014208347272007555,
+          "outside_stationarity_residual": 0.0952734636319874,
+          "reduced_gap_hartree": 2.192912518239609e-12,
+          "basis_dimension": 20,
+          "physical_energy_identity_error_hartree": 2.6712884833822448e-14
+        },
+        {
+          "update": 1,
+          "physical_total_energy_hartree": -15.603409489243727,
+          "potential_self_consistency_residual": 0.022193415179904637,
+          "outside_stationarity_residual": 0.06553905242041648,
+          "reduced_gap_hartree": 7.242206834234821e-12,
+          "basis_dimension": 38,
+          "physical_energy_identity_error_hartree": 3.0029147571331016e-15
+        },
+        {
+          "update": 2,
+          "physical_total_energy_hartree": -15.608071837198139,
+          "potential_self_consistency_residual": 0.019446659463829678,
+          "outside_stationarity_residual": 0.06630029887940701,
+          "reduced_gap_hartree": 1.6966428262321642e-12,
+          "basis_dimension": 56,
+          "physical_energy_identity_error_hartree": 2.0532051536389928e-14
+        },
+        {
+          "update": 3,
+          "physical_total_energy_hartree": -15.61078940271804,
+          "potential_self_consistency_residual": 0.013022820237048269,
+          "outside_stationarity_residual": 0.05511467586812309,
+          "reduced_gap_hartree": 3.218980637598179e-12,
+          "basis_dimension": 74,
+          "physical_energy_identity_error_hartree": 2.113831028618951e-14
+        },
+        {
+          "update": 4,
+          "physical_total_energy_hartree": -15.612921651853974,
+          "potential_self_consistency_residual": 0.009491802453274604,
+          "outside_stationarity_residual": 0.05035180288326624,
+          "reduced_gap_hartree": 9.796385924687456e-12,
+          "basis_dimension": 92,
+          "physical_energy_identity_error_hartree": 2.8408136574457205e-14
+        },
+        {
+          "update": 5,
+          "physical_total_energy_hartree": -15.614166331371646,
+          "potential_self_consistency_residual": 0.004224795713681353,
+          "outside_stationarity_residual": 0.03660503118088783,
+          "reduced_gap_hartree": 7.907452470590215e-12,
+          "basis_dimension": 110,
+          "physical_energy_identity_error_hartree": 1.4795454832540293e-14
+        },
+        {
+          "update": 6,
+          "physical_total_energy_hartree": -15.614621389404775,
+          "potential_self_consistency_residual": 0.0020955951779927915,
+          "outside_stationarity_residual": 0.01926416153179944,
+          "reduced_gap_hartree": 5.6070703635668906e-12,
+          "basis_dimension": 128,
+          "physical_energy_identity_error_hartree": 8.493622878592497e-16
+        },
+        {
+          "update": 7,
+          "physical_total_energy_hartree": -15.614747213983662,
+          "potential_self_consistency_residual": 0.0014157427937855909,
+          "outside_stationarity_residual": 0.010132107048397036,
+          "reduced_gap_hartree": 2.8537172624965024e-12,
+          "basis_dimension": 146,
+          "physical_energy_identity_error_hartree": 1.9362175792937914e-14
+        },
+        {
+          "update": 8,
+          "physical_total_energy_hartree": -15.614772753642256,
+          "potential_self_consistency_residual": 0.00027216605543074746,
+          "outside_stationarity_residual": 0.005007213379610936,
+          "reduced_gap_hartree": 3.993250174971763e-12,
+          "basis_dimension": 164,
+          "physical_energy_identity_error_hartree": 1.641789236524618e-14
+        },
+        {
+          "update": 9,
+          "physical_total_energy_hartree": -15.614779215741986,
+          "potential_self_consistency_residual": 9.129090738658881e-05,
+          "outside_stationarity_residual": 0.0025713489887079204,
+          "reduced_gap_hartree": 8.536282791737904e-12,
+          "basis_dimension": 182,
+          "physical_energy_identity_error_hartree": 2.693697795732473e-14
+        },
+        {
+          "update": 10,
+          "physical_total_energy_hartree": -15.614780296522273,
+          "potential_self_consistency_residual": 2.7173841201812413e-05,
+          "outside_stationarity_residual": 0.001772641211961172,
+          "reduced_gap_hartree": 8.236966664298961e-12,
+          "basis_dimension": 191,
+          "physical_energy_identity_error_hartree": 1.0817329710917402e-14
+        },
+        {
+          "update": 11,
+          "physical_total_energy_hartree": -15.614780296865579,
+          "potential_self_consistency_residual": 1.4454900195662757e-15,
+          "outside_stationarity_residual": 0.001773621107270197,
+          "reduced_gap_hartree": 8.881784197001252e-16,
+          "basis_dimension": 191,
+          "physical_energy_identity_error_hartree": 1.0447206983328561e-30
+        },
+        {
+          "update": 12,
+          "physical_total_energy_hartree": -15.614780296865579,
+          "potential_self_consistency_residual": 1.4454900195662757e-15,
+          "outside_stationarity_residual": 0.001773621107270197,
+          "reduced_gap_hartree": 8.881784197001252e-16,
+          "basis_dimension": 191,
+          "physical_energy_identity_error_hartree": 1.0447206983328561e-30
+        },
+        {
+          "update": 13,
+          "physical_total_energy_hartree": -15.614780296865579,
+          "potential_self_consistency_residual": 1.4454900195662757e-15,
+          "outside_stationarity_residual": 0.001773621107270197,
+          "reduced_gap_hartree": 8.881784197001252e-16,
+          "basis_dimension": 191,
+          "physical_energy_identity_error_hartree": 1.0447206983328561e-30
+        },
+        {
+          "update": 14,
+          "physical_total_energy_hartree": -15.614780296865579,
+          "potential_self_consistency_residual": 1.4454900195662757e-15,
+          "outside_stationarity_residual": 0.001773621107270197,
+          "reduced_gap_hartree": 8.881784197001252e-16,
+          "basis_dimension": 191,
+          "physical_energy_identity_error_hartree": 1.0447206983328561e-30
+        },
+        {
+          "update": 15,
+          "physical_total_energy_hartree": -15.614780296865579,
+          "potential_self_consistency_residual": 1.4454900195662757e-15,
+          "outside_stationarity_residual": 0.001773621107270197,
+          "reduced_gap_hartree": 8.881784197001252e-16,
+          "basis_dimension": 191,
+          "physical_energy_identity_error_hartree": 1.0447206983328561e-30
+        },
+        {
+          "update": 16,
+          "physical_total_energy_hartree": -15.614780296865579,
+          "potential_self_consistency_residual": 1.4454900195662757e-15,
+          "outside_stationarity_residual": 0.001773621107270197,
+          "reduced_gap_hartree": 8.881784197001252e-16,
+          "basis_dimension": 191,
+          "physical_energy_identity_error_hartree": 1.0447206983328561e-30
+        },
+        {
+          "update": 17,
+          "physical_total_energy_hartree": -15.614780296865579,
+          "potential_self_consistency_residual": 1.4454900195662757e-15,
+          "outside_stationarity_residual": 0.001773621107270197,
+          "reduced_gap_hartree": 8.881784197001252e-16,
+          "basis_dimension": 191,
+          "physical_energy_identity_error_hartree": 1.0447206983328561e-30
+        },
+        {
+          "update": 18,
+          "physical_total_energy_hartree": -15.614780296865579,
+          "potential_self_consistency_residual": 1.4454900195662757e-15,
+          "outside_stationarity_residual": 0.001773621107270197,
+          "reduced_gap_hartree": 8.881784197001252e-16,
+          "basis_dimension": 191,
+          "physical_energy_identity_error_hartree": 1.0447206983328561e-30
+        },
+        {
+          "update": 19,
+          "physical_total_energy_hartree": -15.614780296865579,
+          "potential_self_consistency_residual": 1.4454900195662757e-15,
+          "outside_stationarity_residual": 0.001773621107270197,
+          "reduced_gap_hartree": 8.881784197001252e-16,
+          "basis_dimension": 191,
+          "physical_energy_identity_error_hartree": 1.0447206983328561e-30
+        },
+        {
+          "update": 20,
+          "physical_total_energy_hartree": -15.614780296865579,
+          "potential_self_consistency_residual": 1.4454900195662757e-15,
+          "outside_stationarity_residual": 0.001773621107270197,
+          "reduced_gap_hartree": 8.881784197001252e-16,
+          "basis_dimension": 191,
+          "physical_energy_identity_error_hartree": 1.0447206983328561e-30
+        },
+        {
+          "update": 21,
+          "physical_total_energy_hartree": -15.614780296865579,
+          "potential_self_consistency_residual": 1.4454900195662757e-15,
+          "outside_stationarity_residual": 0.001773621107270197,
+          "reduced_gap_hartree": 8.881784197001252e-16,
+          "basis_dimension": 191,
+          "physical_energy_identity_error_hartree": 1.0447206983328561e-30
+        },
+        {
+          "update": 22,
+          "physical_total_energy_hartree": -15.614780296865579,
+          "potential_self_consistency_residual": 1.4454900195662757e-15,
+          "outside_stationarity_residual": 0.001773621107270197,
+          "reduced_gap_hartree": 8.881784197001252e-16,
+          "basis_dimension": 191,
+          "physical_energy_identity_error_hartree": 1.0447206983328561e-30
+        },
+        {
+          "update": 23,
+          "physical_total_energy_hartree": -15.614780296865579,
+          "potential_self_consistency_residual": 1.4454900195662757e-15,
+          "outside_stationarity_residual": 0.001773621107270197,
+          "reduced_gap_hartree": 8.881784197001252e-16,
+          "basis_dimension": 191,
+          "physical_energy_identity_error_hartree": 1.0447206983328561e-30
+        },
+        {
+          "update": 24,
+          "physical_total_energy_hartree": -15.614780296865579,
+          "potential_self_consistency_residual": 1.4454900195662757e-15,
+          "outside_stationarity_residual": 0.001773621107270197,
+          "reduced_gap_hartree": 8.881784197001252e-16,
+          "basis_dimension": 191,
+          "physical_energy_identity_error_hartree": 1.0447206983328561e-30
+        },
+        {
+          "update": 25,
+          "physical_total_energy_hartree": -15.614780296865579,
+          "potential_self_consistency_residual": 1.4454900195662757e-15,
+          "outside_stationarity_residual": 0.001773621107270197,
+          "reduced_gap_hartree": 8.881784197001252e-16,
+          "basis_dimension": 191,
+          "physical_energy_identity_error_hartree": 1.0447206983328561e-30
+        },
+        {
+          "update": 26,
+          "physical_total_energy_hartree": -15.614780296865579,
+          "potential_self_consistency_residual": 1.4454900195662757e-15,
+          "outside_stationarity_residual": 0.001773621107270197,
+          "reduced_gap_hartree": 8.881784197001252e-16,
+          "basis_dimension": 191,
+          "physical_energy_identity_error_hartree": 1.0447206983328561e-30
+        },
+        {
+          "update": 27,
+          "physical_total_energy_hartree": -15.614780296865579,
+          "potential_self_consistency_residual": 1.4454900195662757e-15,
+          "outside_stationarity_residual": 0.001773621107270197,
+          "reduced_gap_hartree": 8.881784197001252e-16,
+          "basis_dimension": 191,
+          "physical_energy_identity_error_hartree": 1.0447206983328561e-30
+        },
+        {
+          "update": 28,
+          "physical_total_energy_hartree": -15.614780296865579,
+          "potential_self_consistency_residual": 1.4454900195662757e-15,
+          "outside_stationarity_residual": 0.001773621107270197,
+          "reduced_gap_hartree": 8.881784197001252e-16,
+          "basis_dimension": 191,
+          "physical_energy_identity_error_hartree": 1.0447206983328561e-30
+        },
+        {
+          "update": 29,
+          "physical_total_energy_hartree": -15.614780296865579,
+          "potential_self_consistency_residual": 1.4454900195662757e-15,
+          "outside_stationarity_residual": 0.001773621107270197,
+          "reduced_gap_hartree": 8.881784197001252e-16,
+          "basis_dimension": 191,
+          "physical_energy_identity_error_hartree": 1.0447206983328561e-30
+        },
+        {
+          "update": 30,
+          "physical_total_energy_hartree": -15.614780296865579,
+          "potential_self_consistency_residual": 1.4454900195662757e-15,
+          "outside_stationarity_residual": 0.001773621107270197,
+          "reduced_gap_hartree": 8.881784197001252e-16,
+          "basis_dimension": 191,
+          "physical_energy_identity_error_hartree": 1.0447206983328561e-30
+        },
+        {
+          "update": 31,
+          "physical_total_energy_hartree": -15.614780296865579,
+          "potential_self_consistency_residual": 1.4454900195662757e-15,
+          "outside_stationarity_residual": 0.001773621107270197,
+          "reduced_gap_hartree": 8.881784197001252e-16,
+          "basis_dimension": 191,
+          "physical_energy_identity_error_hartree": 1.0447206983328561e-30
+        },
+        {
+          "update": 32,
+          "physical_total_energy_hartree": -15.614780296865579,
+          "potential_self_consistency_residual": 1.4454900195662757e-15,
+          "outside_stationarity_residual": 0.001773621107270197,
+          "reduced_gap_hartree": 8.881784197001252e-16,
+          "basis_dimension": 191,
+          "physical_energy_identity_error_hartree": 1.0447206983328561e-30
+        }
+      ],
+      "xc_potential_accepted": false,
+      "new_reference_generated": false,
+      "oracle_density_used_for_prediction": false,
+      "post_interruption_development_completion": true
+    }
+  ],
+  "failures": [],
+  "peak_cuda_bytes": 1698854912,
+  "balanced_stretch_contrast_error_kcal": 0.000577395773596403
+}

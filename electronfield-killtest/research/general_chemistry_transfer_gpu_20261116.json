@@ -1,0 +1,333 @@
+{
+  "created_utc": "2026-11-17T01:02:16.333259+00:00",
+  "device": "cuda",
+  "protocol_sha256": "9093262a85e4c2645e8c80bfdff477d7204383e7acc98c5518ac41beb5649de2",
+  "protocol": {
+    "purpose": "Independent chemistry and electron-count development evidence before speed work",
+    "created_before_reference_generation": true,
+    "model": "SpinNumberState with exact number and total-spin labels, channels=2",
+    "basis": "sto-3g",
+    "projection": "Complete stated AO basis, no frozen core or active orbital projection",
+    "input_orbitals": "One bounded CUDA Hartree-Fock determinant; no retries if unconverged",
+    "objective": "Actual molecular Hamiltonian Rayleigh quotient; no reference-energy loss",
+    "optimizer": {
+      "name": "Adam",
+      "steps": 400,
+      "lr": 0.02,
+      "cosine_final_lr": 0.0002
+    },
+    "cases": [
+      {
+        "id": "LiH_neutral_1.595",
+        "atom": "Li 0 0 0; H 0 0 1.595",
+        "charge": 0,
+        "spin": 0,
+        "electrons": 4
+      },
+      {
+        "id": "LiH_neutral_2.50",
+        "atom": "Li 0 0 0; H 0 0 2.50",
+        "charge": 0,
+        "spin": 0,
+        "electrons": 4
+      },
+      {
+        "id": "BeH2_neutral_1.33",
+        "atom": "Be 0 0 0; H 0 0 -1.33; H 0 0 1.33",
+        "charge": 0,
+        "spin": 0,
+        "electrons": 6
+      },
+      {
+        "id": "BeH2_neutral_2.10",
+        "atom": "Be 0 0 0; H 0 0 -2.10; H 0 0 2.10",
+        "charge": 0,
+        "spin": 0,
+        "electrons": 6
+      }
+    ],
+    "assessment": "Report every case, number, spin, variational sign, reference retention, maximum error and balanced bond-stretch contrasts. No replacements, no label-driven seed/rank/iteration changes.",
+    "reference": "New CUDA exact diagonalization in the same complete minimal basis, performed after optimization",
+    "limitations": [
+      "Not a complete-basis chemical accuracy result",
+      "Not broad public/hidden-suite validation",
+      "Per-system variational optimization, not an amortized learned energy predictor",
+      "Unconstrained molecular-state test does not establish an XC functional",
+      "Procedural new cases, not a sequestered benchmark"
+    ]
+  },
+  "results": [
+    {
+      "id": "LiH_neutral_1.595",
+      "electrons": 4,
+      "spatial_orbitals": 6,
+      "complete_stated_basis": true,
+      "basis": "sto-3g",
+      "sector_dimension": 225,
+      "parameters": 124,
+      "bond_dimensions": [
+        1,
+        4,
+        15,
+        18,
+        15,
+        4,
+        1
+      ],
+      "input_reference_status": {
+        "converged": true,
+        "cycles": 9,
+        "residual": 2.3551579821371697e-08
+      },
+      "energy_error_kcal": 0.07122182209831537,
+      "model_energy_hartree": -7.882288433092339,
+      "exact_energy_hartree": -7.8824019322904375,
+      "particle_number": 3.9999999999999996,
+      "model_spin_squared": -1.0850567391103937e-27,
+      "reference_spin_squared": -1.5782686310413376e-22,
+      "reference_not_degraded": true,
+      "independent_contraction_error_hartree": 0.0,
+      "variational_sign_valid": true,
+      "history": [
+        {
+          "id": "LiH_neutral_1.595",
+          "step": 1,
+          "lowering_from_input_kcal": -0.00042570734914476686,
+          "seconds": 7.084178399000001
+        },
+        {
+          "id": "LiH_neutral_1.595",
+          "step": 100,
+          "lowering_from_input_kcal": -12.714502130769661,
+          "seconds": 8.212407759000001
+        },
+        {
+          "id": "LiH_neutral_1.595",
+          "step": 200,
+          "lowering_from_input_kcal": -12.716128145833984,
+          "seconds": 9.181887287999999
+        },
+        {
+          "id": "LiH_neutral_1.595",
+          "step": 300,
+          "lowering_from_input_kcal": -12.716184588898525,
+          "seconds": 10.149304925
+        },
+        {
+          "id": "LiH_neutral_1.595",
+          "step": 400,
+          "lowering_from_input_kcal": -12.716211522098952,
+          "seconds": 11.157232078
+        }
+      ],
+      "seconds": 11.273202189
+    },
+    {
+      "id": "LiH_neutral_2.50",
+      "electrons": 4,
+      "spatial_orbitals": 6,
+      "complete_stated_basis": true,
+      "basis": "sto-3g",
+      "sector_dimension": 225,
+      "parameters": 124,
+      "bond_dimensions": [
+        1,
+        4,
+        15,
+        18,
+        15,
+        4,
+        1
+      ],
+      "input_reference_status": {
+        "converged": true,
+        "cycles": 10,
+        "residual": 3.4261384990396114e-08
+      },
+      "energy_error_kcal": 0.055059916495558955,
+      "model_energy_hartree": -7.823636139905601,
+      "exact_energy_hartree": -7.823723883467694,
+      "particle_number": 3.999999999999999,
+      "model_spin_squared": 1.4095725200578582e-27,
+      "reference_spin_squared": 1.1659825800846767e-22,
+      "reference_not_degraded": true,
+      "independent_contraction_error_hartree": 7.105427357601002e-15,
+      "variational_sign_valid": true,
+      "history": [
+        {
+          "id": "LiH_neutral_2.50",
+          "step": 1,
+          "lowering_from_input_kcal": 0.06117596826323492,
+          "seconds": 0.17564144299999995
+        },
+        {
+          "id": "LiH_neutral_2.50",
+          "step": 100,
+          "lowering_from_input_kcal": -33.06767464725825,
+          "seconds": 1.1936969079999997
+        },
+        {
+          "id": "LiH_neutral_2.50",
+          "step": 200,
+          "lowering_from_input_kcal": -33.078271049988494,
+          "seconds": 2.259049849
+        },
+        {
+          "id": "LiH_neutral_2.50",
+          "step": 300,
+          "lowering_from_input_kcal": -33.1014570541861,
+          "seconds": 3.2407676499999987
+        },
+        {
+          "id": "LiH_neutral_2.50",
+          "step": 400,
+          "lowering_from_input_kcal": -33.10895022566649,
+          "seconds": 4.0393860209999985
+        }
+      ],
+      "seconds": 4.091471284000001
+    },
+    {
+      "id": "BeH2_neutral_1.33",
+      "electrons": 6,
+      "spatial_orbitals": 7,
+      "complete_stated_basis": true,
+      "basis": "sto-3g",
+      "sector_dimension": 1225,
+      "parameters": 253,
+      "bond_dimensions": [
+        1,
+        4,
+        15,
+        34,
+        34,
+        15,
+        4,
+        1
+      ],
+      "input_reference_status": {
+        "converged": true,
+        "cycles": 11,
+        "residual": 4.636402821441999e-09
+      },
+      "energy_error_kcal": 1.5765337733457023,
+      "model_energy_hartree": -15.592605196085156,
+      "exact_energy_hartree": -15.595117562573101,
+      "particle_number": 6.0,
+      "model_spin_squared": 8.143524753670335e-24,
+      "reference_spin_squared": -4.882416144984095e-19,
+      "reference_not_degraded": true,
+      "independent_contraction_error_hartree": 2.1316282072803006e-14,
+      "variational_sign_valid": true,
+      "history": [
+        {
+          "id": "BeH2_neutral_1.33",
+          "step": 1,
+          "lowering_from_input_kcal": -0.004718435404611238,
+          "seconds": 0.1851400969999979
+        },
+        {
+          "id": "BeH2_neutral_1.33",
+          "step": 100,
+          "lowering_from_input_kcal": -13.83950930432231,
+          "seconds": 1.1837933209999996
+        },
+        {
+          "id": "BeH2_neutral_1.33",
+          "step": 200,
+          "lowering_from_input_kcal": -20.396684400889864,
+          "seconds": 2.278090807999998
+        },
+        {
+          "id": "BeH2_neutral_1.33",
+          "step": 300,
+          "lowering_from_input_kcal": -20.398317451414428,
+          "seconds": 3.3826141629999995
+        },
+        {
+          "id": "BeH2_neutral_1.33",
+          "step": 400,
+          "lowering_from_input_kcal": -20.39833443675689,
+          "seconds": 4.407193297999999
+        }
+      ],
+      "seconds": 4.630930790000001
+    },
+    {
+      "id": "BeH2_neutral_2.10",
+      "electrons": 6,
+      "spatial_orbitals": 7,
+      "complete_stated_basis": true,
+      "basis": "sto-3g",
+      "sector_dimension": 1225,
+      "parameters": 253,
+      "bond_dimensions": [
+        1,
+        4,
+        15,
+        34,
+        34,
+        15,
+        4,
+        1
+      ],
+      "input_reference_status": {
+        "converged": true,
+        "cycles": 13,
+        "residual": 6.212083021143856e-08
+      },
+      "energy_error_kcal": 4.184594364186509,
+      "model_energy_hartree": -15.41384997557262,
+      "exact_energy_hartree": -15.420518551168001,
+      "particle_number": 6.000000000000001,
+      "model_spin_squared": 5.818809321280245e-19,
+      "reference_spin_squared": 2.7980050062990843e-18,
+      "reference_not_degraded": true,
+      "independent_contraction_error_hartree": 0.0,
+      "variational_sign_valid": true,
+      "history": [
+        {
+          "id": "BeH2_neutral_2.10",
+          "step": 1,
+          "lowering_from_input_kcal": 0.036587379794529175,
+          "seconds": 0.17880826799999738
+        },
+        {
+          "id": "BeH2_neutral_2.10",
+          "step": 100,
+          "lowering_from_input_kcal": -62.22510997960058,
+          "seconds": 1.1753778409999995
+        },
+        {
+          "id": "BeH2_neutral_2.10",
+          "step": 200,
+          "lowering_from_input_kcal": -62.44797990801976,
+          "seconds": 2.1782053579999996
+        },
+        {
+          "id": "BeH2_neutral_2.10",
+          "step": 300,
+          "lowering_from_input_kcal": -62.58549155608852,
+          "seconds": 3.234704193999999
+        },
+        {
+          "id": "BeH2_neutral_2.10",
+          "step": 400,
+          "lowering_from_input_kcal": -62.585739176263196,
+          "seconds": 4.097984223000001
+        }
+      ],
+      "seconds": 4.267627379999997
+    }
+  ],
+  "failures": [],
+  "reference_energy_fitted": false,
+  "mae_kcal": 1.4718524690315216,
+  "max_absolute_error_kcal": 4.184594364186509,
+  "all_cases_below_one": false,
+  "balanced_stretch_errors_kcal": {
+    "LiH": -0.01616190560275642,
+    "BeH2": 2.6080605908408065
+  },
+  "peak_cuda_bytes": 93867008
+}

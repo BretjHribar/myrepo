@@ -1,0 +1,15 @@
+{
+  "purpose": "Verify literal Hamiltonian responses and complete-multiplet truncation for the compositional physical state",
+  "seed": 17112043,
+  "sites": 4,
+  "state_cases": [{"electrons": 4, "twice_spin": 0}, {"electrons": 3, "twice_spin": 1}],
+  "ancilla": 2,
+  "channels_per_sector": 2,
+  "untruncated_maximum_bond": 256,
+  "bounded_maximum_bond": 6,
+  "relative_singular_tolerance": 1e-12,
+  "operator_and_physical_tolerance": 1e-10,
+  "maximum_raw_intermediate_bytes": 1500000000,
+  "no_reference_or_optimization": true,
+  "scope": "New response contraction and symmetry-preserving truncation only; no chemistry, full-system residual bound or speed claim"
+}

@@ -1,0 +1,66 @@
+{
+  "created_utc": "2026-11-17T01:00:27.577969+00:00",
+  "device": "cuda",
+  "scope": "N=4, six-orbital fixed-spatial-moment constrained search; no broad/full-density XC claim",
+  "reference_energy_fitted": false,
+  "external_potential_in_objective": false,
+  "status": "feasible",
+  "density_moment_residual": 1.1028089755320526e-14,
+  "history": [
+    {
+      "step": 0,
+      "universal_energy_hartree": 3.63173196552976,
+      "moment_residual": 5.186348904421688e-14,
+      "stationarity_residual": 0.011819976545993953
+    },
+    {
+      "step": 10,
+      "universal_energy_hartree": 3.6313908241930117,
+      "moment_residual": 1.5951968361491802e-10,
+      "stationarity_residual": 0.002127128313292807
+    },
+    {
+      "step": 20,
+      "universal_energy_hartree": 3.6313715556086543,
+      "moment_residual": 2.6364838996790827e-13,
+      "stationarity_residual": 0.000635406403635471
+    },
+    {
+      "step": 30,
+      "universal_energy_hartree": 3.6313489193646356,
+      "moment_residual": 7.225646466350816e-10,
+      "stationarity_residual": 0.0026506469297755213
+    },
+    {
+      "step": 40,
+      "universal_energy_hartree": 3.6310727103405793,
+      "moment_residual": 5.886338465590076e-11,
+      "stationarity_residual": 0.00259618438195075
+    },
+    {
+      "step": 50,
+      "universal_energy_hartree": 3.6309523527955343,
+      "moment_residual": 4.8741838771540235e-12,
+      "stationarity_residual": 0.0010510212510182945
+    },
+    {
+      "step": 60,
+      "universal_energy_hartree": 3.6309385589882246,
+      "moment_residual": 3.862362085556059e-12,
+      "stationarity_residual": 0.0007939388516847592
+    },
+    {
+      "step": 70,
+      "universal_energy_hartree": 3.6309354709055874,
+      "moment_residual": 3.186881874683804e-14,
+      "stationarity_residual": 0.00032498267328420646
+    }
+  ],
+  "oracle_residual": 2.3340285043738453e-15,
+  "seconds": 21.561455785,
+  "peak_cuda_bytes": 28862976,
+  "functional_error_kcal": 0.29547262104425714,
+  "potential_difference_norm": 0.13743560617853118,
+  "stationarity_residual": 0.00027171428374026755,
+  "steps": 80
+}

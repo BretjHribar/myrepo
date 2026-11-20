@@ -1,0 +1,10 @@
+{
+  "status": "interrupted_before_first_completed_ground_state",
+  "reason": "No first ground-state solve returned after more than eight minutes; observed GPU memory use was 7931 MiB",
+  "elapsed_guard_seconds": 518.625,
+  "interrupt": "SIGINT to the verified dedicated research process; traceback returned from torch.linalg.eigh inside cached_ritz",
+  "energy_or_potential_accepted": false,
+  "mathematical_candidate_rejected": false,
+  "followup": "Reuse the existing preallocated Ritz implementation with the same physical objective, seed construction, dimension cap and residual tolerances; keep inner progress visible",
+  "limits": "Memory allocation or eigensolver nonprogress is suspected, not proved; do not present this interruption as an accuracy result or speed benchmark"
+}

@@ -1,0 +1,33 @@
+{
+  "created_utc": "2026-11-17T01:17:06.911378+00:00",
+  "device": "cuda",
+  "scope": "Two independent ordered singlet fragments, ideal disconnected Hamiltonian; N=8, 12 spatial orbitals",
+  "normalized_product_overlap_squared": 1.0000000000000009,
+  "energy_additivity_error_hartree": 3.552713678800501e-15,
+  "particle_number": 8.000000000000002,
+  "spin_squared": -4.126223707796702e-18,
+  "bond_dimensions": [
+    1,
+    4,
+    15,
+    34,
+    63,
+    68,
+    68,
+    68,
+    63,
+    34,
+    15,
+    4,
+    1
+  ],
+  "reference_regenerated": false,
+  "seconds": 2.2195190040000004,
+  "peak_cuda_bytes": 17763840,
+  "limitations": [
+    "Known component partition and orbital order are supplied",
+    "Singlet composition only",
+    "Not an automatic fragmentation algorithm",
+    "Global residual completion still lacks a fragment factorization guarantee"
+  ]
+}

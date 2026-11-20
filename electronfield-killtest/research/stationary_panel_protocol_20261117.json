@@ -1,0 +1,10 @@
+{
+  "purpose": "Finish remaining physical residuals uniformly, without repeating completed solves or tuning reference errors",
+  "selection": "Existing development states with full Hamiltonian residual above 1e-5 Hartree, in descending residual order",
+  "initialization": "Recover saved-state Schmidt support together with the input determinant",
+  "maximum_adaptive_updates": 32,
+  "stopping": "Original full residual criterion only; reference-energy errors are not used",
+  "completed_cases": "Keep already converged He2, BeH2 and continued H4 states without rerunning them",
+  "reference_use": "Existing labels for final assessment only, never regenerated",
+  "limits": "Development convergence completion, not a new blind accuracy claim; no speed work"
+}

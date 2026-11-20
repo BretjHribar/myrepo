@@ -1,0 +1,239 @@
+{
+  "created_utc": "2026-11-17T11:08:16.810598+00:00",
+  "device": "cuda",
+  "protocol": {
+    "purpose": "Replace the failed cold pure-state inverse search with a feasible fixed-N singlet ensemble and physical response spaces",
+    "universal_input_keys": [
+      "kinetic",
+      "eri",
+      "operators",
+      "bits",
+      "electrons"
+    ],
+    "cases": [
+      {
+        "id": "BeH2_631g_1.65_new",
+        "path_index": 0
+      },
+      {
+        "id": "BeH2_631g_2.75_new",
+        "path_index": 1
+      }
+    ],
+    "input": "Saved ensemble input densities from prior potential paths; all are development/oracle-density diagnostics",
+    "maximum_response_space_dimension": 192,
+    "maximum_response_updates": 8,
+    "stationarity_response_directions": 8,
+    "density_response_directions": 8,
+    "maximum_density_response_states": 4,
+    "keep_complete_source_degeneracies": true,
+    "density_residual_tolerance": 1e-08,
+    "inner_dual_tolerance": 5e-10,
+    "stationarity_residual_tolerance_hartree": 1e-06,
+    "interacting_entropy_allowance_hartree": 1e-05,
+    "kinetic_entropy_allowance_hartree": 1e-05,
+    "global_check_seed": 17112030,
+    "global_check_ritz_dimension": 192,
+    "global_check_residual_tolerance": 1e-08,
+    "global_check_energy_tolerance_hartree": 1e-07,
+    "initialization": "Full canonical paired-determinant lift of the input density, T+W responses and density response directions; no molecular h, nuclear potential or labels",
+    "failure_policy": "Retain the last feasible positive fixed-N ensemble and its upper energy estimate; return no XC potential unless all stationarity checks pass",
+    "assessment": "Access the saved universal energy only after each prediction stops; no error-target stopping or setting changes",
+    "limits": [
+      "Finite-basis and development inputs",
+      "Dense reduced ensemble with matrix-free full actions",
+      "Global Fock coefficient storage",
+      "Not a general learned or many-block model",
+      "No nuclear-force derivative, broad WTMAD-2 or timing claim"
+    ]
+  },
+  "results": [
+    {
+      "status": "density_dual_failed_kept_feasible",
+      "converged": false,
+      "feasible_ensemble_retained": true,
+      "xc_energy": null,
+      "xc_potential": null,
+      "density_residual": 2.603556274623444e-11,
+      "spin_squared_basis_norm": 4.941533509001072e-15,
+      "ensemble_trace_error": 6.661338147750939e-16,
+      "minimum_reduced_ensemble_eigenvalue": -2.328248571216054e-18,
+      "noninteracting_density_residual": 1.888601950194214e-10,
+      "global_lowest_state_check": null,
+      "history": [
+        {
+          "update": 0,
+          "dimension": 41,
+          "density_residual": 1.6032055684420644e-11,
+          "rejected_dual_density_residual": 0.007638782217801897,
+          "source_retention_error": 3.728551783788638e-15,
+          "universal_energy_hartree": 22.825251870410263,
+          "status": "density_dual_failed_kept_feasible"
+        }
+      ],
+      "dual_history": [
+        [
+          {
+            "beta": 0.1,
+            "iterations": 80,
+            "density_residual": 0.20364947351538443,
+            "dual": 15.592884848141864
+          },
+          {
+            "beta": 1.0,
+            "iterations": 80,
+            "density_residual": 0.09325081579768779,
+            "dual": 20.0251957312353
+          },
+          {
+            "beta": 10.0,
+            "iterations": 80,
+            "density_residual": 0.09325077121890477,
+            "dual": 20.72283285739485
+          },
+          {
+            "beta": 100.0,
+            "iterations": 80,
+            "density_residual": 0.08390707037709734,
+            "dual": 21.895227754614204
+          },
+          {
+            "beta": 1000.0,
+            "iterations": 80,
+            "density_residual": 0.00416763656550778,
+            "dual": 22.773203972474217
+          },
+          {
+            "beta": 10000.0,
+            "iterations": 80,
+            "density_residual": 0.00042135637376232215,
+            "dual": 22.773278606711308
+          },
+          {
+            "beta": 100000.0,
+            "iterations": 80,
+            "density_residual": 0.0006765510567891839,
+            "dual": 22.773280267481695
+          },
+          {
+            "beta": 1131198.3621639705,
+            "iterations": 80,
+            "density_residual": 0.007638782217801897,
+            "dual": 22.77328057071064
+          }
+        ]
+      ],
+      "initial_canonical_components": 13,
+      "occupation_link_bytes": 70671744,
+      "entropy_allowance_hartree": 1e-05,
+      "limits": [
+        "Implicit fixed-basis ensemble search",
+        "Global Fock vectors and supplied spatial frame",
+        "No learned predictor or many-fragment closure claim",
+        "Potential requires separate density-path validation"
+      ],
+      "id": "BeH2_631g_1.65_new",
+      "universal_upper_minus_saved_oracle_kcal": 63.43739810860596,
+      "universal_energy_minus_saved_oracle_kcal": 63.43127083805589,
+      "xc_energy_available": false,
+      "xc_potential_available": false,
+      "external_potential_passed_to_model": false,
+      "new_reference_generated": false
+    },
+    {
+      "status": "density_dual_failed_kept_feasible",
+      "converged": false,
+      "feasible_ensemble_retained": true,
+      "xc_energy": null,
+      "xc_potential": null,
+      "density_residual": 4.4386276924159284e-11,
+      "spin_squared_basis_norm": 5.663458765092271e-15,
+      "ensemble_trace_error": 1.7763568394002505e-15,
+      "minimum_reduced_ensemble_eigenvalue": -1.4494461329986838e-17,
+      "noninteracting_density_residual": 2.8754227994987114e-10,
+      "global_lowest_state_check": null,
+      "history": [
+        {
+          "update": 0,
+          "dimension": 40,
+          "density_residual": 2.168767282166195e-11,
+          "rejected_dual_density_residual": 0.08413909793460592,
+          "source_retention_error": 3.3574406782570555e-15,
+          "universal_energy_hartree": 22.024253666986386,
+          "status": "density_dual_failed_kept_feasible"
+        }
+      ],
+      "dual_history": [
+        [
+          {
+            "beta": 0.1,
+            "iterations": 80,
+            "density_residual": 0.08677321671905393,
+            "dual": 5.046967000169843
+          },
+          {
+            "beta": 1.0,
+            "iterations": 80,
+            "density_residual": 0.5994741735888158,
+            "dual": 17.999669865800882
+          },
+          {
+            "beta": 10.0,
+            "iterations": 80,
+            "density_residual": 0.817125259838698,
+            "dual": 20.098322332327058
+          },
+          {
+            "beta": 100.0,
+            "iterations": 80,
+            "density_residual": 0.8134877390757558,
+            "dual": 20.831931382135735
+          },
+          {
+            "beta": 1000.0,
+            "iterations": 80,
+            "density_residual": 0.4237596651989935,
+            "dual": 21.628374230946154
+          },
+          {
+            "beta": 10000.0,
+            "iterations": 80,
+            "density_residual": 0.056494861833885836,
+            "dual": 21.801882253062434
+          },
+          {
+            "beta": 100000.0,
+            "iterations": 80,
+            "density_residual": 0.022741102839546466,
+            "dual": 21.802069148799468
+          },
+          {
+            "beta": 1131198.3621639705,
+            "iterations": 80,
+            "density_residual": 0.08413909793460592,
+            "dual": 21.802084580640752
+          }
+        ]
+      ],
+      "initial_canonical_components": 13,
+      "occupation_link_bytes": 70671744,
+      "entropy_allowance_hartree": 1e-05,
+      "limits": [
+        "Implicit fixed-basis ensemble search",
+        "Global Fock vectors and supplied spatial frame",
+        "No learned predictor or many-fragment closure claim",
+        "Potential requires separate density-path validation"
+      ],
+      "id": "BeH2_631g_2.75_new",
+      "universal_upper_minus_saved_oracle_kcal": 190.16055182109437,
+      "universal_energy_minus_saved_oracle_kcal": 190.15486748880454,
+      "xc_energy_available": false,
+      "xc_potential_available": false,
+      "external_potential_passed_to_model": false,
+      "new_reference_generated": false
+    }
+  ],
+  "failures": [],
+  "status": "completed",
+  "peak_cuda_bytes": 1060989952
+}

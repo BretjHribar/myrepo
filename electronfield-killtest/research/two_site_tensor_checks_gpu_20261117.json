@@ -1,0 +1,55 @@
+{
+  "created_utc": "2026-11-17T15:37:43.891441+00:00",
+  "device": "cuda",
+  "protocol": {
+    "purpose": "Verify the complete intermediate charge/spin section and exact two-site physical Hamiltonian before sector enrichment",
+    "seed": 17112057,
+    "sites": 4,
+    "electrons": 4,
+    "twice_spin": 0,
+    "center": 1,
+    "channels": 8,
+    "operator_tolerance_hartree": 1e-09,
+    "state_tolerance": 1e-10,
+    "ritz_maximum_dimension": 64,
+    "ritz_residual_tolerance_hartree": 1e-10,
+    "ritz_energy_tolerance_hartree": 1e-08,
+    "scope": "New CG path basis, sparse operator contraction, exact split and local eigenproblem; no chemical-accuracy or frontier-method benchmark"
+  },
+  "status": "completed",
+  "failures": [],
+  "result": {
+    "passed": true,
+    "physical_dimension": 20,
+    "maximum_operator_difference_hartree": 1.7763568394002505e-15,
+    "hermiticity_error_hartree": 2.220446049250313e-16,
+    "independent_overlap_error": 1.918162120516482e-15,
+    "exact_split_state_error": 2.4456933613143837e-16,
+    "local_ritz_residual_hartree": 2.7588015968399572e-15,
+    "independent_ritz_energy_error_hartree": 4.440892098500626e-16,
+    "old_determinant_middle_sectors": [
+      [
+        4,
+        0
+      ]
+    ],
+    "complete_middle_sectors": [
+      [
+        2,
+        0
+      ],
+      [
+        3,
+        1
+      ],
+      [
+        4,
+        0
+      ]
+    ],
+    "new_sectors_not_limited_to_seed": true,
+    "merged_operator_blocks": 168
+  },
+  "passed": true,
+  "peak_cuda_bytes": 15555072
+}

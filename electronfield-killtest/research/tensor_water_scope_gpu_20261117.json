@@ -1,0 +1,553 @@
+{
+  "created_utc": "2026-11-17T13:05:41.340372+00:00",
+  "device": "cuda",
+  "protocol": {
+    "purpose": "First coupled polarised-basis molecular use of the physical tensor backend, beyond a single global Fock vector on this GPU",
+    "case": {
+      "id": "H2O_ccpvdz_tensor_scope_new",
+      "atom": "O 0 0 0; H 0 0 0.985; H 0.954 0 -0.245",
+      "charge": 0,
+      "spin": 0,
+      "electrons": 10
+    },
+    "basis": "cc-pvdz",
+    "seed": 17112044,
+    "input": "One bounded CUDA RHF input using GPU integrals with CPU integral entry points blocked; no native GPU4PySCF XC wrapper",
+    "method": "One literal Hamiltonian response to the paired determinant, complete-spin-multiplet compression, then exact two-state nonorthogonal Rayleigh-Ritz; retain the input determinant",
+    "response_maximum_bond": 64,
+    "relative_response_singular_tolerance": 1e-11,
+    "maximum_raw_response_bytes": 1500000000,
+    "integral_truncation_threshold": 0,
+    "constant_shift": "Subtract E_HF/N from the one-body diagonal, exactly H-E_HF in the fixed-N physical sector; restore the constant in reported energies",
+    "operator_and_energy_identity_tolerance_hartree": 1e-08,
+    "physical_tolerance": 1e-07,
+    "overlap_rank_threshold": 1e-10,
+    "no_parameter_optimization": true,
+    "no_reference_label_generated_or_loaded": true,
+    "no_frontier_replication": true,
+    "no_speed_benchmark": true,
+    "scope": "Physical state/action and larger-basis scope diagnostic only, not a converged density functional, chemical-accuracy, learned-transfer or WTMAD-2 test",
+    "acceptance": "Literal energy identity, number/spin, norm, Hermiticity and input retention. Full physical residual and reference energy remain unmeasured; do not claim an accuracy pass from variational lowering or local compression indicators.",
+    "resource_bound": "One CUDA job, one host orchestration core, at most 1 GB new disk, existing 40 GB total budget"
+  },
+  "status": "completed",
+  "history": [
+    {
+      "phase": "cuda_inputs"
+    },
+    {
+      "phase": "building_literal_hamiltonian",
+      "spatial_orbitals": 24,
+      "electrons": 10,
+      "full_fixed_sz_dimension": 1806590016,
+      "input_reference_status": {
+        "converged": true,
+        "cycles": 15,
+        "residual": 2.7685503621836752e-08
+      }
+    },
+    {
+      "phase": "hamiltonian_ready",
+      "sites": 24,
+      "input_fermion_words": 1274112,
+      "canonical_product_words": 485280,
+      "mpo_bond_dimensions": [
+        1,
+        16,
+        266,
+        302,
+        354,
+        422,
+        506,
+        606,
+        722,
+        854,
+        1002,
+        1166,
+        1346,
+        1542,
+        1754,
+        1982,
+        2226,
+        2486,
+        2762,
+        3054,
+        3362,
+        3686,
+        4026,
+        334,
+        1
+      ],
+      "sparse_edges": 520056,
+      "cuda_operator_storage_bytes": 17635152,
+      "full_occupation_vector_allocated": false,
+      "integral_truncation_threshold": 0.0
+    },
+    {
+      "phase": "reference_energy_identity",
+      "error_hartree": 1.865174681370263e-14,
+      "total_input_energy_hartree": -76.02403866536444
+    },
+    {
+      "phase": "physical_response",
+      "retained_dimension": 4,
+      "capacity_limited": false,
+      "local_coupled_discarded_squared_norm": 0.0,
+      "isometry_error": 0.0,
+      "site": 0,
+      "raw_intermediate_bytes": 512
+    },
+    {
+      "phase": "physical_response",
+      "retained_dimension": 11,
+      "capacity_limited": false,
+      "local_coupled_discarded_squared_norm": 0.0,
+      "isometry_error": 6.501718008155301e-16,
+      "site": 1,
+      "raw_intermediate_bytes": 34048
+    },
+    {
+      "phase": "physical_response",
+      "retained_dimension": 22,
+      "capacity_limited": false,
+      "local_coupled_discarded_squared_norm": 0.0,
+      "isometry_error": 1.1328423895217985e-15,
+      "site": 2,
+      "raw_intermediate_bytes": 106304
+    },
+    {
+      "phase": "physical_response",
+      "retained_dimension": 37,
+      "capacity_limited": false,
+      "local_coupled_discarded_squared_norm": 0.0,
+      "isometry_error": 3.130596108345794e-15,
+      "site": 3,
+      "raw_intermediate_bytes": 249216
+    },
+    {
+      "phase": "physical_response",
+      "retained_dimension": 56,
+      "capacity_limited": false,
+      "local_coupled_discarded_squared_norm": 0.0,
+      "isometry_error": 1.9755451439040296e-15,
+      "site": 4,
+      "raw_intermediate_bytes": 499648
+    },
+    {
+      "phase": "physical_response",
+      "retained_dimension": 64,
+      "capacity_limited": true,
+      "local_coupled_discarded_squared_norm": 0.024317510565261102,
+      "isometry_error": 1.847120530187863e-14,
+      "site": 5,
+      "raw_intermediate_bytes": 906752
+    },
+    {
+      "phase": "physical_response",
+      "retained_dimension": 64,
+      "capacity_limited": true,
+      "local_coupled_discarded_squared_norm": 2.0540566358664627,
+      "isometry_error": 1.7301382635201072e-14,
+      "site": 6,
+      "raw_intermediate_bytes": 1241088
+    },
+    {
+      "phase": "physical_response",
+      "retained_dimension": 64,
+      "capacity_limited": true,
+      "local_coupled_discarded_squared_norm": 5.077661302083918,
+      "isometry_error": 2.232656318576189e-14,
+      "site": 7,
+      "raw_intermediate_bytes": 1478656
+    },
+    {
+      "phase": "physical_response",
+      "retained_dimension": 64,
+      "capacity_limited": true,
+      "local_coupled_discarded_squared_norm": 5.056411777289174,
+      "isometry_error": 2.4333393574789946e-14,
+      "site": 8,
+      "raw_intermediate_bytes": 1748992
+    },
+    {
+      "phase": "physical_response",
+      "retained_dimension": 64,
+      "capacity_limited": true,
+      "local_coupled_discarded_squared_norm": 5.07094743926282,
+      "isometry_error": 2.4938860580823633e-14,
+      "site": 9,
+      "raw_intermediate_bytes": 2052096
+    },
+    {
+      "phase": "physical_response",
+      "retained_dimension": 64,
+      "capacity_limited": true,
+      "local_coupled_discarded_squared_norm": 5.079271986501723,
+      "isometry_error": 1.124271011352671e-14,
+      "site": 10,
+      "raw_intermediate_bytes": 2387968
+    },
+    {
+      "phase": "physical_response",
+      "retained_dimension": 64,
+      "capacity_limited": true,
+      "local_coupled_discarded_squared_norm": 5.022985171359519,
+      "isometry_error": 2.2202540165473113e-14,
+      "site": 11,
+      "raw_intermediate_bytes": 2756608
+    },
+    {
+      "phase": "physical_response",
+      "retained_dimension": 64,
+      "capacity_limited": true,
+      "local_coupled_discarded_squared_norm": 5.017372212538476,
+      "isometry_error": 2.6604304566487308e-14,
+      "site": 12,
+      "raw_intermediate_bytes": 3158016
+    },
+    {
+      "phase": "physical_response",
+      "retained_dimension": 64,
+      "capacity_limited": true,
+      "local_coupled_discarded_squared_norm": 5.014939478797299,
+      "isometry_error": 1.0299374686407848e-14,
+      "site": 13,
+      "raw_intermediate_bytes": 3592192
+    },
+    {
+      "phase": "physical_response",
+      "retained_dimension": 64,
+      "capacity_limited": true,
+      "local_coupled_discarded_squared_norm": 5.005228029404133,
+      "isometry_error": 8.438628158691014e-15,
+      "site": 14,
+      "raw_intermediate_bytes": 4059136
+    },
+    {
+      "phase": "physical_response",
+      "retained_dimension": 64,
+      "capacity_limited": true,
+      "local_coupled_discarded_squared_norm": 5.013345101438546,
+      "isometry_error": 1.5650752615032264e-14,
+      "site": 15,
+      "raw_intermediate_bytes": 4558848
+    },
+    {
+      "phase": "physical_response",
+      "retained_dimension": 64,
+      "capacity_limited": true,
+      "local_coupled_discarded_squared_norm": 4.983589943116261,
+      "isometry_error": 2.0503427031064973e-14,
+      "site": 16,
+      "raw_intermediate_bytes": 5091328
+    },
+    {
+      "phase": "physical_response",
+      "retained_dimension": 64,
+      "capacity_limited": true,
+      "local_coupled_discarded_squared_norm": 5.0150103709755705,
+      "isometry_error": 1.8233954678258125e-14,
+      "site": 17,
+      "raw_intermediate_bytes": 5656576
+    },
+    {
+      "phase": "physical_response",
+      "retained_dimension": 64,
+      "capacity_limited": true,
+      "local_coupled_discarded_squared_norm": 5.011442347617553,
+      "isometry_error": 1.3824399596077826e-14,
+      "site": 18,
+      "raw_intermediate_bytes": 6254592
+    },
+    {
+      "phase": "physical_response",
+      "retained_dimension": 64,
+      "capacity_limited": true,
+      "local_coupled_discarded_squared_norm": 5.034082391506061,
+      "isometry_error": 7.933824811030342e-15,
+      "site": 19,
+      "raw_intermediate_bytes": 6885376
+    },
+    {
+      "phase": "physical_response",
+      "retained_dimension": 64,
+      "capacity_limited": true,
+      "local_coupled_discarded_squared_norm": 5.018899279783593,
+      "isometry_error": 1.1529302141742092e-14,
+      "site": 20,
+      "raw_intermediate_bytes": 7548928
+    },
+    {
+      "phase": "physical_response",
+      "retained_dimension": 64,
+      "capacity_limited": true,
+      "local_coupled_discarded_squared_norm": 5.0035644405905195,
+      "isometry_error": 7.712146770230675e-15,
+      "site": 21,
+      "raw_intermediate_bytes": 8245248
+    },
+    {
+      "phase": "physical_response",
+      "retained_dimension": 21,
+      "capacity_limited": false,
+      "local_coupled_discarded_squared_norm": 0.0,
+      "isometry_error": 4.361714157584217e-15,
+      "site": 22,
+      "raw_intermediate_bytes": 684032
+    },
+    {
+      "phase": "two_state_variational_prediction",
+      "total_energy_hartree": -76.02713740636966,
+      "lowering_from_input_kcal": -1.9444893382500061,
+      "energy_reconstruction_error_hartree": 1.2533377113932431e-16,
+      "response_capacity_limited": true
+    },
+    {
+      "phase": "physical_checks",
+      "particle_number": 10.000000000000002,
+      "number_variance": -4.263256414560601e-14,
+      "spin_squared": 0.0,
+      "passed": true
+    }
+  ],
+  "failures": [],
+  "result": {
+    "physical_scope_passed": true,
+    "total_energy_hartree": -76.02713740636966,
+    "input_total_energy_hartree": -76.02403866536444,
+    "lowering_from_input_kcal": -1.9444893382500061,
+    "particle_number": 10.000000000000002,
+    "particle_number_variance": -4.263256414560601e-14,
+    "spin_squared": 0.0,
+    "energy_identity_error_hartree": 1.2533377113932431e-16,
+    "hermiticity_error_hartree": 6.280369834735101e-16,
+    "state_bond_dimensions": [
+      5,
+      12,
+      23,
+      38,
+      57,
+      65,
+      65,
+      65,
+      65,
+      65,
+      65,
+      65,
+      65,
+      65,
+      65,
+      65,
+      65,
+      65,
+      65,
+      65,
+      65,
+      65,
+      22,
+      1
+    ],
+    "full_fixed_sz_dimension": 1806590016,
+    "full_occupation_vector_allocated": false,
+    "new_reference_generated_or_loaded": false,
+    "full_stationarity_certified": false,
+    "chemical_accuracy_measured": false,
+    "xc_functional_evaluated": false,
+    "wtmad2_measured": false,
+    "goal_accuracy_achieved": false,
+    "response": {
+      "history": [
+        {
+          "retained_dimension": 4,
+          "capacity_limited": false,
+          "local_coupled_discarded_squared_norm": 0.0,
+          "isometry_error": 0.0,
+          "site": 0,
+          "raw_intermediate_bytes": 512
+        },
+        {
+          "retained_dimension": 11,
+          "capacity_limited": false,
+          "local_coupled_discarded_squared_norm": 0.0,
+          "isometry_error": 6.501718008155301e-16,
+          "site": 1,
+          "raw_intermediate_bytes": 34048
+        },
+        {
+          "retained_dimension": 22,
+          "capacity_limited": false,
+          "local_coupled_discarded_squared_norm": 0.0,
+          "isometry_error": 1.1328423895217985e-15,
+          "site": 2,
+          "raw_intermediate_bytes": 106304
+        },
+        {
+          "retained_dimension": 37,
+          "capacity_limited": false,
+          "local_coupled_discarded_squared_norm": 0.0,
+          "isometry_error": 3.130596108345794e-15,
+          "site": 3,
+          "raw_intermediate_bytes": 249216
+        },
+        {
+          "retained_dimension": 56,
+          "capacity_limited": false,
+          "local_coupled_discarded_squared_norm": 0.0,
+          "isometry_error": 1.9755451439040296e-15,
+          "site": 4,
+          "raw_intermediate_bytes": 499648
+        },
+        {
+          "retained_dimension": 64,
+          "capacity_limited": true,
+          "local_coupled_discarded_squared_norm": 0.024317510565261102,
+          "isometry_error": 1.847120530187863e-14,
+          "site": 5,
+          "raw_intermediate_bytes": 906752
+        },
+        {
+          "retained_dimension": 64,
+          "capacity_limited": true,
+          "local_coupled_discarded_squared_norm": 2.0540566358664627,
+          "isometry_error": 1.7301382635201072e-14,
+          "site": 6,
+          "raw_intermediate_bytes": 1241088
+        },
+        {
+          "retained_dimension": 64,
+          "capacity_limited": true,
+          "local_coupled_discarded_squared_norm": 5.077661302083918,
+          "isometry_error": 2.232656318576189e-14,
+          "site": 7,
+          "raw_intermediate_bytes": 1478656
+        },
+        {
+          "retained_dimension": 64,
+          "capacity_limited": true,
+          "local_coupled_discarded_squared_norm": 5.056411777289174,
+          "isometry_error": 2.4333393574789946e-14,
+          "site": 8,
+          "raw_intermediate_bytes": 1748992
+        },
+        {
+          "retained_dimension": 64,
+          "capacity_limited": true,
+          "local_coupled_discarded_squared_norm": 5.07094743926282,
+          "isometry_error": 2.4938860580823633e-14,
+          "site": 9,
+          "raw_intermediate_bytes": 2052096
+        },
+        {
+          "retained_dimension": 64,
+          "capacity_limited": true,
+          "local_coupled_discarded_squared_norm": 5.079271986501723,
+          "isometry_error": 1.124271011352671e-14,
+          "site": 10,
+          "raw_intermediate_bytes": 2387968
+        },
+        {
+          "retained_dimension": 64,
+          "capacity_limited": true,
+          "local_coupled_discarded_squared_norm": 5.022985171359519,
+          "isometry_error": 2.2202540165473113e-14,
+          "site": 11,
+          "raw_intermediate_bytes": 2756608
+        },
+        {
+          "retained_dimension": 64,
+          "capacity_limited": true,
+          "local_coupled_discarded_squared_norm": 5.017372212538476,
+          "isometry_error": 2.6604304566487308e-14,
+          "site": 12,
+          "raw_intermediate_bytes": 3158016
+        },
+        {
+          "retained_dimension": 64,
+          "capacity_limited": true,
+          "local_coupled_discarded_squared_norm": 5.014939478797299,
+          "isometry_error": 1.0299374686407848e-14,
+          "site": 13,
+          "raw_intermediate_bytes": 3592192
+        },
+        {
+          "retained_dimension": 64,
+          "capacity_limited": true,
+          "local_coupled_discarded_squared_norm": 5.005228029404133,
+          "isometry_error": 8.438628158691014e-15,
+          "site": 14,
+          "raw_intermediate_bytes": 4059136
+        },
+        {
+          "retained_dimension": 64,
+          "capacity_limited": true,
+          "local_coupled_discarded_squared_norm": 5.013345101438546,
+          "isometry_error": 1.5650752615032264e-14,
+          "site": 15,
+          "raw_intermediate_bytes": 4558848
+        },
+        {
+          "retained_dimension": 64,
+          "capacity_limited": true,
+          "local_coupled_discarded_squared_norm": 4.983589943116261,
+          "isometry_error": 2.0503427031064973e-14,
+          "site": 16,
+          "raw_intermediate_bytes": 5091328
+        },
+        {
+          "retained_dimension": 64,
+          "capacity_limited": true,
+          "local_coupled_discarded_squared_norm": 5.0150103709755705,
+          "isometry_error": 1.8233954678258125e-14,
+          "site": 17,
+          "raw_intermediate_bytes": 5656576
+        },
+        {
+          "retained_dimension": 64,
+          "capacity_limited": true,
+          "local_coupled_discarded_squared_norm": 5.011442347617553,
+          "isometry_error": 1.3824399596077826e-14,
+          "site": 18,
+          "raw_intermediate_bytes": 6254592
+        },
+        {
+          "retained_dimension": 64,
+          "capacity_limited": true,
+          "local_coupled_discarded_squared_norm": 5.034082391506061,
+          "isometry_error": 7.933824811030342e-15,
+          "site": 19,
+          "raw_intermediate_bytes": 6885376
+        },
+        {
+          "retained_dimension": 64,
+          "capacity_limited": true,
+          "local_coupled_discarded_squared_norm": 5.018899279783593,
+          "isometry_error": 1.1529302141742092e-14,
+          "site": 20,
+          "raw_intermediate_bytes": 7548928
+        },
+        {
+          "retained_dimension": 64,
+          "capacity_limited": true,
+          "local_coupled_discarded_squared_norm": 5.0035644405905195,
+          "isometry_error": 7.712146770230675e-15,
+          "site": 21,
+          "raw_intermediate_bytes": 8245248
+        },
+        {
+          "retained_dimension": 21,
+          "capacity_limited": false,
+          "local_coupled_discarded_squared_norm": 0.0,
+          "isometry_error": 4.361714157584217e-15,
+          "site": 22,
+          "raw_intermediate_bytes": 684032
+        }
+      ],
+      "maximum_bond": 64,
+      "capacity_limited": true,
+      "full_image_error_certified": false,
+      "full_stationarity_certified": false
+    }
+  },
+  "passed": true,
+  "peak_cuda_bytes": 1080178688
+}

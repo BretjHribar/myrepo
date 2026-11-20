@@ -1,0 +1,23 @@
+{
+  "purpose": "Enable actual full-target-basis physical inputs with a bounded CUDA factor producer after the complete public domain failure; no speed benchmark or chemical-accuracy pass claim",
+  "seed": 17112072,
+  "basis": "def2-qzvp",
+  "auxiliary_basis": "def2-qzvp-ri",
+  "small_public_validation_id": "G21IP/be",
+  "additional_probe_ids": ["WATER27/H2O", "S22/01"],
+  "largest_case_selection": "First lexicographically sorted required structure among the maximum spatial-basis-function count in the frozen full model-domain inventory; no reference-energy values used",
+  "factor_chunk_size": 2,
+  "pair_batch_size": 4096,
+  "auxiliary_batch_size": 128,
+  "maximum_working_bytes": 5500000000,
+  "screening_cutoff": 1e-14,
+  "metric_reconstruction_relative_tolerance": 1e-10,
+  "factor_comparison_tolerance": 2e-9,
+  "factor_symmetry_tolerance": 1e-10,
+  "large_probe": "Generate the final whitened factor, which exercises global auxiliary mixing; do not claim all factors, molecular energy or a state prediction from that probe",
+  "independent_reference": "For the small case only, compare all streamed factors with a separately assembled dense three-center tensor and GPU triangular solve; measure fitting energy error against independent exact four-center GPU integrals without using it to tune settings",
+  "hartree_to_kcal_per_mol": 627.5094740631,
+  "runtime": "One CUDA numerical job and one host core; no CPU integrals, scientific fallback, baseline method or frontier replication; bounded factor workspace and at most 0.5 GB new disk",
+  "scope": "Physical integral-input implementation and fitting diagnostics, not a full public model score, learned transfer, XC callable or private-test pass",
+  "speed_work_authorized": false
+}

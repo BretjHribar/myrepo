@@ -1,0 +1,362 @@
+{
+  "created_utc": "2026-11-17T13:14:00.519149+00:00",
+  "device": "cuda",
+  "protocol": {
+    "purpose": "Verify physical-norm response truncation and full image-error measurement, rather than arbitrary raw MPO-channel metrics",
+    "seed": 17112045,
+    "sites": 4,
+    "states": [
+      {
+        "electrons": 4,
+        "twice_spin": 0
+      },
+      {
+        "electrons": 3,
+        "twice_spin": 1
+      }
+    ],
+    "source": "Highest-weight product determinants, no parameter optimization or reference solve",
+    "untruncated_bond": "Algebraic prefix Hilbert bound 4^(sites-1)",
+    "bounded_bond": 4,
+    "singular_tolerance": 1e-11,
+    "right_frame_null_tolerance": 1e-13,
+    "absolute_identity_tolerance": 1e-10,
+    "maximum_gram_bytes": 250000000,
+    "maximum_frame_bytes": 1500000000,
+    "scope": "New compression metric, physical constraints and full image-norm identities only; not chemical accuracy or a correlated-state residual certificate"
+  },
+  "status": "completed",
+  "results": [
+    {
+      "case": {
+        "electrons": 4,
+        "twice_spin": 0
+      },
+      "variant": "untruncated",
+      "passed": true,
+      "full_image_error_norm": 3.5687727037521365e-15,
+      "image_squared_error_identity_difference": 1.2736138611046336e-29,
+      "exact_full_norm_identity_difference": 1.7763568394002505e-15,
+      "spin_sector_error": 1.3077434507227133e-17,
+      "number_sector_error": 0.0,
+      "magnetic_sector_error": 0.0,
+      "projection_bound_valid": true,
+      "diagnostics": {
+        "exact_full_image_squared_norm": 4.504591048946125,
+        "approximate_image_squared_norm": 4.504591048946111,
+        "exact_approximate_image_overlap": 4.504591048946118,
+        "full_image_difference_squared_norm": 0.0,
+        "full_image_relative_error_upper_estimate": 3.37174788087152e-07,
+        "right_frame_triangle_error_bound": 0.0,
+        "sequential_projection_error_bound": 5.1619136559035694e-08,
+        "floating_squared_norm_allowance": 5.121127115837814e-13,
+        "rigorous_interval_arithmetic_bound": false,
+        "physical_compression_norm_measured_without_global_vector": true,
+        "maximum_bond": 11,
+        "capacity_limited": false,
+        "right_frame_history": [
+          {
+            "phase": "right_physical_frame",
+            "site": 3,
+            "retained_right_dimension": 4,
+            "discarded_local_norm": 0.0,
+            "prefix_weighted_error_bound": 0.0
+          },
+          {
+            "phase": "right_physical_frame",
+            "site": 2,
+            "retained_right_dimension": 11,
+            "discarded_local_norm": 0.0,
+            "prefix_weighted_error_bound": 0.0
+          },
+          {
+            "phase": "right_physical_frame",
+            "site": 1,
+            "retained_right_dimension": 16,
+            "discarded_local_norm": 0.0,
+            "prefix_weighted_error_bound": 0.0
+          }
+        ],
+        "truncation_history": [
+          {
+            "retained_dimension": 4,
+            "capacity_limited": false,
+            "local_coupled_discarded_squared_norm": 0.0,
+            "local_full_discarded_squared_norm": 0.0,
+            "isometry_error": 0.0,
+            "phase": "physical_schmidt_truncation",
+            "site": 0
+          },
+          {
+            "retained_dimension": 11,
+            "capacity_limited": false,
+            "local_coupled_discarded_squared_norm": 5.48043485854404e-33,
+            "local_full_discarded_squared_norm": 0.0,
+            "isometry_error": 8.189397882090259e-16,
+            "phase": "physical_schmidt_truncation",
+            "site": 1
+          },
+          {
+            "retained_dimension": 4,
+            "capacity_limited": false,
+            "local_coupled_discarded_squared_norm": 0.0,
+            "local_full_discarded_squared_norm": 2.6645352591003757e-15,
+            "isometry_error": 7.28021923224409e-16,
+            "phase": "physical_schmidt_truncation",
+            "site": 2
+          }
+        ],
+        "full_stationarity_of_a_correlated_candidate_certified": false
+      }
+    },
+    {
+      "case": {
+        "electrons": 4,
+        "twice_spin": 0
+      },
+      "variant": "bounded",
+      "passed": true,
+      "full_image_error_norm": 0.3057515386162123,
+      "image_squared_error_identity_difference": 8.049116928532385e-16,
+      "exact_full_norm_identity_difference": 1.7763568394002505e-15,
+      "spin_sector_error": 0.0,
+      "number_sector_error": 0.0,
+      "magnetic_sector_error": 0.0,
+      "projection_bound_valid": true,
+      "diagnostics": {
+        "exact_full_image_squared_norm": 4.504591048946125,
+        "approximate_image_squared_norm": 4.411107045579929,
+        "exact_approximate_image_overlap": 4.411107045579937,
+        "full_image_difference_squared_norm": 0.09348400336618035,
+        "full_image_relative_error_upper_estimate": 0.1440591893002108,
+        "right_frame_triangle_error_bound": 0.0,
+        "sequential_projection_error_bound": 0.30575153861621535,
+        "floating_squared_norm_allowance": 5.041417860435879e-13,
+        "rigorous_interval_arithmetic_bound": false,
+        "physical_compression_norm_measured_without_global_vector": true,
+        "maximum_bond": 4,
+        "capacity_limited": true,
+        "right_frame_history": [
+          {
+            "phase": "right_physical_frame",
+            "site": 3,
+            "retained_right_dimension": 4,
+            "discarded_local_norm": 0.0,
+            "prefix_weighted_error_bound": 0.0
+          },
+          {
+            "phase": "right_physical_frame",
+            "site": 2,
+            "retained_right_dimension": 11,
+            "discarded_local_norm": 0.0,
+            "prefix_weighted_error_bound": 0.0
+          },
+          {
+            "phase": "right_physical_frame",
+            "site": 1,
+            "retained_right_dimension": 16,
+            "discarded_local_norm": 0.0,
+            "prefix_weighted_error_bound": 0.0
+          }
+        ],
+        "truncation_history": [
+          {
+            "retained_dimension": 4,
+            "capacity_limited": false,
+            "local_coupled_discarded_squared_norm": 0.0,
+            "local_full_discarded_squared_norm": 0.0,
+            "isometry_error": 0.0,
+            "phase": "physical_schmidt_truncation",
+            "site": 0
+          },
+          {
+            "retained_dimension": 4,
+            "capacity_limited": true,
+            "local_coupled_discarded_squared_norm": 0.09348400336618129,
+            "local_full_discarded_squared_norm": 0.09348400336618123,
+            "isometry_error": 3.3306690738754696e-16,
+            "phase": "physical_schmidt_truncation",
+            "site": 1
+          },
+          {
+            "retained_dimension": 4,
+            "capacity_limited": false,
+            "local_coupled_discarded_squared_norm": 0.0,
+            "local_full_discarded_squared_norm": 1.7763568394002505e-15,
+            "isometry_error": 5.438959822042073e-16,
+            "phase": "physical_schmidt_truncation",
+            "site": 2
+          }
+        ],
+        "full_stationarity_of_a_correlated_candidate_certified": false
+      }
+    },
+    {
+      "case": {
+        "electrons": 3,
+        "twice_spin": 1
+      },
+      "variant": "untruncated",
+      "passed": true,
+      "full_image_error_norm": 2.5722533283017203e-15,
+      "image_squared_error_identity_difference": 3.552713678800507e-15,
+      "exact_full_norm_identity_difference": 0.0,
+      "spin_sector_error": 2.6637669263063097e-17,
+      "number_sector_error": 0.0,
+      "magnetic_sector_error": 0.0,
+      "projection_bound_valid": true,
+      "diagnostics": {
+        "exact_full_image_squared_norm": 4.42760190469398,
+        "approximate_image_squared_norm": 4.427601904693979,
+        "exact_approximate_image_overlap": 4.427601904693981,
+        "full_image_difference_squared_norm": -3.552713678800501e-15,
+        "full_image_relative_error_upper_estimate": 3.371747880871523e-07,
+        "right_frame_triangle_error_bound": 3.3816930891140184e-16,
+        "sequential_projection_error_bound": 9.929157652266125e-16,
+        "floating_squared_norm_allowance": 5.033600592348626e-13,
+        "rigorous_interval_arithmetic_bound": false,
+        "physical_compression_norm_measured_without_global_vector": true,
+        "maximum_bond": 11,
+        "capacity_limited": false,
+        "right_frame_history": [
+          {
+            "phase": "right_physical_frame",
+            "site": 3,
+            "retained_right_dimension": 4,
+            "discarded_local_norm": 0.0,
+            "prefix_weighted_error_bound": 0.0
+          },
+          {
+            "phase": "right_physical_frame",
+            "site": 2,
+            "retained_right_dimension": 11,
+            "discarded_local_norm": 0.0,
+            "prefix_weighted_error_bound": 0.0
+          },
+          {
+            "phase": "right_physical_frame",
+            "site": 1,
+            "retained_right_dimension": 10,
+            "discarded_local_norm": 9.807945061361021e-17,
+            "prefix_weighted_error_bound": 3.3816930891140184e-16
+          }
+        ],
+        "truncation_history": [
+          {
+            "retained_dimension": 4,
+            "capacity_limited": false,
+            "local_coupled_discarded_squared_norm": 0.0,
+            "local_full_discarded_squared_norm": 0.0,
+            "isometry_error": 0.0,
+            "phase": "physical_schmidt_truncation",
+            "site": 0
+          },
+          {
+            "retained_dimension": 11,
+            "capacity_limited": false,
+            "local_coupled_discarded_squared_norm": 1.912687697898321e-34,
+            "local_full_discarded_squared_norm": 0.0,
+            "isometry_error": 3.6063277116559735e-16,
+            "phase": "physical_schmidt_truncation",
+            "site": 1
+          },
+          {
+            "retained_dimension": 8,
+            "capacity_limited": false,
+            "local_coupled_discarded_squared_norm": 0.0,
+            "local_full_discarded_squared_norm": 0.0,
+            "isometry_error": 3.285963337835955e-15,
+            "phase": "physical_schmidt_truncation",
+            "site": 2
+          }
+        ],
+        "full_stationarity_of_a_correlated_candidate_certified": false
+      }
+    },
+    {
+      "case": {
+        "electrons": 3,
+        "twice_spin": 1
+      },
+      "variant": "bounded",
+      "passed": true,
+      "full_image_error_norm": 0.8611043489031285,
+      "image_squared_error_identity_difference": 1.2212453270876722e-15,
+      "exact_full_norm_identity_difference": 0.0,
+      "spin_sector_error": 0.0,
+      "number_sector_error": 0.0,
+      "magnetic_sector_error": 0.0,
+      "projection_bound_valid": true,
+      "diagnostics": {
+        "exact_full_image_squared_norm": 4.42760190469398,
+        "approximate_image_squared_norm": 3.6861012049940967,
+        "exact_approximate_image_overlap": 3.6861012049940984,
+        "full_image_difference_squared_norm": 0.7415006996998796,
+        "full_image_relative_error_upper_estimate": 0.4092338032224228,
+        "right_frame_triangle_error_bound": 3.3816930891140184e-16,
+        "sequential_projection_error_bound": 0.8611043489031281,
+        "floating_squared_norm_allowance": 4.401359069469286e-13,
+        "rigorous_interval_arithmetic_bound": false,
+        "physical_compression_norm_measured_without_global_vector": true,
+        "maximum_bond": 4,
+        "capacity_limited": true,
+        "right_frame_history": [
+          {
+            "phase": "right_physical_frame",
+            "site": 3,
+            "retained_right_dimension": 4,
+            "discarded_local_norm": 0.0,
+            "prefix_weighted_error_bound": 0.0
+          },
+          {
+            "phase": "right_physical_frame",
+            "site": 2,
+            "retained_right_dimension": 11,
+            "discarded_local_norm": 0.0,
+            "prefix_weighted_error_bound": 0.0
+          },
+          {
+            "phase": "right_physical_frame",
+            "site": 1,
+            "retained_right_dimension": 10,
+            "discarded_local_norm": 9.807945061361021e-17,
+            "prefix_weighted_error_bound": 3.3816930891140184e-16
+          }
+        ],
+        "truncation_history": [
+          {
+            "retained_dimension": 4,
+            "capacity_limited": false,
+            "local_coupled_discarded_squared_norm": 0.0,
+            "local_full_discarded_squared_norm": 0.0,
+            "isometry_error": 0.0,
+            "phase": "physical_schmidt_truncation",
+            "site": 0
+          },
+          {
+            "retained_dimension": 4,
+            "capacity_limited": true,
+            "local_coupled_discarded_squared_norm": 0.7415006996998799,
+            "local_full_discarded_squared_norm": 0.7415006996998792,
+            "isometry_error": 2.8094248249725485e-16,
+            "phase": "physical_schmidt_truncation",
+            "site": 1
+          },
+          {
+            "retained_dimension": 3,
+            "capacity_limited": false,
+            "local_coupled_discarded_squared_norm": 0.0,
+            "local_full_discarded_squared_norm": 4.440892098500626e-16,
+            "isometry_error": 1.5700924586837752e-16,
+            "phase": "physical_schmidt_truncation",
+            "site": 2
+          }
+        ],
+        "full_stationarity_of_a_correlated_candidate_certified": false
+      }
+    }
+  ],
+  "failures": [],
+  "passed": true,
+  "peak_cuda_bytes": 14752768
+}

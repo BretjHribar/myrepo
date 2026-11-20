@@ -1,0 +1,28 @@
+{
+  "created_utc": "2026-11-17T01:57:04.804928+00:00",
+  "device": "cuda",
+  "scope": "Frozen Coulomb frame, one ensemble-valid density rotation; no full-density or force claim",
+  "finite_difference_hartree": 2.0343036180037184,
+  "potential_prediction_hartree": 2.034303614056737,
+  "absolute_difference_hartree": 3.946981408375905e-09,
+  "step": 1e-05,
+  "derivative_check_passed": true,
+  "density_constraints": [
+    3.2219231218986143e-13,
+    3.183078896258452e-13,
+    3.167533295544053e-13
+  ],
+  "state_stationarity_residuals": [
+    1.4126458728094232e-08,
+    2.0330518645355214e-08,
+    9.107470736170083e-09
+  ],
+  "kinetic_density_number_residuals": [
+    1.5468615220003656e-10,
+    3.844354665290977e-10,
+    4.871445495662871e-10
+  ],
+  "reference_energy_used": false,
+  "seconds": 41.73454464699999,
+  "peak_cuda_bytes": 28626944
+}

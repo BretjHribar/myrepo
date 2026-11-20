@@ -1,0 +1,14 @@
+{
+  "hypothesis": "Coulomb-response conditioned coherent orbital state for larger-basis constrained correlation",
+  "mathematical_primitives": "Spin-paired determinants, polynomial cofactors and variational Ritz coefficients; these primitives are not claimed as novel",
+  "basis": "cc-pvdz",
+  "cases": ["LiH_neutral_1.595", "LiH_neutral_2.50", "Be_neutral"],
+  "response_seed": {"proposed_modes": 6, "include_complete_boundary_degeneracy": true, "displacement": 0.15},
+  "orbital_optimization": {"steps": 400, "learning_rate": 0.02, "final_learning_rate": 0.0002},
+  "objective": "Actual Hamiltonian Rayleigh quotient, no reference-energy loss",
+  "reference_retention": "Unchanged input determinant always included; do not regularize its physical norm",
+  "assessment": "One frozen run per case. Compare against saved new same-basis references only after optimization. Retain all failures; no mode/seed/iteration sweep to rescue a failure.",
+  "scope": "Full larger-basis state experiment. Canonical density constraints and density-only frame still need integration.",
+  "symmetry": "Exact particle number, fermionic antisymmetry and S=0 for spin-paired states. Orbital-rotation covariance is a property of the variational family; finite-optimizer spatial covariance is unverified.",
+  "limits": ["No claim of a world-first determinant method", "No broad XC generalization claim", "Explicit component product closure still required", "cc-pVDZ is not CBS"]
+}

@@ -1,0 +1,104 @@
+{
+  "created_utc": "2026-11-17T15:15:43.585027+00:00",
+  "device": "cuda",
+  "protocol": {
+    "purpose": "Reach common all-site stationarity of the physical/auxiliary tensor model before independent accuracy testing",
+    "case_id": "H2O_ccpvdz_tensor_scope_new",
+    "source_input": "data/tensor_scope/H2O_ccpvdz_tensor_scope_new.inputs.pt",
+    "source_state": "data/tensor_local_water/center6/installed_state.pt",
+    "source_frame": "data/tensor_local_water/center6/spatial_frame.pt",
+    "checkpoint_folder": "data/tensor_forward_water",
+    "basis": "cc-pvdz",
+    "electrons": 10,
+    "twice_spin": 0,
+    "seed": 17112055,
+    "maximum_embedding_bytes": 1500000000,
+    "maximum_local_matrix_bytes": 1500000000,
+    "maximum_environment_bytes": 1500000000,
+    "local_metric_null_tolerance": 1e-12,
+    "ground_degeneracy_tolerance_hartree": 1e-10,
+    "physical_identity_tolerance_hartree": 1e-07,
+    "physical_tolerance": 1e-07,
+    "sweep_energy_tolerance_hartree": 1e-08,
+    "sweep_density_tolerance": 1e-06,
+    "common_context_gap_tolerance_hartree": 1e-07,
+    "maximum_sweeps": 12,
+    "epsilon_inverse_hartree": 1.0,
+    "kinetic_maximum_iterations": 4000,
+    "kinetic_gap_tolerance_hartree": 1e-11,
+    "ks_commutator_tolerance": 1e-05,
+    "model": "Unchanged supplied tensor sectors and literal Hamiltonian, positive local physical updates; exact elimination of auxiliary x in the same statewise functional",
+    "stopping": "Physical sweep energy/density criteria followed by a frozen-final-state audit of every site; report a failure if its declared capacity is exhausted without passing the audit",
+    "reference_use": "No correlated reference energies loaded, generated, fitted or used for stopping",
+    "scope": "Coordinate stationarity of the supplied finite tensor family; not global minimization, full Hilbert residual, arbitrary-density universal search, chemical accuracy or WTMAD-2",
+    "resource_limit": "One CUDA job, one host core, at most 1 GB new disk within the unchanged 40 GB budget; no cache of all-site density-operator matrices",
+    "speed_work_authorized": false
+  },
+  "status": "completed",
+  "history": [
+    {
+      "phase": "building_literal_physical_operator",
+      "sites": 24,
+      "electrons": 10
+    },
+    {
+      "phase": "physical_site_update",
+      "center": 0,
+      "physical_dimension": 4,
+      "local_variational_gap_hartree": 0.0006330928240743106,
+      "electronic_energy_hartree": -85.14814976612723,
+      "local_global_energy_identity_error_hartree": 1.2789769243681803e-13,
+      "metric_error": 1.1387771390722063e-14,
+      "input_retention_error": 0.0,
+      "sweep": 0,
+      "position": 0
+    },
+    {
+      "phase": "physical_site_update",
+      "center": 1,
+      "physical_dimension": 16,
+      "local_variational_gap_hartree": 0.0001619550330929087,
+      "electronic_energy_hartree": -85.14831172116025,
+      "local_global_energy_identity_error_hartree": 2.842170943040401e-14,
+      "metric_error": 3.749982531573946e-14,
+      "input_retention_error": 7.23453000605132e-17,
+      "sweep": 0,
+      "position": 1
+    },
+    {
+      "phase": "physical_site_update",
+      "center": 2,
+      "physical_dimension": 56,
+      "local_variational_gap_hartree": 4.487391599639068e-05,
+      "electronic_energy_hartree": -85.14835659507631,
+      "local_global_energy_identity_error_hartree": 4.263256414560601e-14,
+      "metric_error": 8.688203538057247e-14,
+      "input_retention_error": 2.451017036688914e-16,
+      "sweep": 0,
+      "position": 2
+    },
+    {
+      "phase": "physical_site_update",
+      "center": 3,
+      "physical_dimension": 154,
+      "local_variational_gap_hartree": 0.0004621717737762765,
+      "electronic_energy_hartree": -85.14881876684998,
+      "local_global_energy_identity_error_hartree": 2.1316282072803006e-13,
+      "metric_error": 2.0705428709703716e-13,
+      "input_retention_error": 1.8711797495401546e-15,
+      "sweep": 0,
+      "position": 3
+    },
+    {
+      "phase": "failure",
+      "error": "RuntimeError: Local physical space lost input/metric consistency: 9.650968001533293e-15, 4.6664312736346626e-08, 5.100942298602596e-08"
+    }
+  ],
+  "failures": [
+    {
+      "error": "RuntimeError: Local physical space lost input/metric consistency: 9.650968001533293e-15, 4.6664312736346626e-08, 5.100942298602596e-08"
+    }
+  ],
+  "passed": false,
+  "peak_cuda_bytes": 831204864
+}

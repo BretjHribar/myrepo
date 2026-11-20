@@ -1,0 +1,23 @@
+{
+  "purpose": "Verify the conditional physical tensor compiler, positive auxiliary-density search and scalar derivative before molecular functional work",
+  "seed": 17112048,
+  "sites": 4,
+  "center": 1,
+  "state_cases": [{"electrons": 4, "twice_spin": 0}, {"electrons": 3, "twice_spin": 1}],
+  "ancilla": 2,
+  "channels": 2,
+  "epsilon_inverse_hartree": 1.0,
+  "local_metric_null_tolerance": 1e-12,
+  "maximum_embedding_bytes": 1500000000,
+  "maximum_local_operator_bytes": 2000000000,
+  "maximum_environment_bytes": 1500000000,
+  "maximum_reduced_iterations": 4000,
+  "reduced_gap_tolerance_hartree": 1e-11,
+  "operator_identity_tolerance": 1e-9,
+  "derivative_step": 0.001,
+  "derivative_tolerance_hartree": 1e-5,
+  "universal_keys": ["kinetic", "eri", "operators", "electrons", "twice_spin"],
+  "no_chemical_labels_or_external_potential": true,
+  "no_parameter_or_seed_sweep": true,
+  "scope": "Synthetic fixed-context conditional functional and physical installation; no complete universal search, molecular accuracy or speed claim"
+}

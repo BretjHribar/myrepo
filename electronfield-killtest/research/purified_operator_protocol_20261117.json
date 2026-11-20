@@ -1,0 +1,20 @@
+{
+  "purpose": "Verify a compositional positive number/spin state and literal fermionic Hamiltonian action before larger accuracy work",
+  "source_of_physics": "Own synthetic spin-independent one-/two-electron Hamiltonians; positive Coulomb pair matrices, fixed CUDA seed",
+  "seed": 17112042,
+  "dense_operator_check_sites": 4,
+  "state_cases": [{"electrons": 4, "twice_spin": 0}, {"electrons": 3, "twice_spin": 1}],
+  "ancilla_dimension": 2,
+  "channels_per_quantum_sector": 2,
+  "operator_and_energy_tolerance_hartree": 1e-10,
+  "gradient_tolerance": 1e-9,
+  "physical_constraint_tolerance": 1e-10,
+  "independent_product_test": "Eight separate 4-electron/3-orbital singlet mixed states, 32 electrons in 24 orbitals; additive supplied independent Hamiltonian, no global occupation enumeration",
+  "family_embedding_test": "Three fragment purifications embedded in the same reduced CG tensor family, compared with direct concatenation",
+  "legacy_special_case": "Ancilla dimension one must match the unchanged pure-state family after exact parameter copying",
+  "no_optimization_or_reference_fit": true,
+  "no_frontier_replication": true,
+  "failure_policy": "Record any failed operator, gradient or physical invariant before using this backend for chemistry; no energy-only acceptance",
+  "scope": "New representation/operator tests, not a chemical-accuracy, WTMAD-2, learned-transfer or speed benchmark",
+  "resource_limit": "One CUDA job, one host orchestration core; under 1 GB new disk and existing 40 GB total allocation"
+}

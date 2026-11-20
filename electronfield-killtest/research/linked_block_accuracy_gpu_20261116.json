@@ -1,0 +1,192 @@
+{
+  "created_utc": "2026-11-17T03:39:47.365241+00:00",
+  "device": "cuda",
+  "protocol": {
+    "purpose": "Accuracy rejection test after the fixed-global-rank composition failure; no speed optimization",
+    "hypothesis": "Compositional local singlet states with quantum Coulomb links can retain correlation across independent and coupled fragments",
+    "basis": "cc-pvdz",
+    "local_space": "Complete two-electron singlet space in each orthogonal local orbital block, represented by paired determinants",
+    "global_space": "Tensor product of neutral local singlets; exact projected direct/exchange couplings, no local charge-transfer or triplet sectors",
+    "partition": "Supplied atom groups, symmetrically orthogonalized AO order; no fitted energy offsets",
+    "cases": [
+      {
+        "id": "He2_R3.00",
+        "atom": "He 0 0 0; He 0 0 3.00",
+        "charge": 0,
+        "spin": 0,
+        "electrons": 4,
+        "first_block_atoms": 1
+      },
+      {
+        "id": "H4_parallel_far",
+        "atom": "H -0.37 0 0; H 0.37 0 0; H -0.37 0 3.0; H 0.37 0 3.0",
+        "charge": 0,
+        "spin": 0,
+        "electrons": 4,
+        "first_block_atoms": 2
+      },
+      {
+        "id": "H4_square_close",
+        "atom": "H -0.6 0 0; H 0.6 0 0; H -0.6 0 1.2; H 0.6 0 1.2",
+        "charge": 0,
+        "spin": 0,
+        "electrons": 4,
+        "first_block_atoms": 2
+      }
+    ],
+    "reference": "New full cc-pVDZ singlet four-electron CUDA matrix-free reference, after prediction",
+    "reference_initialization": "HF singlet plus one fixed small generic singlet component, to avoid locking the reference to an incorrect spatial irrep",
+    "maximum_reference_dimension": 192,
+    "reference_residual_tolerance": 1e-08,
+    "assessment": "All cases retained, no energy-label fitting, rank/seed/iteration sweep or replacement. Require per-case errors and the balanced H4 geometry contrast below 1 kcal/mol. A failure closes the neutral-singlet-only hypothesis before any speed work.",
+    "limits": [
+      "Early rejection panel, not full GMTKN55",
+      "Finite cc-pVDZ, not CBS",
+      "Given local partition",
+      "State projection, not yet a density-only XC functional"
+    ]
+  },
+  "results": [
+    {
+      "id": "He2_R3.00",
+      "basis": "cc-pvdz",
+      "electrons": 4,
+      "spatial_orbitals": 10,
+      "model_energy_hartree": -5.775127514130675,
+      "reference_energy_hartree": -5.775195281432453,
+      "reference_converged": true,
+      "reference_residual": 4.721962825792152e-09,
+      "energy_error_kcal": 0.042524623893208914,
+      "below_one_kcal": true,
+      "coupling_lowering_from_product_kcal": -0.7436850761548978,
+      "block_dimensions": [
+        15,
+        15
+      ],
+      "projected_dimension": 225,
+      "block_number_errors": [
+        4.440892098500626e-16,
+        4.440892098500626e-16
+      ],
+      "block_metric_errors": [
+        1.1102230246251565e-16,
+        1.1102230246251565e-16
+      ],
+      "leading_block_schmidt_values": [
+        0.9999994823415125,
+        0.0008307616126965213,
+        0.00041541883147975123,
+        0.00041541883147975107,
+        2.4522432661132966e-06,
+        3.8102335119835726e-07,
+        1.725323855888075e-07,
+        1.7253238558880706e-07
+      ],
+      "input_reference_status": {
+        "converged": true,
+        "cycles": 8,
+        "residual": 4.8044646578179175e-08
+      },
+      "reference_energy_fitted": false,
+      "seconds": 5.127450940000001,
+      "independent_projection_check_error_hartree": 8.881784197001252e-16,
+      "projection_kernel_verified": true
+    },
+    {
+      "id": "H4_parallel_far",
+      "basis": "cc-pvdz",
+      "electrons": 4,
+      "spatial_orbitals": 20,
+      "model_energy_hartree": -2.3248937713217335,
+      "reference_energy_hartree": -2.32642394731199,
+      "reference_converged": true,
+      "reference_residual": 7.785330858608313e-09,
+      "energy_error_kcal": 0.9601999307732222,
+      "below_one_kcal": true,
+      "coupling_lowering_from_product_kcal": -2.729759935538212,
+      "block_dimensions": [
+        55,
+        55
+      ],
+      "projected_dimension": 3025,
+      "block_number_errors": [
+        4.440892098500626e-16,
+        4.440892098500626e-16
+      ],
+      "block_metric_errors": [
+        1.1102230246251565e-16,
+        1.1102230246251565e-16
+      ],
+      "leading_block_schmidt_values": [
+        0.9999640832592468,
+        0.007767826807147557,
+        0.0030016826682762953,
+        0.0015223025068506959,
+        0.00032553905192123214,
+        0.00020970122708066448,
+        8.399902520346993e-05,
+        8.102178899355184e-05
+      ],
+      "input_reference_status": {
+        "converged": true,
+        "cycles": 10,
+        "residual": 4.2521033530940105e-08
+      },
+      "reference_energy_fitted": false,
+      "seconds": 1.7245887679999985,
+      "independent_projection_check_error_hartree": 8.881784197001252e-16,
+      "projection_kernel_verified": true
+    },
+    {
+      "id": "H4_square_close",
+      "basis": "cc-pvdz",
+      "electrons": 4,
+      "spatial_orbitals": 20,
+      "model_energy_hartree": -1.762211215381454,
+      "reference_energy_hartree": -2.096806436342877,
+      "reference_converged": true,
+      "reference_residual": 7.801481771432229e-09,
+      "energy_error_kcal": 209.96167110841625,
+      "below_one_kcal": false,
+      "coupling_lowering_from_product_kcal": -39.351367983818136,
+      "block_dimensions": [
+        55,
+        55
+      ],
+      "projected_dimension": 3025,
+      "block_number_errors": [
+        4.440892098500626e-16,
+        4.440892098500626e-16
+      ],
+      "block_metric_errors": [
+        1.1102230246251565e-16,
+        1.1102230246251565e-16
+      ],
+      "leading_block_schmidt_values": [
+        0.9980902183640652,
+        0.053549508348029,
+        0.026216473933434806,
+        0.01244190878588201,
+        0.006941223638006138,
+        0.005474119991703494,
+        0.0035963624540518956,
+        0.0032129086459187113
+      ],
+      "input_reference_status": {
+        "converged": true,
+        "cycles": 10,
+        "residual": 9.565060421522706e-09
+      },
+      "reference_energy_fitted": false,
+      "seconds": 2.3840772979999976,
+      "independent_projection_check_error_hartree": 4.440892098500626e-16,
+      "projection_kernel_verified": true
+    }
+  ],
+  "failures": [],
+  "balanced_H4_contrast_error_kcal": 209.00147117764303,
+  "accuracy_rejection_panel_passed": false,
+  "peak_cuda_bytes": 610831360,
+  "projection_checks_use_reference_energies": false,
+  "projection_checks_recompute_references": false
+}

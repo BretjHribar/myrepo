@@ -1,0 +1,50 @@
+{
+  "scope": "Changed model's kinetic coefficient on inputs from the failing CPU SCF screen",
+  "criterion": "T=integral(tau); 1+delta_E/delta_tau must not become strongly negative",
+  "cases": [
+    {
+      "id": "00211b695674f5856c2ce113be2ffc2fcabaf41c",
+      "effective_kinetic_coefficient_min": 1.0000014907707024,
+      "quantiles_01_10_50_90": [
+        1.0000018974680356,
+        1.0000992355385883,
+        1.0060414561428004,
+        1.0562737384099576
+      ],
+      "electron_mass_fraction_negative_coefficient": 0.0
+    },
+    {
+      "id": "0285a070ab12463e51aa2fe4abf2f9948a803245",
+      "effective_kinetic_coefficient_min": 1.000002488621618,
+      "quantiles_01_10_50_90": [
+        1.000002881518325,
+        1.000144755158176,
+        1.0054098888602698,
+        1.0490077875719903
+      ],
+      "electron_mass_fraction_negative_coefficient": 0.0
+    },
+    {
+      "id": "02c8b84d07ac6a4e42a606da94273be873f8e814",
+      "effective_kinetic_coefficient_min": 1.0000024965757077,
+      "quantiles_01_10_50_90": [
+        1.0000025021900374,
+        1.0000550814560862,
+        1.0070228388743114,
+        1.1039000639412024
+      ],
+      "electron_mass_fraction_negative_coefficient": 0.0
+    },
+    {
+      "id": "0f1be79f8bdf9faf63d31242e1d3f52172fa7b43",
+      "effective_kinetic_coefficient_min": 1.0000024947233501,
+      "quantiles_01_10_50_90": [
+        1.0000028893084936,
+        1.0000908814977794,
+        1.0059410046194446,
+        1.0979605633503138
+      ],
+      "electron_mass_fraction_negative_coefficient": 0.0
+    }
+  ]
+}

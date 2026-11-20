@@ -1,0 +1,19 @@
+{
+  "purpose": "Independent chemistry and electron-count development evidence before speed work",
+  "created_before_reference_generation": true,
+  "model": "SpinNumberState with exact number and total-spin labels, channels=2",
+  "basis": "sto-3g",
+  "projection": "Complete stated AO basis, no frozen core or active orbital projection",
+  "input_orbitals": "One bounded CUDA Hartree-Fock determinant; no retries if unconverged",
+  "objective": "Actual molecular Hamiltonian Rayleigh quotient; no reference-energy loss",
+  "optimizer": {"name": "Adam", "steps": 400, "lr": 0.02, "cosine_final_lr": 0.0002},
+  "cases": [
+    {"id": "LiH_neutral_1.595", "atom": "Li 0 0 0; H 0 0 1.595", "charge": 0, "spin": 0, "electrons": 4},
+    {"id": "LiH_neutral_2.50", "atom": "Li 0 0 0; H 0 0 2.50", "charge": 0, "spin": 0, "electrons": 4},
+    {"id": "BeH2_neutral_1.33", "atom": "Be 0 0 0; H 0 0 -1.33; H 0 0 1.33", "charge": 0, "spin": 0, "electrons": 6},
+    {"id": "BeH2_neutral_2.10", "atom": "Be 0 0 0; H 0 0 -2.10; H 0 0 2.10", "charge": 0, "spin": 0, "electrons": 6}
+  ],
+  "assessment": "Report every case, number, spin, variational sign, reference retention, maximum error and balanced bond-stretch contrasts. No replacements, no label-driven seed/rank/iteration changes.",
+  "reference": "New CUDA exact diagonalization in the same complete minimal basis, performed after optimization",
+  "limitations": ["Not a complete-basis chemical accuracy result", "Not broad public/hidden-suite validation", "Per-system variational optimization, not an amortized learned energy predictor", "Unconstrained molecular-state test does not establish an XC functional", "Procedural new cases, not a sequestered benchmark"]
+}

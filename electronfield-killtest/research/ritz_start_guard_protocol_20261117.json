@@ -1,0 +1,11 @@
+{
+  "purpose": "Expose false lowest-state acceptance from a retained vector confined to an excited invariant sector, and check one fixed generic physical start",
+  "seed": 17112065,
+  "cases": ["diagonal_two_sector", "decoupled_four_state_blocks"],
+  "ritz_residual_tolerance_hartree": 1e-12,
+  "energy_tolerance_hartree": 1e-10,
+  "generic_relative_amplitude": 0.5,
+  "seed_sweep": false,
+  "scope": "New numerical lowest-state safeguard only, not chemical accuracy or a rigorous global-minimum certificate",
+  "execution": "One CUDA job, only after the ongoing original BH protocol is terminal; no change to that frozen experiment"
+}

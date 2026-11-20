@@ -1,0 +1,619 @@
+{
+    "created_utc":  "2026-11-17T11:33:27.114958+00:00",
+    "device":  "cuda",
+    "protocol":  {
+                     "purpose":  "A physical self-consistent forward model using an auxiliary-density universal functional with exact energy recovery",
+                     "cases":  [
+                                   "BeH2_631g_1.65_new",
+                                   "BeH2_631g_2.75_new"
+                               ],
+                     "input":  "Existing mean-field orbital densities and universal operators; no oracle density, correlated state or energy enters prediction",
+                     "epsilon_inverse_hartree":  1.0,
+                     "maximum_response_space_dimension":  192,
+                     "response_updates_per_call":  2,
+                     "stationarity_response_directions":  8,
+                     "density_response_directions":  8,
+                     "maximum_density_response_states":  4,
+                     "maximum_reduced_iterations":  4000,
+                     "reduced_gap_tolerance_hartree":  1E-11,
+                     "outside_stationarity_tolerance_hartree":  1E-05,
+                     "maximum_self_consistency_updates":  32,
+                     "self_consistency_potential_tolerance":  1E-06,
+                     "global_check_seed":  17112031,
+                     "global_check_ritz_dimension":  192,
+                     "global_check_residual_tolerance":  1E-08,
+                     "global_gap_tolerance_hartree":  1E-07,
+                     "ks_commutator_tolerance":  1E-05,
+                     "derivative_direction_seed":  17112032,
+                     "derivative_step":  0.001,
+                     "derivative_tolerance_hartree":  1E-05,
+                     "initialization":  "x=Q:D_meanfield-epsilon*v; each universal evaluation accepts only T,W,Q,N,occupation metadata and the auxiliary coordinate",
+                     "self_consistency":  "x_next=q(Gamma_x)-epsilon*v; physical Gamma remains positive with exact fixed N,S",
+                     "energy_recovery":  "F_epsilon(x)+v.x+epsilon*||v||^2/2 plus the fixed-number external constant and nuclear repulsion",
+                     "stopping":  "Reduced physical-state gap, full response, self-consistency and lowest-state checks; no reference-error target",
+                     "assessment":  "Only after prediction and consistency checks stop, compare with existing labels; generate no new correlated reference",
+                     "limits":  [
+                                    "Finite-basis development geometry pair",
+                                    "Auxiliary-density regularized KS formulation, not an unchanged conventional XC plugin",
+                                    "Global Fock-vector backend",
+                                    "No general learned model or many-fragment closure",
+                                    "Submission integration/eligibility unresolved",
+                                    "Not GMTKN55, CBS or speed evidence"
+                                ]
+                 },
+    "status":  "interrupted_environment_recovery",
+    "results":  [
+
+                ],
+    "failures":  [
+                     {
+                         "id":  "BeH2_631g_1.65_new",
+                         "error":  "TypeError: \u0027Tensor\u0027 object is not callable",
+                         "history":  [
+                                         {
+                                             "update":  0,
+                                             "physical_total_energy_hartree":  -15.75963076424523,
+                                             "potential_self_consistency_residual":  0.04246937082190207,
+                                             "outside_stationarity_residual":  0.12149183517696187,
+                                             "reduced_gap_hartree":  1.1093348462054564E-12,
+                                             "basis_dimension":  54,
+                                             "physical_energy_identity_error_hartree":  4.1033040680538146E-14
+                                         },
+                                         {
+                                             "update":  1,
+                                             "physical_total_energy_hartree":  -15.767333115170562,
+                                             "potential_self_consistency_residual":  0.03344074673735036,
+                                             "outside_stationarity_residual":  0.05338436700836437,
+                                             "reduced_gap_hartree":  1.0396128402589966E-12,
+                                             "basis_dimension":  124,
+                                             "physical_energy_identity_error_hartree":  4.3824536014036575E-14
+                                         },
+                                         {
+                                             "update":  2,
+                                             "physical_total_energy_hartree":  -15.768312760725394,
+                                             "potential_self_consistency_residual":  0.015146918893741203,
+                                             "outside_stationarity_residual":  0.035320555693946626,
+                                             "reduced_gap_hartree":  9.4151353380311775E-12,
+                                             "basis_dimension":  175,
+                                             "physical_energy_identity_error_hartree":  4.70865479853394E-14
+                                         },
+                                         {
+                                             "update":  3,
+                                             "physical_total_energy_hartree":  -15.768405742799096,
+                                             "potential_self_consistency_residual":  0.008510798480174657,
+                                             "outside_stationarity_residual":  0.03697351794203224,
+                                             "reduced_gap_hartree":  4.6092019090338E-12,
+                                             "basis_dimension":  175,
+                                             "physical_energy_identity_error_hartree":  2.2369530273264049E-14
+                                         },
+                                         {
+                                             "update":  4,
+                                             "physical_total_energy_hartree":  -15.76845191346689,
+                                             "potential_self_consistency_residual":  0.00632036897422063,
+                                             "outside_stationarity_residual":  0.03755710769931128,
+                                             "reduced_gap_hartree":  4.241496043277948E-12,
+                                             "basis_dimension":  175,
+                                             "physical_energy_identity_error_hartree":  1.6526032929273238E-14
+                                         },
+                                         {
+                                             "update":  5,
+                                             "physical_total_energy_hartree":  -15.768479799780813,
+                                             "potential_self_consistency_residual":  0.004959929356231311,
+                                             "outside_stationarity_residual":  0.037860386405222504,
+                                             "reduced_gap_hartree":  3.4798830483850907E-12,
+                                             "basis_dimension":  175,
+                                             "physical_energy_identity_error_hartree":  2.011835386868735E-14
+                                         },
+                                         {
+                                             "update":  6,
+                                             "physical_total_energy_hartree":  -15.768497363803867,
+                                             "potential_self_consistency_residual":  0.003949057518286608,
+                                             "outside_stationarity_residual":  0.03806425310437805,
+                                             "reduced_gap_hartree":  7.65743024544463E-12,
+                                             "basis_dimension":  175,
+                                             "physical_energy_identity_error_hartree":  2.0411223980529997E-14
+                                         },
+                                         {
+                                             "update":  7,
+                                             "physical_total_energy_hartree":  -15.768508618280716,
+                                             "potential_self_consistency_residual":  0.0031668492686410337,
+                                             "outside_stationarity_residual":  0.03821846569216426,
+                                             "reduced_gap_hartree":  4.922284801978094E-12,
+                                             "basis_dimension":  175,
+                                             "physical_energy_identity_error_hartree":  3.1606203487472961E-14
+                                         },
+                                         {
+                                             "update":  8,
+                                             "physical_total_energy_hartree":  -15.768515909245046,
+                                             "potential_self_consistency_residual":  0.002552123153140184,
+                                             "outside_stationarity_residual":  0.03834159786513165,
+                                             "reduced_gap_hartree":  3.929301328753354E-12,
+                                             "basis_dimension":  175,
+                                             "physical_energy_identity_error_hartree":  1.3137984996517815E-15
+                                         },
+                                         {
+                                             "update":  9,
+                                             "physical_total_energy_hartree":  -15.768520669396295,
+                                             "potential_self_consistency_residual":  0.002064028148750556,
+                                             "outside_stationarity_residual":  0.038441272084924365,
+                                             "reduced_gap_hartree":  2.5894841826357151E-12,
+                                             "basis_dimension":  175,
+                                             "physical_energy_identity_error_hartree":  8.0834276921268149E-15
+                                         },
+                                         {
+                                             "update":  10,
+                                             "physical_total_energy_hartree":  -15.768523795233612,
+                                             "potential_self_consistency_residual":  0.001673741827081975,
+                                             "outside_stationarity_residual":  0.0385226174605293,
+                                             "reduced_gap_hartree":  2.1671553440683056E-12,
+                                             "basis_dimension":  175,
+                                             "physical_energy_identity_error_hartree":  7.2166093257740749E-15
+                                         },
+                                         {
+                                             "update":  11,
+                                             "physical_total_energy_hartree":  -15.768525856044786,
+                                             "potential_self_consistency_residual":  0.0013594188577006415,
+                                             "outside_stationarity_residual":  0.03858951743181807,
+                                             "reduced_gap_hartree":  9.6642693847570627E-12,
+                                             "basis_dimension":  175,
+                                             "physical_energy_identity_error_hartree":  1.6867806276567375E-14
+                                         },
+                                         {
+                                             "update":  12,
+                                             "physical_total_energy_hartree":  -15.768527220449077,
+                                             "potential_self_consistency_residual":  0.0011067984091078684,
+                                             "outside_stationarity_residual":  0.03864351995105674,
+                                             "reduced_gap_hartree":  7.4318329268407979E-12,
+                                             "basis_dimension":  175,
+                                             "physical_energy_identity_error_hartree":  3.6178750340481796E-14
+                                         },
+                                         {
+                                             "update":  13,
+                                             "physical_total_energy_hartree":  -15.76852812588654,
+                                             "potential_self_consistency_residual":  0.0009020302443486785,
+                                             "outside_stationarity_residual":  0.03868787493327618,
+                                             "reduced_gap_hartree":  6.9886318954104354E-12,
+                                             "basis_dimension":  175,
+                                             "physical_energy_identity_error_hartree":  9.3960595097728719E-15
+                                         },
+                                         {
+                                             "update":  14,
+                                             "physical_total_energy_hartree":  -15.768528727202277,
+                                             "potential_self_consistency_residual":  0.0007348344613465071,
+                                             "outside_stationarity_residual":  0.038723521183115964,
+                                             "reduced_gap_hartree":  2.2892798767770728E-12,
+                                             "basis_dimension":  175,
+                                             "physical_energy_identity_error_hartree":  1.487430618839138E-14
+                                         },
+                                         {
+                                             "update":  15,
+                                             "physical_total_energy_hartree":  -15.768529127786142,
+                                             "potential_self_consistency_residual":  0.0005998886561495826,
+                                             "outside_stationarity_residual":  0.03875286832259479,
+                                             "reduced_gap_hartree":  1.5361045768713666E-12,
+                                             "basis_dimension":  175,
+                                             "physical_energy_identity_error_hartree":  4.4340801536596887E-15
+                                         },
+                                         {
+                                             "update":  16,
+                                             "physical_total_energy_hartree":  -15.768529395562652,
+                                             "potential_self_consistency_residual":  0.0004911969969733966,
+                                             "outside_stationarity_residual":  0.03877769095452136,
+                                             "reduced_gap_hartree":  8.7383433822196821E-12,
+                                             "basis_dimension":  175,
+                                             "physical_energy_identity_error_hartree":  9.6054262814087725E-15
+                                         },
+                                         {
+                                             "update":  17,
+                                             "physical_total_energy_hartree":  -15.768529574167342,
+                                             "potential_self_consistency_residual":  0.0004011955360939565,
+                                             "outside_stationarity_residual":  0.03879717507565904,
+                                             "reduced_gap_hartree":  5.5737636728281359E-12,
+                                             "basis_dimension":  175,
+                                             "physical_energy_identity_error_hartree":  4.6485554736447085E-15
+                                         },
+                                         {
+                                             "update":  18,
+                                             "physical_total_energy_hartree":  -15.768529693404162,
+                                             "potential_self_consistency_residual":  0.0003278372422752282,
+                                             "outside_stationarity_residual":  0.03881303110739282,
+                                             "reduced_gap_hartree":  3.6943781367426709E-12,
+                                             "basis_dimension":  175,
+                                             "physical_energy_identity_error_hartree":  4.3573960480711822E-14
+                                         },
+                                         {
+                                             "update":  19,
+                                             "physical_total_energy_hartree":  -15.768529773067058,
+                                             "potential_self_consistency_residual":  0.0002679899853378928,
+                                             "outside_stationarity_residual":  0.03882595725437156,
+                                             "reduced_gap_hartree":  2.4558133304708463E-12,
+                                             "basis_dimension":  175,
+                                             "physical_energy_identity_error_hartree":  1.8052154683036527E-14
+                                         },
+                                         {
+                                             "update":  20,
+                                             "physical_total_energy_hartree":  -15.768529825974632,
+                                             "potential_self_consistency_residual":  0.0002175411031213135,
+                                             "outside_stationarity_residual":  0.03883520234557314,
+                                             "reduced_gap_hartree":  8.8644647178171E-12,
+                                             "basis_dimension":  175,
+                                             "physical_energy_identity_error_hartree":  5.6397361040509415E-15
+                                         },
+                                         {
+                                             "update":  21,
+                                             "physical_total_energy_hartree":  -15.768529861477067,
+                                             "potential_self_consistency_residual":  0.00017820097420243513,
+                                             "outside_stationarity_residual":  0.038843790247715504,
+                                             "reduced_gap_hartree":  6.3087313151299895E-12,
+                                             "basis_dimension":  175,
+                                             "physical_energy_identity_error_hartree":  7.6684326852702925E-14
+                                         },
+                                         {
+                                             "update":  22,
+                                             "physical_total_energy_hartree":  -15.768529885294296,
+                                             "potential_self_consistency_residual":  0.00014587635684486133,
+                                             "outside_stationarity_residual":  0.03885093250434874,
+                                             "reduced_gap_hartree":  5.2819970619566448E-12,
+                                             "basis_dimension":  175,
+                                             "physical_energy_identity_error_hartree":  1.1706225972170268E-14
+                                         },
+                                         {
+                                             "update":  23,
+                                             "physical_total_energy_hartree":  -15.768529901304365,
+                                             "potential_self_consistency_residual":  0.00011960754927764444,
+                                             "outside_stationarity_residual":  0.038856811136614454,
+                                             "reduced_gap_hartree":  3.5793590313915047E-12,
+                                             "basis_dimension":  175,
+                                             "physical_energy_identity_error_hartree":  8.1662307106212911E-15
+                                         },
+                                         {
+                                             "update":  24,
+                                             "physical_total_energy_hartree":  -15.768529912108672,
+                                             "potential_self_consistency_residual":  9.853699350028186E-05,
+                                             "outside_stationarity_residual":  0.038860546619812086,
+                                             "reduced_gap_hartree":  9.6531671545108111E-12,
+                                             "basis_dimension":  175,
+                                             "physical_energy_identity_error_hartree":  2.1829093198135429E-14
+                                         },
+                                         {
+                                             "update":  25,
+                                             "physical_total_energy_hartree":  -15.768529919403775,
+                                             "potential_self_consistency_residual":  8.1174649782873686E-05,
+                                             "outside_stationarity_residual":  0.03886447448737729,
+                                             "reduced_gap_hartree":  7.6521011749264289E-12,
+                                             "basis_dimension":  175,
+                                             "physical_energy_identity_error_hartree":  5.0175046232229533E-14
+                                         },
+                                         {
+                                             "update":  26,
+                                             "physical_total_energy_hartree":  -15.768529924321019,
+                                             "potential_self_consistency_residual":  6.6791190780023023E-05,
+                                             "outside_stationarity_residual":  0.038868930729585846,
+                                             "reduced_gap_hartree":  4.1007197637554782E-12,
+                                             "basis_dimension":  175,
+                                             "physical_energy_identity_error_hartree":  1.0037663324841736E-14
+                                         },
+                                         {
+                                             "update":  27,
+                                             "physical_total_energy_hartree":  -15.76852992759871,
+                                             "potential_self_consistency_residual":  5.4486913180646423E-05,
+                                             "outside_stationarity_residual":  0.03887222965773073,
+                                             "reduced_gap_hartree":  6.738165581055E-12,
+                                             "basis_dimension":  175,
+                                             "physical_energy_identity_error_hartree":  1.7024701225308285E-14
+                                         },
+                                         {
+                                             "update":  28,
+                                             "physical_total_energy_hartree":  -15.768529929796166,
+                                             "potential_self_consistency_residual":  4.4560300408558408E-05,
+                                             "outside_stationarity_residual":  0.03887426910479991,
+                                             "reduced_gap_hartree":  4.1877612488860905E-12,
+                                             "basis_dimension":  175,
+                                             "physical_energy_identity_error_hartree":  3.6323132794448774E-14
+                                         },
+                                         {
+                                             "update":  29,
+                                             "physical_total_energy_hartree":  -15.768529931273097,
+                                             "potential_self_consistency_residual":  3.6528113009624967E-05,
+                                             "outside_stationarity_residual":  0.03887593114007554,
+                                             "reduced_gap_hartree":  2.7737812047234911E-12,
+                                             "basis_dimension":  175,
+                                             "physical_energy_identity_error_hartree":  8.7345620932027454E-15
+                                         },
+                                         {
+                                             "update":  30,
+                                             "physical_total_energy_hartree":  -15.76852993226705,
+                                             "potential_self_consistency_residual":  2.9963045093447494E-05,
+                                             "outside_stationarity_residual":  0.03887727792410377,
+                                             "reduced_gap_hartree":  1.84341431008761E-12,
+                                             "basis_dimension":  175,
+                                             "physical_energy_identity_error_hartree":  2.4425887934681571E-14
+                                         },
+                                         {
+                                             "update":  31,
+                                             "physical_total_energy_hartree":  -15.768529932936879,
+                                             "potential_self_consistency_residual":  2.4596660083811032E-05,
+                                             "outside_stationarity_residual":  0.038878375799069755,
+                                             "reduced_gap_hartree":  1.2287948436551233E-12,
+                                             "basis_dimension":  175,
+                                             "physical_energy_identity_error_hartree":  1.2173396912395975E-14
+                                         },
+                                         {
+                                             "update":  32,
+                                             "physical_total_energy_hartree":  -15.76852993336555,
+                                             "potential_self_consistency_residual":  1.9128617475050529E-05,
+                                             "outside_stationarity_residual":  0.03887857948256444,
+                                             "reduced_gap_hartree":  7.6538775317658292E-12,
+                                             "basis_dimension":  175,
+                                             "physical_energy_identity_error_hartree":  4.0539500360429675E-14
+                                         }
+                                     ],
+                         "xc_potential_accepted":  false
+                     }
+                 ],
+    "current_case":  "BeH2_631g_2.75_new",
+    "current_history":  [
+                            {
+                                "update":  0,
+                                "physical_total_energy_hartree":  -15.534358520943972,
+                                "potential_self_consistency_residual":  0.1012764133525699,
+                                "outside_stationarity_residual":  0.21517635259786966,
+                                "reduced_gap_hartree":  7.02327085377874E-13,
+                                "basis_dimension":  55,
+                                "physical_energy_identity_error_hartree":  2.6680047060523293E-14
+                            },
+                            {
+                                "update":  1,
+                                "physical_total_energy_hartree":  -15.567692515728769,
+                                "potential_self_consistency_residual":  0.11874187190861185,
+                                "outside_stationarity_residual":  0.0983891684378377,
+                                "reduced_gap_hartree":  3.5018654642726688E-12,
+                                "basis_dimension":  129,
+                                "physical_energy_identity_error_hartree":  2.6434583688672575E-14
+                            },
+                            {
+                                "update":  2,
+                                "physical_total_energy_hartree":  -15.57907762622051,
+                                "potential_self_consistency_residual":  0.08573882582069692,
+                                "outside_stationarity_residual":  0.07995044476420105,
+                                "reduced_gap_hartree":  4.3640646651965653E-12,
+                                "basis_dimension":  186,
+                                "physical_energy_identity_error_hartree":  1.1952678430349195E-14
+                            },
+                            {
+                                "update":  3,
+                                "physical_total_energy_hartree":  -15.583646909849278,
+                                "potential_self_consistency_residual":  0.06232095798485572,
+                                "outside_stationarity_residual":  0.09349895986250409,
+                                "reduced_gap_hartree":  7.8319573049157043E-12,
+                                "basis_dimension":  186,
+                                "physical_energy_identity_error_hartree":  1.3569223869525082E-14
+                            },
+                            {
+                                "update":  4,
+                                "physical_total_energy_hartree":  -15.586295942786592,
+                                "potential_self_consistency_residual":  0.048182495653600645,
+                                "outside_stationarity_residual":  0.10320650787436979,
+                                "reduced_gap_hartree":  7.7471362658343423E-12,
+                                "basis_dimension":  186,
+                                "physical_energy_identity_error_hartree":  1.7633247292869747E-14
+                            },
+                            {
+                                "update":  5,
+                                "physical_total_energy_hartree":  -15.58796691554923,
+                                "potential_self_consistency_residual":  0.03862814936267194,
+                                "outside_stationarity_residual":  0.11073678626250591,
+                                "reduced_gap_hartree":  5.8957283499694313E-12,
+                                "basis_dimension":  186,
+                                "physical_energy_identity_error_hartree":  1.3584619540374376E-14
+                            },
+                            {
+                                "update":  6,
+                                "physical_total_energy_hartree":  -15.589082868153163,
+                                "potential_self_consistency_residual":  0.03178195287535223,
+                                "outside_stationarity_residual":  0.11680103379682598,
+                                "reduced_gap_hartree":  9.43289890642518E-12,
+                                "basis_dimension":  186,
+                                "physical_energy_identity_error_hartree":  5.4781483169175083E-14
+                            },
+                            {
+                                "update":  7,
+                                "physical_total_energy_hartree":  -15.589861154132066,
+                                "potential_self_consistency_residual":  0.02668102066728443,
+                                "outside_stationarity_residual":  0.1218034564200349,
+                                "reduced_gap_hartree":  8.4732221239391947E-12,
+                                "basis_dimension":  186,
+                                "physical_energy_identity_error_hartree":  2.4003585577525577E-14
+                            },
+                            {
+                                "update":  8,
+                                "physical_total_energy_hartree":  -15.590422897261643,
+                                "potential_self_consistency_residual":  0.022761508001770007,
+                                "outside_stationarity_residual":  0.1260017149945772,
+                                "reduced_gap_hartree":  5.2753357238088938E-12,
+                                "basis_dimension":  186,
+                                "physical_energy_identity_error_hartree":  3.2065279251258794E-16
+                            },
+                            {
+                                "update":  9,
+                                "physical_total_energy_hartree":  -15.590839570679112,
+                                "potential_self_consistency_residual":  0.01966729890454272,
+                                "outside_stationarity_residual":  0.12957190214100453,
+                                "reduced_gap_hartree":  4.8268056218603306E-12,
+                                "basis_dimension":  186,
+                                "physical_energy_identity_error_hartree":  3.0301661787385248E-14
+                            },
+                            {
+                                "update":  10,
+                                "physical_total_energy_hartree":  -15.591155351630789,
+                                "potential_self_consistency_residual":  0.017164732641670986,
+                                "outside_stationarity_residual":  0.1326404509297517,
+                                "reduced_gap_hartree":  4.3844927688496682E-12,
+                                "basis_dimension":  186,
+                                "physical_energy_identity_error_hartree":  1.0555765246264559E-14
+                            },
+                            {
+                                "update":  11,
+                                "physical_total_energy_hartree":  -15.591398681037742,
+                                "potential_self_consistency_residual":  0.015096591742262378,
+                                "outside_stationarity_residual":  0.13530096445236714,
+                                "reduced_gap_hartree":  3.957278948973908E-12,
+                                "basis_dimension":  186,
+                                "physical_energy_identity_error_hartree":  6.3932013979681179E-15
+                            },
+                            {
+                                "update":  12,
+                                "physical_total_energy_hartree":  -15.591588567701226,
+                                "potential_self_consistency_residual":  0.013355442107786665,
+                                "outside_stationarity_residual":  0.13762444214691658,
+                                "reduced_gap_hartree":  3.8449243788818421E-12,
+                                "basis_dimension":  186,
+                                "physical_energy_identity_error_hartree":  2.019357717066711E-14
+                            },
+                            {
+                                "update":  13,
+                                "physical_total_energy_hartree":  -15.591738162871714,
+                                "potential_self_consistency_residual":  0.011866909194888068,
+                                "outside_stationarity_residual":  0.1396657854058442,
+                                "reduced_gap_hartree":  4.0585312888197222E-12,
+                                "basis_dimension":  186,
+                                "physical_energy_identity_error_hartree":  3.2812294548101306E-15
+                            },
+                            {
+                                "update":  14,
+                                "physical_total_energy_hartree":  -15.591856860047884,
+                                "potential_self_consistency_residual":  0.01057944191809128,
+                                "outside_stationarity_residual":  0.14146818628317587,
+                                "reduced_gap_hartree":  5.0501824944149121E-12,
+                                "basis_dimension":  186,
+                                "physical_energy_identity_error_hartree":  4.8013811893357627E-14
+                            },
+                            {
+                                "update":  15,
+                                "physical_total_energy_hartree":  -15.59195152655333,
+                                "potential_self_consistency_residual":  0.009453612739885073,
+                                "outside_stationarity_residual":  0.1430660170194038,
+                                "reduced_gap_hartree":  4.4364512064021255E-12,
+                                "basis_dimension":  186,
+                                "physical_energy_identity_error_hartree":  9.1520358186467782E-14
+                            },
+                            {
+                                "update":  16,
+                                "physical_total_energy_hartree":  -15.592027321561108,
+                                "potential_self_consistency_residual":  0.008462906847925727,
+                                "outside_stationarity_residual":  0.14448728045303033,
+                                "reduced_gap_hartree":  8.9981355699819687E-12,
+                                "basis_dimension":  186,
+                                "physical_energy_identity_error_hartree":  2.6054001621075851E-14
+                            },
+                            {
+                                "update":  17,
+                                "physical_total_energy_hartree":  -15.592088176270607,
+                                "potential_self_consistency_residual":  0.007585529066493292,
+                                "outside_stationarity_residual":  0.14575470319970943,
+                                "reduced_gap_hartree":  7.6125772352497734E-12,
+                                "basis_dimension":  186,
+                                "physical_energy_identity_error_hartree":  3.141458854117804E-14
+                            },
+                            {
+                                "update":  18,
+                                "physical_total_energy_hartree":  -15.592137138497137,
+                                "potential_self_consistency_residual":  0.006805704738897197,
+                                "outside_stationarity_residual":  0.14688751236471453,
+                                "reduced_gap_hartree":  6.4015459599886526E-12,
+                                "basis_dimension":  186,
+                                "physical_energy_identity_error_hartree":  3.981029441106794E-14
+                            },
+                            {
+                                "update":  19,
+                                "physical_total_energy_hartree":  -15.592176594185855,
+                                "potential_self_consistency_residual":  0.0061104775505111085,
+                                "outside_stationarity_residual":  0.14790176377935998,
+                                "reduced_gap_hartree":  5.3508308894834045E-12,
+                                "basis_dimension":  186,
+                                "physical_energy_identity_error_hartree":  2.7438317731168921E-14
+                            },
+                            {
+                                "update":  20,
+                                "physical_total_energy_hartree":  -15.59220842676459,
+                                "potential_self_consistency_residual":  0.005489279040398296,
+                                "outside_stationarity_residual":  0.14881112388024187,
+                                "reduced_gap_hartree":  4.453770685586278E-12,
+                                "basis_dimension":  186,
+                                "physical_energy_identity_error_hartree":  1.1464011570551033E-14
+                            },
+                            {
+                                "update":  21,
+                                "physical_total_energy_hartree":  -15.592234128590604,
+                                "potential_self_consistency_residual":  0.0049325577913174575,
+                                "outside_stationarity_residual":  0.14962726057010764,
+                                "reduced_gap_hartree":  9.14956999054084E-12,
+                                "basis_dimension":  186,
+                                "physical_energy_identity_error_hartree":  5.3526132907499163E-14
+                            },
+                            {
+                                "update":  22,
+                                "physical_total_energy_hartree":  -15.592254898573017,
+                                "potential_self_consistency_residual":  0.004434485864547645,
+                                "outside_stationarity_residual":  0.15036038245439765,
+                                "reduced_gap_hartree":  7.7080564153675368E-12,
+                                "basis_dimension":  186,
+                                "physical_energy_identity_error_hartree":  6.9801867600858755E-15
+                            },
+                            {
+                                "update":  23,
+                                "physical_total_energy_hartree":  -15.592271692423274,
+                                "potential_self_consistency_residual":  0.003987753821658789,
+                                "outside_stationarity_residual":  0.1510194663326079,
+                                "reduced_gap_hartree":  6.4650507169972116E-12,
+                                "basis_dimension":  186,
+                                "physical_energy_identity_error_hartree":  4.4138548068242689E-16
+                            },
+                            {
+                                "update":  24,
+                                "physical_total_energy_hartree":  -15.592285277432936,
+                                "potential_self_consistency_residual":  0.003586790511911862,
+                                "outside_stationarity_residual":  0.1516122861026728,
+                                "reduced_gap_hartree":  5.4085624867639126E-12,
+                                "basis_dimension":  186,
+                                "physical_energy_identity_error_hartree":  3.6178383151699162E-14
+                            },
+                            {
+                                "update":  25,
+                                "physical_total_energy_hartree":  -15.592296270811406,
+                                "potential_self_consistency_residual":  0.0032267154553451984,
+                                "outside_stationarity_residual":  0.15214571252189688,
+                                "reduced_gap_hartree":  4.5115022828667861E-12,
+                                "basis_dimension":  186,
+                                "physical_energy_identity_error_hartree":  6.2506271182203796E-15
+                            },
+                            {
+                                "update":  26,
+                                "physical_total_energy_hartree":  -15.592305169525261,
+                                "potential_self_consistency_residual":  0.0029031431002692607,
+                                "outside_stationarity_residual":  0.15262586039767392,
+                                "reduced_gap_hartree":  3.9892533720831125E-12,
+                                "basis_dimension":  186,
+                                "physical_energy_identity_error_hartree":  2.0453412997566839E-14
+                            },
+                            {
+                                "update":  27,
+                                "physical_total_energy_hartree":  -15.592312374881597,
+                                "potential_self_consistency_residual":  0.0026124420499730647,
+                                "outside_stationarity_residual":  0.1530581090120115,
+                                "reduced_gap_hartree":  3.3124614162716171E-12,
+                                "basis_dimension":  186,
+                                "physical_energy_identity_error_hartree":  2.4931842208157987E-14
+                            },
+                            {
+                                "update":  28,
+                                "physical_total_energy_hartree":  -15.592318210507006,
+                                "potential_self_consistency_residual":  0.0023511218631147718,
+                                "outside_stationarity_residual":  0.15344732435261108,
+                                "reduced_gap_hartree":  2.7440272276635369E-12,
+                                "basis_dimension":  186,
+                                "physical_energy_identity_error_hartree":  1.1004123502168783E-14
+                            }
+                        ],
+    "recovery_record":  "auxiliary_environment_recovery_20261117.json"
+}

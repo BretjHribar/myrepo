@@ -1,0 +1,11 @@
+{
+  "purpose": "Verify physical norm loss, spin symmetry and the explicit resource cap in a new bounded two-site split",
+  "seed": 17112060,
+  "sites": 4,
+  "electrons": 4,
+  "center": 1,
+  "channels": 8,
+  "maximum_bond_dimension": 4,
+  "identity_tolerance": 1e-10,
+  "scope": "One independent state-space truncation check; no Hamiltonian benchmark or chemical score"
+}

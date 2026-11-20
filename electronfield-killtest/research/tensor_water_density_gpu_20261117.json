@@ -1,0 +1,20 @@
+{
+  "created_utc": "2026-11-17T13:20:14.920125+00:00",
+  "device": "cuda",
+  "id": "H2O_ccpvdz_tensor_scope_new",
+  "passed": true,
+  "spatial_orbitals": 24,
+  "electrons": 10,
+  "number_error": 1.7763568394002505e-15,
+  "hermiticity_error": 0.0,
+  "minimum_spatial_occupation": 3.574059327323515e-05,
+  "maximum_spatial_occupation": 1.9983801568858295,
+  "physical_density_method": "Fixed-state derivative of the complete literal one-body tensor operator",
+  "global_occupation_vector_allocated": false,
+  "state_solve_repeated": false,
+  "new_reference_generated_or_loaded": false,
+  "xc_functional_evaluated": false,
+  "chemical_accuracy_measured": false,
+  "wtmad2_measured": false,
+  "peak_cuda_bytes": 102744064
+}

@@ -1,0 +1,12 @@
+{
+  "created_utc": "2026-11-16T21:25:17.659545+00:00",
+  "scope": "New analytic ensemble functional's full DM derivative; no unchanged benchmark rerun",
+  "case": "spin-polarized carbon, occupied/virtual orbital rotation",
+  "device": "cuda",
+  "correction_hartree": 0.34758949747774676,
+  "autograd_directional": 0.046803881915733675,
+  "finite_difference_directional": 0.04680388187017214,
+  "absolute_error": 4.556153371249039e-11,
+  "passed": true,
+  "seconds": 0.7154729089999989
+}

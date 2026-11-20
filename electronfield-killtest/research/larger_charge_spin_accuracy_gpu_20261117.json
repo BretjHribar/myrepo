@@ -1,0 +1,915 @@
+{
+  "created_utc": "2026-11-17T10:11:26.648487+00:00",
+  "device": "cuda",
+  "protocol": {
+    "purpose": "Accuracy and basis-scope transfer of the charge/spin state before any speed work",
+    "frozen_before_new_reference_generation": true,
+    "cases": [
+      {
+        "id": "BeH2_631g_1.65_new",
+        "atom": "Be 0 0 0; H 0 0 1.65; H 0 0 -1.65",
+        "charge": 0,
+        "spin": 0,
+        "electrons": 6,
+        "basis": "6-31g",
+        "first_block_atoms": 1
+      },
+      {
+        "id": "BeH2_631g_2.75_new",
+        "atom": "Be 0 0 0; H 0 0 2.75; H 0 0 -2.75",
+        "charge": 0,
+        "spin": 0,
+        "electrons": 6,
+        "basis": "6-31g",
+        "first_block_atoms": 1
+      }
+    ],
+    "model": "Unchanged charge/spin multiplets, input Schmidt support, full fermionic interactions and residual-based completion",
+    "maximum_adaptive_updates": 64,
+    "full_state_residual_target_hartree": 1e-05,
+    "maximum_reference_ritz_dimension": 384,
+    "reference_residual_tolerance_hartree": 1e-08,
+    "stopping": "Physical Hamiltonian residual or declared capacity; never reference-energy error",
+    "reference_use": "Generate each new full same-basis reference only after its prediction is saved; no frontier method runs",
+    "assessment": "Keep both cases and their balanced stretch contrast, including all convergence failures",
+    "limits": [
+      "Six electrons and a larger split-valence basis, not full GMTKN55",
+      "No polarization functions or complete-basis accuracy claim",
+      "A physical state representation, not yet a completed density-only XC functional",
+      "Supplied two-block partition and global fixed-Sz coefficient vector",
+      "No timing optimization or CPU numerical work"
+    ]
+  },
+  "results": [
+    {
+      "id": "BeH2_631g_1.65_new",
+      "electrons": 6,
+      "basis": "6-31g",
+      "spatial_orbitals": 13,
+      "full_fixed_sz_dimension": 81796,
+      "energy_error_kcal": 6.691428517807907e-09,
+      "total_energy_hartree": -15.769192300831044,
+      "reference_energy_hartree": -15.769192300841707,
+      "reference_converged": true,
+      "reference_residual": 9.502117957933393e-09,
+      "reference_energy_fitted": false,
+      "physical_validity_passed": true,
+      "full_residual": 8.585648553789507e-06,
+      "projected_residual": 7.8857274407923e-09,
+      "input_retention_error": 1.7565186360346507e-15,
+      "spin_lower_norm": 1.6957544866072063e-14,
+      "initial_spin_lower_norm": 1.0097890303062429e-15,
+      "reference_not_degraded": true,
+      "projected_dimension": 11019,
+      "charge_weights": {
+        "0": 1.507052163180416e-08,
+        "1": 5.962186764585107e-05,
+        "2": 0.04712319349941272,
+        "3": 0.2724697281333034,
+        "4": 0.44866836423668405,
+        "5": 0.20423125243630602,
+        "6": 0.027447824756126272
+      },
+      "local_multiplets": [
+        [
+          {
+            "electrons": 0,
+            "twice_spin": 0,
+            "multiplets": 1,
+            "complete_multiplets": 1,
+            "input_support_added": 0
+          },
+          {
+            "electrons": 1,
+            "twice_spin": 1,
+            "multiplets": 9,
+            "complete_multiplets": 9,
+            "input_support_added": 0
+          },
+          {
+            "electrons": 2,
+            "twice_spin": 0,
+            "multiplets": 26,
+            "complete_multiplets": 45,
+            "input_support_added": 6
+          },
+          {
+            "electrons": 2,
+            "twice_spin": 2,
+            "multiplets": 22,
+            "complete_multiplets": 36,
+            "input_support_added": 3
+          },
+          {
+            "electrons": 3,
+            "twice_spin": 1,
+            "multiplets": 69,
+            "complete_multiplets": 240,
+            "input_support_added": 8
+          },
+          {
+            "electrons": 3,
+            "twice_spin": 3,
+            "multiplets": 27,
+            "complete_multiplets": 84,
+            "input_support_added": 1
+          },
+          {
+            "electrons": 4,
+            "twice_spin": 0,
+            "multiplets": 69,
+            "complete_multiplets": 540,
+            "input_support_added": 6
+          },
+          {
+            "electrons": 4,
+            "twice_spin": 2,
+            "multiplets": 65,
+            "complete_multiplets": 630,
+            "input_support_added": 3
+          },
+          {
+            "electrons": 5,
+            "twice_spin": 1,
+            "multiplets": 65,
+            "complete_multiplets": 1890,
+            "input_support_added": 3
+          },
+          {
+            "electrons": 6,
+            "twice_spin": 0,
+            "multiplets": 41,
+            "complete_multiplets": 2520,
+            "input_support_added": 1
+          }
+        ],
+        [
+          {
+            "electrons": 0,
+            "twice_spin": 0,
+            "multiplets": 1,
+            "complete_multiplets": 1,
+            "input_support_added": 0
+          },
+          {
+            "electrons": 1,
+            "twice_spin": 1,
+            "multiplets": 4,
+            "complete_multiplets": 4,
+            "input_support_added": 0
+          },
+          {
+            "electrons": 2,
+            "twice_spin": 0,
+            "multiplets": 10,
+            "complete_multiplets": 10,
+            "input_support_added": 0
+          },
+          {
+            "electrons": 2,
+            "twice_spin": 2,
+            "multiplets": 6,
+            "complete_multiplets": 6,
+            "input_support_added": 0
+          },
+          {
+            "electrons": 3,
+            "twice_spin": 1,
+            "multiplets": 20,
+            "complete_multiplets": 20,
+            "input_support_added": 4
+          },
+          {
+            "electrons": 3,
+            "twice_spin": 3,
+            "multiplets": 4,
+            "complete_multiplets": 4,
+            "input_support_added": 0
+          },
+          {
+            "electrons": 4,
+            "twice_spin": 0,
+            "multiplets": 20,
+            "complete_multiplets": 20,
+            "input_support_added": 4
+          },
+          {
+            "electrons": 4,
+            "twice_spin": 2,
+            "multiplets": 15,
+            "complete_multiplets": 15,
+            "input_support_added": 0
+          },
+          {
+            "electrons": 5,
+            "twice_spin": 1,
+            "multiplets": 20,
+            "complete_multiplets": 20,
+            "input_support_added": 3
+          },
+          {
+            "electrons": 6,
+            "twice_spin": 0,
+            "multiplets": 10,
+            "complete_multiplets": 10,
+            "input_support_added": 0
+          }
+        ]
+      ],
+      "history": [
+        {
+          "adaptive_update": 0,
+          "energy_hartree": -15.767414386561667,
+          "full_state_residual": 0.06223119216483744,
+          "projected_state_residual": 7.879753168454757e-09,
+          "projected_dimension": 5531,
+          "added_local_multiplets": [
+            15,
+            1
+          ]
+        },
+        {
+          "adaptive_update": 1,
+          "energy_hartree": -15.768468277405518,
+          "full_state_residual": 0.054176223435542285,
+          "projected_state_residual": 7.1236424921657145e-09,
+          "projected_dimension": 6062,
+          "added_local_multiplets": [
+            14,
+            0
+          ]
+        },
+        {
+          "adaptive_update": 2,
+          "energy_hartree": -15.768945209771836,
+          "full_state_residual": 0.031820881769109154,
+          "projected_state_residual": 9.56157939526262e-09,
+          "projected_dimension": 6510,
+          "added_local_multiplets": [
+            11,
+            0
+          ]
+        },
+        {
+          "adaptive_update": 3,
+          "energy_hartree": -15.769095207684625,
+          "full_state_residual": 0.01897469402150875,
+          "projected_state_residual": 9.44951304535897e-09,
+          "projected_dimension": 6823,
+          "added_local_multiplets": [
+            11,
+            0
+          ]
+        },
+        {
+          "adaptive_update": 4,
+          "energy_hartree": -15.769162343549013,
+          "full_state_residual": 0.01202971024152507,
+          "projected_state_residual": 9.109906580907982e-09,
+          "projected_dimension": 7136,
+          "added_local_multiplets": [
+            11,
+            0
+          ]
+        },
+        {
+          "adaptive_update": 5,
+          "energy_hartree": -15.769177690197475,
+          "full_state_residual": 0.008071979560409384,
+          "projected_state_residual": 9.24413279283172e-09,
+          "projected_dimension": 7449,
+          "added_local_multiplets": [
+            9,
+            0
+          ]
+        },
+        {
+          "adaptive_update": 6,
+          "energy_hartree": -15.769186536004296,
+          "full_state_residual": 0.0049156149076560055,
+          "projected_state_residual": 8.643354394389294e-09,
+          "projected_dimension": 7650,
+          "added_local_multiplets": [
+            9,
+            0
+          ]
+        },
+        {
+          "adaptive_update": 7,
+          "energy_hartree": -15.769189232984893,
+          "full_state_residual": 0.0038835408864684464,
+          "projected_state_residual": 9.11666870184956e-09,
+          "projected_dimension": 7851,
+          "added_local_multiplets": [
+            9,
+            0
+          ]
+        },
+        {
+          "adaptive_update": 8,
+          "energy_hartree": -15.7691910260346,
+          "full_state_residual": 0.0026832933305345483,
+          "projected_state_residual": 8.436814717343814e-09,
+          "projected_dimension": 8052,
+          "added_local_multiplets": [
+            9,
+            0
+          ]
+        },
+        {
+          "adaptive_update": 9,
+          "energy_hartree": -15.769191772583273,
+          "full_state_residual": 0.0017429312342475013,
+          "projected_state_residual": 8.969325902656862e-09,
+          "projected_dimension": 8253,
+          "added_local_multiplets": [
+            9,
+            0
+          ]
+        },
+        {
+          "adaptive_update": 10,
+          "energy_hartree": -15.769191997149013,
+          "full_state_residual": 0.0012229551490842527,
+          "projected_state_residual": 8.408043758768134e-09,
+          "projected_dimension": 8454,
+          "added_local_multiplets": [
+            9,
+            0
+          ]
+        },
+        {
+          "adaptive_update": 11,
+          "energy_hartree": -15.769192137510306,
+          "full_state_residual": 0.0009288332876819872,
+          "projected_state_residual": 8.398949640137184e-09,
+          "projected_dimension": 8655,
+          "added_local_multiplets": [
+            9,
+            0
+          ]
+        },
+        {
+          "adaptive_update": 12,
+          "energy_hartree": -15.769192233311454,
+          "full_state_residual": 0.0005689378752226407,
+          "projected_state_residual": 6.972736507892183e-09,
+          "projected_dimension": 8856,
+          "added_local_multiplets": [
+            9,
+            0
+          ]
+        },
+        {
+          "adaptive_update": 13,
+          "energy_hartree": -15.769192271882666,
+          "full_state_residual": 0.0004311128937916806,
+          "projected_state_residual": 7.3128153743448425e-09,
+          "projected_dimension": 9057,
+          "added_local_multiplets": [
+            9,
+            0
+          ]
+        },
+        {
+          "adaptive_update": 14,
+          "energy_hartree": -15.769192289368796,
+          "full_state_residual": 0.00025779392724064275,
+          "projected_state_residual": 6.909010973918833e-09,
+          "projected_dimension": 9258,
+          "added_local_multiplets": [
+            9,
+            0
+          ]
+        },
+        {
+          "adaptive_update": 15,
+          "energy_hartree": -15.769192295513738,
+          "full_state_residual": 0.00018168929518142495,
+          "projected_state_residual": 7.67445388875686e-09,
+          "projected_dimension": 9459,
+          "added_local_multiplets": [
+            9,
+            0
+          ]
+        },
+        {
+          "adaptive_update": 16,
+          "energy_hartree": -15.769192298635756,
+          "full_state_residual": 0.00011406146406318098,
+          "projected_state_residual": 6.791107191769343e-09,
+          "projected_dimension": 9660,
+          "added_local_multiplets": [
+            9,
+            0
+          ]
+        },
+        {
+          "adaptive_update": 17,
+          "energy_hartree": -15.769192299996085,
+          "full_state_residual": 7.479699016173195e-05,
+          "projected_state_residual": 7.421022729435574e-09,
+          "projected_dimension": 9861,
+          "added_local_multiplets": [
+            9,
+            0
+          ]
+        },
+        {
+          "adaptive_update": 18,
+          "energy_hartree": -15.769192300406626,
+          "full_state_residual": 5.059210649835773e-05,
+          "projected_state_residual": 6.192427201838167e-09,
+          "projected_dimension": 10062,
+          "added_local_multiplets": [
+            9,
+            0
+          ]
+        },
+        {
+          "adaptive_update": 19,
+          "energy_hartree": -15.769192300597016,
+          "full_state_residual": 3.460459480662231e-05,
+          "projected_state_residual": 7.72350528631383e-09,
+          "projected_dimension": 10263,
+          "added_local_multiplets": [
+            9,
+            0
+          ]
+        },
+        {
+          "adaptive_update": 20,
+          "energy_hartree": -15.769192300737421,
+          "full_state_residual": 2.507366552110208e-05,
+          "projected_state_residual": 9.861012544628653e-09,
+          "projected_dimension": 10464,
+          "added_local_multiplets": [
+            9,
+            0
+          ]
+        },
+        {
+          "adaptive_update": 21,
+          "energy_hartree": -15.769192300785056,
+          "full_state_residual": 1.794025267352361e-05,
+          "projected_state_residual": 8.986352666291738e-09,
+          "projected_dimension": 10665,
+          "added_local_multiplets": [
+            9,
+            0
+          ]
+        },
+        {
+          "adaptive_update": 22,
+          "energy_hartree": -15.769192300818155,
+          "full_state_residual": 1.3036590292445612e-05,
+          "projected_state_residual": 7.57698182276845e-09,
+          "projected_dimension": 10866,
+          "added_local_multiplets": [
+            8,
+            0
+          ]
+        },
+        {
+          "adaptive_update": 23,
+          "energy_hartree": -15.769192300831044,
+          "full_state_residual": 8.585648553789507e-06,
+          "projected_state_residual": 7.8857274407923e-09,
+          "projected_dimension": 11019
+        }
+      ],
+      "saved_state_recovery_error": null
+    },
+    {
+      "id": "BeH2_631g_2.75_new",
+      "electrons": 6,
+      "basis": "6-31g",
+      "spatial_orbitals": 13,
+      "full_fixed_sz_dimension": 81796,
+      "energy_error_kcal": 6.409414289088033e-09,
+      "total_energy_hartree": -15.61478121723462,
+      "reference_energy_hartree": -15.614781217244834,
+      "reference_converged": true,
+      "reference_residual": 8.206704474807278e-09,
+      "reference_energy_fitted": false,
+      "physical_validity_passed": true,
+      "full_residual": 6.137421816424791e-06,
+      "projected_residual": 7.64401887688529e-09,
+      "input_retention_error": 2.1572116537339712e-15,
+      "spin_lower_norm": 6.675405972747536e-13,
+      "initial_spin_lower_norm": 7.483120445325541e-16,
+      "reference_not_degraded": true,
+      "projected_dimension": 10865,
+      "charge_weights": {
+        "0": 1.3121425705197291e-14,
+        "1": 1.424894240771472e-08,
+        "2": 0.002118397480307854,
+        "3": 0.0811397829505966,
+        "4": 0.8246840361564224,
+        "5": 0.0885973438175665,
+        "6": 0.003460425346151346
+      },
+      "local_multiplets": [
+        [
+          {
+            "electrons": 0,
+            "twice_spin": 0,
+            "multiplets": 1,
+            "complete_multiplets": 1,
+            "input_support_added": 0
+          },
+          {
+            "electrons": 1,
+            "twice_spin": 1,
+            "multiplets": 9,
+            "complete_multiplets": 9,
+            "input_support_added": 0
+          },
+          {
+            "electrons": 2,
+            "twice_spin": 0,
+            "multiplets": 26,
+            "complete_multiplets": 45,
+            "input_support_added": 6
+          },
+          {
+            "electrons": 2,
+            "twice_spin": 2,
+            "multiplets": 22,
+            "complete_multiplets": 36,
+            "input_support_added": 3
+          },
+          {
+            "electrons": 3,
+            "twice_spin": 1,
+            "multiplets": 68,
+            "complete_multiplets": 240,
+            "input_support_added": 8
+          },
+          {
+            "electrons": 3,
+            "twice_spin": 3,
+            "multiplets": 27,
+            "complete_multiplets": 84,
+            "input_support_added": 1
+          },
+          {
+            "electrons": 4,
+            "twice_spin": 0,
+            "multiplets": 67,
+            "complete_multiplets": 540,
+            "input_support_added": 6
+          },
+          {
+            "electrons": 4,
+            "twice_spin": 2,
+            "multiplets": 63,
+            "complete_multiplets": 630,
+            "input_support_added": 3
+          },
+          {
+            "electrons": 5,
+            "twice_spin": 1,
+            "multiplets": 63,
+            "complete_multiplets": 1890,
+            "input_support_added": 3
+          },
+          {
+            "electrons": 6,
+            "twice_spin": 0,
+            "multiplets": 39,
+            "complete_multiplets": 2520,
+            "input_support_added": 1
+          }
+        ],
+        [
+          {
+            "electrons": 0,
+            "twice_spin": 0,
+            "multiplets": 1,
+            "complete_multiplets": 1,
+            "input_support_added": 0
+          },
+          {
+            "electrons": 1,
+            "twice_spin": 1,
+            "multiplets": 4,
+            "complete_multiplets": 4,
+            "input_support_added": 0
+          },
+          {
+            "electrons": 2,
+            "twice_spin": 0,
+            "multiplets": 10,
+            "complete_multiplets": 10,
+            "input_support_added": 0
+          },
+          {
+            "electrons": 2,
+            "twice_spin": 2,
+            "multiplets": 6,
+            "complete_multiplets": 6,
+            "input_support_added": 0
+          },
+          {
+            "electrons": 3,
+            "twice_spin": 1,
+            "multiplets": 20,
+            "complete_multiplets": 20,
+            "input_support_added": 4
+          },
+          {
+            "electrons": 3,
+            "twice_spin": 3,
+            "multiplets": 4,
+            "complete_multiplets": 4,
+            "input_support_added": 0
+          },
+          {
+            "electrons": 4,
+            "twice_spin": 0,
+            "multiplets": 20,
+            "complete_multiplets": 20,
+            "input_support_added": 4
+          },
+          {
+            "electrons": 4,
+            "twice_spin": 2,
+            "multiplets": 15,
+            "complete_multiplets": 15,
+            "input_support_added": 0
+          },
+          {
+            "electrons": 5,
+            "twice_spin": 1,
+            "multiplets": 20,
+            "complete_multiplets": 20,
+            "input_support_added": 3
+          },
+          {
+            "electrons": 6,
+            "twice_spin": 0,
+            "multiplets": 10,
+            "complete_multiplets": 10,
+            "input_support_added": 0
+          }
+        ]
+      ],
+      "history": [
+        {
+          "adaptive_update": 0,
+          "energy_hartree": -15.606380681473976,
+          "full_state_residual": 0.08574364440608319,
+          "projected_state_residual": 8.449388215841829e-09,
+          "projected_dimension": 5530,
+          "added_local_multiplets": [
+            15,
+            1
+          ]
+        },
+        {
+          "adaptive_update": 1,
+          "energy_hartree": -15.61293390988583,
+          "full_state_residual": 0.1006681092320601,
+          "projected_state_residual": 9.939199499031403e-09,
+          "projected_dimension": 6061,
+          "added_local_multiplets": [
+            14,
+            0
+          ]
+        },
+        {
+          "adaptive_update": 2,
+          "energy_hartree": -15.614240051344819,
+          "full_state_residual": 0.03733873575971473,
+          "projected_state_residual": 7.960871547321813e-09,
+          "projected_dimension": 6509,
+          "added_local_multiplets": [
+            11,
+            0
+          ]
+        },
+        {
+          "adaptive_update": 3,
+          "energy_hartree": -15.61456878740426,
+          "full_state_residual": 0.020823266074604743,
+          "projected_state_residual": 9.191081820106761e-09,
+          "projected_dimension": 6822,
+          "added_local_multiplets": [
+            11,
+            0
+          ]
+        },
+        {
+          "adaptive_update": 4,
+          "energy_hartree": -15.614680181366818,
+          "full_state_residual": 0.020463012333511978,
+          "projected_state_residual": 8.60096113530181e-09,
+          "projected_dimension": 7135,
+          "added_local_multiplets": [
+            11,
+            0
+          ]
+        },
+        {
+          "adaptive_update": 5,
+          "energy_hartree": -15.614767091482904,
+          "full_state_residual": 0.006321988217465179,
+          "projected_state_residual": 8.690099611678957e-09,
+          "projected_dimension": 7448,
+          "added_local_multiplets": [
+            9,
+            0
+          ]
+        },
+        {
+          "adaptive_update": 6,
+          "energy_hartree": -15.614774387558295,
+          "full_state_residual": 0.004285027801252468,
+          "projected_state_residual": 8.443340254693812e-09,
+          "projected_dimension": 7649,
+          "added_local_multiplets": [
+            9,
+            0
+          ]
+        },
+        {
+          "adaptive_update": 7,
+          "energy_hartree": -15.614777585585863,
+          "full_state_residual": 0.0031610733465358976,
+          "projected_state_residual": 7.715745246837239e-09,
+          "projected_dimension": 7850,
+          "added_local_multiplets": [
+            9,
+            0
+          ]
+        },
+        {
+          "adaptive_update": 8,
+          "energy_hartree": -15.614779414102628,
+          "full_state_residual": 0.0024598985334863964,
+          "projected_state_residual": 8.93560075100665e-09,
+          "projected_dimension": 8051,
+          "added_local_multiplets": [
+            9,
+            0
+          ]
+        },
+        {
+          "adaptive_update": 9,
+          "energy_hartree": -15.614780579428048,
+          "full_state_residual": 0.0014752839892860042,
+          "projected_state_residual": 8.834815623759706e-09,
+          "projected_dimension": 8252,
+          "added_local_multiplets": [
+            9,
+            0
+          ]
+        },
+        {
+          "adaptive_update": 10,
+          "energy_hartree": -15.614780978480525,
+          "full_state_residual": 0.001030030318967021,
+          "projected_state_residual": 9.055310751255572e-09,
+          "projected_dimension": 8453,
+          "added_local_multiplets": [
+            9,
+            0
+          ]
+        },
+        {
+          "adaptive_update": 11,
+          "energy_hartree": -15.614781130775373,
+          "full_state_residual": 0.0005200643681954753,
+          "projected_state_residual": 8.881069700250142e-09,
+          "projected_dimension": 8654,
+          "added_local_multiplets": [
+            9,
+            0
+          ]
+        },
+        {
+          "adaptive_update": 12,
+          "energy_hartree": -15.614781169597974,
+          "full_state_residual": 0.00039218249810471875,
+          "projected_state_residual": 8.320782583395098e-09,
+          "projected_dimension": 8855,
+          "added_local_multiplets": [
+            9,
+            0
+          ]
+        },
+        {
+          "adaptive_update": 13,
+          "energy_hartree": -15.61478119743502,
+          "full_state_residual": 0.00028298985279873764,
+          "projected_state_residual": 9.233332470699464e-09,
+          "projected_dimension": 9056,
+          "added_local_multiplets": [
+            9,
+            0
+          ]
+        },
+        {
+          "adaptive_update": 14,
+          "energy_hartree": -15.614781210396075,
+          "full_state_residual": 0.0001704633447638271,
+          "projected_state_residual": 9.626890591462125e-09,
+          "projected_dimension": 9257,
+          "added_local_multiplets": [
+            9,
+            0
+          ]
+        },
+        {
+          "adaptive_update": 15,
+          "energy_hartree": -15.614781213979194,
+          "full_state_residual": 0.000129805588078117,
+          "projected_state_residual": 8.838983384278688e-09,
+          "projected_dimension": 9458,
+          "added_local_multiplets": [
+            9,
+            0
+          ]
+        },
+        {
+          "adaptive_update": 16,
+          "energy_hartree": -15.61478121574581,
+          "full_state_residual": 7.986295513474028e-05,
+          "projected_state_residual": 9.35752604645705e-09,
+          "projected_dimension": 9659,
+          "added_local_multiplets": [
+            9,
+            0
+          ]
+        },
+        {
+          "adaptive_update": 17,
+          "energy_hartree": -15.614781216531822,
+          "full_state_residual": 5.1942141665693924e-05,
+          "projected_state_residual": 9.511096531753392e-09,
+          "projected_dimension": 9860,
+          "added_local_multiplets": [
+            9,
+            0
+          ]
+        },
+        {
+          "adaptive_update": 18,
+          "energy_hartree": -15.614781216922651,
+          "full_state_residual": 3.458098801336069e-05,
+          "projected_state_residual": 7.954792258402881e-09,
+          "projected_dimension": 10061,
+          "added_local_multiplets": [
+            9,
+            0
+          ]
+        },
+        {
+          "adaptive_update": 19,
+          "energy_hartree": -15.614781217061186,
+          "full_state_residual": 2.427399217984193e-05,
+          "projected_state_residual": 9.623478042516024e-09,
+          "projected_dimension": 10262,
+          "added_local_multiplets": [
+            9,
+            0
+          ]
+        },
+        {
+          "adaptive_update": 20,
+          "energy_hartree": -15.61478121716046,
+          "full_state_residual": 1.7646872140177907e-05,
+          "projected_state_residual": 9.837017860164135e-09,
+          "projected_dimension": 10463,
+          "added_local_multiplets": [
+            9,
+            0
+          ]
+        },
+        {
+          "adaptive_update": 21,
+          "energy_hartree": -15.61478121721726,
+          "full_state_residual": 1.1209408089554498e-05,
+          "projected_state_residual": 7.907885979026331e-09,
+          "projected_dimension": 10664,
+          "added_local_multiplets": [
+            9,
+            0
+          ]
+        },
+        {
+          "adaptive_update": 22,
+          "energy_hartree": -15.61478121723462,
+          "full_state_residual": 6.137421816424791e-06,
+          "projected_state_residual": 7.64401887688529e-09,
+          "projected_dimension": 10865
+        }
+      ],
+      "saved_state_recovery_error": null
+    }
+  ],
+  "failures": [],
+  "balanced_stretch_contrast_error_kcal": -2.8201422871987386e-10,
+  "peak_cuda_bytes": 2933893632
+}

@@ -1,0 +1,77 @@
+{
+  "recorded_date": "2026-11-17",
+  "authority": "User instructions in this conversation",
+  "disk": {
+    "external_accounted_paths": [
+      "C:/Users/breth/AppData/Local/Temp/wsl-crashes",
+      "C:/Users/breth/AppData/Local/Temp/swap.vhdx",
+      "C:/Windows/Temp/swap.vhdx"
+    ],
+    "legacy_external_upper_bound_bytes": 1073741824,
+    "external_accounting_note": "Count dedicated research WSL crash dumps outside the repository. Conservatively reserve another 1 GiB for any old default swap until its cleanup is verified; new swap is explicitly inside .research.",
+    "hard_limit_bytes": 40000000000,
+    "working_ceiling_bytes": 32000000000,
+    "transient_headroom_bytes": 8000000000,
+    "scope": "All project storage, including environments, Linux/VHD, caches, downloads, datasets, scratch, logs and checkpoints, wherever located",
+    "preferred_storage_directory": ".research/ at repository root",
+    "check_before_large_allocations": true,
+    "must_account_for_peak_temporary_expansion": true
+  },
+  "cpu": {
+    "allocated_logical_cores": 1,
+    "scope": "Host orchestration and I/O only; no CPU numerical work",
+    "numerical_work_allowed": false,
+    "cpu_reference_scf_and_fallbacks_allowed": false,
+    "max_numerical_library_threads": 1,
+    "torch_intraop_threads": 1,
+    "torch_interop_threads": 1,
+    "data_loader_workers": 0,
+    "one_core_affinity_or_quota_required_for_compute_jobs": true,
+    "concurrent_cpu_heavy_project_jobs": 1
+  },
+  "gpu": {
+    "device_index": 0,
+    "allocation": "Full local GPU; all numerical work must run on CUDA",
+    "cuda_required_no_cpu_fallback": true,
+    "observed_model": "NVIDIA GeForce RTX 4060 Laptop GPU",
+    "observed_memory_mib": 8188
+  },
+  "wsl_runtime": {
+    "distribution": "XCResearch",
+    "memory_limit_gib": 6,
+    "swap_limit_gib": 1,
+    "swap_file": "C:/Users/breth/myrepo/.research/wsl-swap.vhdx",
+    "virtual_processors_available": 4,
+    "compute_affinity": "taskset core 0; one host core and one numerical-library thread",
+    "recovery_record": "auxiliary_environment_recovery_20261117.json"
+  },
+  "research_scope": {
+    "priority": "Full public GMTKN55 tests and initial measured assessment first, then sub-1 accuracy; no further speed work",
+    "accuracy_before_speed": true,
+    "speed_work_authorized": false,
+    "larger_accuracy_tests_required": true,
+    "timing_device": "CUDA only; one-core host orchestration, no CPU numerical benchmark authorized",
+    "frontier_replication_allowed": false,
+    "frontier_sanity_checks_allowed": false,
+    "frontier_replication_elapsed_time_budget_minutes": 0,
+    "focus": "Our own models, reference labels needed for them, and their measured performance",
+    "do_not_repeat_already_established_checks": true,
+    "record_failed_ideas_and_move_on": true,
+    "active_pipeline_20261120": "xcgpu: GPU Kohn-Sham (gpu4pyscf) inputs + own fitted functional; see research/GPU_DFT_PIPELINE.md"
+  },
+  "expected_additional_drive": {
+    "capacity_tb": 2,
+    "expected_date": "2026-11-17",
+    "available_now": true,
+    "automatically_expands_budget": false,
+    "note": "D: observed with about 542 GB free on 2026-11-20; user authorized its use"
+  },
+  "d_drive": {
+    "authorized_by_user": "2026-11-20: 'if you need space use the D drive'",
+    "path_windows": "D:/xcresearch",
+    "path_wsl": "/mnt/d/xcresearch",
+    "working_ceiling_bytes": 150000000000,
+    "contents": "orbitals, response spectra, grid data, logs, wheel backups",
+    "counted_in_c_volume_limit": false
+  }
+}

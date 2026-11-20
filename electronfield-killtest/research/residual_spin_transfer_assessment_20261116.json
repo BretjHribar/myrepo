@@ -1,0 +1,8 @@
+{
+  "source_report": "residual_spin_transfer_gpu_20261116.json",
+  "reference_definition": "Lowest energy in each fixed-Sz sector, which also contains higher total spins",
+  "CH_caveat": "Model S^2=0.75 (doublet), reference S^2=3.75 (quartet). The 0.09461248 kcal/mol difference is a conservative upper bound to targeted-doublet ground-energy error, not a spin-matched exact error.",
+  "NH_OH_caveat": "Reference total spins match the model's triplet/doublet; energies agree within numerical precision in the complete minimal basis.",
+  "claim_supported": "All three new physical state solves are within 0.1 kcal/mol of lower same-basis reference energies, preserving their stated N and S.",
+  "claims_not_supported": ["Learned/amortized prediction", "Broad chemistry or basis transfer", "Complete-basis chemical accuracy", "An independently confirmed XC functional", "The challenge target rectangle"]
+}

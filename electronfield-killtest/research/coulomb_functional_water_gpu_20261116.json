@@ -1,0 +1,75 @@
+{
+  "created_utc": "2026-11-17T01:32:21.009771+00:00",
+  "device": "cuda",
+  "hypothesis": "Coulomb-complete constrained correlation plus kinetic completion outside the moment frame",
+  "protocol": {
+    "hypothesis": "E_xc[D]=F_M(q[D])-Ts_M(q[D])-E_H[D], keeping Tr(TD) outside the moment search",
+    "created_before_reference_generation": true,
+    "case": {
+      "id": "H2O_closed_0.957",
+      "atom": "O 0 0 0; H 0 0.757 0.586; H 0 -0.757 0.586",
+      "charge": 0,
+      "spin": 0,
+      "electrons": 10
+    },
+    "basis": "sto-3g",
+    "moments": "Point-charge Coulomb density probes at all nuclear positions, with number gauge and linear dependencies removed; no nuclear-charge weighting in universal objective",
+    "input": "One bounded CUDA HF determinant, complete stated basis",
+    "maximum_subspace_dimension": 192,
+    "stationarity_tolerance": 1e-07,
+    "kinetic_reference": "Noninteracting one-body Legendre dual, gives a lower bound even if unconverged",
+    "stopping": "Density and stationarity residuals; reference energies never used",
+    "assessment": "Report moment residuals, potential-span error, convergence status and energy error against a new same-basis CUDA physical reference after prediction. No replacement or label-driven parameter changes.",
+    "limitations": [
+      "One new development geometry",
+      "Complete minimal basis only",
+      "No model-driven SCF yet",
+      "No general benchmark or world-novelty claim"
+    ]
+  },
+  "scope": "One new closed-shell water geometry, full stated minimal basis; not broad/CBS validation",
+  "input_reference_status": {
+    "converged": true,
+    "cycles": 11,
+    "residual": 4.511701802850473e-08
+  },
+  "moment_count": 3,
+  "external_span_error_hartree": 6.394884621840902e-14,
+  "charge_probe_error_hartree": 4.263256414560601e-14,
+  "interacting_status": "projected_density_solve_failed",
+  "density_moment_residual": 0.024603007345293804,
+  "state_stationarity_residual": 0.6176422773895124,
+  "kinetic_density_residual": 1.1939633537639431,
+  "kinetic_iterations": 55,
+  "xc_energy_hartree": -9.770791735368775,
+  "model_total_hartree": -75.62903368478571,
+  "reference_total_hartree": -75.01243743249371,
+  "total_error_kcal": -386.9199899461231,
+  "kinetic_completion_hartree": 0.5254174603536939,
+  "moment_xc_potential_coefficients": [
+    9.552346163343906,
+    2.4233510814447912e-14,
+    -2.4802255147337524
+  ],
+  "full_xc_potential": "(-lambda+u_s).Q-J[D], frozen-frame derivative; stationarity required",
+  "history": [
+    {
+      "iteration": 1,
+      "dimension": 5,
+      "functional_hartree": 111.60954650888567,
+      "density_residual": 0.024603007345293804,
+      "stationarity_residual": 0.6176422773895124
+    }
+  ],
+  "reference_energy_fitted": false,
+  "seconds": 4.812553138,
+  "peak_cuda_bytes": 26044416,
+  "limitations": [
+    "One-shot input density; model-driven self-consistency remains unimplemented",
+    "Potential derivative requires interacting and noninteracting convergence",
+    "Frame/basis derivatives are required for nuclear forces",
+    "Ensemble noninteracting representability can require fractional occupations",
+    "Dense finite-space action; no compression/speed claim",
+    "Global finite subspace does not guarantee fragment separability"
+  ]
+}

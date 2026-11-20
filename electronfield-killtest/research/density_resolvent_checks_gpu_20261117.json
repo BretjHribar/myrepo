@@ -1,0 +1,12 @@
+{
+  "created_utc": "2026-11-17T11:29:43.048314+00:00",
+  "device": "cuda",
+  "passed": true,
+  "closed_form_moment_error": 5.551115123125783e-17,
+  "directional_derivative_error": 1.1435297153639112e-14,
+  "exact_external_counterterm_error_hartree": 0.0,
+  "closed_form_pauli_density_error": 1.0348029034938504e-15,
+  "interacting_gap": 1.1102230246251565e-16,
+  "noninteracting_gap": 2.6645352591003757e-15,
+  "physical_density_distinguished_from_auxiliary": true
+}

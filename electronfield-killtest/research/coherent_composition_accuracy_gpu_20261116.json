@@ -1,0 +1,60 @@
+{
+  "created_utc": "2026-11-17T03:31:48.507244+00:00",
+  "device": "cuda",
+  "source": "LiH_neutral_1.595",
+  "basis": "cc-pvdz",
+  "local_determinants": 13,
+  "local_spin_schmidt_rank_at_relative_1e_minus10": 13,
+  "two_fragment_product_rank": 169,
+  "fixed_global_budget_can_represent_product": false,
+  "global_coherent_family_is_fragment_closed": false,
+  "product_representation": "Factored local states; no global determinant enumeration needed for storage",
+  "two_fragment_energy_additivity_error_hartree": 0.0,
+  "fidelity_upper_bounds_for_fixed_global_budget": [
+    {
+      "identical_fragments": 1,
+      "global_determinant_budget": 13,
+      "maximum_possible_squared_overlap": 1.0000000000000002
+    },
+    {
+      "identical_fragments": 2,
+      "global_determinant_budget": 13,
+      "maximum_possible_squared_overlap": 0.9989635154035811
+    },
+    {
+      "identical_fragments": 3,
+      "global_determinant_budget": 13,
+      "maximum_possible_squared_overlap": 0.9963765081844758
+    },
+    {
+      "identical_fragments": 4,
+      "global_determinant_budget": 13,
+      "maximum_possible_squared_overlap": 0.9851404961976425
+    },
+    {
+      "identical_fragments": 5,
+      "global_determinant_budget": 13,
+      "maximum_possible_squared_overlap": 0.9702326167377053
+    },
+    {
+      "identical_fragments": 6,
+      "global_determinant_budget": 13,
+      "maximum_possible_squared_overlap": 0.9554303993914524
+    },
+    {
+      "identical_fragments": 7,
+      "global_determinant_budget": 13,
+      "maximum_possible_squared_overlap": 0.9407293997665295
+    },
+    {
+      "identical_fragments": 8,
+      "global_determinant_budget": 13,
+      "maximum_possible_squared_overlap": 0.9261435777082428
+    }
+  ],
+  "reference_recomputed": false,
+  "optimization_run": false,
+  "interpretation": "Each global paired determinant has alpha/beta Schmidt rank one. A rank-K sum cannot represent a fragment product of larger rank. Fidelity bounds are not energy-error bounds.",
+  "decision": "Use coherent states as local blocks; a fixed global determinant budget is not an acceptable final composition rule",
+  "peak_cuda_bytes": 16730624
+}

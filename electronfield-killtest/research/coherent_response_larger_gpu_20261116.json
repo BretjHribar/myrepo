@@ -1,0 +1,210 @@
+{
+  "created_utc": "2026-11-17T03:18:38.546018+00:00",
+  "device": "cuda",
+  "protocol": {
+    "hypothesis": "Coulomb-response conditioned coherent orbital state for larger-basis constrained correlation",
+    "mathematical_primitives": "Spin-paired determinants, polynomial cofactors and variational Ritz coefficients; these primitives are not claimed as novel",
+    "basis": "cc-pvdz",
+    "cases": [
+      "LiH_neutral_1.595",
+      "LiH_neutral_2.50",
+      "Be_neutral"
+    ],
+    "response_seed": {
+      "proposed_modes": 6,
+      "include_complete_boundary_degeneracy": true,
+      "displacement": 0.15
+    },
+    "orbital_optimization": {
+      "steps": 400,
+      "learning_rate": 0.02,
+      "final_learning_rate": 0.0002
+    },
+    "objective": "Actual Hamiltonian Rayleigh quotient, no reference-energy loss",
+    "reference_retention": "Unchanged input determinant always included; do not regularize its physical norm",
+    "assessment": "One frozen run per case. Compare against saved new same-basis references only after optimization. Retain all failures; no mode/seed/iteration sweep to rescue a failure.",
+    "scope": "Full larger-basis state experiment. Canonical density constraints and density-only frame still need integration.",
+    "symmetry": "Exact particle number, fermionic antisymmetry and S=0 for spin-paired states. Orbital-rotation covariance is a property of the variational family; finite-optimizer spatial covariance is unverified.",
+    "limits": [
+      "No claim of a world-first determinant method",
+      "No broad XC generalization claim",
+      "Explicit component product closure still required",
+      "cc-pVDZ is not CBS"
+    ]
+  },
+  "results": [
+    {
+      "id": "LiH_neutral_1.595",
+      "basis": "cc-pvdz",
+      "complete_stated_basis": true,
+      "electrons": 4,
+      "spatial_orbitals": 19,
+      "response_modes": 6,
+      "proposed_determinants": 13,
+      "retained_determinants": 13,
+      "parameters": 408,
+      "total_energy_hartree": -8.01462326499738,
+      "energy_error_kcal": 0.06573901150148279,
+      "state_residual": 0.021183863138863984,
+      "reference_not_degraded": true,
+      "initial_kernel_discrepancy_hartree": 8.733014311701481e-13,
+      "final_kernel_discrepancy_hartree": 1.1102230246251565e-15,
+      "coulomb_factorization_error": 2.48993534124331e-14,
+      "reference_energy_fitted": false,
+      "seconds": 23.343755962000003,
+      "history": [
+        {
+          "id": "LiH_neutral_1.595",
+          "step": 1,
+          "energy_hartree": -8.013759633575862,
+          "retained_determinants": 13,
+          "seconds": 6.574803069
+        },
+        {
+          "id": "LiH_neutral_1.595",
+          "step": 100,
+          "energy_hartree": -8.014415571934032,
+          "retained_determinants": 13,
+          "seconds": 10.230710450999998
+        },
+        {
+          "id": "LiH_neutral_1.595",
+          "step": 200,
+          "energy_hartree": -8.014602441952212,
+          "retained_determinants": 13,
+          "seconds": 14.187956071
+        },
+        {
+          "id": "LiH_neutral_1.595",
+          "step": 300,
+          "energy_hartree": -8.014618987297007,
+          "retained_determinants": 13,
+          "seconds": 18.567021558999997
+        },
+        {
+          "id": "LiH_neutral_1.595",
+          "step": 400,
+          "energy_hartree": -8.014623264997383,
+          "retained_determinants": 13,
+          "seconds": 23.265863988
+        }
+      ]
+    },
+    {
+      "id": "LiH_neutral_2.50",
+      "basis": "cc-pvdz",
+      "complete_stated_basis": true,
+      "electrons": 4,
+      "spatial_orbitals": 19,
+      "response_modes": 7,
+      "proposed_determinants": 15,
+      "retained_determinants": 15,
+      "parameters": 476,
+      "total_energy_hartree": -7.978114842143562,
+      "energy_error_kcal": 0.07715063292710053,
+      "state_residual": 0.02343518170809915,
+      "reference_not_degraded": true,
+      "initial_kernel_discrepancy_hartree": 3.391731340229853e-13,
+      "final_kernel_discrepancy_hartree": 9.992007221626409e-16,
+      "coulomb_factorization_error": 6.661338147750939e-15,
+      "reference_energy_fitted": false,
+      "seconds": 16.989695255,
+      "history": [
+        {
+          "id": "LiH_neutral_2.50",
+          "step": 1,
+          "energy_hartree": -7.976836538274324,
+          "retained_determinants": 15,
+          "seconds": 0.2259843470000007
+        },
+        {
+          "id": "LiH_neutral_2.50",
+          "step": 100,
+          "energy_hartree": -7.977868535509162,
+          "retained_determinants": 15,
+          "seconds": 5.145739001000003
+        },
+        {
+          "id": "LiH_neutral_2.50",
+          "step": 200,
+          "energy_hartree": -7.978098125965393,
+          "retained_determinants": 15,
+          "seconds": 9.594868568000003
+        },
+        {
+          "id": "LiH_neutral_2.50",
+          "step": 300,
+          "energy_hartree": -7.97811238858002,
+          "retained_determinants": 15,
+          "seconds": 13.390757987999997
+        },
+        {
+          "id": "LiH_neutral_2.50",
+          "step": 400,
+          "energy_hartree": -7.978114842143561,
+          "retained_determinants": 15,
+          "seconds": 16.932002253
+        }
+      ]
+    },
+    {
+      "id": "Be_neutral",
+      "basis": "cc-pvdz",
+      "complete_stated_basis": true,
+      "electrons": 4,
+      "spatial_orbitals": 14,
+      "response_modes": 9,
+      "proposed_determinants": 19,
+      "retained_determinants": 19,
+      "parameters": 432,
+      "total_energy_hartree": -14.617128354544196,
+      "energy_error_kcal": 0.17642554961508075,
+      "state_residual": 0.042045037868255246,
+      "reference_not_degraded": true,
+      "initial_kernel_discrepancy_hartree": 8.22453216642316e-13,
+      "final_kernel_discrepancy_hartree": 1.2434497875801753e-14,
+      "coulomb_factorization_error": 1.6209256159527285e-14,
+      "reference_energy_fitted": false,
+      "seconds": 20.832699893999994,
+      "history": [
+        {
+          "id": "Be_neutral",
+          "step": 1,
+          "energy_hartree": -14.613676234232765,
+          "retained_determinants": 19,
+          "seconds": 0.1013342520000009
+        },
+        {
+          "id": "Be_neutral",
+          "step": 100,
+          "energy_hartree": -14.616923248444728,
+          "retained_determinants": 19,
+          "seconds": 4.484467778000003
+        },
+        {
+          "id": "Be_neutral",
+          "step": 200,
+          "energy_hartree": -14.617059585774822,
+          "retained_determinants": 19,
+          "seconds": 9.506862552000001
+        },
+        {
+          "id": "Be_neutral",
+          "step": 300,
+          "energy_hartree": -14.617112532523098,
+          "retained_determinants": 19,
+          "seconds": 15.173590836999999
+        },
+        {
+          "id": "Be_neutral",
+          "step": 400,
+          "energy_hartree": -14.617128354544183,
+          "retained_determinants": 19,
+          "seconds": 20.768626852000004
+        }
+      ]
+    }
+  ],
+  "failures": [],
+  "peak_cuda_bytes": 31141376
+}

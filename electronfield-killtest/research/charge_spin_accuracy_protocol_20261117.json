@@ -1,0 +1,27 @@
+{
+  "goal": "Below 1 kcal/mol with physical consistency and independent transfer; no speed work",
+  "hypothesis": "Density-conditioned local charge/spin multiplets, exact fermionic links, factored product closure and residual-selected local completion",
+  "initial_low_energy_multiplets_per_sector": 16,
+  "include_complete_boundary_degeneracies": true,
+  "retain_full_input_determinant_schmidt_support": true,
+  "maximum_adaptive_updates": 4,
+  "residual_directions_per_sector_per_update": 2,
+  "residual_source_threshold_hartree": 1e-8,
+  "projected_state_residual_tolerance_hartree": 1e-8,
+  "full_state_residual_target_hartree": 1e-5,
+  "maximum_projected_ritz_dimension": 192,
+  "source_embedding": "Physical local one-body operator plus the other block's input-density Hartree/exchange field; used only to choose local states",
+  "cases": [
+    {"id": "He2_R3.00", "source_folder": "linked_block_accuracy", "source_report": "research/linked_block_accuracy_gpu_20261116.json", "first_block_atoms": 1},
+    {"id": "H4_parallel_far", "source_folder": "linked_block_accuracy", "source_report": "research/linked_block_accuracy_gpu_20261116.json", "first_block_atoms": 2},
+    {"id": "H4_square_close", "source_folder": "linked_block_accuracy", "source_report": "research/linked_block_accuracy_gpu_20261116.json", "first_block_atoms": 2},
+    {"id": "BeH2_neutral_1.33", "source_folder": "coherent_local_accuracy", "source_report": "research/local_sector_accuracy_gpu_20261116.json", "first_block_atoms": 1},
+    {"id": "BeH2_neutral_2.10", "source_folder": "coherent_local_accuracy", "source_report": "research/local_sector_accuracy_gpu_20261116.json", "first_block_atoms": 1},
+    {"id": "BH3_planar_1.19", "source_folder": "coherent_local_accuracy", "source_report": "research/local_sector_accuracy_gpu_20261116.json", "first_block_atoms": 1},
+    {"id": "NH3_pyramidal", "source_folder": "coherent_local_accuracy", "source_report": "research/local_sector_accuracy_gpu_20261116.json", "first_block_atoms": 1},
+    {"id": "NH3_planar", "source_folder": "coherent_local_accuracy", "source_report": "research/local_sector_accuracy_gpu_20261116.json", "first_block_atoms": 1},
+    {"id": "H2F_plus_new", "atom": "F 0 0 0; H 0.77 0 0.54; H -0.77 0 0.54", "charge": 1, "spin": 0, "electrons": 10, "basis": "sto-3g", "first_block_atoms": 1}
+  ],
+  "assessment": "No reference-energy objective or stopping rule. Reuse all existing physical labels; generate only the new ionic label after prediction. Retain every failure and balanced geometry contrast. No seed/rank/iteration sweeps.",
+  "limits": ["Accuracy research state representation, not yet a density-only XC functional", "Fixed-Sz global coordinate vector, not a scalable tensor solver", "Two supplied orbital blocks", "Finite bases; a rejection panel is not full GMTKN55 WTMAD-2", "All prior cases are development; H2F+ is a prespecified new ionic composition"]
+}

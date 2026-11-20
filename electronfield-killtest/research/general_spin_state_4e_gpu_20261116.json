@@ -1,0 +1,97 @@
+{
+  "created_utc": "2026-11-17T00:39:31.544748+00:00",
+  "device": "cuda",
+  "scope": "First four-electron test of general number/total-spin tensor representation; six-orbital projection, not full-basis/CBS chemistry",
+  "research_role": "Representation for our density-conditioned correlation model; not a frontier-method reproduction",
+  "config": {
+    "active": 6,
+    "channels": 2,
+    "steps": 400,
+    "output": "research/general_spin_state_4e_gpu_20261116.json"
+  },
+  "reference_method": "New exact active-space singlet diagonalization on CUDA",
+  "input_reference_status": {
+    "converged": true,
+    "cycles": 10,
+    "residual": 1.503690338531533e-08
+  },
+  "active_orbitals": 6,
+  "full_orbitals": 20,
+  "fixed_spin_dimension": 225,
+  "singlet_dimension": 105,
+  "bond_dimensions": [
+    1,
+    4,
+    15,
+    18,
+    15,
+    4,
+    1
+  ],
+  "parameters": 124,
+  "reference_wick_discrepancy_hartree": 4.440892098500626e-16,
+  "history": [
+    {
+      "step": 1,
+      "energy_error_kcal": 102.52294518171962,
+      "norm": 0.8823726795192168,
+      "seconds": 4.689171370999999
+    },
+    {
+      "step": 50,
+      "energy_error_kcal": 2.753718540391348,
+      "norm": 0.0011858981473877388,
+      "seconds": 9.835300952
+    },
+    {
+      "step": 100,
+      "energy_error_kcal": 0.08179850846531923,
+      "norm": 0.0006716161143109522,
+      "seconds": 14.750511502999998
+    },
+    {
+      "step": 150,
+      "energy_error_kcal": 0.058843092059277034,
+      "norm": 0.0006775555596909592,
+      "seconds": 20.89215059
+    },
+    {
+      "step": 200,
+      "energy_error_kcal": 0.055390551975375374,
+      "norm": 0.0006787656116905413,
+      "seconds": 28.551009479
+    },
+    {
+      "step": 250,
+      "energy_error_kcal": 0.05358798006756088,
+      "norm": 0.0006800477875747734,
+      "seconds": 35.328962354
+    },
+    {
+      "step": 300,
+      "energy_error_kcal": 0.05268409212121583,
+      "norm": 0.0006806822709404537,
+      "seconds": 42.617822383
+    },
+    {
+      "step": 350,
+      "energy_error_kcal": 0.052317653728978855,
+      "norm": 0.0006809401935810403,
+      "seconds": 49.705282408
+    },
+    {
+      "step": 400,
+      "energy_error_kcal": 0.052227188659053875,
+      "norm": 0.0006810040483558896,
+      "seconds": 58.65923395
+    }
+  ],
+  "final_error_kcal": 0.052227188660447225,
+  "particle_number": 4.000000000000001,
+  "spin_squared": 7.960321051710586e-17,
+  "independent_energy_discrepancy_hartree": 2.220446049250313e-15,
+  "variational_bound_satisfied": true,
+  "reference_not_degraded": true,
+  "peak_cuda_bytes": 87394304,
+  "seconds": 58.74009383799999
+}

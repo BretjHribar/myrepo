@@ -1,0 +1,16 @@
+{
+  "created_utc": "2026-11-17T14:51:01.692309+00:00",
+  "device": "cuda",
+  "passed": true,
+  "compiled_density_chunks_restored": 35,
+  "local_operator_matrices_recompiled": 0,
+  "universal_mpo_rebuilt_from_saved_TW": true,
+  "new_optimizer_iterations": 0,
+  "completed_iteration": 1100,
+  "physical_state_difference": 0.0,
+  "auxiliary_gradient_difference": 0.0,
+  "conditional_scalar_difference_hartree": 0.0,
+  "independently_recomputed_conditional_gap_hartree": 5.524469770534779e-12,
+  "new_chemical_or_reference_solve": false,
+  "peak_cuda_bytes": 2259911680
+}

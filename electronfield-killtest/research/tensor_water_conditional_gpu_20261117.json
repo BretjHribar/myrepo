@@ -1,0 +1,442 @@
+{
+  "created_utc": "2026-11-17T14:35:22.740913+00:00",
+  "device": "cuda",
+  "protocol": {
+    "purpose": "First off-shell conditional XC search on the larger-basis physical tensor state, with universal T,W,Q and no global Fock vector",
+    "case_id": "H2O_ccpvdz_tensor_scope_new",
+    "source_input": "data/tensor_scope/H2O_ccpvdz_tensor_scope_new.inputs.pt",
+    "source_state": "data/tensor_scope/H2O_ccpvdz_tensor_scope_new.physical_metric.state.pt",
+    "source_density": "data/tensor_scope/H2O_ccpvdz_tensor_scope_new.physical_metric.density.pt",
+    "cache_folder": "data/tensor_local_water/center6",
+    "center": 6,
+    "basis": "cc-pvdz",
+    "electrons": 10,
+    "twice_spin": 0,
+    "frame_construction_seed": 17112049,
+    "frame_validation_seed": 17112050,
+    "derivative_seed": 17112051,
+    "spatial_span_tolerance": 1e-07,
+    "external_span_tolerance_hartree": 1e-08,
+    "epsilon_inverse_hartree": 1.0,
+    "local_metric_null_tolerance": 1e-12,
+    "maximum_embedding_bytes": 1500000000,
+    "maximum_local_operator_bytes": 2000000000,
+    "maximum_environment_bytes": 1500000000,
+    "maximum_reduced_iterations": 4000,
+    "reduced_gap_tolerance_hartree": 1e-11,
+    "derivative_step": 0.001,
+    "derivative_tolerance_hartree": 1e-05,
+    "physical_energy_identity_tolerance_hartree": 1e-07,
+    "input_auxiliary": "x=Q:D_saved-epsilon*v, where v is used only by the outer physical test; the saved state is unconverged, no correlated oracle or reference energy is used",
+    "conditional_context": "Hold every surrounding tensor fixed; optimize a positive local coefficient ensemble in its true physical overlap metric",
+    "assessment": "Actual density/energy recovery and conditional scalar/derivative; no goal-level acceptance from a fixed environment or a variational lowering",
+    "failure_policy": "Return no conditional XC from failed local/kinetic gaps or physical identities; preserve all compiled chunks and exact optimizer checkpoints, no iteration/rank/seed sweep",
+    "scope": "Frozen-context finite-basis conditional functional, not global tensor self-consistency, complete universal search, chemical accuracy, WTMAD-2 or speed",
+    "resource_limit": "One CUDA job, one host core, at most 3 GB peak new disk within the unchanged 40 GB allocation"
+  },
+  "status": "completed",
+  "history": [
+    {
+      "phase": "building_spatial_frame"
+    },
+    {
+      "phase": "spatial_frame_ready",
+      "operators": 280,
+      "independent_point_span_error": 3.9745984281580604e-14
+    },
+    {
+      "phase": "building_universal_tensor_operators",
+      "external_span_error_hartree": 3.0816035267094912e-12
+    },
+    {
+      "phase": "physical_local_space",
+      "input_retention_error": 4.049704147136226e-14,
+      "metric_orthogonality_error": 2.4652275792771084e-12,
+      "literal_metric_orthogonality_error": 2.5041905331054955e-12,
+      "reduced_coordinate_count": 719,
+      "physical_dimension": 692,
+      "embedding_bytes": 94240768
+    },
+    {
+      "phase": "local_density_operators",
+      "center": 6,
+      "compiled": 1,
+      "total": 279,
+      "physical_dimension": 692
+    },
+    {
+      "phase": "local_density_operators",
+      "center": 6,
+      "compiled": 9,
+      "total": 279,
+      "physical_dimension": 692
+    },
+    {
+      "phase": "local_density_operators",
+      "center": 6,
+      "compiled": 17,
+      "total": 279,
+      "physical_dimension": 692
+    },
+    {
+      "phase": "local_density_operators",
+      "center": 6,
+      "compiled": 25,
+      "total": 279,
+      "physical_dimension": 692
+    },
+    {
+      "phase": "local_density_operators",
+      "center": 6,
+      "compiled": 33,
+      "total": 279,
+      "physical_dimension": 692
+    },
+    {
+      "phase": "local_density_operators",
+      "center": 6,
+      "compiled": 41,
+      "total": 279,
+      "physical_dimension": 692
+    },
+    {
+      "phase": "local_density_operators",
+      "center": 6,
+      "compiled": 49,
+      "total": 279,
+      "physical_dimension": 692
+    },
+    {
+      "phase": "local_density_operators",
+      "center": 6,
+      "compiled": 57,
+      "total": 279,
+      "physical_dimension": 692
+    },
+    {
+      "phase": "local_density_operators",
+      "center": 6,
+      "compiled": 65,
+      "total": 279,
+      "physical_dimension": 692
+    },
+    {
+      "phase": "local_density_operators",
+      "center": 6,
+      "compiled": 73,
+      "total": 279,
+      "physical_dimension": 692
+    },
+    {
+      "phase": "local_density_operators",
+      "center": 6,
+      "compiled": 81,
+      "total": 279,
+      "physical_dimension": 692
+    },
+    {
+      "phase": "local_density_operators",
+      "center": 6,
+      "compiled": 89,
+      "total": 279,
+      "physical_dimension": 692
+    },
+    {
+      "phase": "local_density_operators",
+      "center": 6,
+      "compiled": 97,
+      "total": 279,
+      "physical_dimension": 692
+    },
+    {
+      "phase": "local_density_operators",
+      "center": 6,
+      "compiled": 105,
+      "total": 279,
+      "physical_dimension": 692
+    },
+    {
+      "phase": "local_density_operators",
+      "center": 6,
+      "compiled": 113,
+      "total": 279,
+      "physical_dimension": 692
+    },
+    {
+      "phase": "local_density_operators",
+      "center": 6,
+      "compiled": 121,
+      "total": 279,
+      "physical_dimension": 692
+    },
+    {
+      "phase": "local_density_operators",
+      "center": 6,
+      "compiled": 129,
+      "total": 279,
+      "physical_dimension": 692
+    },
+    {
+      "phase": "local_density_operators",
+      "center": 6,
+      "compiled": 137,
+      "total": 279,
+      "physical_dimension": 692
+    },
+    {
+      "phase": "local_density_operators",
+      "center": 6,
+      "compiled": 145,
+      "total": 279,
+      "physical_dimension": 692
+    },
+    {
+      "phase": "local_density_operators",
+      "center": 6,
+      "compiled": 153,
+      "total": 279,
+      "physical_dimension": 692
+    },
+    {
+      "phase": "local_density_operators",
+      "center": 6,
+      "compiled": 161,
+      "total": 279,
+      "physical_dimension": 692
+    },
+    {
+      "phase": "local_density_operators",
+      "center": 6,
+      "compiled": 169,
+      "total": 279,
+      "physical_dimension": 692
+    },
+    {
+      "phase": "local_density_operators",
+      "center": 6,
+      "compiled": 177,
+      "total": 279,
+      "physical_dimension": 692
+    },
+    {
+      "phase": "local_density_operators",
+      "center": 6,
+      "compiled": 185,
+      "total": 279,
+      "physical_dimension": 692
+    },
+    {
+      "phase": "local_density_operators",
+      "center": 6,
+      "compiled": 193,
+      "total": 279,
+      "physical_dimension": 692
+    },
+    {
+      "phase": "local_density_operators",
+      "center": 6,
+      "compiled": 201,
+      "total": 279,
+      "physical_dimension": 692
+    },
+    {
+      "phase": "local_density_operators",
+      "center": 6,
+      "compiled": 209,
+      "total": 279,
+      "physical_dimension": 692
+    },
+    {
+      "phase": "local_density_operators",
+      "center": 6,
+      "compiled": 217,
+      "total": 279,
+      "physical_dimension": 692
+    },
+    {
+      "phase": "local_density_operators",
+      "center": 6,
+      "compiled": 225,
+      "total": 279,
+      "physical_dimension": 692
+    },
+    {
+      "phase": "local_density_operators",
+      "center": 6,
+      "compiled": 233,
+      "total": 279,
+      "physical_dimension": 692
+    },
+    {
+      "phase": "local_density_operators",
+      "center": 6,
+      "compiled": 241,
+      "total": 279,
+      "physical_dimension": 692
+    },
+    {
+      "phase": "local_density_operators",
+      "center": 6,
+      "compiled": 249,
+      "total": 279,
+      "physical_dimension": 692
+    },
+    {
+      "phase": "local_density_operators",
+      "center": 6,
+      "compiled": 257,
+      "total": 279,
+      "physical_dimension": 692
+    },
+    {
+      "phase": "local_density_operators",
+      "center": 6,
+      "compiled": 265,
+      "total": 279,
+      "physical_dimension": 692
+    },
+    {
+      "phase": "local_density_operators",
+      "center": 6,
+      "compiled": 273,
+      "total": 279,
+      "physical_dimension": 692
+    },
+    {
+      "phase": "local_density_operators",
+      "center": 6,
+      "compiled": 279,
+      "total": 279,
+      "physical_dimension": 692
+    },
+    {
+      "phase": "conditional_search",
+      "point": "central"
+    },
+    {
+      "phase": "conditional_progress",
+      "point": "central",
+      "iteration": 0,
+      "regularized_functional_hartree": 1848.4241174287956,
+      "reduced_space_frank_wolfe_gap_hartree": 0.042128921925218776
+    },
+    {
+      "phase": "conditional_progress",
+      "point": "central",
+      "iteration": 500,
+      "regularized_functional_hartree": 1848.382336199463,
+      "reduced_space_frank_wolfe_gap_hartree": 1.1322337403640859e-05
+    },
+    {
+      "phase": "conditional_progress",
+      "point": "central",
+      "iteration": 1000,
+      "regularized_functional_hartree": 1848.382324922137,
+      "reduced_space_frank_wolfe_gap_hartree": 1.6960299831225711e-10
+    },
+    {
+      "phase": "conditional_central_result",
+      "physical_total_energy_hartree": -76.21160243602567,
+      "original_total_energy_hartree": -76.16920232508933,
+      "local_gap_hartree": 5.524469770534779e-12,
+      "physical_energy_identity_error_hartree": 5.59223999573033e-13,
+      "discarded_probability": 1.1823629582322842e-16,
+      "new_local_ancilla": 1,
+      "norm_error": 4.907185768843192e-14,
+      "verification_performed": true,
+      "density_moment_error": 1.9458364945768105e-13,
+      "universal_energy_error_hartree": 5.5706550483591855e-12,
+      "particle_number_error": 1.7763568394002505e-15,
+      "minimum_spatial_occupation": 0.00015123292509323653,
+      "maximum_spatial_occupation": 1.9998568668130423
+    },
+    {
+      "phase": "conditional_search",
+      "point": "minus"
+    },
+    {
+      "phase": "conditional_progress",
+      "point": "minus",
+      "iteration": 0,
+      "regularized_functional_hartree": 1848.385291916233,
+      "reduced_space_frank_wolfe_gap_hartree": 2.773994367544219e-10
+    },
+    {
+      "phase": "conditional_search",
+      "point": "plus"
+    },
+    {
+      "phase": "conditional_progress",
+      "point": "plus",
+      "iteration": 0,
+      "regularized_functional_hartree": 1848.3793589277138,
+      "reduced_space_frank_wolfe_gap_hartree": 2.9319835448404774e-10
+    },
+    {
+      "phase": "conditional_derivative_result",
+      "conditional_functional_passed": true,
+      "local_physical_dimension": 692,
+      "density_coordinate_count": 279,
+      "conditional_gap_hartree": 5.524469770534779e-12,
+      "kinetic_gap_hartree": 1.4210854715202004e-14,
+      "physical_total_energy_hartree": -76.21160243602567,
+      "original_total_energy_hartree": -76.16920232508933,
+      "physical_energy_identity_error_hartree": 5.59223999573033e-13,
+      "derivative_error_hartree": 7.3669461642111855e-09,
+      "finite_difference": 13.575458728155354,
+      "analytic_directional_derivative": 13.5754587355223,
+      "installation": {
+        "discarded_probability": 1.1823629582322842e-16,
+        "new_local_ancilla": 1,
+        "norm_error": 4.907185768843192e-14,
+        "verification_performed": true,
+        "density_moment_error": 1.9458364945768105e-13,
+        "universal_energy_error_hartree": 5.5706550483591855e-12,
+        "particle_number_error": 1.7763568394002505e-15,
+        "minimum_spatial_occupation": 0.00015123292509323653,
+        "maximum_spatial_occupation": 1.9998568668130423
+      },
+      "external_potential_passed_to_universal_evaluator": false,
+      "global_tensor_stationarity_certified": false,
+      "self_consistent_global_xc_model": false,
+      "chemical_accuracy_measured": false,
+      "new_reference_generated_or_loaded": false,
+      "wtmad2_measured": false,
+      "goal_accuracy_achieved": false
+    }
+  ],
+  "failures": [],
+  "result": {
+    "conditional_functional_passed": true,
+    "local_physical_dimension": 692,
+    "density_coordinate_count": 279,
+    "conditional_gap_hartree": 5.524469770534779e-12,
+    "kinetic_gap_hartree": 1.4210854715202004e-14,
+    "physical_total_energy_hartree": -76.21160243602567,
+    "original_total_energy_hartree": -76.16920232508933,
+    "physical_energy_identity_error_hartree": 5.59223999573033e-13,
+    "derivative_error_hartree": 7.3669461642111855e-09,
+    "finite_difference": 13.575458728155354,
+    "analytic_directional_derivative": 13.5754587355223,
+    "installation": {
+      "discarded_probability": 1.1823629582322842e-16,
+      "new_local_ancilla": 1,
+      "norm_error": 4.907185768843192e-14,
+      "verification_performed": true,
+      "density_moment_error": 1.9458364945768105e-13,
+      "universal_energy_error_hartree": 5.5706550483591855e-12,
+      "particle_number_error": 1.7763568394002505e-15,
+      "minimum_spatial_occupation": 0.00015123292509323653,
+      "maximum_spatial_occupation": 1.9998568668130423
+    },
+    "external_potential_passed_to_universal_evaluator": false,
+    "global_tensor_stationarity_certified": false,
+    "self_consistent_global_xc_model": false,
+    "chemical_accuracy_measured": false,
+    "new_reference_generated_or_loaded": false,
+    "wtmad2_measured": false,
+    "goal_accuracy_achieved": false
+  },
+  "passed": true,
+  "peak_cuda_bytes": 1639926784
+}

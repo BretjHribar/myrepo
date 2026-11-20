@@ -1,0 +1,13 @@
+{
+  "purpose": "Verify residual-selected charge/spin sector completion with exact retention of the old physical state",
+  "seed": 17112058,
+  "sites": 4,
+  "electrons": 4,
+  "center": 1,
+  "maximum_bond_dimension": 4,
+  "maximum_added_magnetic_states": 3,
+  "state_tolerance": 1e-10,
+  "energy_tolerance_hartree": 1e-9,
+  "reference_use": "Independent full matrix assessed after the algorithm; no chemistry/reference-driven settings",
+  "scope": "Physical support, residual selection, spin/number and variational local update; no chemical-accuracy claim"
+}

@@ -1,0 +1,19 @@
+{
+  "purpose": "Independent ground-state and common-context audit of the new variable-sector two-site forward implementation",
+  "seed": 17112061,
+  "sites": 6,
+  "electrons": 6,
+  "maximum_bond_dimension": 64,
+  "maximum_environment_bytes": 1500000000,
+  "ritz_maximum_dimension": 128,
+  "ritz_residual_tolerance_hartree": 1e-10,
+  "maximum_sweeps": 6,
+  "physical_identity_tolerance_hartree": 1e-8,
+  "physical_tolerance": 1e-8,
+  "sweep_energy_tolerance_hartree": 1e-10,
+  "sweep_density_tolerance": 1e-7,
+  "common_context_gap_tolerance_hartree": 1e-8,
+  "independent_energy_tolerance_hartree": 1e-8,
+  "reference_use": "Spin-projected independent matrix eigenvalue computed only after the original stopping rule",
+  "scope": "New forward implementation and recovery test; no chemistry/WTMAD-2 or frontier replication"
+}

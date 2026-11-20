@@ -1,0 +1,110 @@
+{
+  "created_utc": "2026-11-16T21:29:00.911652+00:00",
+  "status": "Own fresh-SCF atomization screen; not GMTKN55, hidden suite, or matched challenge protocol",
+  "device": "cpu",
+  "checkpoint": "research/ensemble_screened_20261116.pt",
+  "basis": "def2-tzvp",
+  "grid_level": 1,
+  "atoms": {
+    "Al": {
+      "energy_hartree": -242.31178548197616,
+      "converged": true,
+      "seconds": 0.7317403349999836,
+      "cycles": 8,
+      "correction_calls": 10
+    },
+    "B": {
+      "energy_hartree": -24.6428977760907,
+      "converged": true,
+      "seconds": 0.41200132299996994,
+      "cycles": 7,
+      "correction_calls": 9
+    },
+    "C": {
+      "energy_hartree": -37.834441847663065,
+      "converged": true,
+      "seconds": 0.5220726030000264,
+      "cycles": 8,
+      "correction_calls": 10
+    },
+    "F": {
+      "energy_hartree": -99.72504229705754,
+      "converged": true,
+      "seconds": 0.4300304090000395,
+      "cycles": 7,
+      "correction_calls": 9
+    },
+    "H": {
+      "energy_hartree": -0.4998098322318885,
+      "converged": true,
+      "seconds": 0.20648165399995833,
+      "cycles": 8,
+      "correction_calls": 10
+    },
+    "Na": {
+      "energy_hartree": -162.231148868532,
+      "converged": true,
+      "seconds": 0.5913052519999837,
+      "cycles": 7,
+      "correction_calls": 9
+    },
+    "S": {
+      "energy_hartree": -398.03964857925877,
+      "converged": true,
+      "seconds": 0.6951409499999954,
+      "cycles": 8,
+      "correction_calls": 10
+    }
+  },
+  "molecules": [
+    {
+      "id": "00211b695674f5856c2ce113be2ffc2fcabaf41c",
+      "family": "[[\"Al\",2],[\"H\",4],[\"S\",1]]",
+      "split": "val",
+      "pbe_input_error_kcal": -8.69068574487792,
+      "converged": false,
+      "exception": "TimeoutError: Our calculation exceeded 30.0s bounded attempt"
+    },
+    {
+      "id": "0285a070ab12463e51aa2fe4abf2f9948a803245",
+      "family": "[[\"Al\",1],[\"B\",1],[\"F\",1],[\"H\",3]]",
+      "split": "val",
+      "pbe_input_error_kcal": -3.7084206846115575,
+      "energy_hartree": -368.8880466828705,
+      "converged": true,
+      "seconds": 25.286570220999977,
+      "cycles": 16,
+      "correction_calls": 18,
+      "tae_hartree": 0.7088916310503919,
+      "error_kcal": -3.888706852822059
+    },
+    {
+      "id": "02c8b84d07ac6a4e42a606da94273be873f8e814",
+      "family": "[[\"Al\",2],[\"B\",1],[\"H\",1]]",
+      "split": "val",
+      "pbe_input_error_kcal": 7.791050439478776,
+      "energy_hartree": -510.0953211114403,
+      "converged": true,
+      "seconds": 25.693452520999983,
+      "cycles": 21,
+      "correction_calls": 23,
+      "tae_hartree": 0.3290425391653571,
+      "error_kcal": -3.4871484708333167
+    },
+    {
+      "id": "0f1be79f8bdf9faf63d31242e1d3f52172fa7b43",
+      "family": "[[\"Al\",1],[\"C\",1],[\"H\",2],[\"Na\",1]]",
+      "split": "val",
+      "pbe_input_error_kcal": 3.148656348392057,
+      "converged": false,
+      "exception": "TimeoutError: Our calculation exceeded 30.0s bounded attempt"
+    }
+  ],
+  "summary": {
+    "molecules": 4,
+    "molecular_failures": 2,
+    "atomic_failures": 0,
+    "all_returned_tae_mae_kcal": null,
+    "median_molecular_seconds": null
+  }
+}

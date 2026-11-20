@@ -1,0 +1,178 @@
+{
+  "created_utc": "2026-11-17T10:16:26.208274+00:00",
+  "device": "cuda",
+  "protocol": {
+    "purpose": "Assess an external-potential-independent density frame and its on-shell constrained-search/kinetic completion",
+    "construction": "All resolved eigenmodes of the orbital-product Coulomb Gram operator, plus exact number; no nuclear positions, charges, external h or labels enter frame construction",
+    "relative_null_threshold": 1e-13,
+    "cases": [
+      "BeH2_631g_1.65_new",
+      "BeH2_631g_2.75_new"
+    ],
+    "input": "Reuse the saved new larger-basis physical states; no interacting optimization or reference generation is repeated",
+    "kinetic_entropy_allowance_hartree": 1e-05,
+    "kinetic_density_residual_tolerance": 1e-08,
+    "external_span_tolerance_hartree": 1e-07,
+    "checks": [
+      "Represented density Coulomb Gram range",
+      "Fixed-number one-body density and occupations",
+      "Orbital-gauge covariance of the full retained subspace",
+      "External-potential span assessed only after frame construction",
+      "Canonical noninteracting kinetic search and same-density total energy"
+    ],
+    "limits": [
+      "Finite-basis frame resolution, not a fixed continuum implementation",
+      "An on-shell certificate does not implement arbitrary-density interacting search",
+      "No off-shell functional derivative claim from this experiment",
+      "No learned inference, broad chemistry score or speed work"
+    ]
+  },
+  "results": [
+    {
+      "id": "BeH2_631g_1.65_new",
+      "certificate_passed": false,
+      "density_frame_dimension": 88,
+      "symmetric_matrix_dimension": 91,
+      "retained_coulomb_modes": 87,
+      "coulomb_null_threshold": 4.596463979918884e-13,
+      "external_span_error_hartree": 1.7090762226695482e-05,
+      "orbital_covariance_projector_error": 0.012231898312607613,
+      "rotated_frame_dimension": 88,
+      "number_error": 8.881784197001252e-16,
+      "minimum_occupation": 6.0599378396117175e-05,
+      "maximum_occupation": 1.999852443640291,
+      "kinetic_density_residual": 2.7621091595991835e-10,
+      "ks_commutator_residual": 2.289505210567337e-05,
+      "same_density_total_minus_state_hartree": 5.565611331803666e-07,
+      "kinetic_entropy_allowance_hartree": 1e-05,
+      "xc_energy_hartree": -3.4121135752195233,
+      "interacting_search_repeated": false,
+      "new_reference_generated": false,
+      "off_shell_derivative_tested": false,
+      "kinetic_history": [
+        {
+          "beta": 0.1,
+          "iterations": 41,
+          "density_residual": 1.6253782951452363e-10,
+          "dual": 5.513544895017333
+        },
+        {
+          "beta": 1.0,
+          "iterations": 58,
+          "density_residual": 1.7473997615029214e-14,
+          "dual": 14.527629944775981
+        },
+        {
+          "beta": 10.0,
+          "iterations": 20,
+          "density_residual": 7.696353470531976e-13,
+          "dual": 15.429038449751843
+        },
+        {
+          "beta": 100.0,
+          "iterations": 20,
+          "density_residual": 2.7840601673780044e-10,
+          "dual": 15.519179300249434
+        },
+        {
+          "beta": 1000.0,
+          "iterations": 21,
+          "density_residual": 1.4926570715434595e-13,
+          "dual": 15.528193385299192
+        },
+        {
+          "beta": 10000.0,
+          "iterations": 22,
+          "density_residual": 4.852046752741228e-12,
+          "dual": 15.529094793804166
+        },
+        {
+          "beta": 100000.0,
+          "iterations": 19,
+          "density_residual": 2.2159435283840537e-11,
+          "dual": 15.529184934654657
+        },
+        {
+          "beta": 1802182.6694558575,
+          "iterations": 21,
+          "density_residual": 2.7621091595991835e-10,
+          "dual": 15.529194394553478
+        }
+      ]
+    },
+    {
+      "id": "BeH2_631g_2.75_new",
+      "certificate_passed": false,
+      "density_frame_dimension": 83,
+      "symmetric_matrix_dimension": 91,
+      "retained_coulomb_modes": 82,
+      "coulomb_null_threshold": 4.287112152671302e-13,
+      "external_span_error_hartree": 2.0918525793733914e-07,
+      "orbital_covariance_projector_error": 1.306572499441771e-08,
+      "rotated_frame_dimension": 83,
+      "number_error": 8.881784197001252e-16,
+      "minimum_occupation": 6.266024858881181e-05,
+      "maximum_occupation": 1.9998554846960461,
+      "kinetic_density_residual": 4.1192422938828493e-10,
+      "ks_commutator_residual": 2.7867207781986194e-07,
+      "same_density_total_minus_state_hartree": 2.296492931819216e-06,
+      "kinetic_entropy_allowance_hartree": 1e-05,
+      "xc_energy_hartree": -3.3622710505840967,
+      "interacting_search_repeated": false,
+      "new_reference_generated": false,
+      "off_shell_derivative_tested": false,
+      "kinetic_history": [
+        {
+          "beta": 0.1,
+          "iterations": 40,
+          "density_residual": 1.6644919884343076e-12,
+          "dual": -25.936908985195657
+        },
+        {
+          "beta": 1.0,
+          "iterations": 80,
+          "density_residual": 0.6556969203556337,
+          "dual": 2.130373605435352
+        },
+        {
+          "beta": 10.0,
+          "iterations": 80,
+          "density_residual": 0.6670809360269675,
+          "dual": 14.371469094012696
+        },
+        {
+          "beta": 100.0,
+          "iterations": 50,
+          "density_residual": 3.34766603873588e-11,
+          "dual": 15.576397759259988
+        },
+        {
+          "beta": 1000.0,
+          "iterations": 21,
+          "density_residual": 2.9899230285062355e-10,
+          "dual": 15.613791783726914
+        },
+        {
+          "beta": 10000.0,
+          "iterations": 23,
+          "density_residual": 2.0874378412505833e-12,
+          "dual": 15.61753030493511
+        },
+        {
+          "beta": 100000.0,
+          "iterations": 25,
+          "density_residual": 3.0772239644000627e-11,
+          "dual": 15.61790411386463
+        },
+        {
+          "beta": 1802182.6694558575,
+          "iterations": 35,
+          "density_residual": 4.1192422938828493e-10,
+          "dual": 15.61794331289796
+        }
+      ]
+    }
+  ],
+  "failures": [],
+  "peak_cuda_bytes": 415594496
+}

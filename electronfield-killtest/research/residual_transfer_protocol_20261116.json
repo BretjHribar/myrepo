@@ -1,0 +1,19 @@
+{
+  "purpose": "New spin sectors, compositions and electron counts for the residual-completed state",
+  "created_before_reference_generation": true,
+  "model": "Exact N,S tensor seed followed by physical Hamiltonian residual completion",
+  "basis": "sto-3g",
+  "projection": "Complete stated AO basis, no frozen core",
+  "input_orbitals": "Core Hamiltonian orbitals for open shells; valid high-spin determinant, no SCF",
+  "objective": "Molecular Hamiltonian Rayleigh quotient; no reference-energy loss",
+  "optimizer": {"name": "Adam", "steps": 400, "lr": 0.02, "cosine_final_lr": 0.0002},
+  "completion": {"maximum_dimension": 64, "residual_tolerance": 1e-7, "reference_energies_used": false},
+  "cases": [
+    {"id": "CH_doublet_1.12", "atom": "C 0 0 0; H 0 0 1.12", "charge": 0, "spin": 1, "electrons": 7},
+    {"id": "NH_triplet_1.04", "atom": "N 0 0 0; H 0 0 1.04", "charge": 0, "spin": 2, "electrons": 8},
+    {"id": "OH_doublet_0.97", "atom": "O 0 0 0; H 0 0 0.97", "charge": 0, "spin": 1, "electrons": 9}
+  ],
+  "assessment": "Report every case including failures; exact number, total spin, variational sign and reference retention. No label-driven changes to seed, rank or iteration counts.",
+  "reference": "New CUDA exact diagonalization after optimization, within the same complete minimal basis and specified Sz sector",
+  "limitations": ["Finite minimal basis only", "Per-system physical solve, not an amortized learned predictor", "No claim of worldwide novelty for Krylov/Ritz linear algebra", "Not a broad XC-functional validation", "New development cases, not the locked composition confirmation panel", "Finite global subspaces do not enforce fragment separability"]
+}

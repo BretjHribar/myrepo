@@ -1,0 +1,18 @@
+{
+  "candidate_id": "physical_sector_tensor_development_20261117",
+  "purpose": "Inventory every public reaction's current model-domain/resource blockers before an attempted broad evaluation; not a chemical-accuracy or speed result",
+  "basis": "def2-qzvp",
+  "benchmark_commit": "8d485b37a1ca8837e395042671ca5ba4e0714691",
+  "supported_physical_twice_spins": [0, 1],
+  "ecp_implementation_validated": false,
+  "universal_xc_callable_complete": false,
+  "gpu_input_storage_limit_bytes": 6500000000,
+  "host_word_enumeration_budget_bytes": 3500000000,
+  "estimated_host_bytes_per_enumerated_word": 400,
+  "gpu_bound_scope": "Minimum simultaneous dense ERI, integer word/index arrays and coefficients in the current literal implementation. Excludes optimizer, contractions, duplicate temporaries and allocator overhead; being below this bound does not prove a case fits.",
+  "resource_response": "Report unsupported/infeasible cases. Do not reduce basis, electrons, spin, reference scope or acceptance thresholds to turn failures into passes.",
+  "source_files": ["xc3d/physical_two_site_forward.py", "xc3d/gpu_fermion_mpo.py", "xc3d/gpu_manybody_ops.py", "xc3d/gpu_doublet_embedding.py", "xc3d/gpu_chemistry_transfer.py", "xc3d/physical_ritz_seed.py"],
+  "reference_energies_used_for_domain_selection": false,
+  "full_public_score_required": true,
+  "speed_work_authorized": false
+}

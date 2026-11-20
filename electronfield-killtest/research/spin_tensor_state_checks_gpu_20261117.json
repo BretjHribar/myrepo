@@ -1,0 +1,202 @@
+{
+  "created_utc": "2026-11-17T10:07:11.912294+00:00",
+  "device": "cuda",
+  "scope": "Exact two-block charge/spin tensor representation; no accuracy fitting, reference generation or timing benchmark",
+  "results": [
+    {
+      "id": "H4_square_close",
+      "electrons": 4,
+      "representation_valid": true,
+      "norm_error": 9.103828801926284e-15,
+      "state_l2_error": 1.6404520820375648e-14,
+      "energy_difference_hartree": 4.440892098500626e-16,
+      "spin_lower_norm": 4.956178691829362e-16,
+      "global_fock_coefficients": 36100,
+      "highest_multiplet_and_bond_parameters": 28424,
+      "sectors": [
+        {
+          "first_number": 0,
+          "second_number": 4,
+          "twice_spin": 0,
+          "spin_schmidt_channels": 1,
+          "weight": 0.011604507212340872
+        },
+        {
+          "first_number": 1,
+          "second_number": 3,
+          "twice_spin": 1,
+          "spin_schmidt_channels": 10,
+          "weight": 0.14580296132663897
+        },
+        {
+          "first_number": 2,
+          "second_number": 2,
+          "twice_spin": 0,
+          "spin_schmidt_channels": 55,
+          "weight": 0.5531449719466603
+        },
+        {
+          "first_number": 2,
+          "second_number": 2,
+          "twice_spin": 2,
+          "spin_schmidt_channels": 45,
+          "weight": 0.1320401001357998
+        },
+        {
+          "first_number": 3,
+          "second_number": 1,
+          "twice_spin": 1,
+          "spin_schmidt_channels": 10,
+          "weight": 0.14580295324301124
+        },
+        {
+          "first_number": 4,
+          "second_number": 0,
+          "twice_spin": 0,
+          "spin_schmidt_channels": 1,
+          "weight": 0.011604506135557892
+        }
+      ]
+    },
+    {
+      "id": "H2O2_skew_new",
+      "electrons": 18,
+      "representation_valid": true,
+      "norm_error": 2.5757174171303632e-14,
+      "state_l2_error": 2.265939513623196e-13,
+      "energy_difference_hartree": 0.0,
+      "spin_lower_norm": 9.419659733898394e-16,
+      "global_fock_coefficients": 48400,
+      "highest_multiplet_and_bond_parameters": 33062,
+      "sectors": [
+        {
+          "first_number": 6,
+          "second_number": 12,
+          "twice_spin": 0,
+          "spin_schmidt_channels": 1,
+          "weight": 7.326640661229884e-08
+        },
+        {
+          "first_number": 7,
+          "second_number": 11,
+          "twice_spin": 1,
+          "spin_schmidt_channels": 6,
+          "weight": 0.0003651550482631661
+        },
+        {
+          "first_number": 8,
+          "second_number": 10,
+          "twice_spin": 0,
+          "spin_schmidt_channels": 21,
+          "weight": 0.1660544036154296
+        },
+        {
+          "first_number": 8,
+          "second_number": 10,
+          "twice_spin": 2,
+          "spin_schmidt_channels": 15,
+          "weight": 0.002042163628483987
+        },
+        {
+          "first_number": 9,
+          "second_number": 9,
+          "twice_spin": 1,
+          "spin_schmidt_channels": 70,
+          "weight": 0.6630654769454197
+        },
+        {
+          "first_number": 9,
+          "second_number": 9,
+          "twice_spin": 3,
+          "spin_schmidt_channels": 20,
+          "weight": 1.0931937523562426e-05
+        },
+        {
+          "first_number": 10,
+          "second_number": 8,
+          "twice_spin": 0,
+          "spin_schmidt_channels": 21,
+          "weight": 0.16605440361529175
+        },
+        {
+          "first_number": 10,
+          "second_number": 8,
+          "twice_spin": 2,
+          "spin_schmidt_channels": 15,
+          "weight": 0.0020421636284857466
+        },
+        {
+          "first_number": 11,
+          "second_number": 7,
+          "twice_spin": 1,
+          "spin_schmidt_channels": 6,
+          "weight": 0.0003651550482634038
+        },
+        {
+          "first_number": 12,
+          "second_number": 6,
+          "twice_spin": 0,
+          "spin_schmidt_channels": 1,
+          "weight": 7.326640661161509e-08
+        }
+      ]
+    },
+    {
+      "id": "H2F_plus_new",
+      "electrons": 10,
+      "representation_valid": true,
+      "norm_error": 2.220446049250313e-16,
+      "state_l2_error": 2.5372110848969685e-12,
+      "energy_difference_hartree": 1.4210854715202004e-14,
+      "spin_lower_norm": 1.9191372516080638e-16,
+      "global_fock_coefficients": 441,
+      "highest_multiplet_and_bond_parameters": 329,
+      "sectors": [
+        {
+          "first_number": 6,
+          "second_number": 4,
+          "twice_spin": 0,
+          "spin_schmidt_channels": 1,
+          "weight": 0.0024260955701440722
+        },
+        {
+          "first_number": 7,
+          "second_number": 3,
+          "twice_spin": 1,
+          "spin_schmidt_channels": 2,
+          "weight": 0.05314789696621117
+        },
+        {
+          "first_number": 8,
+          "second_number": 2,
+          "twice_spin": 0,
+          "spin_schmidt_channels": 3,
+          "weight": 0.12122166921117039
+        },
+        {
+          "first_number": 8,
+          "second_number": 2,
+          "twice_spin": 2,
+          "spin_schmidt_channels": 1,
+          "weight": 0.18112871586498766
+        },
+        {
+          "first_number": 9,
+          "second_number": 1,
+          "twice_spin": 1,
+          "spin_schmidt_channels": 2,
+          "weight": 0.4671392921289701
+        },
+        {
+          "first_number": 10,
+          "second_number": 0,
+          "twice_spin": 0,
+          "spin_schmidt_channels": 1,
+          "weight": 0.1749363302585168
+        }
+      ]
+    }
+  ],
+  "failures": [],
+  "peak_cuda_bytes": 198666752
+}

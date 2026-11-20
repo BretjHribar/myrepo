@@ -1,0 +1,15 @@
+{
+  "purpose": "Recover the original valid occupied states and enforce the singlet domain on every extension while evaluating the literal full Hamiltonian",
+  "cases": ["BeH2_631g_1.65_new", "BeH2_631g_2.75_new"],
+  "original_protocol": "research/auxiliary_forward_protocol_20261117.json",
+  "strict_spin_recovery": true,
+  "checkpoint_folder": "data/auxiliary_strict",
+  "maximum_additional_updates": 32,
+  "source": "Original auxiliary_forward checkpoints, not the later rejected spin-contaminated candidates",
+  "correctness_repairs": ["Machine-precision-aware response rank", "Every new basis direction explicitly singlet projected and reorthogonalized", "Basis spin guard before Hamiltonian projection", "Full unprojected physical Hamiltonian for every energy", "Occupied-state, density, number and energy retention checked during recovery"],
+  "outer_solver": "Exact auxiliary-coordinate elimination in the unchanged variational total functional",
+  "unchanged": "epsilon=1, response-space cap 192, response counts, self-consistency/stationarity tolerances and global checks",
+  "preconditions": ["Independent exact-rank and degenerate-source checks", "Independent triplet injection must be removed/rejected", "Raw triplet energy must match the independent full fermion-word operator"],
+  "reference_use": "Only after prediction/checks stop; no reference objective or new labels",
+  "limits": ["Development repair, not a blind benchmark", "Global Fock vectors and finite orbital bases", "No trained model, broad WTMAD-2 result or speed work", "Regularized KS integration and challenge eligibility unresolved"]
+}

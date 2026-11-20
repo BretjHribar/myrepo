@@ -1,0 +1,101 @@
+{
+  "created_utc": "2026-11-17T01:09:48.000100+00:00",
+  "device": "cuda",
+  "scope": "Adaptive universal T+W constrained search, N=4 active-six, frozen spatial-moment frame",
+  "status": "capacity_limit",
+  "reference_energy_fitted": false,
+  "external_nuclear_potential_in_objective": false,
+  "density_moment_residual": 4.3596881816800123e-13,
+  "stationarity_residual": 9.891491656496588e-06,
+  "functional_error_kcal": 3.257988884199392e-08,
+  "potential_difference_norm": 3.6465298797766513e-07,
+  "spin_squared": -1.7584175662868584e-18,
+  "history": [
+    {
+      "iteration": 1,
+      "dimension": 10,
+      "functional_hartree": 3.630496259345417,
+      "density_residual": 1.6481488314216153e-15,
+      "stationarity_residual": 0.007246033668665235
+    },
+    {
+      "iteration": 2,
+      "dimension": 19,
+      "functional_hartree": 3.6304643112242085,
+      "density_residual": 2.1933849780243976e-10,
+      "stationarity_residual": 0.0014868905959257983
+    },
+    {
+      "iteration": 3,
+      "dimension": 28,
+      "functional_hartree": 3.63046330652865,
+      "density_residual": 2.565598699584696e-15,
+      "stationarity_residual": 0.0002861048225726177
+    },
+    {
+      "iteration": 4,
+      "dimension": 37,
+      "functional_hartree": 3.630463240174914,
+      "density_residual": 2.5240621799040924e-10,
+      "stationarity_residual": 0.0002474158961643905
+    },
+    {
+      "iteration": 5,
+      "dimension": 46,
+      "functional_hartree": 3.6304631295717122,
+      "density_residual": 2.0779438104444868e-10,
+      "stationarity_residual": 0.0002653372474654814
+    },
+    {
+      "iteration": 6,
+      "dimension": 55,
+      "functional_hartree": 3.630463086110153,
+      "density_residual": 1.729507780675281e-10,
+      "stationarity_residual": 0.00015234934771799548
+    },
+    {
+      "iteration": 7,
+      "dimension": 64,
+      "functional_hartree": 3.6304630683977246,
+      "density_residual": 7.300926463782531e-11,
+      "stationarity_residual": 0.00010246929734184041
+    },
+    {
+      "iteration": 8,
+      "dimension": 73,
+      "functional_hartree": 3.630463060562288,
+      "density_residual": 1.4380130801246431e-11,
+      "stationarity_residual": 6.0012189630042714e-05
+    },
+    {
+      "iteration": 9,
+      "dimension": 82,
+      "functional_hartree": 3.6304630554288604,
+      "density_residual": 9.552778001225067e-12,
+      "stationarity_residual": 6.9093958492547e-05
+    },
+    {
+      "iteration": 10,
+      "dimension": 91,
+      "functional_hartree": 3.6304630490850216,
+      "density_residual": 1.6011673388039765e-12,
+      "stationarity_residual": 5.1784026801759086e-05
+    },
+    {
+      "iteration": 11,
+      "dimension": 96,
+      "functional_hartree": 3.630463047359698,
+      "density_residual": 4.3596881816800123e-13,
+      "stationarity_residual": 9.891491656496588e-06
+    }
+  ],
+  "seconds": 1.3170163559999999,
+  "peak_cuda_bytes": 19943936,
+  "limitations": [
+    "Dense finite-basis action",
+    "Incomplete spatial-density constraints",
+    "No full XC subtraction or self-consistency",
+    "No broad hidden-suite evidence",
+    "Finite global subspaces do not guarantee fragment separability"
+  ]
+}

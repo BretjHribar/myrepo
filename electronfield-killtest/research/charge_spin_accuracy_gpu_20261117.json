@@ -1,0 +1,1838 @@
+{
+  "created_utc": "2026-11-17T09:42:58.801604+00:00",
+  "device": "cuda",
+  "protocol": {
+    "goal": "Below 1 kcal/mol with physical consistency and independent transfer; no speed work",
+    "hypothesis": "Density-conditioned local charge/spin multiplets, exact fermionic links, factored product closure and residual-selected local completion",
+    "initial_low_energy_multiplets_per_sector": 16,
+    "include_complete_boundary_degeneracies": true,
+    "retain_full_input_determinant_schmidt_support": true,
+    "maximum_adaptive_updates": 4,
+    "residual_directions_per_sector_per_update": 2,
+    "residual_source_threshold_hartree": 1e-08,
+    "projected_state_residual_tolerance_hartree": 1e-08,
+    "full_state_residual_target_hartree": 1e-05,
+    "maximum_projected_ritz_dimension": 192,
+    "source_embedding": "Physical local one-body operator plus the other block's input-density Hartree/exchange field; used only to choose local states",
+    "cases": [
+      {
+        "id": "He2_R3.00",
+        "source_folder": "linked_block_accuracy",
+        "source_report": "research/linked_block_accuracy_gpu_20261116.json",
+        "first_block_atoms": 1
+      },
+      {
+        "id": "H4_parallel_far",
+        "source_folder": "linked_block_accuracy",
+        "source_report": "research/linked_block_accuracy_gpu_20261116.json",
+        "first_block_atoms": 2
+      },
+      {
+        "id": "H4_square_close",
+        "source_folder": "linked_block_accuracy",
+        "source_report": "research/linked_block_accuracy_gpu_20261116.json",
+        "first_block_atoms": 2
+      },
+      {
+        "id": "BeH2_neutral_1.33",
+        "source_folder": "coherent_local_accuracy",
+        "source_report": "research/local_sector_accuracy_gpu_20261116.json",
+        "first_block_atoms": 1
+      },
+      {
+        "id": "BeH2_neutral_2.10",
+        "source_folder": "coherent_local_accuracy",
+        "source_report": "research/local_sector_accuracy_gpu_20261116.json",
+        "first_block_atoms": 1
+      },
+      {
+        "id": "BH3_planar_1.19",
+        "source_folder": "coherent_local_accuracy",
+        "source_report": "research/local_sector_accuracy_gpu_20261116.json",
+        "first_block_atoms": 1
+      },
+      {
+        "id": "NH3_pyramidal",
+        "source_folder": "coherent_local_accuracy",
+        "source_report": "research/local_sector_accuracy_gpu_20261116.json",
+        "first_block_atoms": 1
+      },
+      {
+        "id": "NH3_planar",
+        "source_folder": "coherent_local_accuracy",
+        "source_report": "research/local_sector_accuracy_gpu_20261116.json",
+        "first_block_atoms": 1
+      },
+      {
+        "id": "H2F_plus_new",
+        "atom": "F 0 0 0; H 0.77 0 0.54; H -0.77 0 0.54",
+        "charge": 1,
+        "spin": 0,
+        "electrons": 10,
+        "basis": "sto-3g",
+        "first_block_atoms": 1
+      }
+    ],
+    "assessment": "No reference-energy objective or stopping rule. Reuse all existing physical labels; generate only the new ionic label after prediction. Retain every failure and balanced geometry contrast. No seed/rank/iteration sweeps.",
+    "limits": [
+      "Accuracy research state representation, not yet a density-only XC functional",
+      "Fixed-Sz global coordinate vector, not a scalable tensor solver",
+      "Two supplied orbital blocks",
+      "Finite bases; a rejection panel is not full GMTKN55 WTMAD-2",
+      "All prior cases are development; H2F+ is a prespecified new ionic composition"
+    ]
+  },
+  "results": [
+    {
+      "id": "He2_R3.00",
+      "electrons": 4,
+      "basis": "cc-pvdz",
+      "spatial_orbitals": 10,
+      "full_fixed_sz_dimension": 2025,
+      "energy_error_kcal": 1.3760733808485524e-09,
+      "below_one_kcal": true,
+      "total_energy_hartree": -5.7751952814302605,
+      "reference_energy_hartree": -5.775195281432453,
+      "reference_converged": true,
+      "new_reference_generated": false,
+      "reference_energy_fitted": false,
+      "input_reference_status": {
+        "converged": true,
+        "cycles": 8,
+        "residual": 4.8044646578179175e-08
+      },
+      "seconds": 1.6536733229999996,
+      "physical_validity_passed": true,
+      "full_residual": 4.106382888030278e-06,
+      "projected_residual": 4.224507097645398e-09,
+      "input_retention_error": 1.1693606066098513e-15,
+      "spin_lower_norm": 2.363204068295713e-15,
+      "initial_spin_lower_norm": 2.7595444017512743e-16,
+      "reference_not_degraded": true,
+      "projected_dimension": 1281,
+      "charge_weights": {
+        "0": 5.330478753275192e-13,
+        "1": 1.588799804128886e-05,
+        "2": 0.9999682240028662,
+        "3": 1.588799802638972e-05,
+        "4": 5.330478863061509e-13
+      },
+      "local_multiplets": [
+        [
+          {
+            "electrons": 0,
+            "twice_spin": 0,
+            "multiplets": 1,
+            "complete_multiplets": 1,
+            "input_support_added": 0
+          },
+          {
+            "electrons": 1,
+            "twice_spin": 1,
+            "multiplets": 5,
+            "complete_multiplets": 5,
+            "input_support_added": 0
+          },
+          {
+            "electrons": 2,
+            "twice_spin": 0,
+            "multiplets": 15,
+            "complete_multiplets": 15,
+            "input_support_added": 0
+          },
+          {
+            "electrons": 2,
+            "twice_spin": 2,
+            "multiplets": 10,
+            "complete_multiplets": 10,
+            "input_support_added": 0
+          },
+          {
+            "electrons": 3,
+            "twice_spin": 1,
+            "multiplets": 21,
+            "complete_multiplets": 40,
+            "input_support_added": 2
+          },
+          {
+            "electrons": 4,
+            "twice_spin": 0,
+            "multiplets": 18,
+            "complete_multiplets": 50,
+            "input_support_added": 1
+          }
+        ],
+        [
+          {
+            "electrons": 0,
+            "twice_spin": 0,
+            "multiplets": 1,
+            "complete_multiplets": 1,
+            "input_support_added": 0
+          },
+          {
+            "electrons": 1,
+            "twice_spin": 1,
+            "multiplets": 5,
+            "complete_multiplets": 5,
+            "input_support_added": 0
+          },
+          {
+            "electrons": 2,
+            "twice_spin": 0,
+            "multiplets": 15,
+            "complete_multiplets": 15,
+            "input_support_added": 0
+          },
+          {
+            "electrons": 2,
+            "twice_spin": 2,
+            "multiplets": 10,
+            "complete_multiplets": 10,
+            "input_support_added": 0
+          },
+          {
+            "electrons": 3,
+            "twice_spin": 1,
+            "multiplets": 21,
+            "complete_multiplets": 40,
+            "input_support_added": 2
+          },
+          {
+            "electrons": 4,
+            "twice_spin": 0,
+            "multiplets": 18,
+            "complete_multiplets": 50,
+            "input_support_added": 1
+          }
+        ]
+      ],
+      "history": [
+        {
+          "adaptive_update": 0,
+          "energy_hartree": -5.775195277505362,
+          "full_state_residual": 0.0001604856597268395,
+          "projected_state_residual": 4.753234423682109e-09,
+          "projected_dimension": 1219,
+          "added_local_multiplets": [
+            4,
+            4
+          ]
+        },
+        {
+          "adaptive_update": 1,
+          "energy_hartree": -5.7751952814302605,
+          "full_state_residual": 4.106382888030278e-06,
+          "projected_state_residual": 4.224507097645398e-09,
+          "projected_dimension": 1281
+        }
+      ]
+    },
+    {
+      "id": "H4_parallel_far",
+      "electrons": 4,
+      "basis": "cc-pvdz",
+      "spatial_orbitals": 20,
+      "full_fixed_sz_dimension": 36100,
+      "energy_error_kcal": 1.6407569713360117e-05,
+      "below_one_kcal": true,
+      "total_energy_hartree": -2.326423921164863,
+      "reference_energy_hartree": -2.32642394731199,
+      "reference_converged": true,
+      "new_reference_generated": false,
+      "reference_energy_fitted": false,
+      "input_reference_status": {
+        "converged": true,
+        "cycles": 10,
+        "residual": 4.2521033530940105e-08
+      },
+      "seconds": 5.150802902000001,
+      "physical_validity_passed": true,
+      "full_residual": 0.00035300765296606063,
+      "projected_residual": 7.082375255704129e-09,
+      "input_retention_error": 2.8766896935727904e-15,
+      "spin_lower_norm": 3.4852608728856134e-15,
+      "initial_spin_lower_norm": 4.1407532803275196e-16,
+      "reference_not_degraded": true,
+      "projected_dimension": 5036,
+      "charge_weights": {
+        "0": 9.949424923133393e-09,
+        "1": 0.0007796338629967288,
+        "2": 0.9984407123751566,
+        "3": 0.0007796338629967975,
+        "4": 9.949424923110242e-09
+      },
+      "local_multiplets": [
+        [
+          {
+            "electrons": 0,
+            "twice_spin": 0,
+            "multiplets": 1,
+            "complete_multiplets": 1,
+            "input_support_added": 0
+          },
+          {
+            "electrons": 1,
+            "twice_spin": 1,
+            "multiplets": 10,
+            "complete_multiplets": 10,
+            "input_support_added": 0
+          },
+          {
+            "electrons": 2,
+            "twice_spin": 0,
+            "multiplets": 27,
+            "complete_multiplets": 55,
+            "input_support_added": 3
+          },
+          {
+            "electrons": 2,
+            "twice_spin": 2,
+            "multiplets": 25,
+            "complete_multiplets": 45,
+            "input_support_added": 1
+          },
+          {
+            "electrons": 3,
+            "twice_spin": 1,
+            "multiplets": 26,
+            "complete_multiplets": 330,
+            "input_support_added": 2
+          },
+          {
+            "electrons": 4,
+            "twice_spin": 0,
+            "multiplets": 21,
+            "complete_multiplets": 825,
+            "input_support_added": 1
+          }
+        ],
+        [
+          {
+            "electrons": 0,
+            "twice_spin": 0,
+            "multiplets": 1,
+            "complete_multiplets": 1,
+            "input_support_added": 0
+          },
+          {
+            "electrons": 1,
+            "twice_spin": 1,
+            "multiplets": 10,
+            "complete_multiplets": 10,
+            "input_support_added": 0
+          },
+          {
+            "electrons": 2,
+            "twice_spin": 0,
+            "multiplets": 27,
+            "complete_multiplets": 55,
+            "input_support_added": 3
+          },
+          {
+            "electrons": 2,
+            "twice_spin": 2,
+            "multiplets": 25,
+            "complete_multiplets": 45,
+            "input_support_added": 1
+          },
+          {
+            "electrons": 3,
+            "twice_spin": 1,
+            "multiplets": 26,
+            "complete_multiplets": 330,
+            "input_support_added": 2
+          },
+          {
+            "electrons": 4,
+            "twice_spin": 0,
+            "multiplets": 21,
+            "complete_multiplets": 825,
+            "input_support_added": 1
+          }
+        ]
+      ],
+      "history": [
+        {
+          "adaptive_update": 0,
+          "energy_hartree": -2.326375250209927,
+          "full_state_residual": 0.011914824551186419,
+          "projected_state_residual": 5.288052408885693e-09,
+          "projected_dimension": 2628,
+          "added_local_multiplets": [
+            7,
+            7
+          ]
+        },
+        {
+          "adaptive_update": 1,
+          "energy_hartree": -2.3264205545264773,
+          "full_state_residual": 0.003864235051612584,
+          "projected_state_residual": 7.429693709239694e-09,
+          "projected_dimension": 3158,
+          "added_local_multiplets": [
+            7,
+            7
+          ]
+        },
+        {
+          "adaptive_update": 2,
+          "energy_hartree": -2.3264232980493698,
+          "full_state_residual": 0.001690906113888788,
+          "projected_state_residual": 8.708901177322632e-09,
+          "projected_dimension": 3736,
+          "added_local_multiplets": [
+            7,
+            7
+          ]
+        },
+        {
+          "adaptive_update": 3,
+          "energy_hartree": -2.3264238555136627,
+          "full_state_residual": 0.0006341822549173196,
+          "projected_state_residual": 7.733149603897285e-09,
+          "projected_dimension": 4362,
+          "added_local_multiplets": [
+            7,
+            7
+          ]
+        },
+        {
+          "adaptive_update": 4,
+          "energy_hartree": -2.326423921164863,
+          "full_state_residual": 0.00035300765296606063,
+          "projected_state_residual": 7.082375255704129e-09,
+          "projected_dimension": 5036
+        }
+      ]
+    },
+    {
+      "id": "H4_square_close",
+      "electrons": 4,
+      "basis": "cc-pvdz",
+      "spatial_orbitals": 20,
+      "full_fixed_sz_dimension": 36100,
+      "energy_error_kcal": 4.146434699595615,
+      "below_one_kcal": false,
+      "total_energy_hartree": -2.0901986720438543,
+      "reference_energy_hartree": -2.096806436342877,
+      "reference_converged": true,
+      "new_reference_generated": false,
+      "reference_energy_fitted": false,
+      "input_reference_status": {
+        "converged": true,
+        "cycles": 10,
+        "residual": 9.565060421522706e-09
+      },
+      "seconds": 6.072955589999999,
+      "physical_validity_passed": true,
+      "full_residual": 0.15639577207549235,
+      "projected_residual": 7.941326816032522e-09,
+      "input_retention_error": 1.563905238977084e-15,
+      "spin_lower_norm": 2.77503839330467e-15,
+      "initial_spin_lower_norm": 5.369770927455978e-16,
+      "reference_not_degraded": true,
+      "projected_dimension": 5036,
+      "charge_weights": {
+        "0": 0.009474553003803707,
+        "1": 0.13290260501704748,
+        "2": 0.7152456838449964,
+        "3": 0.13290260510031532,
+        "4": 0.009474553033837234
+      },
+      "local_multiplets": [
+        [
+          {
+            "electrons": 0,
+            "twice_spin": 0,
+            "multiplets": 1,
+            "complete_multiplets": 1,
+            "input_support_added": 0
+          },
+          {
+            "electrons": 1,
+            "twice_spin": 1,
+            "multiplets": 10,
+            "complete_multiplets": 10,
+            "input_support_added": 0
+          },
+          {
+            "electrons": 2,
+            "twice_spin": 0,
+            "multiplets": 27,
+            "complete_multiplets": 55,
+            "input_support_added": 3
+          },
+          {
+            "electrons": 2,
+            "twice_spin": 2,
+            "multiplets": 25,
+            "complete_multiplets": 45,
+            "input_support_added": 1
+          },
+          {
+            "electrons": 3,
+            "twice_spin": 1,
+            "multiplets": 26,
+            "complete_multiplets": 330,
+            "input_support_added": 2
+          },
+          {
+            "electrons": 4,
+            "twice_spin": 0,
+            "multiplets": 21,
+            "complete_multiplets": 825,
+            "input_support_added": 1
+          }
+        ],
+        [
+          {
+            "electrons": 0,
+            "twice_spin": 0,
+            "multiplets": 1,
+            "complete_multiplets": 1,
+            "input_support_added": 0
+          },
+          {
+            "electrons": 1,
+            "twice_spin": 1,
+            "multiplets": 10,
+            "complete_multiplets": 10,
+            "input_support_added": 0
+          },
+          {
+            "electrons": 2,
+            "twice_spin": 0,
+            "multiplets": 27,
+            "complete_multiplets": 55,
+            "input_support_added": 3
+          },
+          {
+            "electrons": 2,
+            "twice_spin": 2,
+            "multiplets": 25,
+            "complete_multiplets": 45,
+            "input_support_added": 1
+          },
+          {
+            "electrons": 3,
+            "twice_spin": 1,
+            "multiplets": 26,
+            "complete_multiplets": 330,
+            "input_support_added": 2
+          },
+          {
+            "electrons": 4,
+            "twice_spin": 0,
+            "multiplets": 21,
+            "complete_multiplets": 825,
+            "input_support_added": 1
+          }
+        ]
+      ],
+      "history": [
+        {
+          "adaptive_update": 0,
+          "energy_hartree": -1.976756259502072,
+          "full_state_residual": 0.33333059521740604,
+          "projected_state_residual": 6.9858204565449e-09,
+          "projected_dimension": 2628,
+          "added_local_multiplets": [
+            7,
+            7
+          ]
+        },
+        {
+          "adaptive_update": 1,
+          "energy_hartree": -2.011623520364956,
+          "full_state_residual": 0.14673216908315836,
+          "projected_state_residual": 6.523205541016123e-09,
+          "projected_dimension": 3158,
+          "added_local_multiplets": [
+            7,
+            7
+          ]
+        },
+        {
+          "adaptive_update": 2,
+          "energy_hartree": -2.0192646433185204,
+          "full_state_residual": 0.18122408804638335,
+          "projected_state_residual": 6.487207469402444e-09,
+          "projected_dimension": 3736,
+          "added_local_multiplets": [
+            7,
+            7
+          ]
+        },
+        {
+          "adaptive_update": 3,
+          "energy_hartree": -2.066308128544595,
+          "full_state_residual": 0.32098754942050195,
+          "projected_state_residual": 6.1296480882103896e-09,
+          "projected_dimension": 4362,
+          "added_local_multiplets": [
+            7,
+            7
+          ]
+        },
+        {
+          "adaptive_update": 4,
+          "energy_hartree": -2.0901986720438543,
+          "full_state_residual": 0.15639577207549235,
+          "projected_state_residual": 7.941326816032522e-09,
+          "projected_dimension": 5036
+        }
+      ]
+    },
+    {
+      "id": "BeH2_neutral_1.33",
+      "electrons": 6,
+      "basis": "sto-3g",
+      "spatial_orbitals": 7,
+      "full_fixed_sz_dimension": 1225,
+      "energy_error_kcal": 4.771948273319282e-09,
+      "below_one_kcal": true,
+      "total_energy_hartree": -15.595117562565497,
+      "reference_energy_hartree": -15.595117562573101,
+      "reference_converged": true,
+      "new_reference_generated": false,
+      "reference_energy_fitted": false,
+      "input_reference_status": {
+        "converged": true,
+        "cycles": 11,
+        "residual": 4.636402821441999e-09
+      },
+      "seconds": 2.263446496999997,
+      "physical_validity_passed": true,
+      "full_residual": 6.701215331857475e-06,
+      "projected_residual": 6.521275789012378e-09,
+      "input_retention_error": 1.1201451360980182e-15,
+      "spin_lower_norm": 5.531555954768998e-15,
+      "initial_spin_lower_norm": 1.3539770703813972e-16,
+      "reference_not_degraded": true,
+      "projected_dimension": 431,
+      "charge_weights": {
+        "2": 0.04432644136429852,
+        "3": 0.25597918212461135,
+        "4": 0.440191122754593,
+        "5": 0.22514006933570124,
+        "6": 0.03436318442079579
+      },
+      "local_multiplets": [
+        [
+          {
+            "electrons": 2,
+            "twice_spin": 0,
+            "multiplets": 15,
+            "complete_multiplets": 15,
+            "input_support_added": 0
+          },
+          {
+            "electrons": 3,
+            "twice_spin": 1,
+            "multiplets": 22,
+            "complete_multiplets": 40,
+            "input_support_added": 2
+          },
+          {
+            "electrons": 4,
+            "twice_spin": 0,
+            "multiplets": 23,
+            "complete_multiplets": 50,
+            "input_support_added": 3
+          },
+          {
+            "electrons": 4,
+            "twice_spin": 2,
+            "multiplets": 19,
+            "complete_multiplets": 45,
+            "input_support_added": 1
+          },
+          {
+            "electrons": 5,
+            "twice_spin": 1,
+            "multiplets": 25,
+            "complete_multiplets": 75,
+            "input_support_added": 2
+          },
+          {
+            "electrons": 6,
+            "twice_spin": 0,
+            "multiplets": 22,
+            "complete_multiplets": 50,
+            "input_support_added": 1
+          }
+        ],
+        [
+          {
+            "electrons": 0,
+            "twice_spin": 0,
+            "multiplets": 1,
+            "complete_multiplets": 1,
+            "input_support_added": 0
+          },
+          {
+            "electrons": 1,
+            "twice_spin": 1,
+            "multiplets": 2,
+            "complete_multiplets": 2,
+            "input_support_added": 0
+          },
+          {
+            "electrons": 2,
+            "twice_spin": 0,
+            "multiplets": 3,
+            "complete_multiplets": 3,
+            "input_support_added": 0
+          },
+          {
+            "electrons": 2,
+            "twice_spin": 2,
+            "multiplets": 1,
+            "complete_multiplets": 1,
+            "input_support_added": 0
+          },
+          {
+            "electrons": 3,
+            "twice_spin": 1,
+            "multiplets": 2,
+            "complete_multiplets": 2,
+            "input_support_added": 0
+          },
+          {
+            "electrons": 4,
+            "twice_spin": 0,
+            "multiplets": 1,
+            "complete_multiplets": 1,
+            "input_support_added": 0
+          }
+        ]
+      ],
+      "history": [
+        {
+          "adaptive_update": 0,
+          "energy_hartree": -15.59494950158963,
+          "full_state_residual": 0.03517172379675806,
+          "projected_state_residual": 9.647802000383557e-09,
+          "projected_dimension": 361,
+          "added_local_multiplets": [
+            8,
+            0
+          ]
+        },
+        {
+          "adaptive_update": 1,
+          "energy_hartree": -15.595111003937191,
+          "full_state_residual": 0.007774268753308112,
+          "projected_state_residual": 8.596184332703822e-09,
+          "projected_dimension": 392,
+          "added_local_multiplets": [
+            7,
+            0
+          ]
+        },
+        {
+          "adaptive_update": 2,
+          "energy_hartree": -15.595117518922708,
+          "full_state_residual": 0.0005047622885694333,
+          "projected_state_residual": 8.527575234995408e-09,
+          "projected_dimension": 417,
+          "added_local_multiplets": [
+            3,
+            0
+          ]
+        },
+        {
+          "adaptive_update": 3,
+          "energy_hartree": -15.59511756245165,
+          "full_state_residual": 3.273682427968896e-05,
+          "projected_state_residual": 8.183981329434775e-09,
+          "projected_dimension": 426,
+          "added_local_multiplets": [
+            2,
+            0
+          ]
+        },
+        {
+          "adaptive_update": 4,
+          "energy_hartree": -15.595117562565497,
+          "full_state_residual": 6.701215331857475e-06,
+          "projected_state_residual": 6.521275789012378e-09,
+          "projected_dimension": 431
+        }
+      ]
+    },
+    {
+      "id": "BeH2_neutral_2.10",
+      "electrons": 6,
+      "basis": "sto-3g",
+      "spatial_orbitals": 7,
+      "full_fixed_sz_dimension": 1225,
+      "energy_error_kcal": 3.3440422377850607e-12,
+      "below_one_kcal": true,
+      "total_energy_hartree": -15.420518551167996,
+      "reference_energy_hartree": -15.420518551168001,
+      "reference_converged": true,
+      "new_reference_generated": false,
+      "reference_energy_fitted": false,
+      "input_reference_status": {
+        "converged": true,
+        "cycles": 13,
+        "residual": 6.212083021143856e-08
+      },
+      "seconds": 1.8479743689999992,
+      "physical_validity_passed": true,
+      "full_residual": 4.0366903699846334e-07,
+      "projected_residual": 9.202955237185188e-09,
+      "input_retention_error": 7.463782040446754e-16,
+      "spin_lower_norm": 2.264879558914032e-14,
+      "initial_spin_lower_norm": 1.706235118205821e-16,
+      "reference_not_degraded": true,
+      "projected_dimension": 435,
+      "charge_weights": {
+        "2": 0.012563662067657912,
+        "3": 0.19165231483924866,
+        "4": 0.626870660199285,
+        "5": 0.1589218928008067,
+        "6": 0.009991470093002046
+      },
+      "local_multiplets": [
+        [
+          {
+            "electrons": 2,
+            "twice_spin": 0,
+            "multiplets": 15,
+            "complete_multiplets": 15,
+            "input_support_added": 0
+          },
+          {
+            "electrons": 3,
+            "twice_spin": 1,
+            "multiplets": 22,
+            "complete_multiplets": 40,
+            "input_support_added": 2
+          },
+          {
+            "electrons": 4,
+            "twice_spin": 0,
+            "multiplets": 23,
+            "complete_multiplets": 50,
+            "input_support_added": 3
+          },
+          {
+            "electrons": 4,
+            "twice_spin": 2,
+            "multiplets": 19,
+            "complete_multiplets": 45,
+            "input_support_added": 1
+          },
+          {
+            "electrons": 5,
+            "twice_spin": 1,
+            "multiplets": 26,
+            "complete_multiplets": 75,
+            "input_support_added": 2
+          },
+          {
+            "electrons": 6,
+            "twice_spin": 0,
+            "multiplets": 22,
+            "complete_multiplets": 50,
+            "input_support_added": 1
+          }
+        ],
+        [
+          {
+            "electrons": 0,
+            "twice_spin": 0,
+            "multiplets": 1,
+            "complete_multiplets": 1,
+            "input_support_added": 0
+          },
+          {
+            "electrons": 1,
+            "twice_spin": 1,
+            "multiplets": 2,
+            "complete_multiplets": 2,
+            "input_support_added": 0
+          },
+          {
+            "electrons": 2,
+            "twice_spin": 0,
+            "multiplets": 3,
+            "complete_multiplets": 3,
+            "input_support_added": 0
+          },
+          {
+            "electrons": 2,
+            "twice_spin": 2,
+            "multiplets": 1,
+            "complete_multiplets": 1,
+            "input_support_added": 0
+          },
+          {
+            "electrons": 3,
+            "twice_spin": 1,
+            "multiplets": 2,
+            "complete_multiplets": 2,
+            "input_support_added": 0
+          },
+          {
+            "electrons": 4,
+            "twice_spin": 0,
+            "multiplets": 1,
+            "complete_multiplets": 1,
+            "input_support_added": 0
+          }
+        ]
+      ],
+      "history": [
+        {
+          "adaptive_update": 0,
+          "energy_hartree": -15.420505603999906,
+          "full_state_residual": 0.00873701452075175,
+          "projected_state_residual": 6.206323932036181e-09,
+          "projected_dimension": 361,
+          "added_local_multiplets": [
+            8,
+            0
+          ]
+        },
+        {
+          "adaptive_update": 1,
+          "energy_hartree": -15.420517529632583,
+          "full_state_residual": 0.002885822682210288,
+          "projected_state_residual": 6.211928185940471e-09,
+          "projected_dimension": 392,
+          "added_local_multiplets": [
+            6,
+            0
+          ]
+        },
+        {
+          "adaptive_update": 2,
+          "energy_hartree": -15.420518549392845,
+          "full_state_residual": 0.00012169822190012359,
+          "projected_state_residual": 7.0984092042948845e-09,
+          "projected_dimension": 413,
+          "added_local_multiplets": [
+            4,
+            0
+          ]
+        },
+        {
+          "adaptive_update": 3,
+          "energy_hartree": -15.420518551150202,
+          "full_state_residual": 1.205213175737171e-05,
+          "projected_state_residual": 8.860601025082107e-09,
+          "projected_dimension": 426,
+          "added_local_multiplets": [
+            3,
+            0
+          ]
+        },
+        {
+          "adaptive_update": 4,
+          "energy_hartree": -15.420518551167996,
+          "full_state_residual": 4.0366903699846334e-07,
+          "projected_state_residual": 9.202955237185188e-09,
+          "projected_dimension": 435
+        }
+      ]
+    },
+    {
+      "id": "BH3_planar_1.19",
+      "electrons": 8,
+      "basis": "sto-3g",
+      "spatial_orbitals": 8,
+      "full_fixed_sz_dimension": 4900,
+      "energy_error_kcal": 0.0013137710805686674,
+      "below_one_kcal": true,
+      "total_energy_hartree": -26.12236844901649,
+      "reference_energy_hartree": -26.122370542643974,
+      "reference_converged": true,
+      "new_reference_generated": false,
+      "reference_energy_fitted": false,
+      "input_reference_status": {
+        "converged": true,
+        "cycles": 11,
+        "residual": 7.293188343391554e-08
+      },
+      "seconds": 6.561505355000001,
+      "physical_validity_passed": true,
+      "full_residual": 0.005528574636048869,
+      "projected_residual": 7.435720426888851e-09,
+      "input_retention_error": 1.2240233736136873e-15,
+      "spin_lower_norm": 1.3429177267914178e-14,
+      "initial_spin_lower_norm": 3.4655288872057904e-16,
+      "reference_not_degraded": true,
+      "projected_dimension": 2640,
+      "charge_weights": {
+        "2": 0.009537498887468385,
+        "3": 0.08700548214343312,
+        "4": 0.2735409854007972,
+        "5": 0.36469841314674856,
+        "6": 0.20932586387950963,
+        "7": 0.051466132148253387,
+        "8": 0.004425624393789638
+      },
+      "local_multiplets": [
+        [
+          {
+            "electrons": 2,
+            "twice_spin": 0,
+            "multiplets": 15,
+            "complete_multiplets": 15,
+            "input_support_added": 0
+          },
+          {
+            "electrons": 3,
+            "twice_spin": 1,
+            "multiplets": 27,
+            "complete_multiplets": 40,
+            "input_support_added": 3
+          },
+          {
+            "electrons": 4,
+            "twice_spin": 0,
+            "multiplets": 30,
+            "complete_multiplets": 50,
+            "input_support_added": 6
+          },
+          {
+            "electrons": 4,
+            "twice_spin": 2,
+            "multiplets": 27,
+            "complete_multiplets": 45,
+            "input_support_added": 3
+          },
+          {
+            "electrons": 5,
+            "twice_spin": 1,
+            "multiplets": 32,
+            "complete_multiplets": 75,
+            "input_support_added": 8
+          },
+          {
+            "electrons": 5,
+            "twice_spin": 3,
+            "multiplets": 18,
+            "complete_multiplets": 24,
+            "input_support_added": 1
+          },
+          {
+            "electrons": 6,
+            "twice_spin": 0,
+            "multiplets": 30,
+            "complete_multiplets": 50,
+            "input_support_added": 6
+          },
+          {
+            "electrons": 6,
+            "twice_spin": 2,
+            "multiplets": 27,
+            "complete_multiplets": 45,
+            "input_support_added": 3
+          },
+          {
+            "electrons": 7,
+            "twice_spin": 1,
+            "multiplets": 27,
+            "complete_multiplets": 40,
+            "input_support_added": 3
+          },
+          {
+            "electrons": 8,
+            "twice_spin": 0,
+            "multiplets": 15,
+            "complete_multiplets": 15,
+            "input_support_added": 0
+          }
+        ],
+        [
+          {
+            "electrons": 0,
+            "twice_spin": 0,
+            "multiplets": 1,
+            "complete_multiplets": 1,
+            "input_support_added": 0
+          },
+          {
+            "electrons": 1,
+            "twice_spin": 1,
+            "multiplets": 3,
+            "complete_multiplets": 3,
+            "input_support_added": 0
+          },
+          {
+            "electrons": 2,
+            "twice_spin": 0,
+            "multiplets": 6,
+            "complete_multiplets": 6,
+            "input_support_added": 0
+          },
+          {
+            "electrons": 2,
+            "twice_spin": 2,
+            "multiplets": 3,
+            "complete_multiplets": 3,
+            "input_support_added": 0
+          },
+          {
+            "electrons": 3,
+            "twice_spin": 1,
+            "multiplets": 8,
+            "complete_multiplets": 8,
+            "input_support_added": 0
+          },
+          {
+            "electrons": 3,
+            "twice_spin": 3,
+            "multiplets": 1,
+            "complete_multiplets": 1,
+            "input_support_added": 0
+          },
+          {
+            "electrons": 4,
+            "twice_spin": 0,
+            "multiplets": 6,
+            "complete_multiplets": 6,
+            "input_support_added": 0
+          },
+          {
+            "electrons": 4,
+            "twice_spin": 2,
+            "multiplets": 3,
+            "complete_multiplets": 3,
+            "input_support_added": 0
+          },
+          {
+            "electrons": 5,
+            "twice_spin": 1,
+            "multiplets": 3,
+            "complete_multiplets": 3,
+            "input_support_added": 0
+          },
+          {
+            "electrons": 6,
+            "twice_spin": 0,
+            "multiplets": 1,
+            "complete_multiplets": 1,
+            "input_support_added": 0
+          }
+        ]
+      ],
+      "history": [
+        {
+          "adaptive_update": 0,
+          "energy_hartree": -26.122050327253444,
+          "full_state_residual": 0.06716597214953096,
+          "projected_state_residual": 6.780901241329377e-09,
+          "projected_dimension": 1996,
+          "added_local_multiplets": [
+            15,
+            0
+          ]
+        },
+        {
+          "adaptive_update": 1,
+          "energy_hartree": -26.122277619527654,
+          "full_state_residual": 0.03565517469151553,
+          "projected_state_residual": 8.047930972115038e-09,
+          "projected_dimension": 2172,
+          "added_local_multiplets": [
+            14,
+            0
+          ]
+        },
+        {
+          "adaptive_update": 2,
+          "energy_hartree": -26.122345122636727,
+          "full_state_residual": 0.01764242250113176,
+          "projected_state_residual": 5.624589173596331e-09,
+          "projected_dimension": 2328,
+          "added_local_multiplets": [
+            14,
+            0
+          ]
+        },
+        {
+          "adaptive_update": 3,
+          "energy_hartree": -26.122361400655926,
+          "full_state_residual": 0.010705864566052914,
+          "projected_state_residual": 7.840203355752178e-09,
+          "projected_dimension": 2484,
+          "added_local_multiplets": [
+            14,
+            0
+          ]
+        },
+        {
+          "adaptive_update": 4,
+          "energy_hartree": -26.12236844901649,
+          "full_state_residual": 0.005528574636048869,
+          "projected_state_residual": 7.435720426888851e-09,
+          "projected_dimension": 2640
+        }
+      ]
+    },
+    {
+      "id": "NH3_pyramidal",
+      "electrons": 10,
+      "basis": "sto-3g",
+      "spatial_orbitals": 8,
+      "full_fixed_sz_dimension": 3136,
+      "energy_error_kcal": 0.001491932026844295,
+      "below_one_kcal": true,
+      "total_energy_hartree": -55.51948313511368,
+      "reference_energy_hartree": -55.519485512658704,
+      "reference_converged": true,
+      "new_reference_generated": false,
+      "reference_energy_fitted": false,
+      "input_reference_status": {
+        "converged": true,
+        "cycles": 11,
+        "residual": 7.271204107210179e-08
+      },
+      "seconds": 5.019776673999999,
+      "physical_validity_passed": true,
+      "full_residual": 0.007530418095013762,
+      "projected_residual": 7.833016670211784e-09,
+      "input_retention_error": 1.0297339707715712e-15,
+      "spin_lower_norm": 2.827496422775584e-14,
+      "initial_spin_lower_norm": 4.84928812803885e-16,
+      "reference_not_degraded": true,
+      "projected_dimension": 2008,
+      "charge_weights": {
+        "4": 0.002194454348685333,
+        "5": 0.03521586546280628,
+        "6": 0.1802212655812636,
+        "7": 0.36633964988494616,
+        "8": 0.30353316773129013,
+        "9": 0.101368773037747,
+        "10": 0.01112682395326161
+      },
+      "local_multiplets": [
+        [
+          {
+            "electrons": 4,
+            "twice_spin": 0,
+            "multiplets": 22,
+            "complete_multiplets": 50,
+            "input_support_added": 1
+          },
+          {
+            "electrons": 5,
+            "twice_spin": 1,
+            "multiplets": 28,
+            "complete_multiplets": 75,
+            "input_support_added": 3
+          },
+          {
+            "electrons": 6,
+            "twice_spin": 0,
+            "multiplets": 30,
+            "complete_multiplets": 50,
+            "input_support_added": 6
+          },
+          {
+            "electrons": 6,
+            "twice_spin": 2,
+            "multiplets": 28,
+            "complete_multiplets": 45,
+            "input_support_added": 3
+          },
+          {
+            "electrons": 7,
+            "twice_spin": 1,
+            "multiplets": 34,
+            "complete_multiplets": 40,
+            "input_support_added": 8
+          },
+          {
+            "electrons": 7,
+            "twice_spin": 3,
+            "multiplets": 10,
+            "complete_multiplets": 10,
+            "input_support_added": 0
+          },
+          {
+            "electrons": 8,
+            "twice_spin": 0,
+            "multiplets": 15,
+            "complete_multiplets": 15,
+            "input_support_added": 0
+          },
+          {
+            "electrons": 8,
+            "twice_spin": 2,
+            "multiplets": 10,
+            "complete_multiplets": 10,
+            "input_support_added": 0
+          },
+          {
+            "electrons": 9,
+            "twice_spin": 1,
+            "multiplets": 5,
+            "complete_multiplets": 5,
+            "input_support_added": 0
+          },
+          {
+            "electrons": 10,
+            "twice_spin": 0,
+            "multiplets": 1,
+            "complete_multiplets": 1,
+            "input_support_added": 0
+          }
+        ],
+        [
+          {
+            "electrons": 0,
+            "twice_spin": 0,
+            "multiplets": 1,
+            "complete_multiplets": 1,
+            "input_support_added": 0
+          },
+          {
+            "electrons": 1,
+            "twice_spin": 1,
+            "multiplets": 3,
+            "complete_multiplets": 3,
+            "input_support_added": 0
+          },
+          {
+            "electrons": 2,
+            "twice_spin": 0,
+            "multiplets": 6,
+            "complete_multiplets": 6,
+            "input_support_added": 0
+          },
+          {
+            "electrons": 2,
+            "twice_spin": 2,
+            "multiplets": 3,
+            "complete_multiplets": 3,
+            "input_support_added": 0
+          },
+          {
+            "electrons": 3,
+            "twice_spin": 1,
+            "multiplets": 8,
+            "complete_multiplets": 8,
+            "input_support_added": 0
+          },
+          {
+            "electrons": 3,
+            "twice_spin": 3,
+            "multiplets": 1,
+            "complete_multiplets": 1,
+            "input_support_added": 0
+          },
+          {
+            "electrons": 4,
+            "twice_spin": 0,
+            "multiplets": 6,
+            "complete_multiplets": 6,
+            "input_support_added": 0
+          },
+          {
+            "electrons": 4,
+            "twice_spin": 2,
+            "multiplets": 3,
+            "complete_multiplets": 3,
+            "input_support_added": 0
+          },
+          {
+            "electrons": 5,
+            "twice_spin": 1,
+            "multiplets": 3,
+            "complete_multiplets": 3,
+            "input_support_added": 0
+          },
+          {
+            "electrons": 6,
+            "twice_spin": 0,
+            "multiplets": 1,
+            "complete_multiplets": 1,
+            "input_support_added": 0
+          }
+        ]
+      ],
+      "history": [
+        {
+          "adaptive_update": 0,
+          "energy_hartree": -55.518953695672515,
+          "full_state_residual": 0.09671378146485876,
+          "projected_state_residual": 6.446038216352946e-09,
+          "projected_dimension": 1587,
+          "added_local_multiplets": [
+            11,
+            0
+          ]
+        },
+        {
+          "adaptive_update": 1,
+          "energy_hartree": -55.519325325524164,
+          "full_state_residual": 0.05439697924490648,
+          "projected_state_residual": 5.374846258613083e-09,
+          "projected_dimension": 1717,
+          "added_local_multiplets": [
+            9,
+            0
+          ]
+        },
+        {
+          "adaptive_update": 2,
+          "energy_hartree": -55.519451704369565,
+          "full_state_residual": 0.0291596252529574,
+          "projected_state_residual": 4.324967740719962e-09,
+          "projected_dimension": 1814,
+          "added_local_multiplets": [
+            9,
+            0
+          ]
+        },
+        {
+          "adaptive_update": 3,
+          "energy_hartree": -55.51947729556667,
+          "full_state_residual": 0.013204092260447442,
+          "projected_state_residual": 8.69141941599195e-09,
+          "projected_dimension": 1911,
+          "added_local_multiplets": [
+            9,
+            0
+          ]
+        },
+        {
+          "adaptive_update": 4,
+          "energy_hartree": -55.51948313511368,
+          "full_state_residual": 0.007530418095013762,
+          "projected_state_residual": 7.833016670211784e-09,
+          "projected_dimension": 2008
+        }
+      ]
+    },
+    {
+      "id": "NH3_planar",
+      "electrons": 10,
+      "basis": "sto-3g",
+      "spatial_orbitals": 8,
+      "full_fixed_sz_dimension": 3136,
+      "energy_error_kcal": 1.340291683031954e-05,
+      "below_one_kcal": true,
+      "total_energy_hartree": -55.49777875189067,
+      "reference_energy_hartree": -55.49777877324958,
+      "reference_converged": true,
+      "new_reference_generated": false,
+      "reference_energy_fitted": false,
+      "input_reference_status": {
+        "converged": true,
+        "cycles": 13,
+        "residual": 2.0405669180064008e-10
+      },
+      "seconds": 4.041508040000004,
+      "physical_validity_passed": true,
+      "full_residual": 0.0006301955087329852,
+      "projected_residual": 7.96821857306557e-09,
+      "input_retention_error": 1.2004410685065885e-15,
+      "spin_lower_norm": 1.7949949056717368e-14,
+      "initial_spin_lower_norm": 3.2693569903152767e-16,
+      "reference_not_degraded": true,
+      "projected_dimension": 1989,
+      "charge_weights": {
+        "4": 0.0021086752194890146,
+        "5": 0.033310399914001844,
+        "6": 0.17181106833880833,
+        "7": 0.3590188379770297,
+        "8": 0.3112310636850075,
+        "9": 0.10972336763703598,
+        "10": 0.01279658722862761
+      },
+      "local_multiplets": [
+        [
+          {
+            "electrons": 4,
+            "twice_spin": 0,
+            "multiplets": 21,
+            "complete_multiplets": 50,
+            "input_support_added": 1
+          },
+          {
+            "electrons": 5,
+            "twice_spin": 1,
+            "multiplets": 28,
+            "complete_multiplets": 75,
+            "input_support_added": 3
+          },
+          {
+            "electrons": 6,
+            "twice_spin": 0,
+            "multiplets": 32,
+            "complete_multiplets": 50,
+            "input_support_added": 6
+          },
+          {
+            "electrons": 6,
+            "twice_spin": 2,
+            "multiplets": 28,
+            "complete_multiplets": 45,
+            "input_support_added": 3
+          },
+          {
+            "electrons": 7,
+            "twice_spin": 1,
+            "multiplets": 32,
+            "complete_multiplets": 40,
+            "input_support_added": 8
+          },
+          {
+            "electrons": 7,
+            "twice_spin": 3,
+            "multiplets": 10,
+            "complete_multiplets": 10,
+            "input_support_added": 0
+          },
+          {
+            "electrons": 8,
+            "twice_spin": 0,
+            "multiplets": 15,
+            "complete_multiplets": 15,
+            "input_support_added": 0
+          },
+          {
+            "electrons": 8,
+            "twice_spin": 2,
+            "multiplets": 10,
+            "complete_multiplets": 10,
+            "input_support_added": 0
+          },
+          {
+            "electrons": 9,
+            "twice_spin": 1,
+            "multiplets": 5,
+            "complete_multiplets": 5,
+            "input_support_added": 0
+          },
+          {
+            "electrons": 10,
+            "twice_spin": 0,
+            "multiplets": 1,
+            "complete_multiplets": 1,
+            "input_support_added": 0
+          }
+        ],
+        [
+          {
+            "electrons": 0,
+            "twice_spin": 0,
+            "multiplets": 1,
+            "complete_multiplets": 1,
+            "input_support_added": 0
+          },
+          {
+            "electrons": 1,
+            "twice_spin": 1,
+            "multiplets": 3,
+            "complete_multiplets": 3,
+            "input_support_added": 0
+          },
+          {
+            "electrons": 2,
+            "twice_spin": 0,
+            "multiplets": 6,
+            "complete_multiplets": 6,
+            "input_support_added": 0
+          },
+          {
+            "electrons": 2,
+            "twice_spin": 2,
+            "multiplets": 3,
+            "complete_multiplets": 3,
+            "input_support_added": 0
+          },
+          {
+            "electrons": 3,
+            "twice_spin": 1,
+            "multiplets": 8,
+            "complete_multiplets": 8,
+            "input_support_added": 0
+          },
+          {
+            "electrons": 3,
+            "twice_spin": 3,
+            "multiplets": 1,
+            "complete_multiplets": 1,
+            "input_support_added": 0
+          },
+          {
+            "electrons": 4,
+            "twice_spin": 0,
+            "multiplets": 6,
+            "complete_multiplets": 6,
+            "input_support_added": 0
+          },
+          {
+            "electrons": 4,
+            "twice_spin": 2,
+            "multiplets": 3,
+            "complete_multiplets": 3,
+            "input_support_added": 0
+          },
+          {
+            "electrons": 5,
+            "twice_spin": 1,
+            "multiplets": 3,
+            "complete_multiplets": 3,
+            "input_support_added": 0
+          },
+          {
+            "electrons": 6,
+            "twice_spin": 0,
+            "multiplets": 1,
+            "complete_multiplets": 1,
+            "input_support_added": 0
+          }
+        ]
+      ],
+      "history": [
+        {
+          "adaptive_update": 0,
+          "energy_hartree": -55.49751207541323,
+          "full_state_residual": 0.07185910130990258,
+          "projected_state_residual": 7.337132318374736e-09,
+          "projected_dimension": 1580,
+          "added_local_multiplets": [
+            11,
+            0
+          ]
+        },
+        {
+          "adaptive_update": 1,
+          "energy_hartree": -55.49774238315763,
+          "full_state_residual": 0.031447791439147874,
+          "projected_state_residual": 9.090948289155497e-09,
+          "projected_dimension": 1701,
+          "added_local_multiplets": [
+            11,
+            0
+          ]
+        },
+        {
+          "adaptive_update": 2,
+          "energy_hartree": -55.4977751851081,
+          "full_state_residual": 0.008800842433175192,
+          "projected_state_residual": 5.330490413965428e-09,
+          "projected_dimension": 1813,
+          "added_local_multiplets": [
+            9,
+            0
+          ]
+        },
+        {
+          "adaptive_update": 3,
+          "energy_hartree": -55.49777853764815,
+          "full_state_residual": 0.0021662327904668653,
+          "projected_state_residual": 6.174731218302287e-09,
+          "projected_dimension": 1910,
+          "added_local_multiplets": [
+            8,
+            0
+          ]
+        },
+        {
+          "adaptive_update": 4,
+          "energy_hartree": -55.49777875189067,
+          "full_state_residual": 0.0006301955087329852,
+          "projected_state_residual": 7.96821857306557e-09,
+          "projected_dimension": 1989
+        }
+      ]
+    },
+    {
+      "id": "H2F_plus_new",
+      "electrons": 10,
+      "basis": "sto-3g",
+      "spatial_orbitals": 7,
+      "full_fixed_sz_dimension": 441,
+      "energy_error_kcal": 1.5768184657442815e-06,
+      "below_one_kcal": true,
+      "total_energy_hartree": -98.90120554345191,
+      "reference_energy_hartree": -98.90120554596473,
+      "reference_converged": true,
+      "new_reference_generated": true,
+      "reference_energy_fitted": false,
+      "input_reference_status": {
+        "converged": true,
+        "cycles": 11,
+        "residual": 8.896367915935567e-08
+      },
+      "seconds": 4.990239578999997,
+      "physical_validity_passed": true,
+      "full_residual": 0.0003688539148788274,
+      "projected_residual": 4.008932482085034e-09,
+      "input_retention_error": 5.902534840533337e-16,
+      "spin_lower_norm": 6.489441677343346e-11,
+      "initial_spin_lower_norm": 3.1926629831632025e-16,
+      "reference_not_degraded": true,
+      "projected_dimension": 266,
+      "charge_weights": {
+        "6": 0.0024260734768360077,
+        "7": 0.05314791777057208,
+        "8": 0.30235040743457026,
+        "9": 0.46713928424836415,
+        "10": 0.17493631706965765
+      },
+      "local_multiplets": [
+        [
+          {
+            "electrons": 6,
+            "twice_spin": 0,
+            "multiplets": 21,
+            "complete_multiplets": 50,
+            "input_support_added": 1
+          },
+          {
+            "electrons": 7,
+            "twice_spin": 1,
+            "multiplets": 26,
+            "complete_multiplets": 40,
+            "input_support_added": 2
+          },
+          {
+            "electrons": 8,
+            "twice_spin": 0,
+            "multiplets": 15,
+            "complete_multiplets": 15,
+            "input_support_added": 0
+          },
+          {
+            "electrons": 8,
+            "twice_spin": 2,
+            "multiplets": 10,
+            "complete_multiplets": 10,
+            "input_support_added": 0
+          },
+          {
+            "electrons": 9,
+            "twice_spin": 1,
+            "multiplets": 5,
+            "complete_multiplets": 5,
+            "input_support_added": 0
+          },
+          {
+            "electrons": 10,
+            "twice_spin": 0,
+            "multiplets": 1,
+            "complete_multiplets": 1,
+            "input_support_added": 0
+          }
+        ],
+        [
+          {
+            "electrons": 0,
+            "twice_spin": 0,
+            "multiplets": 1,
+            "complete_multiplets": 1,
+            "input_support_added": 0
+          },
+          {
+            "electrons": 1,
+            "twice_spin": 1,
+            "multiplets": 2,
+            "complete_multiplets": 2,
+            "input_support_added": 0
+          },
+          {
+            "electrons": 2,
+            "twice_spin": 0,
+            "multiplets": 3,
+            "complete_multiplets": 3,
+            "input_support_added": 0
+          },
+          {
+            "electrons": 2,
+            "twice_spin": 2,
+            "multiplets": 1,
+            "complete_multiplets": 1,
+            "input_support_added": 0
+          },
+          {
+            "electrons": 3,
+            "twice_spin": 1,
+            "multiplets": 2,
+            "complete_multiplets": 2,
+            "input_support_added": 0
+          },
+          {
+            "electrons": 4,
+            "twice_spin": 0,
+            "multiplets": 1,
+            "complete_multiplets": 1,
+            "input_support_added": 0
+          }
+        ]
+      ],
+      "history": [
+        {
+          "adaptive_update": 0,
+          "energy_hartree": -98.90084797263063,
+          "full_state_residual": 0.07902334192617111,
+          "projected_state_residual": 7.849615384525271e-09,
+          "projected_dimension": 230,
+          "added_local_multiplets": [
+            3,
+            0
+          ]
+        },
+        {
+          "adaptive_update": 1,
+          "energy_hartree": -98.9011175014732,
+          "full_state_residual": 0.03739725474218235,
+          "projected_state_residual": 5.222291636391078e-09,
+          "projected_dimension": 239,
+          "added_local_multiplets": [
+            3,
+            0
+          ]
+        },
+        {
+          "adaptive_update": 2,
+          "energy_hartree": -98.90117546979025,
+          "full_state_residual": 0.029116621397773625,
+          "projected_state_residual": 6.309011905169102e-09,
+          "projected_dimension": 248,
+          "added_local_multiplets": [
+            3,
+            0
+          ]
+        },
+        {
+          "adaptive_update": 3,
+          "energy_hartree": -98.9012054893919,
+          "full_state_residual": 0.0013579645020996415,
+          "projected_state_residual": 9.727188502786413e-09,
+          "projected_dimension": 257,
+          "added_local_multiplets": [
+            3,
+            0
+          ]
+        },
+        {
+          "adaptive_update": 4,
+          "energy_hartree": -98.90120554345191,
+          "full_state_residual": 0.0003688539148788274,
+          "projected_state_residual": 4.008932482085034e-09,
+          "projected_dimension": 266
+        }
+      ]
+    }
+  ],
+  "failures": [],
+  "balanced_contrast_errors_kcal": {
+    "H4_geometries": 4.146418292025902,
+    "BeH2_stretch": -4.768604231081497e-09,
+    "NH3_geometries": -0.0014785291100139755
+  },
+  "rejection_panel_passed": false,
+  "peak_cuda_bytes": 867989504
+}

@@ -1,0 +1,19 @@
+{
+  "purpose": "Accuracy rejection test after the fixed-global-rank composition failure; no speed optimization",
+  "hypothesis": "Compositional local singlet states with quantum Coulomb links can retain correlation across independent and coupled fragments",
+  "basis": "cc-pvdz",
+  "local_space": "Complete two-electron singlet space in each orthogonal local orbital block, represented by paired determinants",
+  "global_space": "Tensor product of neutral local singlets; exact projected direct/exchange couplings, no local charge-transfer or triplet sectors",
+  "partition": "Supplied atom groups, symmetrically orthogonalized AO order; no fitted energy offsets",
+  "cases": [
+    {"id": "He2_R3.00", "atom": "He 0 0 0; He 0 0 3.00", "charge": 0, "spin": 0, "electrons": 4, "first_block_atoms": 1},
+    {"id": "H4_parallel_far", "atom": "H -0.37 0 0; H 0.37 0 0; H -0.37 0 3.0; H 0.37 0 3.0", "charge": 0, "spin": 0, "electrons": 4, "first_block_atoms": 2},
+    {"id": "H4_square_close", "atom": "H -0.6 0 0; H 0.6 0 0; H -0.6 0 1.2; H 0.6 0 1.2", "charge": 0, "spin": 0, "electrons": 4, "first_block_atoms": 2}
+  ],
+  "reference": "New full cc-pVDZ singlet four-electron CUDA matrix-free reference, after prediction",
+  "reference_initialization": "HF singlet plus one fixed small generic singlet component, to avoid locking the reference to an incorrect spatial irrep",
+  "maximum_reference_dimension": 192,
+  "reference_residual_tolerance": 1e-8,
+  "assessment": "All cases retained, no energy-label fitting, rank/seed/iteration sweep or replacement. Require per-case errors and the balanced H4 geometry contrast below 1 kcal/mol. A failure closes the neutral-singlet-only hypothesis before any speed work.",
+  "limits": ["Early rejection panel, not full GMTKN55", "Finite cc-pVDZ, not CBS", "Given local partition", "State projection, not yet a density-only XC functional"]
+}

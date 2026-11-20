@@ -1,0 +1,31 @@
+{
+  "created_utc": "2026-11-16T19:27:44.416931+00:00",
+  "status": "Fresh SCF, finite-basis tiny-system pilot; not GMTKN55 or challenge-suite evidence",
+  "checkpoint": "research/pilot_energy_20261116.pt",
+  "device": "cuda",
+  "cases": [
+    {
+      "id": "H2_0.70",
+      "split": "train",
+      "reference_hartree": -1.1609046824784532,
+      "pbe_error_kcal": 2.4798003167961586,
+      "energy_hartree": -1.1605034189505825,
+      "error_kcal": 0.2517966653095475,
+      "converged": true,
+      "first_attempt_converged": true,
+      "correction_calls": 7,
+      "commutator_norm": 2.2551050040436561e-07,
+      "scf_cycles_last_attempt": 4,
+      "seconds_including_setup_and_retries": 0.6716706020000007
+    }
+  ],
+  "summary": {
+    "train": {
+      "cases": 1,
+      "failures": 0,
+      "all_returned_energy_mae_kcal": 0.2517966653095475,
+      "pbe_mae_kcal": 2.4798003167961586,
+      "median_seconds": 0.6716706020000007
+    }
+  }
+}

@@ -1,0 +1,120 @@
+{
+  "created_utc": "2026-11-16T20:08:52.652517+00:00",
+  "status": "Own fresh-SCF atomization screen; not GMTKN55, hidden suite, or matched challenge protocol",
+  "device": "cuda",
+  "checkpoint": "research/screened_state_broad_20261116.pt",
+  "basis": "def2-tzvp",
+  "grid_level": 1,
+  "atoms": {
+    "Al": {
+      "energy_hartree": -241.96880150902382,
+      "converged": true,
+      "seconds": 0.9891330410000005,
+      "cycles": 7,
+      "correction_calls": 9
+    },
+    "B": {
+      "energy_hartree": -24.552358719067886,
+      "converged": true,
+      "seconds": 0.33478110400000105,
+      "cycles": 7,
+      "correction_calls": 9
+    },
+    "C": {
+      "energy_hartree": -37.717885750137185,
+      "converged": true,
+      "seconds": 0.3034736149999997,
+      "cycles": 7,
+      "correction_calls": 9
+    },
+    "F": {
+      "energy_hartree": -99.52183093858613,
+      "converged": true,
+      "seconds": 0.2817027500000009,
+      "cycles": 7,
+      "correction_calls": 9
+    },
+    "H": {
+      "energy_hartree": -0.49259212302342137,
+      "converged": true,
+      "seconds": 0.2451828599999999,
+      "cycles": 6,
+      "correction_calls": 8
+    },
+    "Na": {
+      "energy_hartree": -161.94705921192707,
+      "converged": true,
+      "seconds": 0.4802186079999995,
+      "cycles": 7,
+      "correction_calls": 9
+    },
+    "S": {
+      "energy_hartree": -397.605208426962,
+      "converged": true,
+      "seconds": 0.3654012560000002,
+      "cycles": 7,
+      "correction_calls": 9
+    }
+  },
+  "molecules": [
+    {
+      "id": "00211b695674f5856c2ce113be2ffc2fcabaf41c",
+      "family": "[[\"Al\",2],[\"H\",4],[\"S\",1]]",
+      "split": "val",
+      "pbe_input_error_kcal": -8.68926812971771,
+      "energy_hartree": -884.1581924828424,
+      "converged": true,
+      "seconds": 8.659429173,
+      "cycles": 12,
+      "correction_calls": 14,
+      "tae_hartree": 0.6450125457390641,
+      "error_kcal": -8.641390164208616
+    },
+    {
+      "id": "0285a070ab12463e51aa2fe4abf2f9948a803245",
+      "family": "[[\"Al\",1],[\"B\",1],[\"F\",1],[\"H\",3]]",
+      "split": "val",
+      "pbe_input_error_kcal": -3.7090196617168463,
+      "energy_hartree": -368.22340409351773,
+      "converged": true,
+      "seconds": 6.317655551999998,
+      "cycles": 16,
+      "correction_calls": 18,
+      "tae_hartree": 0.7026365577696083,
+      "error_kcal": -7.813824597078007
+    },
+    {
+      "id": "02c8b84d07ac6a4e42a606da94273be873f8e814",
+      "family": "[[\"Al\",2],[\"B\",1],[\"H\",1]]",
+      "split": "val",
+      "pbe_input_error_kcal": 7.792307906690564,
+      "energy_hartree": -509.3143849110128,
+      "converged": true,
+      "seconds": 7.152183874000002,
+      "cycles": 21,
+      "correction_calls": 23,
+      "tae_hartree": 0.3318310508738591,
+      "error_kcal": -1.7373309553883676
+    },
+    {
+      "id": "0f1be79f8bdf9faf63d31242e1d3f52172fa7b43",
+      "family": "[[\"Al\",1],[\"C\",1],[\"H\",2],[\"Na\",1]]",
+      "split": "val",
+      "pbe_input_error_kcal": 3.147343178068676,
+      "energy_hartree": -443.1092641746877,
+      "converged": true,
+      "seconds": 9.050987595999999,
+      "cycles": 25,
+      "correction_calls": 27,
+      "tae_hartree": 0.490333457552822,
+      "error_kcal": 0.8706801385603647
+    }
+  ],
+  "summary": {
+    "molecules": 4,
+    "molecular_failures": 0,
+    "atomic_failures": 0,
+    "all_returned_tae_mae_kcal": 4.765806463808839,
+    "median_molecular_seconds": 7.905806523500001
+  }
+}

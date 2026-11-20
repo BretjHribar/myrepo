@@ -1,0 +1,15 @@
+{
+  "purpose": "Model-driven density fixed point before speed or learned prediction work",
+  "functional": "Coulomb-complete F_M(q)-Ts_M(q)-E_H with the ordinary kinetic energy retained",
+  "method": "Direct interacting dual condition lambda=v_ext; noninteracting ensemble inversion supplies the corresponding KS density and potential",
+  "basis": "sto-3g",
+  "maximum_subspace_dimension": 192,
+  "stationarity_tolerance": 1e-7,
+  "kinetic_entropy_tolerance_hartree": 1e-5,
+  "cases": [
+    {"id": "H2O_closed_0.957", "atom": "O 0 0 0; H 0 0.757 0.586; H 0 -0.757 0.586", "charge": 0, "spin": 0, "electrons": 10, "reference_report": "research/coulomb_functional_water_gpu_20261116.json"},
+    {"id": "H2S_closed_1.336", "atom": "S 0 0 0; H 0 0.963 0.926; H 0 -0.963 0.926", "charge": 0, "spin": 0, "electrons": 18}
+  ],
+  "assessment": "All cases retained, no reference-energy loss or error-driven stopping. Water is development; H2S is a new composition/element/electron-count application, protocol fixed before its reference is generated.",
+  "limitations": ["Implicit dense physical solve, not learned inference", "Complete minimal basis only", "Direct dual solution, not a conventional iterative KS SCF benchmark", "No nuclear/frame force derivatives", "No broad challenge validation", "Finite subspace fragment separability remains unresolved"]
+}

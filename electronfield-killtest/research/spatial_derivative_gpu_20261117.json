@@ -1,0 +1,66 @@
+{
+  "created_utc": "2026-11-17T10:22:26.637968+00:00",
+  "device": "cuda",
+  "protocol": {
+    "purpose": "Check the scalar/potential contract along independent representable density paths in the larger basis",
+    "cases": [
+      "BeH2_631g_1.65_new",
+      "BeH2_631g_2.75_new"
+    ],
+    "frame": "Reuse each previously constructed spatial-product frame; do not change its span",
+    "potential_direction": "Fixed-seed real symmetric traceless random operator projected into that density span and normalized",
+    "direction_seed": 17112028,
+    "potential_step_hartree": 0.001,
+    "maximum_ritz_dimension": 256,
+    "state_residual_tolerance_hartree": 1e-09,
+    "directional_derivative_tolerance_hartree": 1e-05,
+    "kinetic_density_residual_tolerance": 1e-08,
+    "objective": "New plus/minus physical potential states only, with the saved central state as seed; no label objective",
+    "references": "No central optimization repeated and no new correlated reference labels generated",
+    "limits": [
+      "Implicit full finite-basis constrained-search diagnostic",
+      "One fixed path per geometry, not arbitrary-density functional coverage",
+      "No learned model, broad chemistry score, nuclear-force derivative or speed claim"
+    ]
+  },
+  "results": [
+    {
+      "id": "BeH2_631g_1.65_new",
+      "directional_derivative_passed": true,
+      "scalar_directional_derivative": 0.02008167501443836,
+      "potential_directional_derivative": 0.020081539234181368,
+      "absolute_difference_hartree": 1.3578025699276242e-07,
+      "density_path_derivative_norm": 1.857373433703625,
+      "state_residuals": [
+        7.45211530860192e-10,
+        7.372098060291824e-10
+      ],
+      "kinetic_density_residuals": [
+        2.581633772901339e-10,
+        2.669526760296462e-10
+      ],
+      "central_optimization_repeated": false,
+      "new_reference_labels_generated": false
+    },
+    {
+      "id": "BeH2_631g_2.75_new",
+      "directional_derivative_passed": true,
+      "scalar_directional_derivative": 0.0724374938121386,
+      "potential_directional_derivative": 0.07243755125482432,
+      "absolute_difference_hartree": 5.7442685719166775e-08,
+      "density_path_derivative_norm": 1.7265654251087674,
+      "state_residuals": [
+        8.6908855284084e-10,
+        8.445369200503175e-10
+      ],
+      "kinetic_density_residuals": [
+        4.764033828483303e-10,
+        2.678400510441963e-10
+      ],
+      "central_optimization_repeated": false,
+      "new_reference_labels_generated": false
+    }
+  ],
+  "failures": [],
+  "peak_cuda_bytes": 615883776
+}

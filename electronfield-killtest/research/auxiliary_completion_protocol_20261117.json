@@ -1,0 +1,16 @@
+{
+  "purpose": "Recover saved predictions after postprocessing/environment interruption, repair the independently verified response-rank bug and complete the original physical checks",
+  "status": "closed_invalid_spin",
+  "cases": ["BeH2_631g_1.65_new", "BeH2_631g_2.75_new"],
+  "original_protocol": "research/auxiliary_forward_protocol_20261117.json",
+  "maximum_additional_updates": 32,
+  "maximum_response_space_dimension": 192,
+  "unchanged": "epsilon, physical objective, response counts, self-consistency and stationarity tolerances, reduced gap and global-check thresholds",
+  "rank_repair": "An exact rank-one source incorrectly generated 46 directions. Use machine-precision-aware Gram rank and boundary-relative degeneracy tolerance; independent post-repair checks require one direction and retain complete true degeneracies.",
+  "restart": "Preserve the saved occupied ensemble and original mean-field input; verify trace, operator, density and energy retention before continuing",
+  "outer_solver": "Exact elimination of the auxiliary coordinate: minimize the unchanged physical total matrix in the current variational space, set x=q-epsilon*v, then evaluate the universal functional and complete physical responses",
+  "outer_solver_identity": "The independently checked energy identity proves this is the same total functional, not a new fitted energy or changed accuracy criterion",
+  "checkpointing": "Serialize GPU storages directly one at a time instead of retaining simultaneous CPU copies",
+  "reference_use": "Only after completion, reuse the existing labels; no label objective, new correlated references or new seed/rank sweeps",
+  "limits": ["Post-interruption development completion, not a new blind benchmark", "General regularization and variational linear algebra are not novelty claims", "Global Fock vectors, finite basis and nonstandard regularized KS integration", "Broad goal and challenge eligibility remain unverified"]
+}

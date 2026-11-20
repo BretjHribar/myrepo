@@ -1,0 +1,14 @@
+{
+  "created_utc": "2026-11-17T12:00:07.934714+00:00",
+  "device": "cuda",
+  "id": "BeH2_631g_1.65_new",
+  "reported_rejected_total_hartree": -42.03064436132981,
+  "unprojected_physical_total_hartree": -13.546512306371056,
+  "energy_evaluation_error_hartree": 28.484132054958756,
+  "ensemble_spin_squared": 5.544894819307777,
+  "ensemble_singlet_weight": 0.00013248985199434003,
+  "basis_orthogonality_error": 1.780469243198475e-14,
+  "projection_removed_universal_energy_hartree": 0.0021268754492398895,
+  "new_fit_or_reference_generated": false,
+  "conclusion": "Use the full physical Hamiltonian for energy and explicitly purify every trial-space extension; reject spin leakage immediately"
+}

@@ -1,0 +1,720 @@
+{
+  "created_utc": "2026-11-17T23:48:00.138445+00:00",
+  "device": "cuda",
+  "protocol": {
+    "purpose": "Enable actual full-target-basis physical inputs with a bounded CUDA factor producer after the complete public domain failure; no speed benchmark or chemical-accuracy pass claim",
+    "seed": 17112072,
+    "basis": "def2-qzvp",
+    "auxiliary_basis": "def2-qzvp-ri",
+    "small_public_validation_id": "G21IP/be",
+    "additional_probe_ids": [
+      "WATER27/H2O",
+      "S22/01"
+    ],
+    "largest_case_selection": "First lexicographically sorted required structure among the maximum spatial-basis-function count in the frozen full model-domain inventory; no reference-energy values used",
+    "factor_chunk_size": 2,
+    "pair_batch_size": 4096,
+    "auxiliary_batch_size": 128,
+    "maximum_working_bytes": 5500000000,
+    "screening_cutoff": 1e-14,
+    "metric_reconstruction_relative_tolerance": 1e-10,
+    "factor_comparison_tolerance": 2e-09,
+    "factor_symmetry_tolerance": 1e-10,
+    "large_probe": "Generate the final whitened factor, which exercises global auxiliary mixing; do not claim all factors, molecular energy or a state prediction from that probe",
+    "independent_reference": "For the small case only, compare all streamed factors with a separately assembled dense three-center tensor and GPU triangular solve; measure fitting energy error against independent exact four-center GPU integrals without using it to tune settings",
+    "hartree_to_kcal_per_mol": 627.5094740631,
+    "runtime": "One CUDA numerical job and one host core; no CPU integrals, scientific fallback, baseline method or frontier replication; bounded factor workspace and at most 0.5 GB new disk",
+    "scope": "Physical integral-input implementation and fitting diagnostics, not a full public model score, learned transfer, XC callable or private-test pass",
+    "speed_work_authorized": false
+  },
+  "status": "completed",
+  "history": [
+    {
+      "id": "G21IP/be",
+      "phase": "bounded_factor_source_setup"
+    },
+    {
+      "id": "G21IP/be",
+      "phase": "factor_source_metadata",
+      "basis_functions": 36,
+      "cartesian_basis_functions": 41,
+      "auxiliary_basis": "def2-qzvp-ri",
+      "factor_count": 101,
+      "cartesian_auxiliary_functions": 130,
+      "factor_chunk_size": 2,
+      "pair_batches": 1,
+      "auxiliary_batches": 2,
+      "maximum_generated_integral_block_shape": [
+        948,
+        100
+      ],
+      "estimated_working_bytes": 65803720,
+      "metric_relative_reconstruction_error": 1.8051963165449623e-16,
+      "minimum_cholesky_diagonal": 0.24160787318866547,
+      "screening_cutoff": 1e-14,
+      "full_inverse_metric_allocated": false,
+      "full_three_index_tensor_allocated": false,
+      "full_four_index_tensor_allocated": false,
+      "cpu_integrals_allowed": false,
+      "chemical_accuracy_established": false
+    },
+    {
+      "id": "G21IP/be",
+      "phase": "all_factor_comparison",
+      "factors_checked": 2,
+      "total": 101
+    },
+    {
+      "id": "G21IP/be",
+      "phase": "all_factor_comparison",
+      "factors_checked": 42,
+      "total": 101
+    },
+    {
+      "id": "G21IP/be",
+      "phase": "all_factor_comparison",
+      "factors_checked": 82,
+      "total": 101
+    },
+    {
+      "phase": "small_molecular_input_check_completed",
+      "id": "G21IP/be",
+      "physical_electrons": 4,
+      "basis_functions": 36,
+      "all_factors_checked": 101,
+      "independent_factor_maximum_difference": 6.151329445813758e-15,
+      "factor_symmetry_error": 4.3814136223681096e-17,
+      "producer_implementation_passed": true,
+      "provided_determinant_fitting_energy_difference_kcal_per_mol": -0.010403089212893138,
+      "all_N_electron_states_conservative_fitting_energy_bound_kcal_per_mol": 1738.4198788168262,
+      "bound_definition": "N(N-1)/2 times the Frobenius norm of the two-particle fitting error in the full orthonormal physical basis; this also bounds every normalized N-electron state's energy error from this fitting approximation",
+      "source": {
+        "basis_functions": 36,
+        "cartesian_basis_functions": 41,
+        "auxiliary_basis": "def2-qzvp-ri",
+        "factor_count": 101,
+        "cartesian_auxiliary_functions": 130,
+        "factor_chunk_size": 2,
+        "pair_batches": 1,
+        "auxiliary_batches": 2,
+        "maximum_generated_integral_block_shape": [
+          948,
+          100
+        ],
+        "estimated_working_bytes": 65803720,
+        "metric_relative_reconstruction_error": 1.8051963165449623e-16,
+        "minimum_cholesky_diagonal": 0.24160787318866547,
+        "screening_cutoff": 1e-14,
+        "full_inverse_metric_allocated": false,
+        "full_three_index_tensor_allocated": false,
+        "full_four_index_tensor_allocated": false,
+        "cpu_integrals_allowed": false,
+        "chemical_accuracy_established": false
+      },
+      "correlated_molecular_accuracy_measured": false,
+      "full_suite_accuracy_estimate_available": false
+    },
+    {
+      "id": "WATER27/H2O",
+      "phase": "larger_public_input_probe_setup"
+    },
+    {
+      "id": "WATER27/H2O",
+      "phase": "larger_source_ready",
+      "basis_functions": 117,
+      "cartesian_basis_functions": 142,
+      "auxiliary_basis": "def2-qzvp-ri",
+      "factor_count": 253,
+      "cartesian_auxiliary_functions": 333,
+      "factor_chunk_size": 2,
+      "pair_batches": 3,
+      "auxiliary_batches": 4,
+      "maximum_generated_integral_block_shape": [
+        4083,
+        96
+      ],
+      "estimated_working_bytes": 72987656,
+      "metric_relative_reconstruction_error": 1.4793859636238825e-16,
+      "minimum_cholesky_diagonal": 0.10036765832184599,
+      "screening_cutoff": 1e-14,
+      "full_inverse_metric_allocated": false,
+      "full_three_index_tensor_allocated": false,
+      "full_four_index_tensor_allocated": false,
+      "cpu_integrals_allowed": false,
+      "chemical_accuracy_established": false
+    },
+    {
+      "id": "WATER27/H2O",
+      "phase": "streaming_global_factor",
+      "factor_start": 252,
+      "factor_stop": 253,
+      "completed_pair_batches": 1,
+      "total_pair_batches": 3
+    },
+    {
+      "id": "WATER27/H2O",
+      "phase": "streaming_global_factor",
+      "factor_start": 252,
+      "factor_stop": 253,
+      "completed_pair_batches": 3,
+      "total_pair_batches": 3
+    },
+    {
+      "id": "WATER27/H2O",
+      "phase": "single_global_factor_probe_completed",
+      "basis_functions": 117
+    },
+    {
+      "id": "S22/01",
+      "phase": "larger_public_input_probe_setup"
+    },
+    {
+      "id": "S22/01",
+      "phase": "larger_source_ready",
+      "basis_functions": 294,
+      "cartesian_basis_functions": 354,
+      "auxiliary_basis": "def2-qzvp-ri",
+      "factor_count": 618,
+      "cartesian_auxiliary_functions": 808,
+      "factor_chunk_size": 2,
+      "pair_batches": 18,
+      "auxiliary_batches": 8,
+      "maximum_generated_integral_block_shape": [
+        3900,
+        126
+      ],
+      "estimated_working_bytes": 88561184,
+      "metric_relative_reconstruction_error": 2.1690883678203225e-16,
+      "minimum_cholesky_diagonal": 0.09578598277633506,
+      "screening_cutoff": 1e-14,
+      "full_inverse_metric_allocated": false,
+      "full_three_index_tensor_allocated": false,
+      "full_four_index_tensor_allocated": false,
+      "cpu_integrals_allowed": false,
+      "chemical_accuracy_established": false
+    },
+    {
+      "id": "S22/01",
+      "phase": "streaming_global_factor",
+      "factor_start": 617,
+      "factor_stop": 618,
+      "completed_pair_batches": 1,
+      "total_pair_batches": 18
+    },
+    {
+      "id": "S22/01",
+      "phase": "streaming_global_factor",
+      "factor_start": 617,
+      "factor_stop": 618,
+      "completed_pair_batches": 18,
+      "total_pair_batches": 18
+    },
+    {
+      "id": "S22/01",
+      "phase": "single_global_factor_probe_completed",
+      "basis_functions": 294
+    },
+    {
+      "id": "C60ISO/1",
+      "phase": "larger_public_input_probe_setup"
+    },
+    {
+      "id": "C60ISO/1",
+      "phase": "larger_source_ready",
+      "basis_functions": 3420,
+      "cartesian_basis_functions": 4320,
+      "auxiliary_basis": "def2-qzvp-ri",
+      "factor_count": 8460,
+      "cartesian_auxiliary_functions": 11460,
+      "factor_chunk_size": 2,
+      "pair_batches": 1974,
+      "auxiliary_batches": 95,
+      "maximum_generated_integral_block_shape": [
+        4096,
+        128
+      ],
+      "estimated_working_bytes": 2589199488,
+      "metric_relative_reconstruction_error": 1.4039110622775988e-15,
+      "minimum_cholesky_diagonal": 0.010996594438868582,
+      "screening_cutoff": 1e-14,
+      "full_inverse_metric_allocated": false,
+      "full_three_index_tensor_allocated": false,
+      "full_four_index_tensor_allocated": false,
+      "cpu_integrals_allowed": false,
+      "chemical_accuracy_established": false
+    },
+    {
+      "id": "C60ISO/1",
+      "phase": "streaming_global_factor",
+      "factor_start": 8459,
+      "factor_stop": 8460,
+      "completed_pair_batches": 1,
+      "total_pair_batches": 1974
+    },
+    {
+      "id": "C60ISO/1",
+      "phase": "streaming_global_factor",
+      "factor_start": 8459,
+      "factor_stop": 8460,
+      "completed_pair_batches": 51,
+      "total_pair_batches": 1974
+    },
+    {
+      "id": "C60ISO/1",
+      "phase": "streaming_global_factor",
+      "factor_start": 8459,
+      "factor_stop": 8460,
+      "completed_pair_batches": 101,
+      "total_pair_batches": 1974
+    },
+    {
+      "id": "C60ISO/1",
+      "phase": "streaming_global_factor",
+      "factor_start": 8459,
+      "factor_stop": 8460,
+      "completed_pair_batches": 151,
+      "total_pair_batches": 1974
+    },
+    {
+      "id": "C60ISO/1",
+      "phase": "streaming_global_factor",
+      "factor_start": 8459,
+      "factor_stop": 8460,
+      "completed_pair_batches": 201,
+      "total_pair_batches": 1974
+    },
+    {
+      "id": "C60ISO/1",
+      "phase": "streaming_global_factor",
+      "factor_start": 8459,
+      "factor_stop": 8460,
+      "completed_pair_batches": 251,
+      "total_pair_batches": 1974
+    },
+    {
+      "id": "C60ISO/1",
+      "phase": "streaming_global_factor",
+      "factor_start": 8459,
+      "factor_stop": 8460,
+      "completed_pair_batches": 301,
+      "total_pair_batches": 1974
+    },
+    {
+      "id": "C60ISO/1",
+      "phase": "streaming_global_factor",
+      "factor_start": 8459,
+      "factor_stop": 8460,
+      "completed_pair_batches": 351,
+      "total_pair_batches": 1974
+    },
+    {
+      "id": "C60ISO/1",
+      "phase": "streaming_global_factor",
+      "factor_start": 8459,
+      "factor_stop": 8460,
+      "completed_pair_batches": 401,
+      "total_pair_batches": 1974
+    },
+    {
+      "id": "C60ISO/1",
+      "phase": "streaming_global_factor",
+      "factor_start": 8459,
+      "factor_stop": 8460,
+      "completed_pair_batches": 451,
+      "total_pair_batches": 1974
+    },
+    {
+      "id": "C60ISO/1",
+      "phase": "streaming_global_factor",
+      "factor_start": 8459,
+      "factor_stop": 8460,
+      "completed_pair_batches": 501,
+      "total_pair_batches": 1974
+    },
+    {
+      "id": "C60ISO/1",
+      "phase": "streaming_global_factor",
+      "factor_start": 8459,
+      "factor_stop": 8460,
+      "completed_pair_batches": 551,
+      "total_pair_batches": 1974
+    },
+    {
+      "id": "C60ISO/1",
+      "phase": "streaming_global_factor",
+      "factor_start": 8459,
+      "factor_stop": 8460,
+      "completed_pair_batches": 601,
+      "total_pair_batches": 1974
+    },
+    {
+      "id": "C60ISO/1",
+      "phase": "streaming_global_factor",
+      "factor_start": 8459,
+      "factor_stop": 8460,
+      "completed_pair_batches": 651,
+      "total_pair_batches": 1974
+    },
+    {
+      "id": "C60ISO/1",
+      "phase": "streaming_global_factor",
+      "factor_start": 8459,
+      "factor_stop": 8460,
+      "completed_pair_batches": 701,
+      "total_pair_batches": 1974
+    },
+    {
+      "id": "C60ISO/1",
+      "phase": "streaming_global_factor",
+      "factor_start": 8459,
+      "factor_stop": 8460,
+      "completed_pair_batches": 751,
+      "total_pair_batches": 1974
+    },
+    {
+      "id": "C60ISO/1",
+      "phase": "streaming_global_factor",
+      "factor_start": 8459,
+      "factor_stop": 8460,
+      "completed_pair_batches": 801,
+      "total_pair_batches": 1974
+    },
+    {
+      "id": "C60ISO/1",
+      "phase": "streaming_global_factor",
+      "factor_start": 8459,
+      "factor_stop": 8460,
+      "completed_pair_batches": 851,
+      "total_pair_batches": 1974
+    },
+    {
+      "id": "C60ISO/1",
+      "phase": "streaming_global_factor",
+      "factor_start": 8459,
+      "factor_stop": 8460,
+      "completed_pair_batches": 901,
+      "total_pair_batches": 1974
+    },
+    {
+      "id": "C60ISO/1",
+      "phase": "streaming_global_factor",
+      "factor_start": 8459,
+      "factor_stop": 8460,
+      "completed_pair_batches": 951,
+      "total_pair_batches": 1974
+    },
+    {
+      "id": "C60ISO/1",
+      "phase": "streaming_global_factor",
+      "factor_start": 8459,
+      "factor_stop": 8460,
+      "completed_pair_batches": 1001,
+      "total_pair_batches": 1974
+    },
+    {
+      "id": "C60ISO/1",
+      "phase": "streaming_global_factor",
+      "factor_start": 8459,
+      "factor_stop": 8460,
+      "completed_pair_batches": 1051,
+      "total_pair_batches": 1974
+    },
+    {
+      "id": "C60ISO/1",
+      "phase": "streaming_global_factor",
+      "factor_start": 8459,
+      "factor_stop": 8460,
+      "completed_pair_batches": 1101,
+      "total_pair_batches": 1974
+    },
+    {
+      "id": "C60ISO/1",
+      "phase": "streaming_global_factor",
+      "factor_start": 8459,
+      "factor_stop": 8460,
+      "completed_pair_batches": 1151,
+      "total_pair_batches": 1974
+    },
+    {
+      "id": "C60ISO/1",
+      "phase": "streaming_global_factor",
+      "factor_start": 8459,
+      "factor_stop": 8460,
+      "completed_pair_batches": 1201,
+      "total_pair_batches": 1974
+    },
+    {
+      "id": "C60ISO/1",
+      "phase": "streaming_global_factor",
+      "factor_start": 8459,
+      "factor_stop": 8460,
+      "completed_pair_batches": 1251,
+      "total_pair_batches": 1974
+    },
+    {
+      "id": "C60ISO/1",
+      "phase": "streaming_global_factor",
+      "factor_start": 8459,
+      "factor_stop": 8460,
+      "completed_pair_batches": 1301,
+      "total_pair_batches": 1974
+    },
+    {
+      "id": "C60ISO/1",
+      "phase": "streaming_global_factor",
+      "factor_start": 8459,
+      "factor_stop": 8460,
+      "completed_pair_batches": 1351,
+      "total_pair_batches": 1974
+    },
+    {
+      "id": "C60ISO/1",
+      "phase": "streaming_global_factor",
+      "factor_start": 8459,
+      "factor_stop": 8460,
+      "completed_pair_batches": 1401,
+      "total_pair_batches": 1974
+    },
+    {
+      "id": "C60ISO/1",
+      "phase": "streaming_global_factor",
+      "factor_start": 8459,
+      "factor_stop": 8460,
+      "completed_pair_batches": 1451,
+      "total_pair_batches": 1974
+    },
+    {
+      "id": "C60ISO/1",
+      "phase": "streaming_global_factor",
+      "factor_start": 8459,
+      "factor_stop": 8460,
+      "completed_pair_batches": 1501,
+      "total_pair_batches": 1974
+    },
+    {
+      "id": "C60ISO/1",
+      "phase": "streaming_global_factor",
+      "factor_start": 8459,
+      "factor_stop": 8460,
+      "completed_pair_batches": 1551,
+      "total_pair_batches": 1974
+    },
+    {
+      "id": "C60ISO/1",
+      "phase": "streaming_global_factor",
+      "factor_start": 8459,
+      "factor_stop": 8460,
+      "completed_pair_batches": 1601,
+      "total_pair_batches": 1974
+    },
+    {
+      "id": "C60ISO/1",
+      "phase": "streaming_global_factor",
+      "factor_start": 8459,
+      "factor_stop": 8460,
+      "completed_pair_batches": 1651,
+      "total_pair_batches": 1974
+    },
+    {
+      "id": "C60ISO/1",
+      "phase": "streaming_global_factor",
+      "factor_start": 8459,
+      "factor_stop": 8460,
+      "completed_pair_batches": 1701,
+      "total_pair_batches": 1974
+    },
+    {
+      "id": "C60ISO/1",
+      "phase": "streaming_global_factor",
+      "factor_start": 8459,
+      "factor_stop": 8460,
+      "completed_pair_batches": 1751,
+      "total_pair_batches": 1974
+    },
+    {
+      "id": "C60ISO/1",
+      "phase": "streaming_global_factor",
+      "factor_start": 8459,
+      "factor_stop": 8460,
+      "completed_pair_batches": 1801,
+      "total_pair_batches": 1974
+    },
+    {
+      "id": "C60ISO/1",
+      "phase": "streaming_global_factor",
+      "factor_start": 8459,
+      "factor_stop": 8460,
+      "completed_pair_batches": 1851,
+      "total_pair_batches": 1974
+    },
+    {
+      "id": "C60ISO/1",
+      "phase": "streaming_global_factor",
+      "factor_start": 8459,
+      "factor_stop": 8460,
+      "completed_pair_batches": 1901,
+      "total_pair_batches": 1974
+    },
+    {
+      "id": "C60ISO/1",
+      "phase": "streaming_global_factor",
+      "factor_start": 8459,
+      "factor_stop": 8460,
+      "completed_pair_batches": 1951,
+      "total_pair_batches": 1974
+    },
+    {
+      "id": "C60ISO/1",
+      "phase": "streaming_global_factor",
+      "factor_start": 8459,
+      "factor_stop": 8460,
+      "completed_pair_batches": 1974,
+      "total_pair_batches": 1974
+    },
+    {
+      "id": "C60ISO/1",
+      "phase": "single_global_factor_probe_completed",
+      "basis_functions": 3420
+    }
+  ],
+  "failures": [],
+  "probes": [
+    {
+      "id": "WATER27/H2O",
+      "completed": true,
+      "physical_electrons": 10,
+      "basis_functions": 117,
+      "factor_count": 253,
+      "factors_generated": 1,
+      "full_molecular_energy_evaluated": false,
+      "source": {
+        "basis_functions": 117,
+        "cartesian_basis_functions": 142,
+        "auxiliary_basis": "def2-qzvp-ri",
+        "factor_count": 253,
+        "cartesian_auxiliary_functions": 333,
+        "factor_chunk_size": 2,
+        "pair_batches": 3,
+        "auxiliary_batches": 4,
+        "maximum_generated_integral_block_shape": [
+          4083,
+          96
+        ],
+        "estimated_working_bytes": 72987656,
+        "metric_relative_reconstruction_error": 1.4793859636238825e-16,
+        "minimum_cholesky_diagonal": 0.10036765832184599,
+        "screening_cutoff": 1e-14,
+        "full_inverse_metric_allocated": false,
+        "full_three_index_tensor_allocated": false,
+        "full_four_index_tensor_allocated": false,
+        "cpu_integrals_allowed": false,
+        "chemical_accuracy_established": false
+      }
+    },
+    {
+      "id": "S22/01",
+      "completed": true,
+      "physical_electrons": 20,
+      "basis_functions": 294,
+      "factor_count": 618,
+      "factors_generated": 1,
+      "full_molecular_energy_evaluated": false,
+      "source": {
+        "basis_functions": 294,
+        "cartesian_basis_functions": 354,
+        "auxiliary_basis": "def2-qzvp-ri",
+        "factor_count": 618,
+        "cartesian_auxiliary_functions": 808,
+        "factor_chunk_size": 2,
+        "pair_batches": 18,
+        "auxiliary_batches": 8,
+        "maximum_generated_integral_block_shape": [
+          3900,
+          126
+        ],
+        "estimated_working_bytes": 88561184,
+        "metric_relative_reconstruction_error": 2.1690883678203225e-16,
+        "minimum_cholesky_diagonal": 0.09578598277633506,
+        "screening_cutoff": 1e-14,
+        "full_inverse_metric_allocated": false,
+        "full_three_index_tensor_allocated": false,
+        "full_four_index_tensor_allocated": false,
+        "cpu_integrals_allowed": false,
+        "chemical_accuracy_established": false
+      }
+    },
+    {
+      "id": "C60ISO/1",
+      "completed": true,
+      "physical_electrons": 360,
+      "basis_functions": 3420,
+      "factor_count": 8460,
+      "factors_generated": 1,
+      "full_molecular_energy_evaluated": false,
+      "source": {
+        "basis_functions": 3420,
+        "cartesian_basis_functions": 4320,
+        "auxiliary_basis": "def2-qzvp-ri",
+        "factor_count": 8460,
+        "cartesian_auxiliary_functions": 11460,
+        "factor_chunk_size": 2,
+        "pair_batches": 1974,
+        "auxiliary_batches": 95,
+        "maximum_generated_integral_block_shape": [
+          4096,
+          128
+        ],
+        "estimated_working_bytes": 2589199488,
+        "metric_relative_reconstruction_error": 1.4039110622775988e-15,
+        "minimum_cholesky_diagonal": 0.010996594438868582,
+        "screening_cutoff": 1e-14,
+        "full_inverse_metric_allocated": false,
+        "full_three_index_tensor_allocated": false,
+        "full_four_index_tensor_allocated": false,
+        "cpu_integrals_allowed": false,
+        "chemical_accuracy_established": false
+      }
+    }
+  ],
+  "results": {
+    "id": "G21IP/be",
+    "physical_electrons": 4,
+    "basis_functions": 36,
+    "all_factors_checked": 101,
+    "independent_factor_maximum_difference": 6.151329445813758e-15,
+    "factor_symmetry_error": 4.3814136223681096e-17,
+    "producer_implementation_passed": true,
+    "provided_determinant_fitting_energy_difference_kcal_per_mol": -0.010403089212893138,
+    "all_N_electron_states_conservative_fitting_energy_bound_kcal_per_mol": 1738.4198788168262,
+    "bound_definition": "N(N-1)/2 times the Frobenius norm of the two-particle fitting error in the full orthonormal physical basis; this also bounds every normalized N-electron state's energy error from this fitting approximation",
+    "source": {
+      "basis_functions": 36,
+      "cartesian_basis_functions": 41,
+      "auxiliary_basis": "def2-qzvp-ri",
+      "factor_count": 101,
+      "cartesian_auxiliary_functions": 130,
+      "factor_chunk_size": 2,
+      "pair_batches": 1,
+      "auxiliary_batches": 2,
+      "maximum_generated_integral_block_shape": [
+        948,
+        100
+      ],
+      "estimated_working_bytes": 65803720,
+      "metric_relative_reconstruction_error": 1.8051963165449623e-16,
+      "minimum_cholesky_diagonal": 0.24160787318866547,
+      "screening_cutoff": 1e-14,
+      "full_inverse_metric_allocated": false,
+      "full_three_index_tensor_allocated": false,
+      "full_four_index_tensor_allocated": false,
+      "cpu_integrals_allowed": false,
+      "chemical_accuracy_established": false
+    },
+    "correlated_molecular_accuracy_measured": false,
+    "full_suite_accuracy_estimate_available": false
+  },
+  "passed": true,
+  "peak_torch_cuda_bytes": 920514560,
+  "wtmad2_measured": false,
+  "full_public_model_predictions": 0
+}

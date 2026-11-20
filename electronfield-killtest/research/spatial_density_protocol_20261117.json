@@ -1,0 +1,17 @@
+{
+  "purpose": "Resolve spatial density products directly after the squared Coulomb-Gram representation failed",
+  "construction": "Direct SVD of normalized CUDA orbital-product values on basis-scaled spatial points; no external potential or reference labels choose the frame",
+  "relative_null_threshold": 1e-11,
+  "cases": ["BeH2_631g_1.65_new", "BeH2_631g_2.75_new"],
+  "input": "Reuse saved interacting states and needed scalar energies; repeat no interacting fit or reference generation",
+  "construction_seed": 17112026,
+  "validation_seed": 17112027,
+  "radial_count": 24,
+  "directions_count": 32,
+  "kinetic_entropy_allowance_hartree": 1e-5,
+  "kinetic_density_residual_tolerance": 1e-8,
+  "external_span_tolerance_hartree": 1e-7,
+  "density_product_validation_tolerance": 1e-8,
+  "checks": ["Independent spatial density-product validation", "Fixed-number density and occupations", "Orbital-gauge covariance", "External potential assessed only after construction", "On-shell kinetic completion and KS stationarity"],
+  "limits": ["Finite orbital basis", "Sampled product-space resolution requires independent validation", "On-shell only; no arbitrary-density interacting functional or off-shell derivative claim", "No broad WTMAD-2, learned inference or timing claim"]
+}

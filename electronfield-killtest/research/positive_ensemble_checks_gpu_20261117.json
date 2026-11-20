@@ -1,0 +1,23 @@
+{
+  "created_utc": "2026-11-17T11:15:03.708510+00:00",
+  "device": "cuda",
+  "results": [
+    {
+      "rank_deficient_face": false,
+      "passed": true,
+      "energy_error_hartree": 9.769974829154648e-10,
+      "constraint_residual": 5.551115123125783e-17,
+      "primal_dual_gap_hartree": 9.769974829154648e-10,
+      "iterations": 100
+    },
+    {
+      "rank_deficient_face": true,
+      "passed": true,
+      "energy_error_hartree": 1.887379141862766e-15,
+      "constraint_residual": 1.5548363981308478e-15,
+      "primal_dual_gap_hartree": 1.9984014443252818e-15,
+      "iterations": 100
+    }
+  ],
+  "passed": true
+}
