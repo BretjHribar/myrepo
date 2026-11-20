@@ -1,0 +1,66 @@
+{
+  "created_utc": "2026-11-17T22:55:23.751717+00:00",
+  "device": "cuda",
+  "protocol": {
+    "purpose": "Expose false lowest-state acceptance from a retained vector confined to an excited invariant sector, and check one fixed generic physical start",
+    "seed": 17112065,
+    "cases": [
+      "diagonal_two_sector",
+      "decoupled_four_state_blocks"
+    ],
+    "ritz_residual_tolerance_hartree": 1e-12,
+    "energy_tolerance_hartree": 1e-10,
+    "generic_relative_amplitude": 0.5,
+    "seed_sweep": false,
+    "scope": "New numerical lowest-state safeguard only, not chemical accuracy or a rigorous global-minimum certificate",
+    "execution": "One CUDA job, only after the ongoing original BH protocol is terminal; no change to that frozen experiment"
+  },
+  "status": "completed",
+  "results": [
+    {
+      "id": "diagonal_two_sector",
+      "passed": true,
+      "old_residual_passed_while_missing_lower_sector": true,
+      "old_residual_hartree": 0.0,
+      "old_ground_energy_error_hartree": 1.0,
+      "new_residual_hartree": 1.9154431522622235e-16,
+      "new_ground_energy_error_hartree": 6.900599395429334e-17,
+      "start": {
+        "policy": "one_fixed_generic_physical_component",
+        "generic_component_used": true,
+        "fixed_seed": 17112065,
+        "generic_relative_amplitude": 0.5,
+        "normalized_start_error": 1.1102230246251565e-16,
+        "retained_start_overlap": 0.9103484587913004,
+        "seed_sweep_performed": false,
+        "reference_used": false,
+        "global_lowest_eigenvalue_certified": false
+      },
+      "independent_eigenvalue_checked_after_prediction": true
+    },
+    {
+      "id": "decoupled_four_state_blocks",
+      "passed": true,
+      "old_residual_passed_while_missing_lower_sector": true,
+      "old_residual_hartree": 1.1102230246251565e-16,
+      "old_ground_energy_error_hartree": 1.9763364463254673,
+      "new_residual_hartree": 2.766871500483151e-16,
+      "new_ground_energy_error_hartree": 2.220446049250313e-16,
+      "start": {
+        "policy": "one_fixed_generic_physical_component",
+        "generic_component_used": true,
+        "fixed_seed": 17112066,
+        "generic_relative_amplitude": 0.5,
+        "normalized_start_error": 1.1102230246251565e-16,
+        "retained_start_overlap": 0.8803805365782853,
+        "seed_sweep_performed": false,
+        "reference_used": false,
+        "global_lowest_eigenvalue_certified": false
+      },
+      "independent_eigenvalue_checked_after_prediction": true
+    }
+  ],
+  "failures": [],
+  "passed": true,
+  "peak_cuda_bytes": 8801280
+}

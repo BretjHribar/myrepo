@@ -1,0 +1,1333 @@
+{
+  "created_utc": "2026-11-16T20:13:40.041701+00:00",
+  "status": "Our second candidate; finite-basis frozen-input mechanism experiment, not competition performance",
+  "seed": 20261116,
+  "epochs": 400,
+  "architecture": "conserved_hole",
+  "flat_spin_constraints": 0,
+  "initial": {
+    "train": {
+      "frozen_energy_mae_kcal": 8.730930421465967,
+      "frozen_curve_difference_mae_kcal": 4.003261863691511,
+      "by_case": [
+        {
+          "id": "H2_0.70",
+          "error_hartree": 0.021110143472165
+        },
+        {
+          "id": "H2_1.00",
+          "error_hartree": 0.02004474674727863
+        },
+        {
+          "id": "H2_1.50",
+          "error_hartree": 0.01583953372548441
+        },
+        {
+          "id": "H2_2.00",
+          "error_hartree": 0.01777982978877657
+        },
+        {
+          "id": "H2_3.00",
+          "error_hartree": 0.02451454058571101
+        },
+        {
+          "id": "H_atom",
+          "error_hartree": 1.583393841692038e-05
+        },
+        {
+          "id": "HeH_plus_0.70",
+          "error_hartree": -0.006716431373293474
+        },
+        {
+          "id": "HeH_plus_1.20",
+          "error_hartree": -0.014657442050912017
+        },
+        {
+          "id": "HeH_plus_2.20",
+          "error_hartree": 0.010549463851817098
+        },
+        {
+          "id": "He_atom",
+          "error_hartree": 0.007908267196010677
+        }
+      ]
+    },
+    "val": {
+      "frozen_energy_mae_kcal": 8.46890069240059,
+      "frozen_curve_difference_mae_kcal": 2.380222211459865,
+      "by_case": [
+        {
+          "id": "H2_plus_0.80",
+          "error_hartree": 0.00020050430586837642
+        },
+        {
+          "id": "H2_plus_1.60",
+          "error_hartree": 0.0022009476688205076
+        },
+        {
+          "id": "H2_plus_3.00",
+          "error_hartree": 0.00516930814321459
+        },
+        {
+          "id": "H3_linear_plus_0.80",
+          "error_hartree": 0.02720293625189263
+        },
+        {
+          "id": "H3_linear_plus_1.20",
+          "error_hartree": 0.026852405265850532
+        },
+        {
+          "id": "H3_linear_plus_1.80",
+          "error_hartree": 0.019350212284362067
+        }
+      ]
+    },
+    "test": {
+      "frozen_energy_mae_kcal": 9.284993788539108,
+      "frozen_curve_difference_mae_kcal": 10.310189277256077,
+      "by_case": [
+        {
+          "id": "H3_neutral_1.00",
+          "error_hartree": 0.008777293765156013
+        },
+        {
+          "id": "H3_neutral_1.80",
+          "error_hartree": -0.028607178951529866
+        },
+        {
+          "id": "H3_triangle_plus_0.80",
+          "error_hartree": 0.020528434396400286
+        },
+        {
+          "id": "H3_triangle_plus_1.20",
+          "error_hartree": 0.01519007972152564
+        },
+        {
+          "id": "H3_triangle_plus_1.80",
+          "error_hartree": 0.0013550368640118382
+        },
+        {
+          "id": "H4_square_2plus_1.00",
+          "error_hartree": 0.02139001642323013
+        },
+        {
+          "id": "H4_square_2plus_1.50",
+          "error_hartree": 0.01216517441739784
+        },
+        {
+          "id": "H4_square_2plus_2.30",
+          "error_hartree": 0.010359421071844954
+        }
+      ]
+    }
+  },
+  "history": [
+    {
+      "epoch": 1,
+      "loss": 0.48943301987488286,
+      "metrics": {
+        "train": {
+          "frozen_energy_mae_kcal": 8.394003854188766,
+          "frozen_curve_difference_mae_kcal": 4.084268473317966,
+          "by_case": [
+            {
+              "id": "H2_0.70",
+              "error_hartree": 0.020598398314346955
+            },
+            {
+              "id": "H2_1.00",
+              "error_hartree": 0.019346724320180364
+            },
+            {
+              "id": "H2_1.50",
+              "error_hartree": 0.014665875342079637
+            },
+            {
+              "id": "H2_2.00",
+              "error_hartree": 0.016305198164101364
+            },
+            {
+              "id": "H2_3.00",
+              "error_hartree": 0.02319427497136639
+            },
+            {
+              "id": "H_atom",
+              "error_hartree": 1.583393841692038e-05
+            },
+            {
+              "id": "HeH_plus_0.70",
+              "error_hartree": -0.00792012689252175
+            },
+            {
+              "id": "HeH_plus_1.20",
+              "error_hartree": -0.015563133569589827
+            },
+            {
+              "id": "HeH_plus_2.20",
+              "error_hartree": 0.009415769325374246
+            },
+            {
+              "id": "He_atom",
+              "error_hartree": 0.0067416312714261295
+            }
+          ]
+        },
+        "val": {
+          "frozen_energy_mae_kcal": 8.205041546822665,
+          "frozen_curve_difference_mae_kcal": 2.4877240292790193,
+          "by_case": [
+            {
+              "id": "H2_plus_0.80",
+              "error_hartree": 0.00020050430586837642
+            },
+            {
+              "id": "H2_plus_1.60",
+              "error_hartree": 0.0022009476688205076
+            },
+            {
+              "id": "H2_plus_3.00",
+              "error_hartree": 0.00516930814321459
+            },
+            {
+              "id": "H3_linear_plus_0.80",
+              "error_hartree": 0.02659038369294331
+            },
+            {
+              "id": "H3_linear_plus_1.20",
+              "error_hartree": 0.0260097989688739
+            },
+            {
+              "id": "H3_linear_plus_1.80",
+              "error_hartree": 0.018282453257668863
+            }
+          ]
+        },
+        "test": {
+          "frozen_energy_mae_kcal": 8.937904304620538,
+          "frozen_curve_difference_mae_kcal": 10.433969094415481,
+          "by_case": [
+            {
+              "id": "H3_neutral_1.00",
+              "error_hartree": 0.007759280301982807
+            },
+            {
+              "id": "H3_neutral_1.80",
+              "error_hartree": -0.029617872679090995
+            },
+            {
+              "id": "H3_triangle_plus_0.80",
+              "error_hartree": 0.020008631901474505
+            },
+            {
+              "id": "H3_triangle_plus_1.20",
+              "error_hartree": 0.014411995224915541
+            },
+            {
+              "id": "H3_triangle_plus_1.80",
+              "error_hartree": 0.0003303092457522805
+            },
+            {
+              "id": "H4_square_2plus_1.00",
+              "error_hartree": 0.02076846543124211
+            },
+            {
+              "id": "H4_square_2plus_1.50",
+              "error_hartree": 0.011362493148357578
+            },
+            {
+              "id": "H4_square_2plus_2.30",
+              "error_hartree": 0.00968860927333548
+            }
+          ]
+        }
+      },
+      "elapsed_seconds": 1.119518424999999
+    },
+    {
+      "epoch": 50,
+      "loss": 0.3243665948728395,
+      "metrics": {
+        "train": {
+          "frozen_energy_mae_kcal": 6.407360349711531,
+          "frozen_curve_difference_mae_kcal": 4.512321277251994,
+          "by_case": [
+            {
+              "id": "H2_0.70",
+              "error_hartree": 0.015664441408064445
+            },
+            {
+              "id": "H2_1.00",
+              "error_hartree": 0.013916860681825849
+            },
+            {
+              "id": "H2_1.50",
+              "error_hartree": 0.006163640445448149
+            },
+            {
+              "id": "H2_2.00",
+              "error_hartree": 0.006431712351107732
+            },
+            {
+              "id": "H2_3.00",
+              "error_hartree": 0.019530333040080228
+            },
+            {
+              "id": "H_atom",
+              "error_hartree": 1.583393841692038e-05
+            },
+            {
+              "id": "HeH_plus_0.70",
+              "error_hartree": -0.010486629125137092
+            },
+            {
+              "id": "HeH_plus_1.20",
+              "error_hartree": -0.02148017568495586
+            },
+            {
+              "id": "HeH_plus_2.20",
+              "error_hartree": -0.002682128011296747
+            },
+            {
+              "id": "He_atom",
+              "error_hartree": -0.005736031971745881
+            }
+          ]
+        },
+        "val": {
+          "frozen_energy_mae_kcal": 6.249417028393924,
+          "frozen_curve_difference_mae_kcal": 3.1656147761656257,
+          "by_case": [
+            {
+              "id": "H2_plus_0.80",
+              "error_hartree": 0.00020050430586837642
+            },
+            {
+              "id": "H2_plus_1.60",
+              "error_hartree": 0.0022009476688205076
+            },
+            {
+              "id": "H2_plus_3.00",
+              "error_hartree": 0.00516930814321459
+            },
+            {
+              "id": "H3_linear_plus_0.80",
+              "error_hartree": 0.021797795162757483
+            },
+            {
+              "id": "H3_linear_plus_1.20",
+              "error_hartree": 0.019829518178246186
+            },
+            {
+              "id": "H3_linear_plus_1.80",
+              "error_hartree": 0.010556406312283606
+            }
+          ]
+        },
+        "test": {
+          "frozen_energy_mae_kcal": 7.50332612977338,
+          "frozen_curve_difference_mae_kcal": 10.395925767603492,
+          "by_case": [
+            {
+              "id": "H3_neutral_1.00",
+              "error_hartree": 0.002035183186803735
+            },
+            {
+              "id": "H3_neutral_1.80",
+              "error_hartree": -0.03212122306308118
+            },
+            {
+              "id": "H3_triangle_plus_0.80",
+              "error_hartree": 0.016252847538782866
+            },
+            {
+              "id": "H3_triangle_plus_1.20",
+              "error_hartree": 0.00890510509746556
+            },
+            {
+              "id": "H3_triangle_plus_1.80",
+              "error_hartree": -0.006406655211690149
+            },
+            {
+              "id": "H4_square_2plus_1.00",
+              "error_hartree": 0.016202878727558323
+            },
+            {
+              "id": "H4_square_2plus_1.50",
+              "error_hartree": 0.005915455066218933
+            },
+            {
+              "id": "H4_square_2plus_2.30",
+              "error_hartree": 0.007819142577958349
+            }
+          ]
+        }
+      },
+      "elapsed_seconds": 8.441647296
+    },
+    {
+      "epoch": 100,
+      "loss": 0.23781793103528293,
+      "metrics": {
+        "train": {
+          "frozen_energy_mae_kcal": 5.559788989925373,
+          "frozen_curve_difference_mae_kcal": 3.383646172200142,
+          "by_case": [
+            {
+              "id": "H2_0.70",
+              "error_hartree": 0.011083920708166772
+            },
+            {
+              "id": "H2_1.00",
+              "error_hartree": 0.011828128037540742
+            },
+            {
+              "id": "H2_1.50",
+              "error_hartree": 0.00728659875715576
+            },
+            {
+              "id": "H2_2.00",
+              "error_hartree": 0.005179257340429899
+            },
+            {
+              "id": "H2_3.00",
+              "error_hartree": 0.015203289557943256
+            },
+            {
+              "id": "H_atom",
+              "error_hartree": 1.583393841692038e-05
+            },
+            {
+              "id": "HeH_plus_0.70",
+              "error_hartree": -0.009295319533714874
+            },
+            {
+              "id": "HeH_plus_1.20",
+              "error_hartree": -0.020409304907145653
+            },
+            {
+              "id": "HeH_plus_2.20",
+              "error_hartree": -0.002621765974880841
+            },
+            {
+              "id": "He_atom",
+              "error_hartree": -0.0056774585267445055
+            }
+          ]
+        },
+        "val": {
+          "frozen_energy_mae_kcal": 3.4621434104885007,
+          "frozen_curve_difference_mae_kcal": 4.059834653669726,
+          "by_case": [
+            {
+              "id": "H2_plus_0.80",
+              "error_hartree": 0.00020050430586837642
+            },
+            {
+              "id": "H2_plus_1.60",
+              "error_hartree": 0.0022009476688205076
+            },
+            {
+              "id": "H2_plus_3.00",
+              "error_hartree": 0.00516930814321459
+            },
+            {
+              "id": "H3_linear_plus_0.80",
+              "error_hartree": 0.0134773669877426
+            },
+            {
+              "id": "H3_linear_plus_1.20",
+              "error_hartree": 0.010050240502906593
+            },
+            {
+              "id": "H3_linear_plus_1.80",
+              "error_hartree": -0.002005292692408789
+            }
+          ]
+        },
+        "test": {
+          "frozen_energy_mae_kcal": 5.041883942544311,
+          "frozen_curve_difference_mae_kcal": 9.66993026280616,
+          "by_case": [
+            {
+              "id": "H3_neutral_1.00",
+              "error_hartree": 0.0031135420560080007
+            },
+            {
+              "id": "H3_neutral_1.80",
+              "error_hartree": -0.021411454441351507
+            },
+            {
+              "id": "H3_triangle_plus_0.80",
+              "error_hartree": 0.010734903749210378
+            },
+            {
+              "id": "H3_triangle_plus_1.20",
+              "error_hartree": 2.8459269185932e-05
+            },
+            {
+              "id": "H3_triangle_plus_1.80",
+              "error_hartree": -0.01736371979657414
+            },
+            {
+              "id": "H4_square_2plus_1.00",
+              "error_hartree": 0.004219415505488433
+            },
+            {
+              "id": "H4_square_2plus_1.50",
+              "error_hartree": -0.006343855749873395
+            },
+            {
+              "id": "H4_square_2plus_2.30",
+              "error_hartree": 0.0010626774328137412
+            }
+          ]
+        }
+      },
+      "elapsed_seconds": 15.461938988999997
+    },
+    {
+      "epoch": 150,
+      "loss": 0.14971293793660817,
+      "metrics": {
+        "train": {
+          "frozen_energy_mae_kcal": 2.797201445601422,
+          "frozen_curve_difference_mae_kcal": 3.3117035991809463,
+          "by_case": [
+            {
+              "id": "H2_0.70",
+              "error_hartree": 0.0017678335618798169
+            },
+            {
+              "id": "H2_1.00",
+              "error_hartree": 0.004172931307734551
+            },
+            {
+              "id": "H2_1.50",
+              "error_hartree": 0.004012198522112875
+            },
+            {
+              "id": "H2_2.00",
+              "error_hartree": -0.0021270942291646833
+            },
+            {
+              "id": "H2_3.00",
+              "error_hartree": 0.007143775814200226
+            },
+            {
+              "id": "H_atom",
+              "error_hartree": 1.583393841692038e-05
+            },
+            {
+              "id": "HeH_plus_0.70",
+              "error_hartree": -0.006118808794306485
+            },
+            {
+              "id": "HeH_plus_1.20",
+              "error_hartree": -0.016276587296221834
+            },
+            {
+              "id": "HeH_plus_2.20",
+              "error_hartree": 0.0014682936576737582
+            },
+            {
+              "id": "He_atom",
+              "error_hartree": -0.0014728853335768122
+            }
+          ]
+        },
+        "val": {
+          "frozen_energy_mae_kcal": 2.9458658407088976,
+          "frozen_curve_difference_mae_kcal": 4.427763529250763,
+          "by_case": [
+            {
+              "id": "H2_plus_0.80",
+              "error_hartree": 0.00020050430586837642
+            },
+            {
+              "id": "H2_plus_1.60",
+              "error_hartree": 0.0022009476688205076
+            },
+            {
+              "id": "H2_plus_3.00",
+              "error_hartree": 0.00516930814321459
+            },
+            {
+              "id": "H3_linear_plus_0.80",
+              "error_hartree": 0.0006586579874972021
+            },
+            {
+              "id": "H3_linear_plus_1.20",
+              "error_hartree": -0.003963858031736489
+            },
+            {
+              "id": "H3_linear_plus_1.80",
+              "error_hartree": -0.015973940098793937
+            }
+          ]
+        },
+        "test": {
+          "frozen_energy_mae_kcal": 8.047150527337942,
+          "frozen_curve_difference_mae_kcal": 9.47505334627771,
+          "by_case": [
+            {
+              "id": "H3_neutral_1.00",
+              "error_hartree": -0.0035688717414550375
+            },
+            {
+              "id": "H3_neutral_1.80",
+              "error_hartree": -0.012100122997813711
+            },
+            {
+              "id": "H3_triangle_plus_0.80",
+              "error_hartree": 0.0015214083549408564
+            },
+            {
+              "id": "H3_triangle_plus_1.20",
+              "error_hartree": -0.015641884426089492
+            },
+            {
+              "id": "H3_triangle_plus_1.80",
+              "error_hartree": -0.03263503463829753
+            },
+            {
+              "id": "H4_square_2plus_1.00",
+              "error_hartree": -0.013550224452008042
+            },
+            {
+              "id": "H4_square_2plus_1.50",
+              "error_hartree": -0.01961018237131129
+            },
+            {
+              "id": "H4_square_2plus_2.30",
+              "error_hartree": -0.003963876222603302
+            }
+          ]
+        }
+      },
+      "elapsed_seconds": 22.259091476000002
+    },
+    {
+      "epoch": 200,
+      "loss": 0.1444381059923769,
+      "metrics": {
+        "train": {
+          "frozen_energy_mae_kcal": 2.5502161869322455,
+          "frozen_curve_difference_mae_kcal": 3.5172094746582467,
+          "by_case": [
+            {
+              "id": "H2_0.70",
+              "error_hartree": 0.00023575656664842626
+            },
+            {
+              "id": "H2_1.00",
+              "error_hartree": 0.0029555592981251877
+            },
+            {
+              "id": "H2_1.50",
+              "error_hartree": 0.003952200482126189
+            },
+            {
+              "id": "H2_2.00",
+              "error_hartree": -0.003863314946232377
+            },
+            {
+              "id": "H2_3.00",
+              "error_hartree": 0.005777498391610569
+            },
+            {
+              "id": "H_atom",
+              "error_hartree": 1.583393841692038e-05
+            },
+            {
+              "id": "HeH_plus_0.70",
+              "error_hartree": -0.005700529942059163
+            },
+            {
+              "id": "HeH_plus_1.20",
+              "error_hartree": -0.015217434927095486
+            },
+            {
+              "id": "HeH_plus_2.20",
+              "error_hartree": 0.002335685543278121
+            },
+            {
+              "id": "He_atom",
+              "error_hartree": -0.0005864677863876011
+            }
+          ]
+        },
+        "val": {
+          "frozen_energy_mae_kcal": 3.30880136256238,
+          "frozen_curve_difference_mae_kcal": 4.008177282820301,
+          "by_case": [
+            {
+              "id": "H2_plus_0.80",
+              "error_hartree": 0.00020050430586837642
+            },
+            {
+              "id": "H2_plus_1.60",
+              "error_hartree": 0.0022009476688205076
+            },
+            {
+              "id": "H2_plus_3.00",
+              "error_hartree": 0.00516930814321459
+            },
+            {
+              "id": "H3_linear_plus_0.80",
+              "error_hartree": -0.0018287341372009713
+            },
+            {
+              "id": "H3_linear_plus_1.20",
+              "error_hartree": -0.0066073533215680325
+            },
+            {
+              "id": "H3_linear_plus_1.80",
+              "error_hartree": -0.015630616075986703
+            }
+          ]
+        },
+        "test": {
+          "frozen_energy_mae_kcal": 9.029247130032363,
+          "frozen_curve_difference_mae_kcal": 9.59623233470309,
+          "by_case": [
+            {
+              "id": "H3_neutral_1.00",
+              "error_hartree": -0.004821142766648245
+            },
+            {
+              "id": "H3_neutral_1.80",
+              "error_hartree": -0.00997436040023536
+            },
+            {
+              "id": "H3_triangle_plus_0.80",
+              "error_hartree": -0.0010083339221593768
+            },
+            {
+              "id": "H3_triangle_plus_1.20",
+              "error_hartree": -0.020067557942955228
+            },
+            {
+              "id": "H3_triangle_plus_1.80",
+              "error_hartree": -0.03572705020604583
+            },
+            {
+              "id": "H4_square_2plus_1.00",
+              "error_hartree": -0.017635531714191632
+            },
+            {
+              "id": "H4_square_2plus_1.50",
+              "error_hartree": -0.0217049415045919
+            },
+            {
+              "id": "H4_square_2plus_2.30",
+              "error_hartree": -0.004173251212596263
+            }
+          ]
+        }
+      },
+      "elapsed_seconds": 28.750826017
+    },
+    {
+      "epoch": 250,
+      "loss": 0.011938541675063783,
+      "metrics": {
+        "train": {
+          "frozen_energy_mae_kcal": 0.8763516306361695,
+          "frozen_curve_difference_mae_kcal": 1.1773912913801,
+          "by_case": [
+            {
+              "id": "H2_0.70",
+              "error_hartree": -0.0005743192442033695
+            },
+            {
+              "id": "H2_1.00",
+              "error_hartree": 0.0017437345514137448
+            },
+            {
+              "id": "H2_1.50",
+              "error_hartree": 0.0028690394308275025
+            },
+            {
+              "id": "H2_2.00",
+              "error_hartree": -0.0033831228135323688
+            },
+            {
+              "id": "H2_3.00",
+              "error_hartree": 0.0012718443695302062
+            },
+            {
+              "id": "H_atom",
+              "error_hartree": 1.583393841692038e-05
+            },
+            {
+              "id": "HeH_plus_0.70",
+              "error_hartree": 0.000849863925926897
+            },
+            {
+              "id": "HeH_plus_1.20",
+              "error_hartree": 0.0003127446671173928
+            },
+            {
+              "id": "HeH_plus_2.20",
+              "error_hartree": 0.001154119742191373
+            },
+            {
+              "id": "He_atom",
+              "error_hartree": -0.0017909295028486483
+            }
+          ]
+        },
+        "val": {
+          "frozen_energy_mae_kcal": 3.371709878969862,
+          "frozen_curve_difference_mae_kcal": 4.624222826371672,
+          "by_case": [
+            {
+              "id": "H2_plus_0.80",
+              "error_hartree": 0.00020050430586837642
+            },
+            {
+              "id": "H2_plus_1.60",
+              "error_hartree": 0.0022009476688205076
+            },
+            {
+              "id": "H2_plus_3.00",
+              "error_hartree": 0.00516930814321459
+            },
+            {
+              "id": "H3_linear_plus_0.80",
+              "error_hartree": -0.0007202615896557685
+            },
+            {
+              "id": "H3_linear_plus_1.20",
+              "error_hartree": -0.004286751004413336
+            },
+            {
+              "id": "H3_linear_plus_1.80",
+              "error_hartree": -0.01966119755386786
+            }
+          ]
+        },
+        "test": {
+          "frozen_energy_mae_kcal": 9.243604988437756,
+          "frozen_curve_difference_mae_kcal": 9.707504911964723,
+          "by_case": [
+            {
+              "id": "H3_neutral_1.00",
+              "error_hartree": -0.004910145480490513
+            },
+            {
+              "id": "H3_neutral_1.80",
+              "error_hartree": -0.011600526105141284
+            },
+            {
+              "id": "H3_triangle_plus_0.80",
+              "error_hartree": 0.001023203809741302
+            },
+            {
+              "id": "H3_triangle_plus_1.20",
+              "error_hartree": -0.01703244574511431
+            },
+            {
+              "id": "H3_triangle_plus_1.80",
+              "error_hartree": -0.03620223685668811
+            },
+            {
+              "id": "H4_square_2plus_1.00",
+              "error_hartree": -0.016148677809811218
+            },
+            {
+              "id": "H4_square_2plus_1.50",
+              "error_hartree": -0.02315286993659793
+            },
+            {
+              "id": "H4_square_2plus_2.30",
+              "error_hartree": -0.007774871856708998
+            }
+          ]
+        }
+      },
+      "elapsed_seconds": 34.22610641
+    },
+    {
+      "epoch": 300,
+      "loss": 0.007636108239855934,
+      "metrics": {
+        "train": {
+          "frozen_energy_mae_kcal": 0.7418371564547831,
+          "frozen_curve_difference_mae_kcal": 0.9439583618059181,
+          "by_case": [
+            {
+              "id": "H2_0.70",
+              "error_hartree": -0.0007419102521932786
+            },
+            {
+              "id": "H2_1.00",
+              "error_hartree": 0.0012534239185200136
+            },
+            {
+              "id": "H2_1.50",
+              "error_hartree": 0.002235717821525318
+            },
+            {
+              "id": "H2_2.00",
+              "error_hartree": -0.0026480388725111936
+            },
+            {
+              "id": "H2_3.00",
+              "error_hartree": 0.0007038194988523427
+            },
+            {
+              "id": "H_atom",
+              "error_hartree": 1.583393841692038e-05
+            },
+            {
+              "id": "HeH_plus_0.70",
+              "error_hartree": 0.0007662586881442834
+            },
+            {
+              "id": "HeH_plus_1.20",
+              "error_hartree": 0.0005186495373665778
+            },
+            {
+              "id": "HeH_plus_2.20",
+              "error_hartree": 0.0012195893371589328
+            },
+            {
+              "id": "He_atom",
+              "error_hartree": -0.0017186857267148525
+            }
+          ]
+        },
+        "val": {
+          "frozen_energy_mae_kcal": 3.120687121468235,
+          "frozen_curve_difference_mae_kcal": 4.559388433926997,
+          "by_case": [
+            {
+              "id": "H2_plus_0.80",
+              "error_hartree": 0.00020050430586837642
+            },
+            {
+              "id": "H2_plus_1.60",
+              "error_hartree": 0.0022009476688205076
+            },
+            {
+              "id": "H2_plus_3.00",
+              "error_hartree": 0.00516930814321459
+            },
+            {
+              "id": "H3_linear_plus_0.80",
+              "error_hartree": -5.7961376463522285e-05
+            },
+            {
+              "id": "H3_linear_plus_1.20",
+              "error_hartree": -0.0034700777160527885
+            },
+            {
+              "id": "H3_linear_plus_1.80",
+              "error_hartree": -0.01873998969176882
+            }
+          ]
+        },
+        "test": {
+          "frozen_energy_mae_kcal": 9.193488412645438,
+          "frozen_curve_difference_mae_kcal": 9.527550955034968,
+          "by_case": [
+            {
+              "id": "H3_neutral_1.00",
+              "error_hartree": -0.00529005847103603
+            },
+            {
+              "id": "H3_neutral_1.80",
+              "error_hartree": -0.013297050780363362
+            },
+            {
+              "id": "H3_triangle_plus_0.80",
+              "error_hartree": 0.0015139722466475103
+            },
+            {
+              "id": "H3_triangle_plus_1.20",
+              "error_hartree": -0.015488180771028537
+            },
+            {
+              "id": "H3_triangle_plus_1.80",
+              "error_hartree": -0.03526759495530718
+            },
+            {
+              "id": "H4_square_2plus_1.00",
+              "error_hartree": -0.014748068170993722
+            },
+            {
+              "id": "H4_square_2plus_1.50",
+              "error_hartree": -0.022863003700677842
+            },
+            {
+              "id": "H4_square_2plus_2.30",
+              "error_hartree": -0.00873812172631716
+            }
+          ]
+        }
+      },
+      "elapsed_seconds": 40.733417543
+    },
+    {
+      "epoch": 350,
+      "loss": 0.006464491674460071,
+      "metrics": {
+        "train": {
+          "frozen_energy_mae_kcal": 0.7023030292698764,
+          "frozen_curve_difference_mae_kcal": 0.8621417790280238,
+          "by_case": [
+            {
+              "id": "H2_0.70",
+              "error_hartree": -0.0007281380527119907
+            },
+            {
+              "id": "H2_1.00",
+              "error_hartree": 0.0011358814165545184
+            },
+            {
+              "id": "H2_1.50",
+              "error_hartree": 0.0019864906579292185
+            },
+            {
+              "id": "H2_2.00",
+              "error_hartree": -0.002451852049796921
+            },
+            {
+              "id": "H2_3.00",
+              "error_hartree": 0.0005735405397884197
+            },
+            {
+              "id": "H_atom",
+              "error_hartree": 1.583393841692038e-05
+            },
+            {
+              "id": "HeH_plus_0.70",
+              "error_hartree": 0.0007945863614393645
+            },
+            {
+              "id": "HeH_plus_1.20",
+              "error_hartree": 0.0005685960961310244
+            },
+            {
+              "id": "HeH_plus_2.20",
+              "error_hartree": 0.0012080175985209607
+            },
+            {
+              "id": "He_atom",
+              "error_hartree": -0.0017289744608737223
+            }
+          ]
+        },
+        "val": {
+          "frozen_energy_mae_kcal": 3.058687061973586,
+          "frozen_curve_difference_mae_kcal": 4.540888966186836,
+          "by_case": [
+            {
+              "id": "H2_plus_0.80",
+              "error_hartree": 0.00020050430586837642
+            },
+            {
+              "id": "H2_plus_1.60",
+              "error_hartree": 0.0022009476688205076
+            },
+            {
+              "id": "H2_plus_3.00",
+              "error_hartree": 0.00516930814321459
+            },
+            {
+              "id": "H3_linear_plus_0.80",
+              "error_hartree": 0.00030101306077878753
+            },
+            {
+              "id": "H3_linear_plus_1.20",
+              "error_hartree": -0.003086746113653227
+            },
+            {
+              "id": "H3_linear_plus_1.80",
+              "error_hartree": -0.01828744930612669
+            }
+          ]
+        },
+        "test": {
+          "frozen_energy_mae_kcal": 9.13941712646431,
+          "frozen_curve_difference_mae_kcal": 9.462908246108858,
+          "by_case": [
+            {
+              "id": "H3_neutral_1.00",
+              "error_hartree": -0.005378916477514206
+            },
+            {
+              "id": "H3_neutral_1.80",
+              "error_hartree": -0.014002496393057617
+            },
+            {
+              "id": "H3_triangle_plus_0.80",
+              "error_hartree": 0.0017619478620132245
+            },
+            {
+              "id": "H3_triangle_plus_1.20",
+              "error_hartree": -0.01484717537501079
+            },
+            {
+              "id": "H3_triangle_plus_1.80",
+              "error_hartree": -0.03480006744438113
+            },
+            {
+              "id": "H4_square_2plus_1.00",
+              "error_hartree": -0.014077981653601412
+            },
+            {
+              "id": "H4_square_2plus_1.50",
+              "error_hartree": -0.022626961728247075
+            },
+            {
+              "id": "H4_square_2plus_2.30",
+              "error_hartree": -0.009021159253330024
+            }
+          ]
+        }
+      },
+      "elapsed_seconds": 46.548906945999995
+    },
+    {
+      "epoch": 400,
+      "loss": 0.006034136508115858,
+      "metrics": {
+        "train": {
+          "frozen_energy_mae_kcal": 0.68493759065038,
+          "frozen_curve_difference_mae_kcal": 0.8312471118229113,
+          "by_case": [
+            {
+              "id": "H2_0.70",
+              "error_hartree": -0.0007141164183797066
+            },
+            {
+              "id": "H2_1.00",
+              "error_hartree": 0.0010964498163297254
+            },
+            {
+              "id": "H2_1.50",
+              "error_hartree": 0.001891752047937345
+            },
+            {
+              "id": "H2_2.00",
+              "error_hartree": -0.0023704702854698834
+            },
+            {
+              "id": "H2_3.00",
+              "error_hartree": 0.0005315094955803401
+            },
+            {
+              "id": "H_atom",
+              "error_hartree": 1.583393841692038e-05
+            },
+            {
+              "id": "HeH_plus_0.70",
+              "error_hartree": 0.000791235036477822
+            },
+            {
+              "id": "HeH_plus_1.20",
+              "error_hartree": 0.0005671303968046715
+            },
+            {
+              "id": "HeH_plus_2.20",
+              "error_hartree": 0.0011967754701402988
+            },
+            {
+              "id": "He_atom",
+              "error_hartree": -0.0017399023871056407
+            }
+          ]
+        },
+        "val": {
+          "frozen_energy_mae_kcal": 3.037555605201729,
+          "frozen_curve_difference_mae_kcal": 4.53346917615686,
+          "by_case": [
+            {
+              "id": "H2_plus_0.80",
+              "error_hartree": 0.00020050430586837642
+            },
+            {
+              "id": "H2_plus_1.60",
+              "error_hartree": 0.0022009476688205076
+            },
+            {
+              "id": "H2_plus_3.00",
+              "error_hartree": 0.00516930814321459
+            },
+            {
+              "id": "H3_linear_plus_0.80",
+              "error_hartree": 0.0004557670279057291
+            },
+            {
+              "id": "H3_linear_plus_1.20",
+              "error_hartree": -0.0029246731988807895
+            },
+            {
+              "id": "H3_linear_plus_1.80",
+              "error_hartree": -0.018092717534405445
+            }
+          ]
+        },
+        "test": {
+          "frozen_energy_mae_kcal": 9.113894006974165,
+          "frozen_curve_difference_mae_kcal": 9.435713234777726,
+          "by_case": [
+            {
+              "id": "H3_neutral_1.00",
+              "error_hartree": -0.005409170594322443
+            },
+            {
+              "id": "H3_neutral_1.80",
+              "error_hartree": -0.014292203568190276
+            },
+            {
+              "id": "H3_triangle_plus_0.80",
+              "error_hartree": 0.0018634466670057748
+            },
+            {
+              "id": "H3_triangle_plus_1.20",
+              "error_hartree": -0.014585883614363526
+            },
+            {
+              "id": "H3_triangle_plus_1.80",
+              "error_hartree": -0.03459814643922443
+            },
+            {
+              "id": "H4_square_2plus_1.00",
+              "error_hartree": -0.013796304545949933
+            },
+            {
+              "id": "H4_square_2plus_1.50",
+              "error_hartree": -0.022518017922692923
+            },
+            {
+              "id": "H4_square_2plus_2.30",
+              "error_hartree": -0.00912814339607293
+            }
+          ]
+        }
+      },
+      "elapsed_seconds": 53.894409040999996
+    }
+  ],
+  "final": {
+    "train": {
+      "frozen_energy_mae_kcal": 0.68493759065038,
+      "frozen_curve_difference_mae_kcal": 0.8312471118229113,
+      "by_case": [
+        {
+          "id": "H2_0.70",
+          "error_hartree": -0.0007141164183797066
+        },
+        {
+          "id": "H2_1.00",
+          "error_hartree": 0.0010964498163297254
+        },
+        {
+          "id": "H2_1.50",
+          "error_hartree": 0.001891752047937345
+        },
+        {
+          "id": "H2_2.00",
+          "error_hartree": -0.0023704702854698834
+        },
+        {
+          "id": "H2_3.00",
+          "error_hartree": 0.0005315094955803401
+        },
+        {
+          "id": "H_atom",
+          "error_hartree": 1.583393841692038e-05
+        },
+        {
+          "id": "HeH_plus_0.70",
+          "error_hartree": 0.000791235036477822
+        },
+        {
+          "id": "HeH_plus_1.20",
+          "error_hartree": 0.0005671303968046715
+        },
+        {
+          "id": "HeH_plus_2.20",
+          "error_hartree": 0.0011967754701402988
+        },
+        {
+          "id": "He_atom",
+          "error_hartree": -0.0017399023871056407
+        }
+      ]
+    },
+    "val": {
+      "frozen_energy_mae_kcal": 3.037555605201729,
+      "frozen_curve_difference_mae_kcal": 4.53346917615686,
+      "by_case": [
+        {
+          "id": "H2_plus_0.80",
+          "error_hartree": 0.00020050430586837642
+        },
+        {
+          "id": "H2_plus_1.60",
+          "error_hartree": 0.0022009476688205076
+        },
+        {
+          "id": "H2_plus_3.00",
+          "error_hartree": 0.00516930814321459
+        },
+        {
+          "id": "H3_linear_plus_0.80",
+          "error_hartree": 0.0004557670279057291
+        },
+        {
+          "id": "H3_linear_plus_1.20",
+          "error_hartree": -0.0029246731988807895
+        },
+        {
+          "id": "H3_linear_plus_1.80",
+          "error_hartree": -0.018092717534405445
+        }
+      ]
+    },
+    "test": {
+      "frozen_energy_mae_kcal": 9.113894006974165,
+      "frozen_curve_difference_mae_kcal": 9.435713234777726,
+      "by_case": [
+        {
+          "id": "H3_neutral_1.00",
+          "error_hartree": -0.005409170594322443
+        },
+        {
+          "id": "H3_neutral_1.80",
+          "error_hartree": -0.014292203568190276
+        },
+        {
+          "id": "H3_triangle_plus_0.80",
+          "error_hartree": 0.0018634466670057748
+        },
+        {
+          "id": "H3_triangle_plus_1.20",
+          "error_hartree": -0.014585883614363526
+        },
+        {
+          "id": "H3_triangle_plus_1.80",
+          "error_hartree": -0.03459814643922443
+        },
+        {
+          "id": "H4_square_2plus_1.00",
+          "error_hartree": -0.013796304545949933
+        },
+        {
+          "id": "H4_square_2plus_1.50",
+          "error_hartree": -0.022518017922692923
+        },
+        {
+          "id": "H4_square_2plus_2.30",
+          "error_hartree": -0.00912814339607293
+        }
+      ]
+    }
+  },
+  "runtime_seconds": 54.035860322,
+  "limitation": "Explicit AO exchange in this prototype; large-system speed target not established"
+}

@@ -1,0 +1,19 @@
+{
+  "purpose": "One bounded arbitrary-input-density functional diagnostic excluding the molecular potential from its interface",
+  "status": "closed_failed",
+  "decision": "The strict singlet version failed a later inner state residual while the density residual remained large; no scalar or potential accepted. Do not rerun this protocol with rank, seed, iteration or tolerance changes.",
+  "id": "BeH2_631g_1.65_new",
+  "input_density": "Saved minus-potential-path noninteracting ensemble density; an oracle-density diagnostic, not a new blind chemistry claim",
+  "universal_input_keys": ["kinetic", "eri", "operators", "bits", "electrons"],
+  "maximum_dual_updates": 40,
+  "density_residual_tolerance": 1e-7,
+  "state_residual_tolerance_hartree": 1e-8,
+  "maximum_ritz_dimension": 256,
+  "numerical_backend": "Existing preallocated Ritz state/image storage; same mathematical search and tolerances after the separately recorded incomplete-solve interruption",
+  "global_spin": "Project every trial vector and operator image into S=0 using the exact finite-sector polynomial in S squared; initialization alone does not enforce spin during inverse-potential searches",
+  "kinetic_entropy_allowance_hartree": 1e-5,
+  "initialization": "Canonical natural-orbital singlet seed; noninteracting density dual minus input-density Hartree/exchange potential; no h, nuclear charges or labels",
+  "dual_coordinates": "Fixed positive Gaussian occupation covariance from the input density; no learned parameters or hyperparameter sweeps",
+  "assessment": "Only after the search stops, compare F with the saved physical-potential-path universal value; reject unconverged scalar/potential outputs",
+  "limits": ["Six-electron even-spin-unpolarized finite-basis research backend", "Implicit universal search rather than an amortized predictor", "Oracle input density, not self-consistent prediction", "Singlet sector and shared physical Hamiltonian primitives", "No broad chemistry score or speed work"]
+}

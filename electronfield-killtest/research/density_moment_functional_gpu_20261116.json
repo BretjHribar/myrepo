@@ -1,0 +1,225 @@
+{
+  "created_utc": "2026-11-17T00:51:16.466900+00:00",
+  "device": "cuda",
+  "scope": "First universal kinetic-plus-Coulomb functional with fixed spatial density moments, N=4 active-six case. Not a full-grid/CBS XC result.",
+  "objective_excludes_external_potential": true,
+  "moment_count": 8,
+  "frame": {
+    "local_electronic_lengths": [
+      1.5034100074839827,
+      1.5684011784588765,
+      1.5684011784588765,
+      1.5034100074839845
+    ],
+    "local_input_charges": [
+      1.3490996714456083,
+      0.651061904495174,
+      0.6510619044951738,
+      1.3490996714456138
+    ],
+    "singular_values": [
+      0.8644227333156179,
+      0.6152617215967181,
+      0.6102168540848982,
+      0.22670341220658105,
+      0.22550798900063007,
+      0.035605391535525194,
+      0.03332927943951502,
+      0.00029527661381422923
+    ],
+    "moment_transform": [
+      [
+        -3.967213293350968e-13,
+        -3.643144133390258e-13,
+        -0.6274273584297814,
+        -0.5248579956316834,
+        0.6274273584297804,
+        0.5248579956316801,
+        3.969723147099496e-13,
+        3.6572678857658805e-13
+      ],
+      [
+        -0.6203639883070743,
+        -0.5189314776113856,
+        0.6637939371637765,
+        0.4754747624349533,
+        0.6637939371637784,
+        0.4754747624349578,
+        -0.6203639883073916,
+        -0.5189314776116682
+      ],
+      [
+        0.8648374643003377,
+        0.7712496939468584,
+        -6.102518071876886e-13,
+        -6.983832587457723e-13,
+        3.6177530078244406e-13,
+        5.200992846653798e-13,
+        -0.8648374643001072,
+        -0.7712496939466672
+      ],
+      [
+        -0.4198026142515461,
+        0.08262997633775045,
+        -2.009039758196878,
+        2.347206141779225,
+        -2.00903975818046,
+        2.3472061417596084,
+        -0.4198026142515458,
+        0.08262997633775035
+      ],
+      [
+        2.0603030588493803e-12,
+        -9.16853081141555e-14,
+        -2.0118984927995625,
+        2.4050698803720487,
+        2.0118984928161194,
+        -2.4050698803914035,
+        1.4063783182568844e-12,
+        -6.227409512163528e-13
+      ],
+      [
+        -13.145346776739924,
+        14.70221799524541,
+        0.7830943954245702,
+        -2.198369798255045,
+        0.7830943954246607,
+        -2.1983697982552015,
+        -13.145346776698812,
+        14.702217995199284
+      ],
+      [
+        -14.120604161500188,
+        15.83407759285467,
+        -1.905497568739659e-12,
+        3.260602889028264e-12,
+        -1.4059388220971404e-12,
+        3.3349504187254323e-12,
+        14.120604161543167,
+        -15.83407759290424
+      ],
+      [
+        1203.0580853577776,
+        1191.0281657388061,
+        1197.296151115498,
+        1198.0404362671713,
+        1197.2961511155117,
+        1198.0404362671636,
+        1203.0580853578808,
+        1191.0281657386836
+      ]
+    ],
+    "raw_moment_count": 8,
+    "independent_moment_count": 8
+  },
+  "oracle_functional_hartree": 3.630463047307779,
+  "oracle_moment_residual": 2.3340285043738453e-15,
+  "state_history": [
+    {
+      "outer": 1,
+      "universal_energy_hartree": 3.1715172313080897,
+      "moment_residual": 0.5132694285329678,
+      "oracle_difference_kcal": -287.99284759246564,
+      "potential_difference_norm": 0.925460732817253,
+      "penalty": 1.0,
+      "seconds": 18.082993829
+    },
+    {
+      "outer": 2,
+      "universal_energy_hartree": 3.2928028735100425,
+      "moment_residual": 0.31816907491392854,
+      "oracle_difference_kcal": -211.88495805056607,
+      "potential_difference_norm": 0.6557603371502928,
+      "penalty": 1.0,
+      "seconds": 31.293148814000002
+    },
+    {
+      "outer": 3,
+      "universal_energy_hartree": 3.3820447235234297,
+      "moment_residual": 0.22149026565568758,
+      "oracle_difference_kcal": -155.88485168987862,
+      "potential_difference_norm": 0.4858544647782959,
+      "penalty": 1.0,
+      "seconds": 43.637490752999994
+    },
+    {
+      "outer": 4,
+      "universal_energy_hartree": 3.3365932732731403,
+      "moment_residual": 0.2630363466541285,
+      "oracle_difference_kcal": -184.40606732897487,
+      "potential_difference_norm": 0.2442056807594138,
+      "penalty": 1.0,
+      "seconds": 55.857767193
+    },
+    {
+      "outer": 5,
+      "universal_energy_hartree": 3.4763648367407014,
+      "moment_residual": 0.12319529689420392,
+      "oracle_difference_kcal": -96.69808705728798,
+      "potential_difference_norm": 0.17557629944719974,
+      "penalty": 2.0,
+      "seconds": 68.38554991299999
+    },
+    {
+      "outer": 6,
+      "universal_energy_hartree": 3.662379162494806,
+      "moment_residual": 0.033082278531996745,
+      "oracle_difference_kcal": 20.027664653134913,
+      "potential_difference_norm": 0.11428418023854647,
+      "penalty": 2.0,
+      "seconds": 81.050501887
+    },
+    {
+      "outer": 7,
+      "universal_energy_hartree": 3.647439878176228,
+      "moment_residual": 0.020841081703270252,
+      "oracle_difference_kcal": 10.653122208447554,
+      "potential_difference_norm": 0.07485251315190439,
+      "penalty": 2.0,
+      "seconds": 93.34916029899999
+    },
+    {
+      "outer": 8,
+      "universal_energy_hartree": 3.637279147324608,
+      "moment_residual": 0.013214712985473246,
+      "oracle_difference_kcal": 4.27716733629188,
+      "potential_difference_norm": 0.048981831844759606,
+      "penalty": 2.0,
+      "seconds": 105.157694073
+    },
+    {
+      "outer": 9,
+      "universal_energy_hartree": 3.6320819413136602,
+      "moment_residual": 0.00946198071773295,
+      "oracle_difference_kcal": 1.0158713260924177,
+      "potential_difference_norm": 0.030188726816542603,
+      "penalty": 2.0,
+      "seconds": 117.285255037
+    },
+    {
+      "outer": 10,
+      "universal_energy_hartree": 3.628981029480992,
+      "moment_residual": 0.006819491384303742,
+      "oracle_difference_kcal": -0.9299802269456825,
+      "potential_difference_norm": 0.012252211674103185,
+      "penalty": 4.0,
+      "seconds": 130.642035673
+    }
+  ],
+  "state_constraint_residual": 0.006819491384303742,
+  "state_functional_difference_kcal": -0.9299802269456825,
+  "oracle_derivative": {
+    "finite_difference": -0.415716610757677,
+    "dual_prediction": -0.4157166106859223,
+    "absolute_difference": 7.175471328224603e-11,
+    "perturbed_max_moment_residual": 8.571281887363407e-11
+  },
+  "limitations": [
+    "Moment constraints are not the full spatial density",
+    "Moment frame is frozen in this local derivative experiment",
+    "Tensor-state constraints and potential require their own convergence evidence",
+    "No broad-chemistry or hidden-suite claim"
+  ],
+  "seconds": 130.682491249,
+  "peak_cuda_bytes": 87819776
+}

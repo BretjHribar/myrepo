@@ -1,0 +1,69 @@
+{
+  "created_utc": "2026-11-17T11:07:41.438858+00:00",
+  "device": "cuda",
+  "protocol": {
+    "purpose": "Replace the failed cold pure-state inverse search with a feasible fixed-N singlet ensemble and physical response spaces",
+    "universal_input_keys": [
+      "kinetic",
+      "eri",
+      "operators",
+      "bits",
+      "electrons"
+    ],
+    "cases": [
+      {
+        "id": "BeH2_631g_1.65_new",
+        "path_index": 0
+      },
+      {
+        "id": "BeH2_631g_2.75_new",
+        "path_index": 1
+      }
+    ],
+    "input": "Saved ensemble input densities from prior potential paths; all are development/oracle-density diagnostics",
+    "maximum_response_space_dimension": 192,
+    "maximum_response_updates": 8,
+    "stationarity_response_directions": 8,
+    "density_response_directions": 8,
+    "maximum_density_response_states": 4,
+    "keep_complete_source_degeneracies": true,
+    "density_residual_tolerance": 1e-08,
+    "inner_dual_tolerance": 5e-10,
+    "stationarity_residual_tolerance_hartree": 1e-06,
+    "interacting_entropy_allowance_hartree": 1e-05,
+    "kinetic_entropy_allowance_hartree": 1e-05,
+    "global_check_seed": 17112030,
+    "global_check_ritz_dimension": 192,
+    "global_check_residual_tolerance": 1e-08,
+    "global_check_energy_tolerance_hartree": 1e-07,
+    "initialization": "Full canonical paired-determinant lift of the input density, T+W responses and density response directions; no molecular h, nuclear potential or labels",
+    "failure_policy": "Retain the last feasible positive fixed-N ensemble and its upper energy estimate; return no XC potential unless all stationarity checks pass",
+    "assessment": "Access the saved universal energy only after each prediction stops; no error-target stopping or setting changes",
+    "limits": [
+      "Finite-basis and development inputs",
+      "Dense reduced ensemble with matrix-free full actions",
+      "Global Fock coefficient storage",
+      "Not a general learned or many-block model",
+      "No nuclear-force derivative, broad WTMAD-2 or timing claim"
+    ]
+  },
+  "results": [],
+  "failures": [
+    {
+      "id": "BeH2_631g_1.65_new",
+      "error": "KeyError: 'bits'",
+      "history": [],
+      "xc_energy_available": false,
+      "xc_potential_available": false
+    },
+    {
+      "id": "BeH2_631g_2.75_new",
+      "error": "KeyError: 'bits'",
+      "history": [],
+      "xc_energy_available": false,
+      "xc_potential_available": false
+    }
+  ],
+  "status": "completed",
+  "peak_cuda_bytes": 103335424
+}

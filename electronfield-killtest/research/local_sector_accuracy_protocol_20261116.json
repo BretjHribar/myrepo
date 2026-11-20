@@ -1,0 +1,18 @@
+{
+  "purpose": "Accuracy rejection panel for coherent local state blocks beyond four electrons; no speed work",
+  "model_status": "Local state primitive only; fixed-global determinant family failed fragment closure",
+  "basis": "sto-3g",
+  "response_seed": {"proposed_modes": 6, "displacement": 0.15, "complete_boundary_degeneracy": true},
+  "orbital_optimization": {"steps": 400, "learning_rate": 0.02, "final_learning_rate": 0.0002},
+  "representation": "Existing validated normalized occupied-subspace coordinates",
+  "cases": [
+    {"id": "BeH2_neutral_1.33", "atom": "Be 0 0 0; H 0 0 -1.33; H 0 0 1.33", "charge": 0, "spin": 0, "electrons": 6, "operator_cache": "general_chemistry_transfer", "reference_report": "research/general_chemistry_transfer_gpu_20261116.json"},
+    {"id": "BeH2_neutral_2.10", "atom": "Be 0 0 0; H 0 0 -2.10; H 0 0 2.10", "charge": 0, "spin": 0, "electrons": 6, "operator_cache": "general_chemistry_transfer", "reference_report": "research/general_chemistry_transfer_gpu_20261116.json"},
+    {"id": "BH3_planar_1.19", "atom": "B 0 0 0; H 1.19 0 0; H -0.595 1.030570 0; H -0.595 -1.030570 0", "charge": 0, "spin": 0, "electrons": 8},
+    {"id": "NH3_pyramidal", "atom": "N 0 0 0; H 0.94 0 -0.38; H -0.47 0.814064 -0.38; H -0.47 -0.814064 -0.38", "charge": 0, "spin": 0, "electrons": 10},
+    {"id": "NH3_planar", "atom": "N 0 0 0; H 1.014 0 0; H -0.507 0.878150 0; H -0.507 -0.878150 0", "charge": 0, "spin": 0, "electrons": 10}
+  ],
+  "objective": "Actual physical Hamiltonian Rayleigh quotient, no energy-label loss",
+  "assessment": "All errors and failures retained. Reuse existing BeH2 labels; generate new same-basis CUDA references after prediction. Require each error and BeH2/NH3 balanced geometry contrasts below 1 kcal/mol. No parameter/seed/rank/iteration sweep.",
+  "limits": ["Early state-block rejection panel", "Minimal basis, not complete-basis chemical accuracy", "NH3 contrast is between supplied geometries, not a validated optimized barrier", "Not a broad XC model or full WTMAD-2 result"]
+}

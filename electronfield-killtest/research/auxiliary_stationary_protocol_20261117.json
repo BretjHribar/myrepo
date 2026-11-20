@@ -1,0 +1,19 @@
+{
+  "purpose": "Finish the original full-space residuals from the corrected physical checkpoints with one bounded checked response-space restart",
+  "cases": ["BeH2_631g_1.65_new", "BeH2_631g_2.75_new"],
+  "original_protocol": "research/auxiliary_forward_protocol_20261117.json",
+  "strict_spin_recovery": true,
+  "finish_unconverged_only": true,
+  "initial_checkpoint_folder": "data/auxiliary_strict",
+  "initial_checkpoint_suffix": ".pt",
+  "checkpoint_folder": "data/auxiliary_stationary",
+  "maximum_additional_updates": 32,
+  "maximum_response_restarts": 1,
+  "trigger": "Both saved states meet reduced self-consistency but retain full-space residuals above the unchanged 1e-5 Hartree target",
+  "restart": "Retain the complete occupied ensemble to numerical precision and its original mean-field input; verify density, trace, spin and full-Hamiltonian energy retention",
+  "unchanged": "Physical functional, epsilon=1, maximum space dimension 192, response counts and every accuracy tolerance",
+  "outer_solver": "Exact elimination of the auxiliary coordinate in the same variational functional",
+  "stopping": "Original full stationarity/self-consistency conditions, or capacity; do not repeat an unchanged state after capacity is exhausted",
+  "reference_use": "Existing labels only after the solve stops; no energy-error stopping or new references",
+  "limits": ["Development convergence completion, not a blind test", "No speed work or rank/seed/tolerance sweep", "Global Fock-vector backend and finite bases", "Broad accuracy remains unachieved"]
+}

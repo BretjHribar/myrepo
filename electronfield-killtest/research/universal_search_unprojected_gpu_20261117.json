@@ -1,0 +1,35 @@
+{
+  "created_utc": "2026-11-17T10:43:58.971728+00:00",
+  "device": "cuda",
+  "status": "failed",
+  "protocol": {
+    "purpose": "One bounded arbitrary-input-density functional diagnostic excluding the molecular potential from its interface",
+    "id": "BeH2_631g_1.65_new",
+    "input_density": "Saved minus-potential-path noninteracting ensemble density; an oracle-density diagnostic, not a new blind chemistry claim",
+    "universal_input_keys": [
+      "kinetic",
+      "eri",
+      "operators",
+      "bits",
+      "electrons"
+    ],
+    "maximum_dual_updates": 40,
+    "density_residual_tolerance": 1e-07,
+    "state_residual_tolerance_hartree": 1e-08,
+    "maximum_ritz_dimension": 256,
+    "numerical_backend": "Existing preallocated Ritz state/image storage; same mathematical search and tolerances after the separately recorded incomplete-solve interruption",
+    "kinetic_entropy_allowance_hartree": 1e-05,
+    "initialization": "Canonical natural-orbital singlet seed; noninteracting density dual minus input-density Hartree/exchange potential; no h, nuclear charges or labels",
+    "dual_coordinates": "Fixed positive Gaussian occupation covariance from the input density; no learned parameters or hyperparameter sweeps",
+    "assessment": "Only after the search stops, compare F with the saved physical-potential-path universal value; reject unconverged scalar/potential outputs",
+    "limits": [
+      "Six-electron even-spin-unpolarized finite-basis research backend",
+      "Implicit universal search rather than an amortized predictor",
+      "Oracle input density, not self-consistent prediction",
+      "Singlet sector and shared physical Hamiltonian primitives",
+      "No broad chemistry score or speed work"
+    ]
+  },
+  "error": "RuntimeError: Interacting potential solve failed its state residual: 0.0011707822468272015",
+  "history": []
+}

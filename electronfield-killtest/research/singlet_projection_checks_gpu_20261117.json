@@ -1,0 +1,32 @@
+{
+  "created_utc": "2026-11-17T10:52:10.258864+00:00",
+  "device": "cuda",
+  "passed": true,
+  "independent_spin_tests": [
+    {
+      "independent_cg_total_spin": 0,
+      "casimir_state_error": 3.411749667559014e-23,
+      "singlet_retention_or_rejection_error": 6.733764151448916e-24
+    },
+    {
+      "independent_cg_total_spin": 1,
+      "casimir_state_error": 5.4761803974213024e-24,
+      "singlet_retention_or_rejection_error": 8.60857980408211e-25
+    },
+    {
+      "independent_cg_total_spin": 2,
+      "casimir_state_error": 1.0138464949786727e-26,
+      "singlet_retention_or_rejection_error": 4.181894037616811e-21
+    },
+    {
+      "independent_cg_total_spin": 3,
+      "casimir_state_error": 0.0,
+      "singlet_retention_or_rejection_error": 9.471293938208234e-21
+    }
+  ],
+  "idempotence_error": 1.2203226697229497e-16,
+  "hermiticity_error": 0.0,
+  "physical_hamiltonian_commutator_norm": 4.78373751772766e-15,
+  "ground_state_or_reference_generated": false,
+  "peak_cuda_bytes": 893138944
+}

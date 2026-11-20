@@ -1,0 +1,212 @@
+{
+  "created_utc": "2026-11-17T15:30:54.727226+00:00",
+  "device": "cuda",
+  "seed_sector_restriction": {
+    "cut_after_initial_occupied_orbitals": 5,
+    "minimum_prefix_electrons": 8,
+    "maximum_virtual_electrons_permitted_by_seed_sectors": 2
+  },
+  "old_completed_updates": 4,
+  "history": [
+    {
+      "cut": 1,
+      "side": "left",
+      "old_bond_dimension": 5,
+      "new_bond_dimension": 4,
+      "relative_squared_state_difference_identity": 0.0,
+      "discarded_boundary_squared_norm": 0.0
+    },
+    {
+      "cut": 2,
+      "side": "left",
+      "old_bond_dimension": 12,
+      "new_bond_dimension": 11,
+      "relative_squared_state_difference_identity": -4.4408920985006163e-16,
+      "discarded_boundary_squared_norm": 0.0
+    },
+    {
+      "cut": 3,
+      "side": "left",
+      "old_bond_dimension": 23,
+      "new_bond_dimension": 22,
+      "relative_squared_state_difference_identity": 4.440892098500624e-16,
+      "discarded_boundary_squared_norm": 0.0
+    },
+    {
+      "cut": 4,
+      "side": "left",
+      "old_bond_dimension": 38,
+      "new_bond_dimension": 37,
+      "relative_squared_state_difference_identity": 0.0,
+      "discarded_boundary_squared_norm": 0.0
+    },
+    {
+      "cut": 23,
+      "side": "right",
+      "old_bond_dimension": 5,
+      "new_bond_dimension": 4,
+      "relative_squared_state_difference_identity": 0.0,
+      "discarded_boundary_squared_norm": 0.0
+    },
+    {
+      "cut": 22,
+      "side": "right",
+      "old_bond_dimension": 12,
+      "new_bond_dimension": 11,
+      "relative_squared_state_difference_identity": 0.0,
+      "discarded_boundary_squared_norm": 0.0
+    },
+    {
+      "cut": 21,
+      "side": "right",
+      "old_bond_dimension": 23,
+      "new_bond_dimension": 22,
+      "relative_squared_state_difference_identity": 0.0,
+      "discarded_boundary_squared_norm": 0.0
+    },
+    {
+      "cut": 20,
+      "side": "right",
+      "old_bond_dimension": 38,
+      "new_bond_dimension": 37,
+      "relative_squared_state_difference_identity": 0.0,
+      "discarded_boundary_squared_norm": 0.0
+    },
+    {
+      "cut": 19,
+      "side": "right",
+      "old_bond_dimension": 48,
+      "new_bond_dimension": 47,
+      "relative_squared_state_difference_identity": 2.2204460492503136e-16,
+      "discarded_boundary_squared_norm": 0.0
+    },
+    {
+      "cut": 18,
+      "side": "right",
+      "old_bond_dimension": 53,
+      "new_bond_dimension": 52,
+      "relative_squared_state_difference_identity": 4.440892098500629e-16,
+      "discarded_boundary_squared_norm": 0.0
+    },
+    {
+      "cut": 17,
+      "side": "right",
+      "old_bond_dimension": 55,
+      "new_bond_dimension": 54,
+      "relative_squared_state_difference_identity": 0.0,
+      "discarded_boundary_squared_norm": 0.0
+    },
+    {
+      "cut": 16,
+      "side": "right",
+      "old_bond_dimension": 57,
+      "new_bond_dimension": 56,
+      "relative_squared_state_difference_identity": 0.0,
+      "discarded_boundary_squared_norm": 0.0
+    },
+    {
+      "cut": 15,
+      "side": "right",
+      "old_bond_dimension": 59,
+      "new_bond_dimension": 58,
+      "relative_squared_state_difference_identity": 0.0,
+      "discarded_boundary_squared_norm": 0.0
+    },
+    {
+      "cut": 14,
+      "side": "right",
+      "old_bond_dimension": 61,
+      "new_bond_dimension": 60,
+      "relative_squared_state_difference_identity": 4.4408920985005995e-16,
+      "discarded_boundary_squared_norm": 0.0
+    },
+    {
+      "cut": 13,
+      "side": "right",
+      "old_bond_dimension": 63,
+      "new_bond_dimension": 62,
+      "relative_squared_state_difference_identity": -4.4408920985006035e-16,
+      "discarded_boundary_squared_norm": 0.0
+    },
+    {
+      "cut": 12,
+      "side": "right",
+      "old_bond_dimension": 65,
+      "new_bond_dimension": 64,
+      "relative_squared_state_difference_identity": -2.220446049250312e-16,
+      "discarded_boundary_squared_norm": 0.0
+    },
+    {
+      "cut": 11,
+      "side": "right",
+      "old_bond_dimension": 65,
+      "new_bond_dimension": 64,
+      "relative_squared_state_difference_identity": -2.220446049250317e-16,
+      "discarded_boundary_squared_norm": 0.0
+    },
+    {
+      "cut": 10,
+      "side": "right",
+      "old_bond_dimension": 65,
+      "new_bond_dimension": 64,
+      "relative_squared_state_difference_identity": 2.220446049250314e-16,
+      "discarded_boundary_squared_norm": 0.0
+    },
+    {
+      "cut": 9,
+      "side": "right",
+      "old_bond_dimension": 65,
+      "new_bond_dimension": 64,
+      "relative_squared_state_difference_identity": 0.0,
+      "discarded_boundary_squared_norm": 0.0
+    },
+    {
+      "cut": 8,
+      "side": "right",
+      "old_bond_dimension": 65,
+      "new_bond_dimension": 64,
+      "relative_squared_state_difference_identity": 8.881784197001239e-16,
+      "discarded_boundary_squared_norm": 0.0
+    },
+    {
+      "cut": 7,
+      "side": "right",
+      "old_bond_dimension": 65,
+      "new_bond_dimension": 64,
+      "relative_squared_state_difference_identity": 0.0,
+      "discarded_boundary_squared_norm": 0.0
+    },
+    {
+      "cut": 6,
+      "side": "right",
+      "old_bond_dimension": 64,
+      "new_bond_dimension": 63,
+      "relative_squared_state_difference_identity": 0.0,
+      "discarded_boundary_squared_norm": 0.0
+    },
+    {
+      "cut": 5,
+      "side": "right",
+      "old_bond_dimension": 56,
+      "new_bond_dimension": 56,
+      "relative_squared_state_difference_identity": 0.0,
+      "discarded_boundary_squared_norm": 0.0
+    }
+  ],
+  "status": "completed",
+  "failures": [],
+  "method": "Direct reduced-tensor SVD with reconstructed orthogonal factors; no inverse-small-singular-value multiplication",
+  "result": {
+    "passed": true,
+    "physical_energy_change_hartree": 7.105427357601002e-14,
+    "density_change": 2.907761555655527e-15,
+    "left_right_canonical_metric_error": 2.963289024874073e-14,
+    "local_metric_error": 1.4686379426080096e-12,
+    "physical_local_dimension": 351,
+    "original_input_retention_error": 9.775524098759808e-16,
+    "optimizer_steps_repeated": 0,
+    "precision_tolerance_relaxed": false
+  },
+  "passed": true,
+  "peak_cuda_bytes": 540697088
+}

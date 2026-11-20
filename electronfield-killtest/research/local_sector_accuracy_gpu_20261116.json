@@ -1,0 +1,363 @@
+{
+  "created_utc": "2026-11-17T03:44:04.239909+00:00",
+  "device": "cuda",
+  "protocol": {
+    "purpose": "Accuracy rejection panel for coherent local state blocks beyond four electrons; no speed work",
+    "model_status": "Local state primitive only; fixed-global determinant family failed fragment closure",
+    "basis": "sto-3g",
+    "response_seed": {
+      "proposed_modes": 6,
+      "displacement": 0.15,
+      "complete_boundary_degeneracy": true
+    },
+    "orbital_optimization": {
+      "steps": 400,
+      "learning_rate": 0.02,
+      "final_learning_rate": 0.0002
+    },
+    "representation": "Existing validated normalized occupied-subspace coordinates",
+    "cases": [
+      {
+        "id": "BeH2_neutral_1.33",
+        "atom": "Be 0 0 0; H 0 0 -1.33; H 0 0 1.33",
+        "charge": 0,
+        "spin": 0,
+        "electrons": 6,
+        "operator_cache": "general_chemistry_transfer",
+        "reference_report": "research/general_chemistry_transfer_gpu_20261116.json"
+      },
+      {
+        "id": "BeH2_neutral_2.10",
+        "atom": "Be 0 0 0; H 0 0 -2.10; H 0 0 2.10",
+        "charge": 0,
+        "spin": 0,
+        "electrons": 6,
+        "operator_cache": "general_chemistry_transfer",
+        "reference_report": "research/general_chemistry_transfer_gpu_20261116.json"
+      },
+      {
+        "id": "BH3_planar_1.19",
+        "atom": "B 0 0 0; H 1.19 0 0; H -0.595 1.030570 0; H -0.595 -1.030570 0",
+        "charge": 0,
+        "spin": 0,
+        "electrons": 8
+      },
+      {
+        "id": "NH3_pyramidal",
+        "atom": "N 0 0 0; H 0.94 0 -0.38; H -0.47 0.814064 -0.38; H -0.47 -0.814064 -0.38",
+        "charge": 0,
+        "spin": 0,
+        "electrons": 10
+      },
+      {
+        "id": "NH3_planar",
+        "atom": "N 0 0 0; H 1.014 0 0; H -0.507 0.878150 0; H -0.507 -0.878150 0",
+        "charge": 0,
+        "spin": 0,
+        "electrons": 10
+      }
+    ],
+    "objective": "Actual physical Hamiltonian Rayleigh quotient, no energy-label loss",
+    "assessment": "All errors and failures retained. Reuse existing BeH2 labels; generate new same-basis CUDA references after prediction. Require each error and BeH2/NH3 balanced geometry contrasts below 1 kcal/mol. No parameter/seed/rank/iteration sweep.",
+    "limits": [
+      "Early state-block rejection panel",
+      "Minimal basis, not complete-basis chemical accuracy",
+      "NH3 contrast is between supplied geometries, not a validated optimized barrier",
+      "Not a broad XC model or full WTMAD-2 result"
+    ]
+  },
+  "results": [
+    {
+      "id": "BeH2_neutral_1.33",
+      "electrons": 6,
+      "spatial_orbitals": 7,
+      "basis": "sto-3g",
+      "sector_dimension": 1225,
+      "energy_error_kcal": 0.4723659780821038,
+      "below_one_kcal": true,
+      "total_energy_hartree": -15.594364799471261,
+      "reference_energy_hartree": -15.595117562573101,
+      "spin_squared": -7.348483559557416e-19,
+      "reference_spin_squared": 0.0,
+      "initial_kernel_error_hartree": 1.0089706847793423e-12,
+      "final_kernel_error_hartree": 4.0589753780295723e-13,
+      "retained_determinants": 13,
+      "response_modes": 6,
+      "new_reference_generated": false,
+      "reference_energy_fitted": false,
+      "seconds": 9.584936356,
+      "history": [
+        {
+          "id": "BeH2_neutral_1.33",
+          "step": 1,
+          "energy_hartree": -15.593826244134458,
+          "retained_determinants": 13,
+          "seconds": 3.5321307169999994
+        },
+        {
+          "id": "BeH2_neutral_1.33",
+          "step": 100,
+          "energy_hartree": -15.594039494162601,
+          "retained_determinants": 13,
+          "seconds": 4.808799765
+        },
+        {
+          "id": "BeH2_neutral_1.33",
+          "step": 200,
+          "energy_hartree": -15.594266813972695,
+          "retained_determinants": 13,
+          "seconds": 6.43320284
+        },
+        {
+          "id": "BeH2_neutral_1.33",
+          "step": 300,
+          "energy_hartree": -15.594353648072943,
+          "retained_determinants": 13,
+          "seconds": 7.877100918
+        },
+        {
+          "id": "BeH2_neutral_1.33",
+          "step": 400,
+          "energy_hartree": -15.594364799470856,
+          "retained_determinants": 13,
+          "seconds": 9.540386778
+        }
+      ]
+    },
+    {
+      "id": "BeH2_neutral_2.10",
+      "electrons": 6,
+      "spatial_orbitals": 7,
+      "basis": "sto-3g",
+      "sector_dimension": 1225,
+      "energy_error_kcal": 2.4748571309121816,
+      "below_one_kcal": false,
+      "total_energy_hartree": -15.416574615285828,
+      "reference_energy_hartree": -15.420518551168001,
+      "spin_squared": 5.07194972630239e-18,
+      "reference_spin_squared": 0.0,
+      "initial_kernel_error_hartree": 3.6557423754857155e-12,
+      "final_kernel_error_hartree": 3.933742220851855e-12,
+      "retained_determinants": 15,
+      "response_modes": 7,
+      "new_reference_generated": false,
+      "reference_energy_fitted": false,
+      "seconds": 7.303674593,
+      "history": [
+        {
+          "id": "BeH2_neutral_2.10",
+          "step": 1,
+          "energy_hartree": -15.409329685080635,
+          "retained_determinants": 15,
+          "seconds": 0.22132376600000114
+        },
+        {
+          "id": "BeH2_neutral_2.10",
+          "step": 100,
+          "energy_hartree": -15.409201116554108,
+          "retained_determinants": 15,
+          "seconds": 1.9010900659999983
+        },
+        {
+          "id": "BeH2_neutral_2.10",
+          "step": 200,
+          "energy_hartree": -15.411587373131518,
+          "retained_determinants": 15,
+          "seconds": 3.8063612499999984
+        },
+        {
+          "id": "BeH2_neutral_2.10",
+          "step": 300,
+          "energy_hartree": -15.41388101288052,
+          "retained_determinants": 15,
+          "seconds": 5.311945809000001
+        },
+        {
+          "id": "BeH2_neutral_2.10",
+          "step": 400,
+          "energy_hartree": -15.416574615289761,
+          "retained_determinants": 15,
+          "seconds": 7.2774092790000005
+        }
+      ]
+    },
+    {
+      "id": "BH3_planar_1.19",
+      "electrons": 8,
+      "spatial_orbitals": 8,
+      "basis": "sto-3g",
+      "sector_dimension": 4900,
+      "energy_error_kcal": 0.9866379704686158,
+      "below_one_kcal": true,
+      "total_energy_hartree": -26.120798234955647,
+      "reference_energy_hartree": -26.122370542643974,
+      "spin_squared": -2.0661002613622027e-19,
+      "reference_spin_squared": -2.094679493675596e-19,
+      "initial_kernel_error_hartree": 9.592326932761353e-13,
+      "final_kernel_error_hartree": 1.0746958878371515e-13,
+      "retained_determinants": 13,
+      "response_modes": 6,
+      "new_reference_generated": true,
+      "reference_energy_fitted": false,
+      "seconds": 14.726150405999999,
+      "history": [
+        {
+          "id": "BH3_planar_1.19",
+          "step": 1,
+          "energy_hartree": -26.12003073996303,
+          "retained_determinants": 13,
+          "seconds": 5.193665901999999
+        },
+        {
+          "id": "BH3_planar_1.19",
+          "step": 100,
+          "energy_hartree": -26.11970138435782,
+          "retained_determinants": 13,
+          "seconds": 6.860588375999999
+        },
+        {
+          "id": "BH3_planar_1.19",
+          "step": 200,
+          "energy_hartree": -26.120583548731982,
+          "retained_determinants": 13,
+          "seconds": 8.495833950999998
+        },
+        {
+          "id": "BH3_planar_1.19",
+          "step": 300,
+          "energy_hartree": -26.120785043652052,
+          "retained_determinants": 13,
+          "seconds": 9.836936714999997
+        },
+        {
+          "id": "BH3_planar_1.19",
+          "step": 400,
+          "energy_hartree": -26.120798234955753,
+          "retained_determinants": 13,
+          "seconds": 11.187271077999998
+        }
+      ]
+    },
+    {
+      "id": "NH3_pyramidal",
+      "electrons": 10,
+      "spatial_orbitals": 8,
+      "basis": "sto-3g",
+      "sector_dimension": 3136,
+      "energy_error_kcal": 1.2874464965782988,
+      "below_one_kcal": false,
+      "total_energy_hartree": -55.517433836070666,
+      "reference_energy_hartree": -55.519485512658704,
+      "spin_squared": 6.500218846872293e-19,
+      "reference_spin_squared": 8.872817387251508e-20,
+      "initial_kernel_error_hartree": 1.5347723092418164e-12,
+      "final_kernel_error_hartree": 9.912071163853398e-13,
+      "retained_determinants": 13,
+      "response_modes": 6,
+      "new_reference_generated": true,
+      "reference_energy_fitted": false,
+      "seconds": 9.122132789999995,
+      "history": [
+        {
+          "id": "NH3_pyramidal",
+          "step": 1,
+          "energy_hartree": -55.51635795152001,
+          "retained_determinants": 13,
+          "seconds": 0.7972664329999972
+        },
+        {
+          "id": "NH3_pyramidal",
+          "step": 100,
+          "energy_hartree": -55.5166827291289,
+          "retained_determinants": 13,
+          "seconds": 2.2791766889999963
+        },
+        {
+          "id": "NH3_pyramidal",
+          "step": 200,
+          "energy_hartree": -55.517323670402135,
+          "retained_determinants": 13,
+          "seconds": 4.2857218069999945
+        },
+        {
+          "id": "NH3_pyramidal",
+          "step": 300,
+          "energy_hartree": -55.51741714823922,
+          "retained_determinants": 13,
+          "seconds": 6.439245849999999
+        },
+        {
+          "id": "NH3_pyramidal",
+          "step": 400,
+          "energy_hartree": -55.51743383607166,
+          "retained_determinants": 13,
+          "seconds": 8.023733076999996
+        }
+      ]
+    },
+    {
+      "id": "NH3_planar",
+      "electrons": 10,
+      "spatial_orbitals": 8,
+      "basis": "sto-3g",
+      "sector_dimension": 3136,
+      "energy_error_kcal": 1.1012106677639328,
+      "below_one_kcal": false,
+      "total_energy_hartree": -55.49602388234611,
+      "reference_energy_hartree": -55.49777877324958,
+      "spin_squared": -6.330556204983304e-19,
+      "reference_spin_squared": 4.721013244942098e-19,
+      "initial_kernel_error_hartree": 1.1056044968427159e-11,
+      "final_kernel_error_hartree": 9.663381206337363e-13,
+      "retained_determinants": 13,
+      "response_modes": 6,
+      "new_reference_generated": true,
+      "reference_energy_fitted": false,
+      "seconds": 9.325603344000001,
+      "history": [
+        {
+          "id": "NH3_planar",
+          "step": 1,
+          "energy_hartree": -55.495300873208905,
+          "retained_determinants": 13,
+          "seconds": 0.998271447999997
+        },
+        {
+          "id": "NH3_planar",
+          "step": 100,
+          "energy_hartree": -55.49532058116429,
+          "retained_determinants": 13,
+          "seconds": 2.6030633120000033
+        },
+        {
+          "id": "NH3_planar",
+          "step": 200,
+          "energy_hartree": -55.49584688589431,
+          "retained_determinants": 13,
+          "seconds": 5.0850039839999965
+        },
+        {
+          "id": "NH3_planar",
+          "step": 300,
+          "energy_hartree": -55.49600557241605,
+          "retained_determinants": 13,
+          "seconds": 6.704749759999999
+        },
+        {
+          "id": "NH3_planar",
+          "step": 400,
+          "energy_hartree": -55.49602388234514,
+          "retained_determinants": 13,
+          "seconds": 8.250929999999997
+        }
+      ]
+    }
+  ],
+  "failures": [],
+  "balanced_contrast_errors_kcal": {
+    "BeH2_stretch": 2.002491152830078,
+    "NH3_supplied_geometry_contrast": -0.18623582881436596
+  },
+  "local_rejection_panel_passed": false,
+  "peak_cuda_bytes": 1371423232
+}

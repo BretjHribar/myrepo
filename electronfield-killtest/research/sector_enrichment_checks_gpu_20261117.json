@@ -1,0 +1,72 @@
+{
+  "created_utc": "2026-11-17T15:45:45.413722+00:00",
+  "device": "cuda",
+  "protocol": {
+    "purpose": "Verify residual-selected charge/spin sector completion with exact retention of the old physical state",
+    "seed": 17112058,
+    "sites": 4,
+    "electrons": 4,
+    "center": 1,
+    "maximum_bond_dimension": 4,
+    "maximum_added_magnetic_states": 3,
+    "state_tolerance": 1e-10,
+    "energy_tolerance_hartree": 1e-09,
+    "reference_use": "Independent full matrix assessed after the algorithm; no chemistry/reference-driven settings",
+    "scope": "Physical support, residual selection, spin/number and variational local update; no chemical-accuracy claim"
+  },
+  "status": "completed",
+  "failures": [],
+  "result": {
+    "passed": true,
+    "support": {
+      "old_bond_dimension": 1,
+      "new_bond_dimension": 4,
+      "added_magnetic_states": 3,
+      "maximum_bond_dimension": 4,
+      "old_left_canonical_error": 0.0,
+      "relative_squared_retained_state_error": 0.0,
+      "captured_new_direction_squared_norm": 2.4942080088159866,
+      "available_new_direction_squared_norm": 2.4942080088159866,
+      "new_direction_fraction": 1.0,
+      "added_multiplets": [
+        {
+          "number": 2,
+          "twice_spin": 0,
+          "channels": 1
+        },
+        {
+          "number": 3,
+          "twice_spin": 1,
+          "channels": 1
+        }
+      ]
+    },
+    "independent_retained_wavefunction_error": 0.0,
+    "independent_literal_energy_error_hartree": 8.881784197001252e-16,
+    "independent_complete_pair_minimum_error_hartree": 1.4432899320127035e-15,
+    "energy_lowering_hartree": 2.0620658553145885,
+    "old_new_sector_probability": 0.0,
+    "new_sector_probability": 0.7480788546979806,
+    "physical_checks": {
+      "passed": true,
+      "number_error": 8.881784197001252e-16,
+      "spin_squared": 0.0,
+      "target_spin_squared": 0.0,
+      "spin_error": 0.0,
+      "norm_error": 2.220446049250313e-16,
+      "minimum_spatial_occupation": 0.0,
+      "maximum_spatial_occupation": 2.0000000000000004
+    },
+    "local_update": {
+      "center": 2,
+      "physical_dimension": 3,
+      "local_variational_gap_hartree": 2.0620658553145903,
+      "electronic_energy_hartree": -0.9043131119760892,
+      "local_global_energy_identity_error_hartree": 2.220446049250313e-16,
+      "metric_error": 1.6764000044290905e-15,
+      "input_retention_error": 0.0
+    }
+  },
+  "passed": true,
+  "peak_cuda_bytes": 19053568
+}

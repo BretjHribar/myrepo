@@ -1,0 +1,11 @@
+{
+  "created_utc": "2026-11-17T12:04:38.248704+00:00",
+  "device": "cuda",
+  "passed": true,
+  "independent_triplet_casimir_error": 4.523157921092555e-22,
+  "triplet_extension_removed": true,
+  "invalid_space_rejected_before_energy": true,
+  "raw_triplet_energy_hartree": 3.7000013034743877,
+  "independent_full_hamiltonian_error_hartree": 0.0,
+  "new_ground_state_or_reference": false
+}

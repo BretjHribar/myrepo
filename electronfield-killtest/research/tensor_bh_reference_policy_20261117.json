@@ -1,0 +1,11 @@
+{
+  "purpose": "Correct independent ground-state reference coverage before any reference has been generated or inspected",
+  "supersedes": "The determinant-only reference starting vector in tensor_bh_accuracy_protocol_20261117.json; all prediction settings and reference capacity/stopping thresholds remain unchanged",
+  "seed": 17112063,
+  "starting_vector": "Equal-norm sum of the independent closed-shell determinant and one fixed generic CUDA random vector projected into the complete singlet space; normalize once. The generic component is not restricted to the determinant's extra spatial symmetries.",
+  "reason": "A determinant-only Krylov start may remain in one spatial-symmetry sector and miss a lower singlet in a different sector. The independent reference must cover the full intended spin space.",
+  "before_any_reference_generation_or_inspection": true,
+  "prediction_or_model_or_stopping_changed": false,
+  "number_of_reference_starts_per_geometry": 1,
+  "reference_seed_sweep": false
+}

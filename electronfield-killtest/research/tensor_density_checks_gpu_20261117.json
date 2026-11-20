@@ -1,0 +1,32 @@
+{
+  "created_utc": "2026-11-17T13:19:42.295902+00:00",
+  "device": "cuda",
+  "results": [
+    {
+      "electrons": 4,
+      "twice_spin": 0,
+      "passed": true,
+      "maximum_self_density_difference": 8.881784197001252e-16,
+      "maximum_cross_density_difference": 1.3877787807814457e-17,
+      "number_error": 0.0,
+      "cross_number_identity_error": 1.3877787807814457e-17,
+      "minimum_spatial_occupation": 0.6665884178288695,
+      "maximum_spatial_occupation": 1.4042235880144178
+    },
+    {
+      "electrons": 3,
+      "twice_spin": 1,
+      "passed": true,
+      "maximum_self_density_difference": 1.1102230246251565e-16,
+      "maximum_cross_density_difference": 2.0816681711721685e-17,
+      "number_error": 4.440892098500626e-16,
+      "cross_number_identity_error": 1.3877787807814457e-17,
+      "minimum_spatial_occupation": 0.2759667355348443,
+      "maximum_spatial_occupation": 1.0791967281317425
+    }
+  ],
+  "failures": [],
+  "scope": "Fixed-state spatial density and cross-density interface, no new molecular/reference solve",
+  "passed": true,
+  "peak_cuda_bytes": 34348032
+}

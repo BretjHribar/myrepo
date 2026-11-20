@@ -1,0 +1,112 @@
+{
+  "created_utc": "2026-11-17T13:45:42.752332+00:00",
+  "device": "cuda",
+  "protocol": {
+    "purpose": "Verify the conditional physical tensor compiler, positive auxiliary-density search and scalar derivative before molecular functional work",
+    "seed": 17112048,
+    "sites": 4,
+    "center": 1,
+    "state_cases": [
+      {
+        "electrons": 4,
+        "twice_spin": 0
+      },
+      {
+        "electrons": 3,
+        "twice_spin": 1
+      }
+    ],
+    "ancilla": 2,
+    "channels": 2,
+    "epsilon_inverse_hartree": 1.0,
+    "local_metric_null_tolerance": 1e-12,
+    "maximum_embedding_bytes": 1500000000,
+    "maximum_local_operator_bytes": 2000000000,
+    "maximum_environment_bytes": 1500000000,
+    "maximum_reduced_iterations": 4000,
+    "reduced_gap_tolerance_hartree": 1e-11,
+    "operator_identity_tolerance": 1e-09,
+    "derivative_step": 0.001,
+    "derivative_tolerance_hartree": 1e-05,
+    "universal_keys": [
+      "kinetic",
+      "eri",
+      "operators",
+      "electrons",
+      "twice_spin"
+    ],
+    "no_chemical_labels_or_external_potential": true,
+    "no_parameter_or_seed_sweep": true,
+    "scope": "Synthetic fixed-context conditional functional and physical installation; no complete universal search, molecular accuracy or speed claim"
+  },
+  "results": [
+    {
+      "case": {
+        "electrons": 4,
+        "twice_spin": 0
+      },
+      "passed": true,
+      "external_key_rejected": true,
+      "physical_local_dimension": 40,
+      "reduced_coordinate_count": 40,
+      "literal_hamiltonian_error_hartree": 3.552713678800501e-15,
+      "density_operator_error": 3.3306690738754696e-15,
+      "independent_overlap_metric_error": 1.1882834570659541e-14,
+      "input_retention_error": 1.3860072448216576e-16,
+      "local_conditional_gap_hartree": 3.3644198538240744e-12,
+      "installation": {
+        "discarded_probability": 2.187339787024282e-16,
+        "new_local_ancilla": 2,
+        "norm_error": 1.1102230246251565e-16,
+        "verification_performed": true,
+        "density_moment_error": 5.979539231207454e-16,
+        "universal_energy_error_hartree": 1.3322676295501878e-15,
+        "particle_number_error": 0.0,
+        "minimum_spatial_occupation": 0.2591824511368056,
+        "maximum_spatial_occupation": 1.700184506550596
+      },
+      "xc_derivative": {
+        "finite_difference": 0.11819656890849073,
+        "analytic": 0.11819662023280406,
+        "absolute_difference_hartree": 5.132431332710574e-08,
+        "passed": true,
+        "surrounding_context_refitted": false
+      },
+      "global_tensor_stationarity_certified": false,
+      "chemical_accuracy_measured": false
+    },
+    {
+      "case": {
+        "electrons": 3,
+        "twice_spin": 1
+      },
+      "passed": true,
+      "external_key_rejected": true,
+      "physical_local_dimension": 36,
+      "reduced_coordinate_count": 36,
+      "literal_hamiltonian_error_hartree": 3.552713678800501e-15,
+      "density_operator_error": 8.881784197001252e-16,
+      "independent_overlap_metric_error": 1.9329173118599023e-14,
+      "input_retention_error": 2.758136302330154e-16,
+      "local_conditional_gap_hartree": 9.283240842705709e-12,
+      "installation": {
+        "discarded_probability": 7.883321493105821e-17,
+        "new_local_ancilla": 4,
+        "norm_error": 1.6653345369377348e-15,
+        "verification_performed": true,
+        "density_moment_error": 2.3689184603855677e-15,
+        "universal_energy_error_hartree": 4.218847493575595e-15,
+        "particle_number_error": 8.881784197001252e-16,
+        "minimum_spatial_occupation": 0.09707877019042581,
+        "maximum_spatial_occupation": 1.4998524001903906
+      },
+      "xc_derivative": null,
+      "global_tensor_stationarity_certified": false,
+      "chemical_accuracy_measured": false
+    }
+  ],
+  "failures": [],
+  "status": "completed",
+  "passed": true,
+  "peak_cuda_bytes": 32796672
+}

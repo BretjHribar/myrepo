@@ -1,0 +1,22 @@
+{
+  "purpose": "Verify all-site physical tensor updates, common-context stationarity and interrupted-step recovery before a larger forward calculation",
+  "seed": 17112054,
+  "sites": 4,
+  "cases": [{"electrons": 4, "twice_spin": 0}, {"electrons": 3, "twice_spin": 1}],
+  "channels": 8,
+  "maximum_embedding_bytes": 1500000000,
+  "maximum_local_matrix_bytes": 1500000000,
+  "maximum_environment_bytes": 1500000000,
+  "local_metric_null_tolerance": 1e-12,
+  "ground_degeneracy_tolerance_hartree": 1e-10,
+  "physical_identity_tolerance_hartree": 1e-8,
+  "physical_tolerance": 1e-8,
+  "sweep_energy_tolerance_hartree": 1e-10,
+  "sweep_density_tolerance": 1e-8,
+  "common_context_gap_tolerance_hartree": 1e-9,
+  "maximum_sweeps": 4,
+  "independent_reference_tolerance_hartree": 1e-7,
+  "reference": "Compute the independent exact spin-sector eigenvalue only after each prediction stops; no reference-error stopping",
+  "checkpoint_test": "Interrupt the singlet after its first completed site update, resume the exact saved state/cursor, and require no duplicate update",
+  "scope": "New all-site algorithm and physical/reference identities in a complete small tensor family, not broad chemical transfer or speed evidence"
+}

@@ -1,0 +1,16 @@
+{
+  "interrupted_job": "xc3d.gpu_auxiliary_forward",
+  "original_job_terminal_returncode": 1,
+  "original_guard_elapsed_seconds": 807.453,
+  "observed_failure": "Dedicated WSL environment stopped responding during a GPU-to-CPU checkpoint; temporary file remained empty and the previous checkpoint stayed intact",
+  "memory_before": "4 GiB WSL RAM, 1 GiB swap",
+  "memory_after": "6 GiB WSL RAM, 1 GiB swap; new swap explicitly under .research/wsl-swap.vhdx",
+  "host_headroom_before_change": "About 5.0 GiB free of about 32 GiB, including the running 4 GiB VM; increasing the cap by 2 GiB preserves host headroom",
+  "scope": "The only registered WSL distribution was the dedicated XCResearch environment; it was shut down and restarted. No other distribution was interrupted.",
+  "config_backup": ".research/wslconfig.before_recovery_20261117.txt",
+  "compute_policy": "All numerical work remains on CUDA with taskset core 0 and one numerical-library thread",
+  "storage_accounting_repair": "Count the research WSL crash directory outside the repository and conservatively reserve 1 GiB for any old default swap",
+  "accounted_project_bytes_after_recovery": 17465347304,
+  "last_completed_checkpoints": [".research/data/auxiliary_forward/BeH2_631g_1.65_new.progress.pt", ".research/data/auxiliary_forward/BeH2_631g_2.75_new.progress.pt"],
+  "cause_limit": "Memory pressure is suspected, not proved. No numerical accuracy conclusion is drawn from the environment interruption."
+}

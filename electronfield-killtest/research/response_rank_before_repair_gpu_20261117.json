@@ -1,0 +1,11 @@
+{
+  "created_utc": "2026-11-17T11:48:58.902615+00:00",
+  "device": "cuda",
+  "exact_rank_one_added": 46,
+  "expected_rank_one_added": 1,
+  "complete_degenerate_triplet_added": 3,
+  "expected_degenerate_added": 3,
+  "unexpected_capacity": false,
+  "passed": false,
+  "new_ground_state_or_reference": false
+}

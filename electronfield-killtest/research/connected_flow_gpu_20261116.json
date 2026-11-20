@@ -1,0 +1,123 @@
+{
+  "created_utc": "2026-11-16T23:32:48.050513+00:00",
+  "device": "cuda",
+  "scope": "New number-consistent correlation-flow hypothesis; first three-electron finite-basis test",
+  "training_targets": "Physical variational energy only; references used solely for error reporting",
+  "priority": "Out-of-sample accuracy and valid many-electron structure before speed",
+  "cases": [
+    {
+      "id": "H3_neutral_1.00",
+      "nelec": [
+        2,
+        1
+      ],
+      "initial_error_kcal": 18.553757648545325,
+      "error_kcal": 5.45773526355022,
+      "energy_hartree": -1.636229092149378,
+      "reference_hartree": -1.6449265469125076,
+      "antisymmetry_residual": 1.7694179454963432e-16,
+      "hamiltonian_residual_hartree": 0.14068501728858895,
+      "variational_bound_satisfied": true,
+      "history": [
+        {
+          "step": 1,
+          "energy_hartree": -1.6153592520471798,
+          "error_kcal": 18.553757648544767,
+          "gradient_norm": 0.5454084273795403,
+          "seconds": 3.948542228000001
+        },
+        {
+          "step": 100,
+          "energy_hartree": -1.6362259770418612,
+          "error_kcal": 5.459690023029557,
+          "gradient_norm": 0.0011277170123726009,
+          "seconds": 10.536154584999998
+        },
+        {
+          "step": 200,
+          "energy_hartree": -1.6362278463420274,
+          "error_kcal": 5.458517019465509,
+          "gradient_norm": 8.182336328933386e-05,
+          "seconds": 15.790510754
+        },
+        {
+          "step": 300,
+          "energy_hartree": -1.6362288457122394,
+          "error_kcal": 5.457889905189497,
+          "gradient_norm": 8.30567823361183e-05,
+          "seconds": 21.198991319999998
+        },
+        {
+          "step": 400,
+          "energy_hartree": -1.636229092149378,
+          "error_kcal": 5.45773526355022,
+          "gradient_norm": 8.380628176991631e-05,
+          "seconds": 25.928493824
+        }
+      ],
+      "parameters": 18,
+      "seconds": 25.947125553
+    },
+    {
+      "id": "H3_neutral_1.80",
+      "nelec": [
+        2,
+        1
+      ],
+      "initial_error_kcal": 30.2051478275317,
+      "error_kcal": 29.995445169032255,
+      "energy_hartree": -1.4899626520252152,
+      "reference_hartree": -1.537763436574059,
+      "antisymmetry_residual": 4.996003610813204e-16,
+      "hamiltonian_residual_hartree": 0.05128946892394841,
+      "variational_bound_satisfied": true,
+      "history": [
+        {
+          "step": 1,
+          "energy_hartree": -1.4896284695671345,
+          "error_kcal": 30.205147827522502,
+          "gradient_norm": 0.014901373197568638,
+          "seconds": 0.046797471000004975
+        },
+        {
+          "step": 100,
+          "energy_hartree": -1.4899621188510717,
+          "error_kcal": 29.995779740858595,
+          "gradient_norm": 0.00015623153982475247,
+          "seconds": 5.656207346000002
+        },
+        {
+          "step": 200,
+          "energy_hartree": -1.4899624037434316,
+          "error_kcal": 29.99560096820367,
+          "gradient_norm": 5.9266941907946934e-05,
+          "seconds": 11.446485262000003
+        },
+        {
+          "step": 300,
+          "energy_hartree": -1.4899626014099574,
+          "error_kcal": 29.99547693058603,
+          "gradient_norm": 6.157594670685238e-05,
+          "seconds": 19.158964165
+        },
+        {
+          "step": 400,
+          "energy_hartree": -1.4899626520252152,
+          "error_kcal": 29.995445169032255,
+          "gradient_norm": 6.228346597133706e-05,
+          "seconds": 24.070796216000005
+        }
+      ],
+      "parameters": 18,
+      "seconds": 24.087607137000006
+    }
+  ],
+  "failures": [],
+  "steps": 400,
+  "summary": {
+    "cases": 2,
+    "mae_kcal": 17.72659021629124,
+    "maximum_error_kcal": 29.995445169032255
+  },
+  "peak_cuda_bytes": 66700800
+}

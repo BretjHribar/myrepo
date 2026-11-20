@@ -1,0 +1,93 @@
+{
+  "created_utc": "2026-11-17T15:12:31.131872+00:00",
+  "device": "cuda",
+  "protocol": {
+    "purpose": "Verify all-site physical tensor updates, common-context stationarity and interrupted-step recovery before a larger forward calculation",
+    "seed": 17112054,
+    "sites": 4,
+    "cases": [
+      {
+        "electrons": 4,
+        "twice_spin": 0
+      },
+      {
+        "electrons": 3,
+        "twice_spin": 1
+      }
+    ],
+    "channels": 8,
+    "maximum_embedding_bytes": 1500000000,
+    "maximum_local_matrix_bytes": 1500000000,
+    "maximum_environment_bytes": 1500000000,
+    "local_metric_null_tolerance": 1e-12,
+    "ground_degeneracy_tolerance_hartree": 1e-10,
+    "physical_identity_tolerance_hartree": 1e-08,
+    "physical_tolerance": 1e-08,
+    "sweep_energy_tolerance_hartree": 1e-10,
+    "sweep_density_tolerance": 1e-08,
+    "common_context_gap_tolerance_hartree": 1e-09,
+    "maximum_sweeps": 4,
+    "independent_reference_tolerance_hartree": 1e-07,
+    "reference": "Compute the independent exact spin-sector eigenvalue only after each prediction stops; no reference-error stopping",
+    "checkpoint_test": "Interrupt the singlet after its first completed site update, resume the exact saved state/cursor, and require no duplicate update",
+    "scope": "New all-site algorithm and physical/reference identities in a complete small tensor family, not broad chemical transfer or speed evidence"
+  },
+  "results": [
+    {
+      "case": {
+        "electrons": 4,
+        "twice_spin": 0
+      },
+      "passed": true,
+      "reference_energy_difference_hartree": 1.3322676295501878e-15,
+      "common_context_maximum_gap_hartree": 1.7763568394002505e-15,
+      "physical_checks": {
+        "passed": true,
+        "number_error": 3.552713678800501e-15,
+        "spin_squared": -1.3877787807814427e-16,
+        "target_spin_squared": 0.0,
+        "spin_error": 1.3877787807814427e-16,
+        "norm_error": 2.220446049250313e-15,
+        "minimum_spatial_occupation": 0.004202234837374604,
+        "maximum_spatial_occupation": 1.9960952671051266
+      },
+      "sweeps": 2,
+      "updates": 8,
+      "audit_centers": 4,
+      "duplicate_updates": 0,
+      "interrupted_first_update_resumed": true,
+      "reference_computed_after_prediction": true,
+      "full_hilbert_stationarity_claimed": false
+    },
+    {
+      "case": {
+        "electrons": 3,
+        "twice_spin": 1
+      },
+      "passed": true,
+      "reference_energy_difference_hartree": 1.2752998657106218e-10,
+      "common_context_maximum_gap_hartree": 1.2463718945809887e-10,
+      "physical_checks": {
+        "passed": true,
+        "number_error": 0.0,
+        "spin_squared": 0.7499999999999999,
+        "target_spin_squared": 0.75,
+        "spin_error": 1.1102230246251565e-16,
+        "norm_error": 6.661338147750939e-16,
+        "minimum_spatial_occupation": 0.0032685881353656386,
+        "maximum_spatial_occupation": 1.9938949080309796
+      },
+      "sweeps": 4,
+      "updates": 16,
+      "audit_centers": 4,
+      "duplicate_updates": 0,
+      "interrupted_first_update_resumed": false,
+      "reference_computed_after_prediction": true,
+      "full_hilbert_stationarity_claimed": false
+    }
+  ],
+  "failures": [],
+  "status": "completed",
+  "passed": true,
+  "peak_cuda_bytes": 19042304
+}

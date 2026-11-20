@@ -1,0 +1,59 @@
+{
+  "created_utc": "2026-11-16T19:33:20.913275+00:00",
+  "status": "Fresh SCF, finite-basis tiny-system pilot; not GMTKN55 or challenge-suite evidence",
+  "checkpoint": "research/pilot_pair_state_20261116.pt",
+  "device": "cuda",
+  "cases": [
+    {
+      "id": "H3_triangle_plus_0.80",
+      "split": "test",
+      "reference_hartree": -1.3215135838088377,
+      "pbe_error_kcal": 3.3746251774320277,
+      "energy_hartree": -1.3125174377316648,
+      "error_kcal": 5.6451668929138705,
+      "converged": true,
+      "first_attempt_converged": true,
+      "correction_calls": 9,
+      "commutator_norm": 1.2991222830409297e-06,
+      "scf_cycles_last_attempt": 6,
+      "seconds_including_setup_and_retries": 0.7584070870000019
+    },
+    {
+      "id": "H3_triangle_plus_1.20",
+      "split": "test",
+      "reference_hartree": -1.2869122557901547,
+      "pbe_error_kcal": -2.752618420925941,
+      "energy_hartree": -1.3279308577221,
+      "error_kcal": -25.739561322530438,
+      "converged": true,
+      "first_attempt_converged": true,
+      "correction_calls": 10,
+      "commutator_norm": 1.9702818269149366e-06,
+      "scf_cycles_last_attempt": 7,
+      "seconds_including_setup_and_retries": 0.16006725399999766
+    },
+    {
+      "id": "H3_triangle_plus_1.80",
+      "split": "test",
+      "reference_hartree": -1.1485907040707415,
+      "pbe_error_kcal": -10.024374686146238,
+      "energy_hartree": -1.2174914490926179,
+      "error_kcal": -43.23587026688576,
+      "converged": true,
+      "first_attempt_converged": true,
+      "correction_calls": 9,
+      "commutator_norm": 3.420524249904426e-07,
+      "scf_cycles_last_attempt": 6,
+      "seconds_including_setup_and_retries": 0.13987918400000154
+    }
+  ],
+  "summary": {
+    "test": {
+      "cases": 3,
+      "failures": 0,
+      "all_returned_energy_mae_kcal": 24.873532827443356,
+      "pbe_mae_kcal": 5.383872761501402,
+      "median_seconds": 0.16006725399999766
+    }
+  }
+}

@@ -1,0 +1,691 @@
+{
+  "created_utc": "2026-11-16T23:08:26.358553+00:00",
+  "device": "cuda",
+  "projection": "Finite Sinkhorn followed by exact nonnegative deficit rounding",
+  "scope": "Original two-electron constrained-pair mechanism experiment. Frozen inputs, finite-basis labels; not broad chemistry or challenge performance.",
+  "accuracy_priority": "Sub-kcal transfer first; speed optimization deferred by user",
+  "initial": {
+    "train": {
+      "cases": 9,
+      "energy_mae_kcal": 38.96413248800623,
+      "pbe_input_mae_kcal": 7.40187047065352,
+      "by_case": [
+        {
+          "id": "H2_0.70",
+          "error_kcal": 21.346989293774836
+        },
+        {
+          "id": "H2_1.00",
+          "error_kcal": 25.341030531191088
+        },
+        {
+          "id": "H2_1.50",
+          "error_kcal": 38.54322303398712
+        },
+        {
+          "id": "H2_2.00",
+          "error_kcal": 62.670600985417074
+        },
+        {
+          "id": "H2_3.00",
+          "error_kcal": 112.73155474295922
+        },
+        {
+          "id": "HeH_plus_0.70",
+          "error_kcal": 23.39543280265671
+        },
+        {
+          "id": "HeH_plus_1.20",
+          "error_kcal": 24.71557310069524
+        },
+        {
+          "id": "HeH_plus_2.20",
+          "error_kcal": 21.665630954907794
+        },
+        {
+          "id": "He_atom",
+          "error_kcal": 20.267156946467036
+        }
+      ]
+    },
+    "val": {
+      "cases": 3,
+      "energy_mae_kcal": 39.65465375129331,
+      "pbe_input_mae_kcal": 6.0050199028544515,
+      "by_case": [
+        {
+          "id": "H3_linear_plus_0.80",
+          "error_kcal": 29.787961650763386
+        },
+        {
+          "id": "H3_linear_plus_1.20",
+          "error_kcal": 37.99183959155388
+        },
+        {
+          "id": "H3_linear_plus_1.80",
+          "error_kcal": 51.18416001156269
+        }
+      ]
+    },
+    "state_diagnostics": {
+      "maximum_marginal_residual": 1.6653345369377348e-16,
+      "minimum_kinetic_cost_hartree": 5.850493552994686e-07,
+      "positive_candidates": 0,
+      "kappa_min": 0.988125000004915,
+      "kappa_max": 0.988125000004915
+    }
+  },
+  "history": [
+    {
+      "step": 1,
+      "loss": 13.982572062029496,
+      "metrics": {
+        "train": {
+          "cases": 9,
+          "energy_mae_kcal": 38.91540345125038,
+          "pbe_input_mae_kcal": 7.40187047065352,
+          "by_case": [
+            {
+              "id": "H2_0.70",
+              "error_kcal": 21.337926209457336
+            },
+            {
+              "id": "H2_1.00",
+              "error_kcal": 25.313663998295148
+            },
+            {
+              "id": "H2_1.50",
+              "error_kcal": 38.4709149881548
+            },
+            {
+              "id": "H2_2.00",
+              "error_kcal": 62.556539183603995
+            },
+            {
+              "id": "H2_3.00",
+              "error_kcal": 112.56106442482277
+            },
+            {
+              "id": "HeH_plus_0.70",
+              "error_kcal": 23.387475034765334
+            },
+            {
+              "id": "HeH_plus_1.20",
+              "error_kcal": 24.69542059636198
+            },
+            {
+              "id": "HeH_plus_2.20",
+              "error_kcal": 21.656143668476766
+            },
+            {
+              "id": "He_atom",
+              "error_kcal": 20.259482957315296
+            }
+          ]
+        },
+        "val": {
+          "cases": 3,
+          "energy_mae_kcal": 39.58209082239763,
+          "pbe_input_mae_kcal": 6.0050199028544515,
+          "by_case": [
+            {
+              "id": "H3_linear_plus_0.80",
+              "error_kcal": 29.75667822329576
+            },
+            {
+              "id": "H3_linear_plus_1.20",
+              "error_kcal": 37.925779248786284
+            },
+            {
+              "id": "H3_linear_plus_1.80",
+              "error_kcal": 51.06381499511085
+            }
+          ]
+        },
+        "state_diagnostics": {
+          "maximum_marginal_residual": 1.1102230246251565e-16,
+          "minimum_kinetic_cost_hartree": 7.139145333993967e-07,
+          "positive_candidates": 0,
+          "kappa_min": 0.9157515268170021,
+          "kappa_max": 0.9674933598563037
+        }
+      },
+      "seconds": 0.9170373049999991
+    },
+    {
+      "step": 100,
+      "loss": 0.5849761081506115,
+      "metrics": {
+        "train": {
+          "cases": 9,
+          "energy_mae_kcal": 8.14928699988097,
+          "pbe_input_mae_kcal": 7.40187047065352,
+          "by_case": [
+            {
+              "id": "H2_0.70",
+              "error_kcal": 15.243663297560285
+            },
+            {
+              "id": "H2_1.00",
+              "error_kcal": 9.400385443125169
+            },
+            {
+              "id": "H2_1.50",
+              "error_kcal": 3.745450479183749
+            },
+            {
+              "id": "H2_2.00",
+              "error_kcal": 5.808997561714539
+            },
+            {
+              "id": "H2_3.00",
+              "error_kcal": 11.226276014416928
+            },
+            {
+              "id": "HeH_plus_0.70",
+              "error_kcal": 12.975581817166566
+            },
+            {
+              "id": "HeH_plus_1.20",
+              "error_kcal": 4.219869685866599
+            },
+            {
+              "id": "HeH_plus_2.20",
+              "error_kcal": 5.456094951453543
+            },
+            {
+              "id": "He_atom",
+              "error_kcal": 5.26726374844135
+            }
+          ]
+        },
+        "val": {
+          "cases": 3,
+          "energy_mae_kcal": 11.731914173473939,
+          "pbe_input_mae_kcal": 6.0050199028544515,
+          "by_case": [
+            {
+              "id": "H3_linear_plus_0.80",
+              "error_kcal": 11.981780654112098
+            },
+            {
+              "id": "H3_linear_plus_1.20",
+              "error_kcal": 11.729418443104938
+            },
+            {
+              "id": "H3_linear_plus_1.80",
+              "error_kcal": 11.484543423204777
+            }
+          ]
+        },
+        "state_diagnostics": {
+          "maximum_marginal_residual": 1.249000902703301e-16,
+          "minimum_kinetic_cost_hartree": 0.005886430237253833,
+          "positive_candidates": 0,
+          "kappa_min": 0.09191775240170297,
+          "kappa_max": 1.602684599111996
+        }
+      },
+      "seconds": 13.524603179000001
+    },
+    {
+      "step": 200,
+      "loss": 0.5033524151691287,
+      "metrics": {
+        "train": {
+          "cases": 9,
+          "energy_mae_kcal": 9.728812807975176,
+          "pbe_input_mae_kcal": 7.40187047065352,
+          "by_case": [
+            {
+              "id": "H2_0.70",
+              "error_kcal": 14.836704366776434
+            },
+            {
+              "id": "H2_1.00",
+              "error_kcal": 9.605768165792755
+            },
+            {
+              "id": "H2_1.50",
+              "error_kcal": 7.901010756142846
+            },
+            {
+              "id": "H2_2.00",
+              "error_kcal": 11.400681673846279
+            },
+            {
+              "id": "H2_3.00",
+              "error_kcal": 13.354363544641947
+            },
+            {
+              "id": "HeH_plus_0.70",
+              "error_kcal": 12.55003153999226
+            },
+            {
+              "id": "HeH_plus_1.20",
+              "error_kcal": 4.9340795395209005
+            },
+            {
+              "id": "HeH_plus_2.20",
+              "error_kcal": 6.539552571460704
+            },
+            {
+              "id": "He_atom",
+              "error_kcal": 6.4371231136024605
+            }
+          ]
+        },
+        "val": {
+          "cases": 3,
+          "energy_mae_kcal": 12.029722504364987,
+          "pbe_input_mae_kcal": 6.0050199028544515,
+          "by_case": [
+            {
+              "id": "H3_linear_plus_0.80",
+              "error_kcal": 11.693799181396827
+            },
+            {
+              "id": "H3_linear_plus_1.20",
+              "error_kcal": 11.417497731660948
+            },
+            {
+              "id": "H3_linear_plus_1.80",
+              "error_kcal": 12.977870600037193
+            }
+          ]
+        },
+        "state_diagnostics": {
+          "maximum_marginal_residual": 1.1102230246251565e-16,
+          "minimum_kinetic_cost_hartree": 0.008709568721870158,
+          "positive_candidates": 0,
+          "kappa_min": 0.08794527203397948,
+          "kappa_max": 1.3103167052288658
+        }
+      },
+      "seconds": 22.974832848999995
+    },
+    {
+      "step": 300,
+      "loss": 0.46691518937855975,
+      "metrics": {
+        "train": {
+          "cases": 9,
+          "energy_mae_kcal": 9.672017486792617,
+          "pbe_input_mae_kcal": 7.40187047065352,
+          "by_case": [
+            {
+              "id": "H2_0.70",
+              "error_kcal": 13.82080168964208
+            },
+            {
+              "id": "H2_1.00",
+              "error_kcal": 7.465822547697103
+            },
+            {
+              "id": "H2_1.50",
+              "error_kcal": 6.2711093830973725
+            },
+            {
+              "id": "H2_2.00",
+              "error_kcal": 11.152940756542396
+            },
+            {
+              "id": "H2_3.00",
+              "error_kcal": 13.234239143022423
+            },
+            {
+              "id": "HeH_plus_0.70",
+              "error_kcal": 12.228797517192088
+            },
+            {
+              "id": "HeH_plus_1.20",
+              "error_kcal": 5.049982893153458
+            },
+            {
+              "id": "HeH_plus_2.20",
+              "error_kcal": 8.8463882026323
+            },
+            {
+              "id": "He_atom",
+              "error_kcal": 8.978075248154344
+            }
+          ]
+        },
+        "val": {
+          "cases": 3,
+          "energy_mae_kcal": 8.614339961844863,
+          "pbe_input_mae_kcal": 6.0050199028544515,
+          "by_case": [
+            {
+              "id": "H3_linear_plus_0.80",
+              "error_kcal": 8.429126566377828
+            },
+            {
+              "id": "H3_linear_plus_1.20",
+              "error_kcal": 8.045020285190487
+            },
+            {
+              "id": "H3_linear_plus_1.80",
+              "error_kcal": 9.36887303396627
+            }
+          ]
+        },
+        "state_diagnostics": {
+          "maximum_marginal_residual": 2.220446049250313e-16,
+          "minimum_kinetic_cost_hartree": 0.00880282934198251,
+          "positive_candidates": 0,
+          "kappa_min": 0.07336480754213663,
+          "kappa_max": 1.1023607832162479
+        }
+      },
+      "seconds": 35.654673888
+    },
+    {
+      "step": 400,
+      "loss": 0.4615261763691829,
+      "metrics": {
+        "train": {
+          "cases": 9,
+          "energy_mae_kcal": 9.557531108080754,
+          "pbe_input_mae_kcal": 7.40187047065352,
+          "by_case": [
+            {
+              "id": "H2_0.70",
+              "error_kcal": 13.593873964565832
+            },
+            {
+              "id": "H2_1.00",
+              "error_kcal": 7.056175351042642
+            },
+            {
+              "id": "H2_1.50",
+              "error_kcal": 6.053099434213281
+            },
+            {
+              "id": "H2_2.00",
+              "error_kcal": 11.117119454060234
+            },
+            {
+              "id": "H2_3.00",
+              "error_kcal": 13.045871703778873
+            },
+            {
+              "id": "HeH_plus_0.70",
+              "error_kcal": 12.021845917387155
+            },
+            {
+              "id": "HeH_plus_1.20",
+              "error_kcal": 4.71488026111607
+            },
+            {
+              "id": "HeH_plus_2.20",
+              "error_kcal": 9.103879338283443
+            },
+            {
+              "id": "He_atom",
+              "error_kcal": 9.31103454827927
+            }
+          ]
+        },
+        "val": {
+          "cases": 3,
+          "energy_mae_kcal": 7.685716360111486,
+          "pbe_input_mae_kcal": 6.0050199028544515,
+          "by_case": [
+            {
+              "id": "H3_linear_plus_0.80",
+              "error_kcal": 7.594457187895747
+            },
+            {
+              "id": "H3_linear_plus_1.20",
+              "error_kcal": 7.209373956658379
+            },
+            {
+              "id": "H3_linear_plus_1.80",
+              "error_kcal": 8.25331793578033
+            }
+          ]
+        },
+        "state_diagnostics": {
+          "maximum_marginal_residual": 1.1102230246251565e-16,
+          "minimum_kinetic_cost_hartree": 0.008379981353476838,
+          "positive_candidates": 0,
+          "kappa_min": 0.06706326190759754,
+          "kappa_max": 1.107833307884859
+        }
+      },
+      "seconds": 48.849866600999995
+    },
+    {
+      "step": 500,
+      "loss": 0.46025887203279364,
+      "metrics": {
+        "train": {
+          "cases": 9,
+          "energy_mae_kcal": 9.53490103963182,
+          "pbe_input_mae_kcal": 7.40187047065352,
+          "by_case": [
+            {
+              "id": "H2_0.70",
+              "error_kcal": 13.554010973319
+            },
+            {
+              "id": "H2_1.00",
+              "error_kcal": 6.990659903956182
+            },
+            {
+              "id": "H2_1.50",
+              "error_kcal": 6.034284629031191
+            },
+            {
+              "id": "H2_2.00",
+              "error_kcal": 11.112749552749841
+            },
+            {
+              "id": "H2_3.00",
+              "error_kcal": 12.98463024049772
+            },
+            {
+              "id": "HeH_plus_0.70",
+              "error_kcal": 11.984233219114474
+            },
+            {
+              "id": "HeH_plus_1.20",
+              "error_kcal": 4.648999597280096
+            },
+            {
+              "id": "HeH_plus_2.20",
+              "error_kcal": 9.141377370316171
+            },
+            {
+              "id": "He_atom",
+              "error_kcal": 9.363163870421687
+            }
+          ]
+        },
+        "val": {
+          "cases": 3,
+          "energy_mae_kcal": 7.500748413750881,
+          "pbe_input_mae_kcal": 6.0050199028544515,
+          "by_case": [
+            {
+              "id": "H3_linear_plus_0.80",
+              "error_kcal": 7.445082513371598
+            },
+            {
+              "id": "H3_linear_plus_1.20",
+              "error_kcal": 7.0491124839861845
+            },
+            {
+              "id": "H3_linear_plus_1.80",
+              "error_kcal": 8.00805024389486
+            }
+          ]
+        },
+        "state_diagnostics": {
+          "maximum_marginal_residual": 1.6653345369377348e-16,
+          "minimum_kinetic_cost_hartree": 0.00829392229578604,
+          "positive_candidates": 0,
+          "kappa_min": 0.06590251374489652,
+          "kappa_max": 1.1095359337309736
+        }
+      },
+      "seconds": 58.879689053999996
+    }
+  ],
+  "final": {
+    "train": {
+      "cases": 9,
+      "energy_mae_kcal": 9.53490103963182,
+      "pbe_input_mae_kcal": 7.40187047065352,
+      "by_case": [
+        {
+          "id": "H2_0.70",
+          "error_kcal": 13.554010973319
+        },
+        {
+          "id": "H2_1.00",
+          "error_kcal": 6.990659903956182
+        },
+        {
+          "id": "H2_1.50",
+          "error_kcal": 6.034284629031191
+        },
+        {
+          "id": "H2_2.00",
+          "error_kcal": 11.112749552749841
+        },
+        {
+          "id": "H2_3.00",
+          "error_kcal": 12.98463024049772
+        },
+        {
+          "id": "HeH_plus_0.70",
+          "error_kcal": 11.984233219114474
+        },
+        {
+          "id": "HeH_plus_1.20",
+          "error_kcal": 4.648999597280096
+        },
+        {
+          "id": "HeH_plus_2.20",
+          "error_kcal": 9.141377370316171
+        },
+        {
+          "id": "He_atom",
+          "error_kcal": 9.363163870421687
+        }
+      ]
+    },
+    "val": {
+      "cases": 3,
+      "energy_mae_kcal": 7.500748413750881,
+      "pbe_input_mae_kcal": 6.0050199028544515,
+      "by_case": [
+        {
+          "id": "H3_linear_plus_0.80",
+          "error_kcal": 7.445082513371598
+        },
+        {
+          "id": "H3_linear_plus_1.20",
+          "error_kcal": 7.0491124839861845
+        },
+        {
+          "id": "H3_linear_plus_1.80",
+          "error_kcal": 8.00805024389486
+        }
+      ]
+    },
+    "test": {
+      "cases": 6,
+      "energy_mae_kcal": 5.927275393448746,
+      "pbe_input_mae_kcal": 8.206502699720225,
+      "by_case": [
+        {
+          "id": "H3_triangle_plus_0.80",
+          "error_kcal": 14.341607759732417
+        },
+        {
+          "id": "H3_triangle_plus_1.20",
+          "error_kcal": 9.471087517358493
+        },
+        {
+          "id": "H3_triangle_plus_1.80",
+          "error_kcal": 5.712599303052834
+        },
+        {
+          "id": "H4_square_2plus_1.00",
+          "error_kcal": 2.230272990807655
+        },
+        {
+          "id": "H4_square_2plus_1.50",
+          "error_kcal": -2.768568867083565
+        },
+        {
+          "id": "H4_square_2plus_2.30",
+          "error_kcal": -1.0395159226575144
+        }
+      ]
+    },
+    "state_diagnostics": {
+      "maximum_marginal_residual": 1.6653345369377348e-16,
+      "minimum_kinetic_cost_hartree": 0.00829392229578604,
+      "positive_candidates": 0,
+      "kappa_min": 0.06590251374489652,
+      "kappa_max": 1.1095359337309736
+    }
+  },
+  "outside_scope": [
+    {
+      "id": "H2_plus_0.80",
+      "nelec": [
+        1,
+        0
+      ],
+      "reason": "Outside this two-electron singlet mechanism experiment"
+    },
+    {
+      "id": "H2_plus_1.60",
+      "nelec": [
+        1,
+        0
+      ],
+      "reason": "Outside this two-electron singlet mechanism experiment"
+    },
+    {
+      "id": "H2_plus_3.00",
+      "nelec": [
+        1,
+        0
+      ],
+      "reason": "Outside this two-electron singlet mechanism experiment"
+    },
+    {
+      "id": "H3_neutral_1.00",
+      "nelec": [
+        2,
+        1
+      ],
+      "reason": "Outside this two-electron singlet mechanism experiment"
+    },
+    {
+      "id": "H3_neutral_1.80",
+      "nelec": [
+        2,
+        1
+      ],
+      "reason": "Outside this two-electron singlet mechanism experiment"
+    },
+    {
+      "id": "H_atom",
+      "nelec": [
+        1,
+        0
+      ],
+      "reason": "Outside this two-electron singlet mechanism experiment"
+    }
+  ],
+  "runtime_seconds": 58.923359282999996,
+  "peak_cuda_bytes": 43358208,
+  "steps": 500
+}

@@ -1,0 +1,77 @@
+{
+  "captured_utc": "2026-11-16T17:06:24.684188+00:00",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "python_version": "3.12.10",
+  "python_executable": "C:\\Users\\breth\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+  "logical_cpus": 22,
+  "workspace_free_gib": 25.000282287597656,
+  "packages": {
+    "torch": "2.7.1+cu118",
+    "numpy": "2.3.5",
+    "scipy": "1.16.3",
+    "pyscf": null,
+    "gpu4pyscf": null,
+    "cupy": null,
+    "skala": null
+  },
+  "nvidia_smi": {
+    "returncode": 0,
+    "stdout": "name, memory.total [MiB], compute_cap, driver_version\r\nNVIDIA GeForce RTX 4060 Laptop GPU, 8188, 8.9, 610.74",
+    "stderr": ""
+  },
+  "gpus": [
+    {
+      "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+      "memory.total [MiB]": "8188",
+      "compute_cap": "8.9",
+      "driver_version": "610.74"
+    }
+  ],
+  "host_query": {
+    "returncode": 0,
+    "stdout": "{\"physical_cores\":16,\"cpu_name\":\"Intel(R) Core(TM) Ultra 9 185H\",\"logical_processors\":22,\"physical_memory_bytes\":33945935872}",
+    "stderr": ""
+  },
+  "host": {
+    "physical_cores": 16,
+    "cpu_name": "Intel(R) Core(TM) Ultra 9 185H",
+    "logical_processors": 22,
+    "physical_memory_bytes": 33945935872
+  },
+  "wsl_distributions": {
+    "returncode": 4294967295,
+    "stdout": "Windows Subsystem for Linux has no installed distributions.\r\nYou can resolve this by installing a distribution with the instructions below:\r\n\r\nUse 'wsl.exe --list --online' to list available distributions\r\nand 'wsl.exe --install <Distro>' to install.",
+    "stderr": ""
+  },
+  "torch": {
+    "version": "2.7.1+cu118",
+    "bundled_cuda_runtime": "11.8",
+    "cuda_available": true,
+    "device_count": 1,
+    "device_name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+    "total_memory_bytes": 8585216000,
+    "compute_capability": [
+      8,
+      9
+    ],
+    "multiprocessor_count": 24
+  },
+  "cuda_smoke": {
+    "float32": {
+      "synthetic_field_training_step_ms": 5.1597599987871945,
+      "steps_timed": 5,
+      "points": 8192,
+      "last_loss": 0.0032179541885852814,
+      "finite_gradients": true,
+      "peak_allocated_mib": 26.58447265625
+    },
+    "float64": {
+      "synthetic_field_training_step_ms": 6.185199998435564,
+      "steps_timed": 5,
+      "points": 8192,
+      "last_loss": 0.0001912968458261736,
+      "finite_gradients": true,
+      "peak_allocated_mib": 36.91015625
+    }
+  }
+}

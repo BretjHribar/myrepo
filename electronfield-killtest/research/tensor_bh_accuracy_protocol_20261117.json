@@ -1,0 +1,32 @@
+{
+  "status": "active",
+  "purpose": "First independent larger-basis relative-energy test of the variable-sector physical tensor family",
+  "seed": 17112062,
+  "basis": "cc-pvdz",
+  "cases": [
+    {"id": "BH_ccpvdz_1.20_sector_new", "atom": "B 0 0 0; H 0 0 1.20", "charge": 0, "spin": 0, "electrons": 6},
+    {"id": "BH_ccpvdz_1.80_sector_new", "atom": "B 0 0 0; H 0 0 1.80", "charge": 0, "spin": 0, "electrons": 6}
+  ],
+  "maximum_bond_dimension": 128,
+  "maximum_environment_bytes": 1500000000,
+  "ritz_maximum_dimension": 128,
+  "ritz_residual_tolerance_hartree": 1e-8,
+  "maximum_sweeps": 10,
+  "physical_identity_tolerance_hartree": 1e-8,
+  "physical_tolerance": 1e-7,
+  "sweep_energy_tolerance_hartree": 1e-8,
+  "sweep_density_tolerance": 1e-6,
+  "common_context_gap_tolerance_hartree": 1e-7,
+  "reference_maximum_dimension": 128,
+  "reference_residual_tolerance_hartree": 1e-8,
+  "reference_spin_tolerance": 1e-8,
+  "reference_maximum_predicted_bytes": 6500000000,
+  "accuracy_tolerance_kcal_per_mol": 1.0,
+  "initialization": "One CUDA integral/RHF preparation per new geometry, full basis, pure singlet determinant; no correlated density, label or fitted parameter",
+  "capacity": "One a priori 128-state spin-complete bound for the changed family; no rank/seed/iteration campaign and no change after chemical reference inspection",
+  "truncation": "Spin-complete physical Schmidt retraction; reject energy-increasing candidates, retain every rejection and use the original stopping/audit",
+  "reference_use": "Both predictions and frozen common-context audits finish before either reference. If either prediction fails its gate, do not spend a reference campaign on this protocol. Independent six-particle singlet-projected CUDA reference action starts from its own determinant only afterward.",
+  "scope": "Two new full cc-pVDZ finite-basis predictions and one balanced stretch contrast; development evidence, not CBS/GMTKN55, WTMAD-2, an arbitrary-density XC model or proof of broad generalization",
+  "resource_limit": "One CUDA job and one host core; at most 1 GB new disk inside 32 GB working/40 GB total; no CPU scientific fallback",
+  "speed_work_authorized": false
+}

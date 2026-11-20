@@ -1,0 +1,33 @@
+{
+  "source": "https://discoveredmaterials.com/grand-challenges/speed-accuracy-barrier/",
+  "checked_date": "2026-11-16",
+  "page_status": "Open; updated Nov 2026; leaderboard provisional",
+  "objective": "Develop a more accurate exchange-correlation functional while preserving DFT efficiency.",
+  "submission": ["Scientific method", "Runnable implementation and instructions", "Accuracy and efficiency evidence on GMTKN55"],
+  "hidden_evaluation": ["ALD/CVD precursor reaction energies", "Activation barriers", "Binding energies", "Bond dissociation energies"],
+  "published_protocol": {
+    "basis": "def2-QZVP",
+    "hardware_tracks": ["One CPU core", "One A100 GPU"],
+    "reference": "CCSD(T), CBS extrapolated from triple- and quadruple-zeta calculations",
+    "timing": "Median of three calculations",
+    "metric_label": "WTMAD-2, kcal/mol"
+  },
+  "target_box_interpretation": {
+    "source": "User-supplied chart in this conversation",
+    "error_kcal_mol": "Below 1.0",
+    "cpu_seconds_per_molecule": "Approximately 10 or less; boundary read from plot",
+    "conditions": "Both together on the organizer's suite and CPU setup; exact timing aggregation and numerical boundary need confirmation",
+    "a100_seconds_threshold": "Not specified by this CPU chart"
+  },
+  "chart_capture": "Server-rendered accessibility labels; default Our CCSD(T) suite tab. These are organizer figures, not measurements from this repository or GMTKN55 literature values.",
+  "provisional_chart": [
+    {"functional": "LDA", "error": 26.35, "cpu_seconds_per_molecule": 2.4, "a100_seconds_per_molecule": 1.33},
+    {"functional": "PBE", "error": 12.47, "cpu_seconds_per_molecule": 3.0, "a100_seconds_per_molecule": 1.47},
+    {"functional": "PBE0", "error": 8.37, "cpu_seconds_per_molecule": 3.9, "a100_seconds_per_molecule": 1.41},
+    {"functional": "HSE06", "error": 8.29, "cpu_seconds_per_molecule": 12.2, "a100_seconds_per_molecule": 1.94},
+    {"functional": "omegaB97M-V", "error": 3.81, "cpu_seconds_per_molecule": 43.5, "a100_seconds_per_molecule": 3.94},
+    {"functional": "B3LYP", "error": 16.16, "cpu_seconds_per_molecule": 4.0, "a100_seconds_per_molecule": 1.50}
+  ],
+  "announced_additions": ["r2SCAN", "Skala"],
+  "not_established_by_this_page": ["Deadline", "Prize", "Full entry rules", "Allowed external data and pretrained models", "Element and charge/spin coverage", "Generalized-KS eligibility", "Dispersion and basis correction policy", "SCF tolerances, retries, failures and startup timing", "Hidden-suite WTMAD-2 weights", "Submission API"]
+}

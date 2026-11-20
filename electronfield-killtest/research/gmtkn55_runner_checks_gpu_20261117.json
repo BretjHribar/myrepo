@@ -1,0 +1,693 @@
+{
+  "created_utc": "2026-11-17T23:11:15.145657+00:00",
+  "device": "cuda",
+  "protocol": {
+    "purpose": "Complete pinned public GMTKN55 evaluation of our own frozen candidates; establish an initial measured score before further sub-1 research",
+    "source_commit": "8d485b37a1ca8837e395042671ca5ba4e0714691",
+    "manifest": "data/gmtkn55_official_v1/manifest.json",
+    "expected_evaluation_sets": 55,
+    "expected_reactions": 1505,
+    "expected_structure_inventory": 2462,
+    "normalization_kcal_per_mol": "57.8167",
+    "normalization_source": "https://github.com/grimme-lab/GMTKN55/blob/8d485b37a1ca8837e395042671ca5ba4e0714691/.calc_WTMAD-2",
+    "normalization_source_git_blob_sha1": "b4b14837e19a6d8d4e8d90a4e7171199d353cf47",
+    "subset_means": "Use pinned .average files, with BH76/.averageRC for BH76RC, exactly as the authors' corrected v1 calculator; also report unrounded means derived from the reference definitions for transparency",
+    "hartree_to_kcal_per_mol": "627.5094740631",
+    "prediction_energy_kind": "total_electronic_plus_nuclear_hartree",
+    "incomplete_prediction_policy": "No full WTMAD-2 unless every reaction has all finite, converged, physically accepted predictions. Missing/failed reactions remain in the full denominator for a clearly labeled nonnegative lower bound, never a claimed passing score.",
+    "partial_estimation_policy": "Do not extrapolate an opportunistic subset to a full-suite point estimate. Report actual coverage and failures; any later sampling estimate needs a prespecified probability design and uncertainty.",
+    "execution": "All scientific arithmetic and benchmark scoring on CUDA float64, one host core, no CPU numerical fallback, no speed experiments, no frontier replication",
+    "private_tests": "Public suite first as explicitly requested; no organizer private files or API available and no private-test pass claim"
+  },
+  "protocol_sha256": "7b7d65c27397db7d08e18570f60eeb96d43f5befc4939f25a096869b2019a1aa",
+  "source_metadata_sha256": {
+    "ACONF/.res": "0da3e9b678ed9c75ca7eba4f218d82c85a0a45ab7c4382c9193a044276c8b08b",
+    "ACONF/.numen": "238903180cc104ec2c5d8b3f20c5bc61b389ec0a967df8cc208cdc7cd454174f",
+    "ACONF/.average": "b2cc8251600923a16bae30e669fc0bce9a9328ae3826a58bb0652c288b337a99",
+    "ADIM6/.res": "fd90d7a90cbd147f29b32beece855301e46a78c1f087c744134f95ef5eac00af",
+    "ADIM6/.numen": "06e9d52c1720fca412803e3b07c4b228ff113e303f4c7ab94665319d832bbfb7",
+    "ADIM6/.average": "3754c752cbf85a4339dcabc619444872660311b502140c5231aad45a725e0f42",
+    "AHB21/.res": "a9c484ef2cab0d68f55c5561e55d8c79dd9c22a0356da5f64b0f54bb9c5e89fa",
+    "AHB21/.numen": "6e2ae11dad0616f66bbb2b6e6556f580bb987fd911d7132aa6bee2bfc7cc7b52",
+    "AHB21/.average": "d29b89a68a06abadc8af35901cc839f7b7dc4840970ec8a9d38480db83ca9a70",
+    "AL2X6/.res": "6c69dc4339af45ff869194fbd0203a1e558c24e9ca5bbfebeb28c4049ee9ab23",
+    "AL2X6/.numen": "06e9d52c1720fca412803e3b07c4b228ff113e303f4c7ab94665319d832bbfb7",
+    "AL2X6/.average": "6746ec652ee0309a60dd7d94354ebfe6a887c812fee867c6f3e835037745e679",
+    "ALK8/.res": "d92d83842d81aab99f8bdf916498f92389ca11fc48a4dc91f8f181460b4f4cc4",
+    "ALK8/.numen": "aa67a169b0bba217aa0aa88a65346920c84c42447c36ba5f7ea65f422c1fe5d8",
+    "ALK8/.average": "a147ffdd5f9760adf3049600023025281076e0f03f5005de6c87322a31cb1c7e",
+    "ALKBDE10/.res": "b1a558f2025cb03026960e680de3ff41b90ec32f20514dc7c461d4729e582e72",
+    "ALKBDE10/.numen": "917df3320d778ddbaa5c5c7742bc4046bf803c36ed2b050f30844ed206783469",
+    "ALKBDE10/.average": "bbaf62bb9ace80b3b52ca4e73eb82a3cf0812091f6a994d8fdfc7ef41f0da777",
+    "Amino20x4/.res": "09f6165654fed3634626693300e9b9c2f3a7bed25d0c8b7daee75d3d5ed9ebd2",
+    "Amino20x4/.numen": "95aebc97bc646c67fdcd923a5965b001f3c8a5c4d3a77075112e12a3a311d760",
+    "Amino20x4/.average": "2499efd2c8cfe5f9d2b60dc96a45264ef148e9aed3634ab37f1ea1f7d2aa3656",
+    "BH76/.res": "4e1aa5b835db1fa126e26e13047117f5fc4f958fb1ba5e01b868b2b7c2735ff7",
+    "BH76/.numen": "461144ccfd56ee3cf0f9a9d80e520c5b872166b23092d5fd838ecbdb46d64dab",
+    "BH76/.average": "47e44312399e30d4b73d303a82e52c78595012908708c50c1faab0adb6af0a8c",
+    "BH76/.resRC": "d1670fb10228ac7bf35cd1b3373c670e96866df77f58be265c49806078acb445",
+    "BH76/.numenRC": "f4ccd05b3271c386ee55d9876c7450012a3b361e5065c09dc22075e38b3cc35c",
+    "BH76/.averageRC": "3423f6bb41c339108fb966402899a3b7cbb07e3c4aeb8ad91ef8357b83b08131",
+    "BHDIV10/.res": "c71a6aaa13227356dc761ab3b3b581f99b7df81e9225c2fda6a9d7e22a1d2841",
+    "BHDIV10/.numen": "917df3320d778ddbaa5c5c7742bc4046bf803c36ed2b050f30844ed206783469",
+    "BHDIV10/.average": "7b7347e81c29e635221338e6e8a2b6afef6553d5afbba960113917501720d982",
+    "BHPERI/.res": "0863ec7883e41678b9dfcab1cef6d7366411f194e2c0004c50f0e1817c180349",
+    "BHPERI/.numen": "20d2add851bf39edcc6b5e830930f962db7e19dffa2cab8610eed551eda6c302",
+    "BHPERI/.average": "39aee64c4e57afaa360f53c3f7413625e2dafe7cad6f2d1351b427321af604f1",
+    "BHROT27/.res": "613cb7067e6953aec7261b475eb2b12c60f7ff08fc436486b36770981a22f818",
+    "BHROT27/.numen": "932ab0a0e4191d32c0af7b3f565b7b180dbe9869378abc5816f9add54b806e7f",
+    "BHROT27/.average": "87677560f9508c5265782803458839dcfd3eb669f0295a9d0b8025305812c7ab",
+    "BSR36/.res": "a43faa6cf37a9ec0ef8f27e64d5c55c541592d8e6460668f864e9a66ae343bb6",
+    "BSR36/.numen": "a4b2c5db15348c29451e18b8307e5ef81625ea638e807935f39ceaa8d9ac7758",
+    "BSR36/.average": "94302ae68dd400e326cfd623a8bef6859373eac48d00cf93fb5813ac8d4755d9",
+    "BUT14DIOL/.res": "adaad7d9a8586932243a6e5b0aba4e90c3e5930263acea14a6218137b191ea87",
+    "BUT14DIOL/.numen": "913f5d1da2feaf4deeccc9e55cbb350a20f12b3f507e87be85dbb77fdd3cb9bc",
+    "BUT14DIOL/.average": "34d9898c3df7eddb637b124124ed43fd8cde70bc74928d9ba553ff1547586f2c",
+    "C60ISO/.res": "930b4686da064e4bd07cfbaea9b96fb626d44ff1f613d937f94b4008ad76bb58",
+    "C60ISO/.numen": "2e6d31a5983a91251bfae5aefa1c0a19d8ba3cf601d0e8a706b4cfa9661a6b8a",
+    "C60ISO/.average": "b4933fec59104632a9296dd62ae0d7293159796d093589aaf43fe3226341ad04",
+    "CARBHB12/.res": "78ee9f516e86ca41db910925ac274d25e4cea30baaae43d57e2524c4e7abeed6",
+    "CARBHB12/.numen": "a1fb50e6c86fae1679ef3351296fd6713411a08cf8dd1790a4fd05fae8688164",
+    "CARBHB12/.average": "5c93499f67ae2a6876a6e4c196d8a03decd87a322e63f8163785b72bd9102d5e",
+    "CDIE20/.res": "7bfed0f626f8ba5da3cc6ac23430dca103bfff3143d19eb312d572459a3cad5d",
+    "CDIE20/.numen": "5378796307535df3ec8d8b15a2e2dc5641419c3d3060cfe32238c0fa973f7aa3",
+    "CDIE20/.average": "0c1943adf6fb14a33745e9e3b2ff76affb11034d726fd50f04b895b14f686b51",
+    "CHB6/.res": "9a0b117b23f9fc1edc610ce70708d7351de5f14943c2802c8d503e27b1c6ffd4",
+    "CHB6/.numen": "06e9d52c1720fca412803e3b07c4b228ff113e303f4c7ab94665319d832bbfb7",
+    "CHB6/.average": "0d7818385ef389a0b6d6c9364cd2058a6df08775bd03a53a977c657b0a8bd265",
+    "DARC/.res": "b263be64aea442fb4ba548531c10351223b0eec81c28ff3b1913af95c80ca9b1",
+    "DARC/.numen": "9a92adbc0cee38ef658c71ce1b1bf8c65668f166bfb213644c895ccb1ad07a25",
+    "DARC/.average": "1726bdaff401b53a03d53cebb5888f326593d69c2bcf1709469d7d6a61d48ec3",
+    "DC13/.res": "3160b5787436d8833199a2328ad69a3b30900035a2c6ce9af6e3abc140772be4",
+    "DC13/.numen": "1a252402972f6057fa53cc172b52b9ffca698e18311facd0f3b06ecaaef79e17",
+    "DC13/.average": "b8e2188d9205cd8abe85387a258184a97bcb4232f73de8b59fdeecf01b238299",
+    "DIPCS10/.res": "785c7e73ff2bf385bbf7ce828769d7daf372e13a970a7285b89a5438f5992f9d",
+    "DIPCS10/.numen": "917df3320d778ddbaa5c5c7742bc4046bf803c36ed2b050f30844ed206783469",
+    "DIPCS10/.average": "bcb95edc8bd61a8b72288f67e3eff965ceb958e3487a57189ef8a3c4385a16bb",
+    "FH51/.res": "d3f77cd50622dde4d8ac2b654c6d34bf8947249a2d252435641554aceae5a213",
+    "FH51/.numen": "9e62e6489fcc4bc58be7cb23e74d25cbfcc3732c1f70e8c37f12a756d1db9381",
+    "FH51/.average": "3419142c6c2f3669e0d7c4c2c360d52912f1388a20176f2c7a51fd2cf9b73c91",
+    "G21EA/.res": "f63d3b1c4a7da734adeab965db9e2b37eb79f7fc0954e3969754179a6b24d64c",
+    "G21EA/.numen": "64aeb9975f234becd55bb4635e6e2f2da7a6b7bf0a896f0c07763bdfbfb31420",
+    "G21EA/.average": "5eaa21ec21653f986460279d0db5e5d5b85a3d171e03c295d0e11514da774d87",
+    "G21IP/.res": "4332e5490731e8c76382abe54f8f73f8ecad4b9bd836cb7b3e65deb89d1e6436",
+    "G21IP/.numen": "a4b2c5db15348c29451e18b8307e5ef81625ea638e807935f39ceaa8d9ac7758",
+    "G21IP/.average": "5ead9d50735e98b507d33756d517f84485e1af750c05cdb4865f4f7385c76000",
+    "G2RC/.res": "fba07d176f75daf2eacfad74d62d5feeedbef53ec45f9178dfd2a3d0939dc20b",
+    "G2RC/.numen": "64aeb9975f234becd55bb4635e6e2f2da7a6b7bf0a896f0c07763bdfbfb31420",
+    "G2RC/.average": "07ae2814a0047918c3149a6ce0ef58947c93f18584c184213a6cc79a324c1b8c",
+    "HAL59/.res": "ce7d0dc3229de5d71542c21575c18bf57beb3d485464091c14fe98f0cb050fd1",
+    "HAL59/.numen": "be4ba010e48e7d5c7c60457e7f40538407a26f4ead94b392beff67a3a5546b8a",
+    "HAL59/.average": "4ef45384bbf8640b71bc4aacd760c11209074ea51696656a05c208e48b72402d",
+    "HEAVY28/.res": "7e577639293b80dbda132500c585bd132cf1d5e01e0e76fd518bf6f748d07ecc",
+    "HEAVY28/.numen": "9961d158a7e0e2f990765971a9e490af826c0743b7d603020f34cc8944319fcb",
+    "HEAVY28/.average": "fbcc473e5178ef2aa09972d277044256923515d4cbb8142ff242bf786141f101",
+    "HEAVYSB11/.res": "65e8619b58713b688627bad26454b9b9155652c5f3f449dc99c78cf12066cef3",
+    "HEAVYSB11/.numen": "25d4f2a86deb5e2574bb3210b67bb24fcc4afb19f93a7b65a057daa874a9d18e",
+    "HEAVYSB11/.average": "7d5aa87161d01d05c3cbf7b378adf5c3303775b23c52e525cc470e07a89f459e",
+    "ICONF/.res": "aece6f00e6e60d39788b132f96194a615ce0fcc879317ddbe849d102e39165e0",
+    "ICONF/.numen": "54183f4323f377b737433a1e98229ead0fdc686f93bab057ecb612daa94002b5",
+    "ICONF/.average": "85033ee4c378a0d115f4ed5b75972957567e0ec0d7d6c688f6dafd485e45d316",
+    "IDISP/.res": "d7eab8bd7e8328bd8d576d5cacd38c76008559eb03f2915bfed3fa21c75c14b3",
+    "IDISP/.numen": "06e9d52c1720fca412803e3b07c4b228ff113e303f4c7ab94665319d832bbfb7",
+    "IDISP/.average": "8d025ad6a79fe2fe6243e078055fed30bfc994613e2a541e892493e6efc92a6a",
+    "IL16/.res": "aaad5fddf0ac7475b6caed1196d7faf8dda597fd0b323fcded6dcfe88b44b063",
+    "IL16/.numen": "e6c21e8d260fe71882debdb339d2402a2ca7648529bc2303f48649bce0380017",
+    "IL16/.average": "9cde8d749f3d5fcb88d2825c7b6a0f5930fe0a3b45fe619269a11150227b81b1",
+    "INV24/.res": "734d1b2bc178fcb856385879f9ff828f5b99974c18ec89a370d65a0ffeda08e2",
+    "INV24/.numen": "68ca3fba3b7e864770cb61aeb306d4bd4354b68ab4dd38450860c5d823e42a53",
+    "INV24/.average": "a65e8ef59e72610cb64472bf6a74cfd6cb91a700610469d38a1e88e8b96cd53c",
+    "ISO34/.res": "0228d903a33029875d8d25b89235b6706cf53ae94959d8c59fca47cb74f5e3fe",
+    "ISO34/.numen": "ea243e5457028e97f9bc93b37a72f8e80ea61ae081911bb037765590ee6aa435",
+    "ISO34/.average": "26eca47398d6983ecc7d8e59674d45666d0acd84c2e1b150927e215a862f4547",
+    "ISOL24/.res": "8b18da28d49922a1a3073b665463f769a790f433be23fe84c0173cfedec735fd",
+    "ISOL24/.numen": "68ca3fba3b7e864770cb61aeb306d4bd4354b68ab4dd38450860c5d823e42a53",
+    "ISOL24/.average": "4a8af2570726de7926d05c558c96897f00e768c00126a5aabd13604c4fd81069",
+    "MB16-43/.res": "9790dd2722a3ecc5b6f8e2af69c68d623917bf86b6c6473c3d6e119c5e866094",
+    "MB16-43/.numen": "0e55092af0746630c98d1b2e0d960617c33f8ea7b55739fd18cb7cd5342a28ca",
+    "MB16-43/.average": "2dd12adde4798605e4c5c1350433a3385abe8229965e83c7ec5544ba3bc0865c",
+    "MCONF/.res": "2286176f93159ebd3f81c0b8951fa76f5283436803e753e1fbb7cc265a774156",
+    "MCONF/.numen": "9e62e6489fcc4bc58be7cb23e74d25cbfcc3732c1f70e8c37f12a756d1db9381",
+    "MCONF/.average": "4f9faac97e2ef6fb474a9e52cf5f8335411d8425126947e1a66e082e2098fc8e",
+    "NBPRC/.res": "42e8f1f0a7ae9a5f5fa8bbf9e6771a6d3ada1fe8b7753826dda026de932c15b2",
+    "NBPRC/.numen": "a1fb50e6c86fae1679ef3351296fd6713411a08cf8dd1790a4fd05fae8688164",
+    "NBPRC/.average": "eec0e1d67a4864e05577d23cab7db1ebfe4c31704be57ec21b19163104411825",
+    "PA26/.res": "c57582fafa83a3030b9ec4a711aa251b00dbb10fce9f5b44be2e6d8d4905d276",
+    "PA26/.numen": "20d2add851bf39edcc6b5e830930f962db7e19dffa2cab8610eed551eda6c302",
+    "PA26/.average": "b00d2a91197bd787e142a73d4a022ffa950f4b95d623742c05a4d852449606f0",
+    "PArel/.res": "1c4f8bb23ee1b1d45cfe50d8a8648414f24c28290fa4ae3418ce628f22474ab8",
+    "PArel/.numen": "5378796307535df3ec8d8b15a2e2dc5641419c3d3060cfe32238c0fa973f7aa3",
+    "PArel/.average": "cb186a9b04c428b1b9f650722cd3bd508ccb42c89dd451b2ad4112a9d004568c",
+    "PCONF21/.res": "9a58ddd0e25e3bd46067850e84e0e9ae1bb2223d188cf1513e94887dbf323aaa",
+    "PCONF21/.numen": "7ee29791fc17e986b97128845622b077fb45e349fdb80523fac9dba879b4ad60",
+    "PCONF21/.average": "6311f085ec95836f8584d02d4250ef546b867a26aa9b049bf78e59602f6fe66a",
+    "PNICO23/.res": "b99eeb701c7708bf83352cc5bbd97048266be891427d1d69c7e318fa67183473",
+    "PNICO23/.numen": "076320a2a08267b4c026d06573bba408ea68841e73cdc20e62cce59de165ece3",
+    "PNICO23/.average": "fa2454c24a4ea22aee8e25da35d9b9011024c4ed23c9d81152dd9565eef9fd67",
+    "PX13/.res": "25ad266172775db7d855777f66adccd6270546ca08c902cddbc64f4bb8ea6988",
+    "PX13/.numen": "1a252402972f6057fa53cc172b52b9ffca698e18311facd0f3b06ecaaef79e17",
+    "PX13/.average": "cace005816465d991b5751585698bf95befbe017fd2c0385c8b3901f3389cd68",
+    "RC21/.res": "23be789d3ae0c0c4fffef777e4cacc82e013c8171a47f9f876f3119789b89f90",
+    "RC21/.numen": "6e2ae11dad0616f66bbb2b6e6556f580bb987fd911d7132aa6bee2bfc7cc7b52",
+    "RC21/.average": "85c69b149981c0c950fc7244256e355f523875477b77ce4b1abf1d3f8943137f",
+    "RG18/.res": "f387efd4d1a34da0c97da54137222c7755c392f799be493c1cc47462927f451e",
+    "RG18/.numen": "7ee29791fc17e986b97128845622b077fb45e349fdb80523fac9dba879b4ad60",
+    "RG18/.average": "b7958da86c50cdb790dd3be7b9a24904d87cad0bf76873f2015d61ee8487bcb4",
+    "RSE43/.res": "42b488da792191491e15a6ef684dd7d121f922ded7288c271e0b5e9c317f5970",
+    "RSE43/.numen": "0e55092af0746630c98d1b2e0d960617c33f8ea7b55739fd18cb7cd5342a28ca",
+    "RSE43/.average": "d284f858292ac1a62fb5ff20559b60ce7d30d708fccd74fc9fe5cc5f9caee076",
+    "S22/.res": "a43c93f575d15233298275b473977d7755010a619809a3b6c720c4699c888bd7",
+    "S22/.numen": "f14b4987904bcb5814e4459a057ed4d20f58a633152288a761214dcd28780b56",
+    "S22/.average": "b417810c812562878b92f941b35895639c4ac38f6aaf7b0162705a42f7e7f2dc",
+    "S66/.res": "1d799b114fd0899ff4e2e9834c3e8382f2c99f56c16a776635da8c632bda0ec3",
+    "S66/.numen": "8e37bed9dff3949ffd23ae638260dff869f5cc26e551f2a9e5e289a8888949fa",
+    "S66/.average": "1b1eb2d4cd094539af6c0d7451ae92e53ee22f1bbcd32d2deab10f354ff9adce",
+    "SCONF/.res": "3ccdf5ca249fef9f90e30a5bafd02109e6a42f3980b5562a486fc8f786d6ea5e",
+    "SCONF/.numen": "54183f4323f377b737433a1e98229ead0fdc686f93bab057ecb612daa94002b5",
+    "SCONF/.average": "101066f5f978540c75927a15154af17197553aaf3f184b81344e23ac060c9ca8",
+    "SIE4x4/.res": "6404d685de38c25f02855660b852f0b6ea3d10a8cf01ed26b325a361a40996e6",
+    "SIE4x4/.numen": "e6c21e8d260fe71882debdb339d2402a2ca7648529bc2303f48649bce0380017",
+    "SIE4x4/.average": "5815904c1f2b7b68f755d904eaf7a4f904f5f82a199c2975ab6c344a9148b17d",
+    "TAUT15/.res": "562375bd781c4df69ef8513fe944721056046a428816490886211652e6f8d071",
+    "TAUT15/.numen": "238903180cc104ec2c5d8b3f20c5bc61b389ec0a967df8cc208cdc7cd454174f",
+    "TAUT15/.average": "8a771b8892580354c76bf57a4c8d4a0ab2c4077345d453da2770c7383315be20",
+    "UPU23/.res": "14f51b9fd2ffd9b2a9fd5f89f516cea959c75270293c5901b4d6f9e37d44be32",
+    "UPU23/.numen": "076320a2a08267b4c026d06573bba408ea68841e73cdc20e62cce59de165ece3",
+    "UPU23/.average": "d41bef6516eda3cd79b40966617648fadb423773009640fb4e77497ec77f3f1e",
+    "W4-11/.res": "bfd27710ab77fd12f95afe776898a7c94011327db100acac93ea928615b61aa0",
+    "W4-11/.numen": "251afbc1fe2e0118f21efcd99a65edefb597b294c5b10ed79b7c46017614e8db",
+    "W4-11/.average": "61173b4282cae1bf3419cbf9b5a79c65bce603911e6852aeb89e4d560171c2d0",
+    "WATER27/.res": "3ec406e3de0b7a8e42027fa5295474d80242d58cac33d2bb168e38111dc53b80",
+    "WATER27/.numen": "932ab0a0e4191d32c0af7b3f565b7b180dbe9869378abc5816f9add54b806e7f",
+    "WATER27/.average": "d61cbc0ddc784846cc98d46dea69f95e9414f3e37b2b56188f837c6da64205e1",
+    "WCPT18/.res": "5604ff5985d2473fde4837fed20445c51159305a8025641a4d52208f61d030bb",
+    "WCPT18/.numen": "7ee29791fc17e986b97128845622b077fb45e349fdb80523fac9dba879b4ad60",
+    "WCPT18/.average": "f7b48d958071d2f898b6c0482ae311cab0951e75432e9d9989273252bb3dd945",
+    "YBDE18/.res": "5125cf93f8e5dcb7d41e901445b6d9cade6637ed5bd5669648f0c99105f5d4d0",
+    "YBDE18/.numen": "7ee29791fc17e986b97128845622b077fb45e349fdb80523fac9dba879b4ad60",
+    "YBDE18/.average": "f214957ed45cb792011ec0d39980d313d35d3de4b1ca705ab248b12222513394"
+  },
+  "manifest_sha256": "54f2f7f85a15c519768ef8f229c6db3b007645abe68c2f5d2d8da25e63a8aa2e",
+  "coordinate_check_sha256": "566b75c874abe72f560d7fb89cb328318cc7400d2f338764d160cab9f2237f5e",
+  "passed": true,
+  "checks": [
+    {
+      "name": "literal_source_reaction_G21IP/001",
+      "passed": true
+    },
+    {
+      "name": "literal_source_reaction_G21IP/002",
+      "passed": true
+    },
+    {
+      "name": "literal_source_reaction_ADIM6/001",
+      "passed": true
+    },
+    {
+      "name": "literal_source_reaction_BH76RC/001",
+      "passed": true
+    },
+    {
+      "name": "literal_source_reaction_S22/001",
+      "passed": true
+    },
+    {
+      "name": "all_reaction_contractions_and_units",
+      "passed": true,
+      "maximum_difference_kcal_per_mol": 2.7939677238464355e-09
+    },
+    {
+      "name": "independent_complete_weighted_aggregation",
+      "passed": true,
+      "difference_kcal_per_mol": 0.0
+    },
+    {
+      "name": "missing_structure_never_reports_full_score",
+      "passed": true
+    },
+    {
+      "name": "nonfinite_prediction_is_not_silently_scored",
+      "passed": true
+    },
+    {
+      "name": "empty_predictions_do_not_become_accuracy_estimate",
+      "passed": true
+    },
+    {
+      "name": "contract_rejects_duplicate_id",
+      "passed": true
+    },
+    {
+      "name": "contract_rejects_wrong_units",
+      "passed": true
+    },
+    {
+      "name": "contract_rejects_electronic_only_energy",
+      "passed": true
+    },
+    {
+      "name": "contract_rejects_reference_leakage",
+      "passed": true
+    },
+    {
+      "name": "contract_rejects_wrong_version",
+      "passed": true
+    },
+    {
+      "name": "contract_rejects_unconverged_energy",
+      "passed": true
+    },
+    {
+      "name": "contract_rejects_unphysical_energy",
+      "passed": true
+    }
+  ],
+  "evaluation_sets": 55,
+  "reactions": 1505,
+  "required_structures": 2442,
+  "inventory_structures": 2462,
+  "unreferenced_upstream_structures": [
+    "BH76/CH2OH",
+    "BH76/N2H",
+    "BH76/N2H2",
+    "BH76/RKT05",
+    "BH76/RKT13",
+    "BH76/RKT15",
+    "BH76/hch3clts",
+    "BHPERI/01r",
+    "BHPERI/01ts",
+    "BHPERI/05ts",
+    "BHPERI/13-Cyclohexadiene",
+    "BHPERI/Benzocyclobutane",
+    "BHPERI/Cyclohexene",
+    "BHPERI/Cyclonona-147-triene",
+    "BHPERI/Norbornene",
+    "BHPERI/TS10",
+    "PX13/h2o",
+    "PX13/hf",
+    "PX13/nh3",
+    "S22/02b"
+  ],
+  "subset_reference_means": [
+    {
+      "subset": "ACONF",
+      "count": 15,
+      "pinned_average_kcal_per_mol": 1.83,
+      "reference_derived_mean_absolute_kcal_per_mol": 1.8341333333333334,
+      "derived_minus_pinned_mean_kcal_per_mol": 0.004133333333333322
+    },
+    {
+      "subset": "ADIM6",
+      "count": 6,
+      "pinned_average_kcal_per_mol": 3.36,
+      "reference_derived_mean_absolute_kcal_per_mol": 3.358333333333333,
+      "derived_minus_pinned_mean_kcal_per_mol": -0.0016666666666669272
+    },
+    {
+      "subset": "AHB21",
+      "count": 21,
+      "pinned_average_kcal_per_mol": 22.49,
+      "reference_derived_mean_absolute_kcal_per_mol": 22.486190476190476,
+      "derived_minus_pinned_mean_kcal_per_mol": -0.003809523809522375
+    },
+    {
+      "subset": "AL2X6",
+      "count": 6,
+      "pinned_average_kcal_per_mol": 35.88,
+      "reference_derived_mean_absolute_kcal_per_mol": 35.88333333333333,
+      "derived_minus_pinned_mean_kcal_per_mol": 0.0033333333333303017
+    },
+    {
+      "subset": "ALK8",
+      "count": 8,
+      "pinned_average_kcal_per_mol": 62.6,
+      "reference_derived_mean_absolute_kcal_per_mol": 62.60125,
+      "derived_minus_pinned_mean_kcal_per_mol": 0.0012499999999988631
+    },
+    {
+      "subset": "ALKBDE10",
+      "count": 10,
+      "pinned_average_kcal_per_mol": 100.69,
+      "reference_derived_mean_absolute_kcal_per_mol": 100.69,
+      "derived_minus_pinned_mean_kcal_per_mol": 0.0
+    },
+    {
+      "subset": "Amino20x4",
+      "count": 80,
+      "pinned_average_kcal_per_mol": 2.44,
+      "reference_derived_mean_absolute_kcal_per_mol": 2.4386875000000003,
+      "derived_minus_pinned_mean_kcal_per_mol": -0.0013124999999996056
+    },
+    {
+      "subset": "BH76",
+      "count": 76,
+      "pinned_average_kcal_per_mol": 18.61,
+      "reference_derived_mean_absolute_kcal_per_mol": 18.614473684210527,
+      "derived_minus_pinned_mean_kcal_per_mol": 0.004473684210527296
+    },
+    {
+      "subset": "BH76RC",
+      "count": 30,
+      "pinned_average_kcal_per_mol": 21.39,
+      "reference_derived_mean_absolute_kcal_per_mol": 21.391666666666666,
+      "derived_minus_pinned_mean_kcal_per_mol": 0.0016666666666651508
+    },
+    {
+      "subset": "BHDIV10",
+      "count": 10,
+      "pinned_average_kcal_per_mol": 45.33,
+      "reference_derived_mean_absolute_kcal_per_mol": 45.333,
+      "derived_minus_pinned_mean_kcal_per_mol": 0.0030000000000001137
+    },
+    {
+      "subset": "BHPERI",
+      "count": 26,
+      "pinned_average_kcal_per_mol": 20.87,
+      "reference_derived_mean_absolute_kcal_per_mol": 20.873076923076926,
+      "derived_minus_pinned_mean_kcal_per_mol": 0.0030769230769251976
+    },
+    {
+      "subset": "BHROT27",
+      "count": 27,
+      "pinned_average_kcal_per_mol": 6.27,
+      "reference_derived_mean_absolute_kcal_per_mol": 6.272962962962962,
+      "derived_minus_pinned_mean_kcal_per_mol": 0.002962962962962834
+    },
+    {
+      "subset": "BSR36",
+      "count": 36,
+      "pinned_average_kcal_per_mol": 16.2,
+      "reference_derived_mean_absolute_kcal_per_mol": 16.19694444444444,
+      "derived_minus_pinned_mean_kcal_per_mol": -0.0030555555555586977
+    },
+    {
+      "subset": "BUT14DIOL",
+      "count": 64,
+      "pinned_average_kcal_per_mol": 2.8,
+      "reference_derived_mean_absolute_kcal_per_mol": 2.7996875,
+      "derived_minus_pinned_mean_kcal_per_mol": -0.0003124999999997158
+    },
+    {
+      "subset": "C60ISO",
+      "count": 9,
+      "pinned_average_kcal_per_mol": 98.25,
+      "reference_derived_mean_absolute_kcal_per_mol": 98.25222222222222,
+      "derived_minus_pinned_mean_kcal_per_mol": 0.002222222222215464
+    },
+    {
+      "subset": "CARBHB12",
+      "count": 12,
+      "pinned_average_kcal_per_mol": 6.04,
+      "reference_derived_mean_absolute_kcal_per_mol": 6.035333333333334,
+      "derived_minus_pinned_mean_kcal_per_mol": -0.004666666666666153
+    },
+    {
+      "subset": "CDIE20",
+      "count": 20,
+      "pinned_average_kcal_per_mol": 4.06,
+      "reference_derived_mean_absolute_kcal_per_mol": 4.055,
+      "derived_minus_pinned_mean_kcal_per_mol": -0.004999999999999893
+    },
+    {
+      "subset": "CHB6",
+      "count": 6,
+      "pinned_average_kcal_per_mol": 26.79,
+      "reference_derived_mean_absolute_kcal_per_mol": 26.784999999999997,
+      "derived_minus_pinned_mean_kcal_per_mol": -0.005000000000002558
+    },
+    {
+      "subset": "DARC",
+      "count": 14,
+      "pinned_average_kcal_per_mol": 32.47,
+      "reference_derived_mean_absolute_kcal_per_mol": 32.47142857142857,
+      "derived_minus_pinned_mean_kcal_per_mol": 0.0014285714285691142
+    },
+    {
+      "subset": "DC13",
+      "count": 13,
+      "pinned_average_kcal_per_mol": 54.98,
+      "reference_derived_mean_absolute_kcal_per_mol": 54.978461538461545,
+      "derived_minus_pinned_mean_kcal_per_mol": -0.0015384615384519407
+    },
+    {
+      "subset": "DIPCS10",
+      "count": 10,
+      "pinned_average_kcal_per_mol": 654.26,
+      "reference_derived_mean_absolute_kcal_per_mol": 654.2600000000001,
+      "derived_minus_pinned_mean_kcal_per_mol": 1.1368683772161603e-13
+    },
+    {
+      "subset": "FH51",
+      "count": 51,
+      "pinned_average_kcal_per_mol": 31.01,
+      "reference_derived_mean_absolute_kcal_per_mol": 31.01098039215686,
+      "derived_minus_pinned_mean_kcal_per_mol": 0.0009803921568583007
+    },
+    {
+      "subset": "G21EA",
+      "count": 25,
+      "pinned_average_kcal_per_mol": 33.62,
+      "reference_derived_mean_absolute_kcal_per_mol": 33.624,
+      "derived_minus_pinned_mean_kcal_per_mol": 0.0040000000000048885
+    },
+    {
+      "subset": "G21IP",
+      "count": 36,
+      "pinned_average_kcal_per_mol": 257.61,
+      "reference_derived_mean_absolute_kcal_per_mol": 257.6095833333333,
+      "derived_minus_pinned_mean_kcal_per_mol": -0.0004166666666947094
+    },
+    {
+      "subset": "G2RC",
+      "count": 25,
+      "pinned_average_kcal_per_mol": 51.26,
+      "reference_derived_mean_absolute_kcal_per_mol": 51.263200000000005,
+      "derived_minus_pinned_mean_kcal_per_mol": 0.003200000000006753
+    },
+    {
+      "subset": "HAL59",
+      "count": 59,
+      "pinned_average_kcal_per_mol": 4.59,
+      "reference_derived_mean_absolute_kcal_per_mol": 4.592203389830509,
+      "derived_minus_pinned_mean_kcal_per_mol": 0.0022033898305089394
+    },
+    {
+      "subset": "HEAVY28",
+      "count": 28,
+      "pinned_average_kcal_per_mol": 1.24,
+      "reference_derived_mean_absolute_kcal_per_mol": 1.2414285714285713,
+      "derived_minus_pinned_mean_kcal_per_mol": 0.0014285714285713347
+    },
+    {
+      "subset": "HEAVYSB11",
+      "count": 11,
+      "pinned_average_kcal_per_mol": 58.02,
+      "reference_derived_mean_absolute_kcal_per_mol": 58.02272727272727,
+      "derived_minus_pinned_mean_kcal_per_mol": 0.002727272727270247
+    },
+    {
+      "subset": "ICONF",
+      "count": 17,
+      "pinned_average_kcal_per_mol": 3.27,
+      "reference_derived_mean_absolute_kcal_per_mol": 3.2664705882352942,
+      "derived_minus_pinned_mean_kcal_per_mol": -0.003529411764705781
+    },
+    {
+      "subset": "IDISP",
+      "count": 6,
+      "pinned_average_kcal_per_mol": 14.22,
+      "reference_derived_mean_absolute_kcal_per_mol": 14.223333333333333,
+      "derived_minus_pinned_mean_kcal_per_mol": 0.003333333333332078
+    },
+    {
+      "subset": "IL16",
+      "count": 16,
+      "pinned_average_kcal_per_mol": 109.04,
+      "reference_derived_mean_absolute_kcal_per_mol": 109.045,
+      "derived_minus_pinned_mean_kcal_per_mol": 0.0049999999999954525
+    },
+    {
+      "subset": "INV24",
+      "count": 24,
+      "pinned_average_kcal_per_mol": 31.85,
+      "reference_derived_mean_absolute_kcal_per_mol": 31.84583333333333,
+      "derived_minus_pinned_mean_kcal_per_mol": -0.0041666666666699825
+    },
+    {
+      "subset": "ISO34",
+      "count": 34,
+      "pinned_average_kcal_per_mol": 14.57,
+      "reference_derived_mean_absolute_kcal_per_mol": 14.57,
+      "derived_minus_pinned_mean_kcal_per_mol": 0.0
+    },
+    {
+      "subset": "ISOL24",
+      "count": 24,
+      "pinned_average_kcal_per_mol": 21.92,
+      "reference_derived_mean_absolute_kcal_per_mol": 21.918749999999996,
+      "derived_minus_pinned_mean_kcal_per_mol": -0.0012500000000059686
+    },
+    {
+      "subset": "MB16-43",
+      "count": 43,
+      "pinned_average_kcal_per_mol": 468.39,
+      "reference_derived_mean_absolute_kcal_per_mol": 468.3937953488372,
+      "derived_minus_pinned_mean_kcal_per_mol": 0.0037953488372295396
+    },
+    {
+      "subset": "MCONF",
+      "count": 51,
+      "pinned_average_kcal_per_mol": 4.97,
+      "reference_derived_mean_absolute_kcal_per_mol": 4.9709803921568625,
+      "derived_minus_pinned_mean_kcal_per_mol": 0.0009803921568627416
+    },
+    {
+      "subset": "NBPRC",
+      "count": 12,
+      "pinned_average_kcal_per_mol": 27.71,
+      "reference_derived_mean_absolute_kcal_per_mol": 27.708333333333332,
+      "derived_minus_pinned_mean_kcal_per_mol": -0.0016666666666687036
+    },
+    {
+      "subset": "PA26",
+      "count": 26,
+      "pinned_average_kcal_per_mol": 189.05,
+      "reference_derived_mean_absolute_kcal_per_mol": 189.0538461538462,
+      "derived_minus_pinned_mean_kcal_per_mol": 0.0038461538461831424
+    },
+    {
+      "subset": "PArel",
+      "count": 20,
+      "pinned_average_kcal_per_mol": 4.63,
+      "reference_derived_mean_absolute_kcal_per_mol": 4.6305,
+      "derived_minus_pinned_mean_kcal_per_mol": 0.0004999999999997229
+    },
+    {
+      "subset": "PCONF21",
+      "count": 18,
+      "pinned_average_kcal_per_mol": 1.62,
+      "reference_derived_mean_absolute_kcal_per_mol": 1.6216666666666664,
+      "derived_minus_pinned_mean_kcal_per_mol": 0.001666666666666261
+    },
+    {
+      "subset": "PNICO23",
+      "count": 23,
+      "pinned_average_kcal_per_mol": 4.27,
+      "reference_derived_mean_absolute_kcal_per_mol": 4.273478260869565,
+      "derived_minus_pinned_mean_kcal_per_mol": 0.003478260869565375
+    },
+    {
+      "subset": "PX13",
+      "count": 13,
+      "pinned_average_kcal_per_mol": 33.36,
+      "reference_derived_mean_absolute_kcal_per_mol": 33.361538461538466,
+      "derived_minus_pinned_mean_kcal_per_mol": 0.0015384615384661515
+    },
+    {
+      "subset": "RC21",
+      "count": 21,
+      "pinned_average_kcal_per_mol": 35.7,
+      "reference_derived_mean_absolute_kcal_per_mol": 35.69857142857143,
+      "derived_minus_pinned_mean_kcal_per_mol": -0.0014285714285762197
+    },
+    {
+      "subset": "RG18",
+      "count": 18,
+      "pinned_average_kcal_per_mol": 0.58,
+      "reference_derived_mean_absolute_kcal_per_mol": 0.58,
+      "derived_minus_pinned_mean_kcal_per_mol": 0.0
+    },
+    {
+      "subset": "RSE43",
+      "count": 43,
+      "pinned_average_kcal_per_mol": 7.6,
+      "reference_derived_mean_absolute_kcal_per_mol": 7.602325581395348,
+      "derived_minus_pinned_mean_kcal_per_mol": 0.0023255813953486637
+    },
+    {
+      "subset": "S22",
+      "count": 22,
+      "pinned_average_kcal_per_mol": 7.3,
+      "reference_derived_mean_absolute_kcal_per_mol": 7.302363636363636,
+      "derived_minus_pinned_mean_kcal_per_mol": 0.0023636363636363455
+    },
+    {
+      "subset": "S66",
+      "count": 66,
+      "pinned_average_kcal_per_mol": 5.47,
+      "reference_derived_mean_absolute_kcal_per_mol": 5.466969696969697,
+      "derived_minus_pinned_mean_kcal_per_mol": -0.003030303030302939
+    },
+    {
+      "subset": "SCONF",
+      "count": 17,
+      "pinned_average_kcal_per_mol": 4.6,
+      "reference_derived_mean_absolute_kcal_per_mol": 4.6000000000000005,
+      "derived_minus_pinned_mean_kcal_per_mol": 8.881784197001252e-16
+    },
+    {
+      "subset": "SIE4x4",
+      "count": 16,
+      "pinned_average_kcal_per_mol": 33.72,
+      "reference_derived_mean_absolute_kcal_per_mol": 33.725,
+      "derived_minus_pinned_mean_kcal_per_mol": 0.005000000000002558
+    },
+    {
+      "subset": "TAUT15",
+      "count": 15,
+      "pinned_average_kcal_per_mol": 3.05,
+      "reference_derived_mean_absolute_kcal_per_mol": 3.046,
+      "derived_minus_pinned_mean_kcal_per_mol": -0.0040000000000000036
+    },
+    {
+      "subset": "UPU23",
+      "count": 23,
+      "pinned_average_kcal_per_mol": 5.72,
+      "reference_derived_mean_absolute_kcal_per_mol": 5.722608695652174,
+      "derived_minus_pinned_mean_kcal_per_mol": 0.0026086956521744753
+    },
+    {
+      "subset": "W4-11",
+      "count": 140,
+      "pinned_average_kcal_per_mol": 306.91,
+      "reference_derived_mean_absolute_kcal_per_mol": 306.9144642857143,
+      "derived_minus_pinned_mean_kcal_per_mol": 0.004464285714277594
+    },
+    {
+      "subset": "WATER27",
+      "count": 27,
+      "pinned_average_kcal_per_mol": 81.17,
+      "reference_derived_mean_absolute_kcal_per_mol": 81.17444444444445,
+      "derived_minus_pinned_mean_kcal_per_mol": 0.004444444444445139
+    },
+    {
+      "subset": "WCPT18",
+      "count": 18,
+      "pinned_average_kcal_per_mol": 34.99,
+      "reference_derived_mean_absolute_kcal_per_mol": 34.98777777777777,
+      "derived_minus_pinned_mean_kcal_per_mol": -0.002222222222229675
+    },
+    {
+      "subset": "YBDE18",
+      "count": 18,
+      "pinned_average_kcal_per_mol": 49.28,
+      "reference_derived_mean_absolute_kcal_per_mol": 49.275555555555556,
+      "derived_minus_pinned_mean_kcal_per_mol": -0.004444444444445139
+    }
+  ],
+  "group_reaction_counts": {
+    "basic_properties_and_small_reactions": 473,
+    "large_reactions_and_isomerizations": 243,
+    "barriers": 194,
+    "intermolecular_interactions": 304,
+    "intramolecular_interactions": 291
+  },
+  "harness_only_synthetic_inputs": true,
+  "actual_model_predictions": 0,
+  "wtmad2_measured": false,
+  "initial_model_accuracy_estimate_kcal_per_mol": null,
+  "goal_accuracy_achieved": false,
+  "organizer_private_tests_passed": false,
+  "cpu_scientific_arithmetic": false,
+  "peak_cuda_bytes": 71086592
+}

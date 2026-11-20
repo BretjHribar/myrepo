@@ -1,0 +1,217 @@
+{
+  "created_utc": "2026-11-17T10:27:36.881163+00:00",
+  "device": "cuda",
+  "id": "H2O2_skew_new",
+  "protocol": {
+    "purpose": "Complete the remaining peroxide physical residual using the saved state and exact saved local subspaces",
+    "trigger": "Original 32-update prediction stopped at 1.593e-5 Hartree, above its unchanged 1e-5 residual target",
+    "maximum_additional_updates": 8,
+    "full_state_residual_target_hartree": 1e-05,
+    "source": "Original model checkpoint; restore subspaces directly, repeat no local eigensolve or previous fit",
+    "reference_use": "Existing label only for assessment after completion; never a stopping condition",
+    "limits": "Post-label development convergence completion; preserve the original prespecified 32-update result separately"
+  },
+  "total_energy_hartree": -148.86241621527356,
+  "reference_energy_hartree": -148.86241621527896,
+  "energy_error_kcal": 3.388629467622195e-09,
+  "original_full_residual": 1.5931884767530044e-05,
+  "new_reference_generated": false,
+  "local_subspaces_restored_without_eigensolve": true,
+  "post_label_development_completion": true,
+  "peak_cuda_bytes": 292411904,
+  "physical_validity_passed": true,
+  "full_residual": 8.348307866800352e-06,
+  "projected_residual": 9.824869376308614e-09,
+  "input_retention_error": 2.3293286619969625e-15,
+  "spin_lower_norm": 1.8707041687202609e-13,
+  "initial_spin_lower_norm": 3.287986666393325e-13,
+  "reference_not_degraded": true,
+  "projected_dimension": 37154,
+  "charge_weights": {
+    "6": 7.326636190802974e-08,
+    "7": 0.0003651550509000652,
+    "8": 0.16809656674459938,
+    "9": 0.6630764098763205,
+    "10": 0.16809656674455578,
+    "11": 0.0003651550509003814,
+    "12": 7.32663619081161e-08
+  },
+  "local_multiplets": [
+    [
+      {
+        "electrons": 6,
+        "twice_spin": 0,
+        "multiplets": 51,
+        "complete_multiplets": 175,
+        "input_support_added": 1
+      },
+      {
+        "electrons": 7,
+        "twice_spin": 1,
+        "multiplets": 87,
+        "complete_multiplets": 210,
+        "input_support_added": 3
+      },
+      {
+        "electrons": 8,
+        "twice_spin": 0,
+        "multiplets": 90,
+        "complete_multiplets": 105,
+        "input_support_added": 6
+      },
+      {
+        "electrons": 8,
+        "twice_spin": 2,
+        "multiplets": 87,
+        "complete_multiplets": 105,
+        "input_support_added": 3
+      },
+      {
+        "electrons": 9,
+        "twice_spin": 1,
+        "multiplets": 70,
+        "complete_multiplets": 70,
+        "input_support_added": 8
+      },
+      {
+        "electrons": 9,
+        "twice_spin": 3,
+        "multiplets": 20,
+        "complete_multiplets": 20,
+        "input_support_added": 1
+      },
+      {
+        "electrons": 10,
+        "twice_spin": 0,
+        "multiplets": 21,
+        "complete_multiplets": 21,
+        "input_support_added": 5
+      },
+      {
+        "electrons": 10,
+        "twice_spin": 2,
+        "multiplets": 15,
+        "complete_multiplets": 15,
+        "input_support_added": 0
+      },
+      {
+        "electrons": 11,
+        "twice_spin": 1,
+        "multiplets": 6,
+        "complete_multiplets": 6,
+        "input_support_added": 0
+      },
+      {
+        "electrons": 12,
+        "twice_spin": 0,
+        "multiplets": 1,
+        "complete_multiplets": 1,
+        "input_support_added": 0
+      }
+    ],
+    [
+      {
+        "electrons": 6,
+        "twice_spin": 0,
+        "multiplets": 51,
+        "complete_multiplets": 175,
+        "input_support_added": 1
+      },
+      {
+        "electrons": 7,
+        "twice_spin": 1,
+        "multiplets": 87,
+        "complete_multiplets": 210,
+        "input_support_added": 3
+      },
+      {
+        "electrons": 8,
+        "twice_spin": 0,
+        "multiplets": 90,
+        "complete_multiplets": 105,
+        "input_support_added": 6
+      },
+      {
+        "electrons": 8,
+        "twice_spin": 2,
+        "multiplets": 87,
+        "complete_multiplets": 105,
+        "input_support_added": 3
+      },
+      {
+        "electrons": 9,
+        "twice_spin": 1,
+        "multiplets": 70,
+        "complete_multiplets": 70,
+        "input_support_added": 8
+      },
+      {
+        "electrons": 9,
+        "twice_spin": 3,
+        "multiplets": 20,
+        "complete_multiplets": 20,
+        "input_support_added": 1
+      },
+      {
+        "electrons": 10,
+        "twice_spin": 0,
+        "multiplets": 21,
+        "complete_multiplets": 21,
+        "input_support_added": 5
+      },
+      {
+        "electrons": 10,
+        "twice_spin": 2,
+        "multiplets": 15,
+        "complete_multiplets": 15,
+        "input_support_added": 0
+      },
+      {
+        "electrons": 11,
+        "twice_spin": 1,
+        "multiplets": 6,
+        "complete_multiplets": 6,
+        "input_support_added": 0
+      },
+      {
+        "electrons": 12,
+        "twice_spin": 0,
+        "multiplets": 1,
+        "complete_multiplets": 1,
+        "input_support_added": 0
+      }
+    ]
+  ],
+  "history": [
+    {
+      "adaptive_update": 0,
+      "energy_hartree": -148.86241621525392,
+      "full_state_residual": 1.593188476747569e-05,
+      "projected_state_residual": 9.835402636655277e-09,
+      "projected_dimension": 36238,
+      "added_local_multiplets": [
+        7,
+        7
+      ]
+    },
+    {
+      "adaptive_update": 1,
+      "energy_hartree": -148.8624162152658,
+      "full_state_residual": 1.2607209396957667e-05,
+      "projected_state_residual": 9.280691026601552e-09,
+      "projected_dimension": 36696,
+      "added_local_multiplets": [
+        7,
+        7
+      ]
+    },
+    {
+      "adaptive_update": 2,
+      "energy_hartree": -148.86241621527356,
+      "full_state_residual": 8.348307866800352e-06,
+      "projected_state_residual": 9.824869376308614e-09,
+      "projected_dimension": 37154
+    }
+  ],
+  "saved_state_recovery_error": 2.5968532770003605e-15
+}

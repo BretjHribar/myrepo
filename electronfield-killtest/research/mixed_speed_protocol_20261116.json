@@ -1,0 +1,15 @@
+{
+  "purpose": "Speed up the newly larger-basis research backend without changing final physical accuracy",
+  "cases": ["LiH_neutral_1.595", "LiH_neutral_2.50", "Be_neutral"],
+  "basis": "cc-pvdz",
+  "search_dtype": "float32, TF32 disabled",
+  "search_residual_tolerance": 1e-5,
+  "search_maximum_dimension": 128,
+  "final_dtype": "float64",
+  "final_residual_tolerance": 1e-8,
+  "final_maximum_dimension": 96,
+  "energy_agreement_tolerance_kcal": 0.001,
+  "execution": "Static CUDA graphs, shifted Hamiltonians, preallocated cached operator images, incremental projected matrix",
+  "assessment": "Compare final FP64 energy/state and cold/warm solve time to the saved matched full-FP64 larger-basis runs. No repeated reference generation, parameter/seed sweeps or frontier execution.",
+  "limitations": ["Numerical backend, not a trained model", "Four particles/holes only", "GPU times do not establish CPU or A100 target performance"]
+}

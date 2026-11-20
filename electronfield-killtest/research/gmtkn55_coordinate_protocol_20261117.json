@@ -1,0 +1,14 @@
+{
+  "purpose": "Verify geometry and units of every pinned public benchmark input before scientific model scoring",
+  "seed": 17112067,
+  "manifest": "data/gmtkn55_official_v1/manifest.json",
+  "source_commit": "8d485b37a1ca8837e395042671ca5ba4e0714691",
+  "expected_structures": 2462,
+  "maximum_pair_distance_difference_bohr": 1e-6,
+  "duplicate_nucleus_tolerance_bohr": 1e-12,
+  "angstrom_per_bohr": "0.52917721092",
+  "comparison": "Same atom sequence and all indexed interatomic distances after CUDA unit conversion; rigid translations and rotations do not change geometry",
+  "reference_energy_values_read": false,
+  "execution": "CUDA-only arithmetic and one host core for file/metadata parsing. Use the verified idle GPU at the user-resume stop boundary before the long BH run resumes; no concurrent numerical worker. Prioritize complete public tests under the updated user objective.",
+  "scope": "Complete benchmark input validation only; no model energy, WTMAD-2, chemical-accuracy or speed result"
+}

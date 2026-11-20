@@ -1,0 +1,117 @@
+{
+  "created_utc": "2026-11-16T23:54:47.717188+00:00",
+  "device": "cuda",
+  "scope": "Reference-complete particle/spin-conserving correlation state; three-electron development tests only",
+  "training_targets": "Hamiltonian expectation only, no reference-energy loss",
+  "validity_condition": "Trial space contains spin-projected mean-field input and must not raise its best energy",
+  "steps": 400,
+  "cases": [
+    {
+      "id": "H3_neutral_1.00",
+      "nelec": [
+        2,
+        1
+      ],
+      "energy_hartree": -1.6401050167330529,
+      "reference_hartree": -1.6449265469125076,
+      "error_kcal": 3.025555866784774,
+      "antisymmetry_residual": 7.077671781985373e-16,
+      "doublet_spin_residual": 8.049116928532385e-16,
+      "variational_bound_satisfied": true,
+      "physical_state_block": 9,
+      "parameters": 27,
+      "history": [
+        {
+          "step": 1,
+          "error_kcal": 17.929739448253088,
+          "gradient_norm": 0.14163313814913883,
+          "seconds": 2.4318531930000002
+        },
+        {
+          "step": 100,
+          "error_kcal": 3.4038128324889945,
+          "gradient_norm": 0.0005230868680087828,
+          "seconds": 21.247105638999997
+        },
+        {
+          "step": 200,
+          "error_kcal": 3.250052827823828,
+          "gradient_norm": 0.0004450272846601462,
+          "seconds": 38.524689489000004
+        },
+        {
+          "step": 300,
+          "error_kcal": 3.066220299861235,
+          "gradient_norm": 0.00040834131338758796,
+          "seconds": 55.863897517000005
+        },
+        {
+          "step": 400,
+          "error_kcal": 3.0255558689539424,
+          "gradient_norm": 0.0003992832105035351,
+          "seconds": 73.791029063
+        }
+      ],
+      "seconds": 73.829828441,
+      "input_reference_error_kcal": 30.66577825699114,
+      "reference_not_degraded": true
+    },
+    {
+      "id": "H3_neutral_1.80",
+      "nelec": [
+        2,
+        1
+      ],
+      "energy_hartree": -1.5350859977324645,
+      "reference_hartree": -1.537763436574059,
+      "error_kcal": 1.6801182391560945,
+      "antisymmetry_residual": 9.957312752106873e-16,
+      "doublet_spin_residual": 1.2651555150733351e-15,
+      "variational_bound_satisfied": true,
+      "physical_state_block": 9,
+      "parameters": 27,
+      "history": [
+        {
+          "step": 1,
+          "error_kcal": 19.74591076682089,
+          "gradient_norm": 0.1031744401128454,
+          "seconds": 0.17985916499999632
+        },
+        {
+          "step": 100,
+          "error_kcal": 3.066765246076413,
+          "gradient_norm": 0.0010920657959005728,
+          "seconds": 18.222075947000008
+        },
+        {
+          "step": 200,
+          "error_kcal": 2.00023010406482,
+          "gradient_norm": 0.0007655458144463073,
+          "seconds": 36.691336135
+        },
+        {
+          "step": 300,
+          "error_kcal": 1.7361098460629767,
+          "gradient_norm": 0.0005561343586786976,
+          "seconds": 54.549951109999995
+        },
+        {
+          "step": 400,
+          "error_kcal": 1.68011823990098,
+          "gradient_norm": 0.0005535307740560497,
+          "seconds": 72.64985580000001
+        }
+      ],
+      "seconds": 72.679884319,
+      "input_reference_error_kcal": 28.914330553134153,
+      "reference_not_degraded": true
+    }
+  ],
+  "failures": [],
+  "summary": {
+    "cases": 2,
+    "mae_kcal": 2.3528370529704343,
+    "maximum_error_kcal": 3.025555866784774
+  },
+  "peak_cuda_bytes": 66836480
+}

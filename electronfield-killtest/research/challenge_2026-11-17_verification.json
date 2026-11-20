@@ -1,0 +1,19 @@
+{
+  "source": "https://discoveredmaterials.com/grand-challenges/speed-accuracy-barrier/",
+  "checked_utc": "2026-11-17T16:02:43Z",
+  "page_status": "Open, updated November 2026; provisional leaderboard",
+  "objective": "A more accurate exchange-correlation functional that retains practical DFT efficiency",
+  "public_evidence": "Runnable method and GMTKN55 accuracy/efficiency evidence",
+  "hidden_scope": "ALD/CVD precursor reaction, barrier, binding and bond dissociation energies",
+  "published_evaluation": {
+    "basis": "def2-QZVP",
+    "hardware": ["One CPU core", "One A100 GPU"],
+    "reference": "CCSD(T) complete-basis extrapolation from triple/quadruple-zeta calculations",
+    "timing": "Median of three repetitions"
+  },
+  "unchanged_project_interpretation": "The user's target rectangle requires sub-1 kcal/mol accuracy and eventual CPU speed evidence. Small cc-pVDZ same-basis state errors are earlier development gates, not the challenge result.",
+  "remaining_unknowns": ["Generalized/regularized KS eligibility", "Complete entry/API rules", "Hidden-suite metric weights and coverage"],
+  "frontier_method_replicated_or_run": false,
+  "cpu_numerical_work_or_timing_authorized": false,
+  "speed_work_authorized": false
+}

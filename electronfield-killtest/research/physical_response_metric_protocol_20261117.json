@@ -1,0 +1,15 @@
+{
+  "purpose": "Verify physical-norm response truncation and full image-error measurement, rather than arbitrary raw MPO-channel metrics",
+  "seed": 17112045,
+  "sites": 4,
+  "states": [{"electrons": 4, "twice_spin": 0}, {"electrons": 3, "twice_spin": 1}],
+  "source": "Highest-weight product determinants, no parameter optimization or reference solve",
+  "untruncated_bond": "Algebraic prefix Hilbert bound 4^(sites-1)",
+  "bounded_bond": 4,
+  "singular_tolerance": 1e-11,
+  "right_frame_null_tolerance": 1e-13,
+  "absolute_identity_tolerance": 1e-10,
+  "maximum_gram_bytes": 250000000,
+  "maximum_frame_bytes": 1500000000,
+  "scope": "New compression metric, physical constraints and full image-norm identities only; not chemical accuracy or a correlated-state residual certificate"
+}

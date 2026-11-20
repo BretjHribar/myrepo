@@ -1,0 +1,337 @@
+{
+  "created_utc": "2026-11-17T01:42:56.324356+00:00",
+  "device": "cuda",
+  "protocol": {
+    "reason_for_changed_construction": "Pure-state interacting and gapped-determinant kinetic searches failed density representability on the first water case; allow physical ensembles",
+    "reference_energy_in_objective_or_stopping": false,
+    "maximum_subspace_dimension": 192,
+    "stationarity_tolerance": 1e-07,
+    "entropy_energy_tolerance_hartree": 1e-05,
+    "many_body_statistics": "Canonical mixture within the exact N=10, S=0 sector generated from the physical seed",
+    "kinetic_statistics": "0<=D<=2, exact expected trace N constrained by a number potential; fractional D admits a fixed-N canonical representation",
+    "dual_continuation": [
+      0.1,
+      1,
+      10,
+      100,
+      1000,
+      10000,
+      100000,
+      "beta from entropy bound"
+    ],
+    "assessment": "Reject energies if either density constraint fails; reject potentials if state stationarity fails. Reuse the existing water reference only for post-prediction assessment.",
+    "scope": "Changed physical construction on development water; no out-of-sample or complete-basis claim"
+  },
+  "case": {
+    "id": "H2O_closed_0.957",
+    "atom": "O 0 0 0; H 0 0.757 0.586; H 0 -0.757 0.586",
+    "charge": 0,
+    "spin": 0,
+    "electrons": 10
+  },
+  "basis": "sto-3g",
+  "scope": "First ensemble Coulomb/kinetic-completed functional, one development water density, complete minimal basis",
+  "energy_prediction_valid": true,
+  "potential_stationarity_valid": true,
+  "interacting_status": "converged",
+  "density_moment_residual": 1.611150560802633e-13,
+  "state_stationarity_residual": 6.154443010642473e-09,
+  "kinetic_density_number_residual": 6.940097418303042e-11,
+  "ensemble_trace": 1.0,
+  "particle_number": 10.0,
+  "spin_squared": -1.5594361105687094e-19,
+  "beta": 970406.0527839233,
+  "entropy_energy_allowance_hartree": 6.27473917539823e-06,
+  "external_moment_energy_allowance_kcal": 1.1337349283358443e-10,
+  "external_span_error_hartree": 6.394884621840902e-14,
+  "total_energy_hartree": -74.52534748200969,
+  "total_error_kcal": 305.65355861891317,
+  "rejected_raw_total_hartree": null,
+  "kinetic_completion_hartree": 0.48684125464420447,
+  "moment_xc_potential_coefficients": [
+    13.930701443175003,
+    -5.716791757413849e-11,
+    -1.7361273202042344
+  ],
+  "kinetic_dual_history": [
+    {
+      "beta": 0.1,
+      "iterations": 10,
+      "density_residual": 7.733797983727832e-10,
+      "dual": 6.4851526629395835
+    },
+    {
+      "beta": 1.0,
+      "iterations": 10,
+      "density_residual": 3.98204388653889e-15,
+      "dual": 69.0394541318112
+    },
+    {
+      "beta": 10.0,
+      "iterations": 10,
+      "density_residual": 8.908631953648906e-15,
+      "dual": 73.8386841761433
+    },
+    {
+      "beta": 100.0,
+      "iterations": 7,
+      "density_residual": 6.13654026555706e-10,
+      "dual": 74.07649305223012
+    },
+    {
+      "beta": 1000.0,
+      "iterations": 6,
+      "density_residual": 6.923792755058867e-13,
+      "dual": 74.09928276750784
+    },
+    {
+      "beta": 10000.0,
+      "iterations": 5,
+      "density_residual": 2.7947454500350443e-12,
+      "dual": 74.10155736341252
+    },
+    {
+      "beta": 100000.0,
+      "iterations": 5,
+      "density_residual": 6.238150970563937e-10,
+      "dual": 74.10178477797166
+    },
+    {
+      "beta": 970406.0527839233,
+      "iterations": 6,
+      "density_residual": 6.940097418303042e-11,
+      "dual": 74.10180744191828
+    }
+  ],
+  "interacting_history": [
+    {
+      "iteration": 1,
+      "dimension": 5,
+      "density_residual": 2.638577015893325e-11,
+      "stationarity_residual": 0.5733477810229447,
+      "universal_energy_hartree": 112.76772169156212
+    },
+    {
+      "iteration": 2,
+      "dimension": 9,
+      "density_residual": 1.9139362397389662e-11,
+      "stationarity_residual": 0.17804053034170214,
+      "universal_energy_hartree": 112.75604702203955
+    },
+    {
+      "iteration": 3,
+      "dimension": 13,
+      "density_residual": 1.4799071881222332e-11,
+      "stationarity_residual": 0.08780164003527802,
+      "universal_energy_hartree": 112.75432769560875
+    },
+    {
+      "iteration": 4,
+      "dimension": 17,
+      "density_residual": 1.390640056000064e-11,
+      "stationarity_residual": 0.13481975628840676,
+      "universal_energy_hartree": 112.75297418321435
+    },
+    {
+      "iteration": 5,
+      "dimension": 21,
+      "density_residual": 1.4478962278574399e-11,
+      "stationarity_residual": 0.04044076323074518,
+      "universal_energy_hartree": 112.75207969648172
+    },
+    {
+      "iteration": 6,
+      "dimension": 25,
+      "density_residual": 1.628017139198169e-11,
+      "stationarity_residual": 0.030811772465098107,
+      "universal_energy_hartree": 112.75200357760825
+    },
+    {
+      "iteration": 7,
+      "dimension": 29,
+      "density_residual": 1.7886588034247517e-11,
+      "stationarity_residual": 0.02669423079837923,
+      "universal_energy_hartree": 112.75189753663228
+    },
+    {
+      "iteration": 8,
+      "dimension": 33,
+      "density_residual": 1.8150578721699724e-11,
+      "stationarity_residual": 0.013986191830718211,
+      "universal_energy_hartree": 112.75185465866024
+    },
+    {
+      "iteration": 9,
+      "dimension": 37,
+      "density_residual": 2.0975424235308007e-11,
+      "stationarity_residual": 0.013321790122175393,
+      "universal_energy_hartree": 112.7518397429902
+    },
+    {
+      "iteration": 10,
+      "dimension": 41,
+      "density_residual": 7.464964233955273e-11,
+      "stationarity_residual": 0.011809758251238192,
+      "universal_energy_hartree": 112.75182425703899
+    },
+    {
+      "iteration": 11,
+      "dimension": 45,
+      "density_residual": 2.953371468146069e-10,
+      "stationarity_residual": 0.00738588425209018,
+      "universal_energy_hartree": 112.75181684465385
+    },
+    {
+      "iteration": 12,
+      "dimension": 49,
+      "density_residual": 6.291541085923512e-10,
+      "stationarity_residual": 0.006560666336518584,
+      "universal_energy_hartree": 112.7518127557912
+    },
+    {
+      "iteration": 13,
+      "dimension": 53,
+      "density_residual": 7.285223683878002e-10,
+      "stationarity_residual": 0.005071007908076705,
+      "universal_energy_hartree": 112.75180801368546
+    },
+    {
+      "iteration": 14,
+      "dimension": 57,
+      "density_residual": 2.279111033568188e-15,
+      "stationarity_residual": 0.003479143353521957,
+      "universal_energy_hartree": 112.75180564480817
+    },
+    {
+      "iteration": 15,
+      "dimension": 61,
+      "density_residual": 2.2190744876997155e-15,
+      "stationarity_residual": 0.0021863394499856414,
+      "universal_energy_hartree": 112.7518033857014
+    },
+    {
+      "iteration": 16,
+      "dimension": 65,
+      "density_residual": 6.214920135569597e-15,
+      "stationarity_residual": 0.001134637385384064,
+      "universal_energy_hartree": 112.7518028845833
+    },
+    {
+      "iteration": 17,
+      "dimension": 69,
+      "density_residual": 1.3822306555415653e-14,
+      "stationarity_residual": 0.0007380787559864233,
+      "universal_energy_hartree": 112.75180271931018
+    },
+    {
+      "iteration": 18,
+      "dimension": 73,
+      "density_residual": 1.439422887806049e-14,
+      "stationarity_residual": 0.0003060357719530125,
+      "universal_energy_hartree": 112.75180266166632
+    },
+    {
+      "iteration": 19,
+      "dimension": 77,
+      "density_residual": 8.071405436851688e-15,
+      "stationarity_residual": 0.00015336975015443734,
+      "universal_energy_hartree": 112.75180264877598
+    },
+    {
+      "iteration": 20,
+      "dimension": 81,
+      "density_residual": 7.349303237075184e-15,
+      "stationarity_residual": 5.494766146808084e-05,
+      "universal_energy_hartree": 112.75180264359878
+    },
+    {
+      "iteration": 21,
+      "dimension": 85,
+      "density_residual": 4.2825128310802335e-15,
+      "stationarity_residual": 1.0879521110413508e-05,
+      "universal_energy_hartree": 112.75180264267655
+    },
+    {
+      "iteration": 22,
+      "dimension": 89,
+      "density_residual": 4.355433126706475e-14,
+      "stationarity_residual": 4.104628896463996e-06,
+      "universal_energy_hartree": 112.75180264263987
+    },
+    {
+      "iteration": 23,
+      "dimension": 93,
+      "density_residual": 1.620952092872686e-13,
+      "stationarity_residual": 1.3969592263852426e-07,
+      "universal_energy_hartree": 112.75180264263199
+    },
+    {
+      "iteration": 24,
+      "dimension": 97,
+      "density_residual": 1.611150560802633e-13,
+      "stationarity_residual": 6.154443010642473e-09,
+      "universal_energy_hartree": 112.751802642632
+    }
+  ],
+  "interacting_dual_history": [
+    {
+      "beta": 0.1,
+      "iterations": 6,
+      "density_residual": 1.0630968529727761e-14,
+      "dual": 78.67529729786561
+    },
+    {
+      "beta": 1.0,
+      "iterations": 8,
+      "density_residual": 1.4104664373107873e-14,
+      "dual": 111.06005813119657
+    },
+    {
+      "beta": 10.0,
+      "iterations": 5,
+      "density_residual": 3.788602678198105e-11,
+      "dual": 112.75155927266404
+    },
+    {
+      "beta": 100.0,
+      "iterations": 3,
+      "density_residual": 1.6133642143582235e-13,
+      "dual": 112.75180264263186
+    },
+    {
+      "beta": 1000.0,
+      "iterations": 1,
+      "density_residual": 1.6133642143582235e-13,
+      "dual": 112.75180264263186
+    },
+    {
+      "beta": 10000.0,
+      "iterations": 1,
+      "density_residual": 1.6133642143582235e-13,
+      "dual": 112.75180264263186
+    },
+    {
+      "beta": 100000.0,
+      "iterations": 1,
+      "density_residual": 1.6133642143582235e-13,
+      "dual": 112.75180264263186
+    },
+    {
+      "beta": 970406.0527839233,
+      "iterations": 1,
+      "density_residual": 1.6133642143582235e-13,
+      "dual": 112.75180264263186
+    }
+  ],
+  "reference_energy_fitted": false,
+  "reference_recomputed": false,
+  "seconds": 9.45659566,
+  "peak_cuda_bytes": 25397248,
+  "limitations": [
+    "One development density, not broad out-of-sample evidence",
+    "Complete minimal basis only",
+    "No model-driven self-consistency or nuclear-frame derivatives",
+    "Entropy regularization has a stated finite energy tolerance",
+    "Dense occupation action; size consistency of global truncation unresolved"
+  ]
+}

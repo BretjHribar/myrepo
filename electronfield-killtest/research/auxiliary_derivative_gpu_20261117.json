@@ -1,0 +1,78 @@
+{
+  "created_utc": "2026-11-17T12:24:13.277797+00:00",
+  "device": "cuda",
+  "results": [
+    {
+      "id": "BeH2_631g_1.65_new",
+      "passed": true,
+      "scalar_directional_derivative": -2.231511557155841,
+      "potential_directional_derivative": -2.2315115729434636,
+      "absolute_difference_hartree": 1.57876227646625e-08,
+      "fixed_response_dimension": 29,
+      "maximum_allowed_difference_hartree": 1e-05,
+      "points": [
+        {
+          "xc_energy": -215.94725007825085,
+          "interacting_converged": true,
+          "kinetic_converged": true,
+          "interacting_gap": 9.023004565733572e-12,
+          "kinetic_gap": 1.4850343177386094e-12,
+          "trace_error": 2.220446049250313e-16,
+          "minimum_ensemble_occupation": -1.3411243355513815e-23,
+          "maximum_kinetic_occupation": 2.0000000000000013
+        },
+        {
+          "xc_energy": -215.95171310136516,
+          "interacting_converged": true,
+          "kinetic_converged": true,
+          "interacting_gap": 6.764366844436154e-12,
+          "kinetic_gap": 1.4921397450962104e-12,
+          "trace_error": 1.1102230246251565e-16,
+          "minimum_ensemble_occupation": -3.842193855493493e-24,
+          "maximum_kinetic_occupation": 2.0000000000000004
+        }
+      ],
+      "response_space_refitted": false,
+      "molecular_potential_passed_to_universal_evaluation": false,
+      "new_reference_generated": false
+    },
+    {
+      "id": "BeH2_631g_2.75_new",
+      "passed": true,
+      "scalar_directional_derivative": -4.385874828130909,
+      "potential_directional_derivative": -4.385874968911628,
+      "absolute_difference_hartree": 1.407807186382115e-07,
+      "fixed_response_dimension": 191,
+      "maximum_allowed_difference_hartree": 1e-05,
+      "points": [
+        {
+          "xc_energy": -216.2099525671427,
+          "interacting_converged": true,
+          "kinetic_converged": true,
+          "interacting_gap": 6.750155989720952e-12,
+          "kinetic_gap": 6.181721801112872e-13,
+          "trace_error": 4.440892098500626e-16,
+          "minimum_ensemble_occupation": -2.303459955991942e-22,
+          "maximum_kinetic_occupation": 2.0000000000000004
+        },
+        {
+          "xc_energy": -216.21872431679895,
+          "interacting_converged": true,
+          "kinetic_converged": true,
+          "interacting_gap": 7.841283178322556e-12,
+          "kinetic_gap": 4.4941828036826337e-13,
+          "trace_error": 2.220446049250313e-16,
+          "minimum_ensemble_occupation": -2.8774385714605837e-22,
+          "maximum_kinetic_occupation": 1.9999999999999991
+        }
+      ],
+      "response_space_refitted": false,
+      "molecular_potential_passed_to_universal_evaluation": false,
+      "new_reference_generated": false
+    }
+  ],
+  "failures": [],
+  "scope": "One new auxiliary-coordinate direction per geometry, fixed compiled physical response space; not a nuclear derivative or full-space path-accuracy test",
+  "passed": true,
+  "peak_cuda_bytes": 794014720
+}

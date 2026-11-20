@@ -1,0 +1,582 @@
+{
+  "created_utc": "2026-11-17T09:55:18.626735+00:00",
+  "device": "cuda",
+  "protocol": {
+    "purpose": "New 18-electron composition after freezing charge/spin block rules; accuracy only",
+    "case": {
+      "id": "H2O2_skew_new",
+      "atom": "O -0.73 0 0; H -1.03 0.83 0.42; O 0.73 0 0; H 1.03 -0.83 0.42",
+      "charge": 0,
+      "spin": 0,
+      "electrons": 18,
+      "basis": "sto-3g",
+      "first_block_atoms": 2
+    },
+    "model": "Unchanged local number/spin multiplets, exact fermionic action, input Schmidt support and Hamiltonian-residual completion",
+    "initial_multiplets": 16,
+    "maximum_adaptive_updates": 32,
+    "stopping": "Original full-state residual target 1e-5 Hartree, never reference-energy error",
+    "reference": "New independent full same-basis CUDA singlet reference using six-hole physical action; generated only after prediction",
+    "maximum_reference_ritz_dimension": 384,
+    "reference_residual_tolerance": 1e-08,
+    "new_backend_checks": "Fock/tensor roundtrip, direct 21-term first-quantized action and input Wick energy before reference use; no speed benchmarking",
+    "assessment": "Retain all numerical/accuracy failures. No geometry, parameter or seed changes after reading the label.",
+    "limits": [
+      "Complete minimal basis only",
+      "State rather than finished density-only XC functional",
+      "Single new peroxide geometry, not an optimized torsional barrier",
+      "Not full GMTKN55 or challenge confirmation"
+    ]
+  },
+  "case": {
+    "id": "H2O2_skew_new",
+    "atom": "O -0.73 0 0; H -1.03 0.83 0.42; O 0.73 0 0; H 1.03 -0.83 0.42",
+    "charge": 0,
+    "spin": 0,
+    "electrons": 18,
+    "basis": "sto-3g",
+    "first_block_atoms": 2
+  },
+  "spatial_orbitals": 12,
+  "full_fixed_sz_dimension": 48400,
+  "operator_checks": {
+    "fock_roundtrip_max_error": 1.3877787807814457e-17,
+    "independent_action_max_error_hartree": 1.3322676295501878e-15,
+    "input_wick_error_hartree": 2.842170943040401e-14
+  },
+  "energy_error_kcal": 1.5748209578475778e-08,
+  "below_one_kcal": true,
+  "total_energy_hartree": -148.86241621525386,
+  "reference_energy_hartree": -148.86241621527896,
+  "reference_converged": true,
+  "reference_residual": 8.749794066239763e-09,
+  "reference_dimension": 124,
+  "reference_energy_fitted": false,
+  "seconds": 269.05687508,
+  "peak_cuda_bytes": 308334592,
+  "physical_validity_passed": true,
+  "full_residual": 1.5931884767530044e-05,
+  "projected_residual": 9.842731625401449e-09,
+  "input_retention_error": 2.600957437235554e-15,
+  "spin_lower_norm": 3.283392571173026e-13,
+  "initial_spin_lower_norm": 9.333498893649324e-16,
+  "reference_not_degraded": true,
+  "projected_dimension": 36238,
+  "charge_weights": {
+    "6": 7.326640661229882e-08,
+    "7": 0.0003651550482631677,
+    "8": 0.16809656724391453,
+    "9": 0.6630764088829676,
+    "10": 0.16809656724377794,
+    "11": 0.0003651550482634044,
+    "12": 7.32664066116151e-08
+  },
+  "local_multiplets": [
+    [
+      {
+        "electrons": 6,
+        "twice_spin": 0,
+        "multiplets": 49,
+        "complete_multiplets": 175,
+        "input_support_added": 1
+      },
+      {
+        "electrons": 7,
+        "twice_spin": 1,
+        "multiplets": 83,
+        "complete_multiplets": 210,
+        "input_support_added": 3
+      },
+      {
+        "electrons": 8,
+        "twice_spin": 0,
+        "multiplets": 86,
+        "complete_multiplets": 105,
+        "input_support_added": 6
+      },
+      {
+        "electrons": 8,
+        "twice_spin": 2,
+        "multiplets": 83,
+        "complete_multiplets": 105,
+        "input_support_added": 3
+      },
+      {
+        "electrons": 9,
+        "twice_spin": 1,
+        "multiplets": 70,
+        "complete_multiplets": 70,
+        "input_support_added": 8
+      },
+      {
+        "electrons": 9,
+        "twice_spin": 3,
+        "multiplets": 20,
+        "complete_multiplets": 20,
+        "input_support_added": 1
+      },
+      {
+        "electrons": 10,
+        "twice_spin": 0,
+        "multiplets": 21,
+        "complete_multiplets": 21,
+        "input_support_added": 5
+      },
+      {
+        "electrons": 10,
+        "twice_spin": 2,
+        "multiplets": 15,
+        "complete_multiplets": 15,
+        "input_support_added": 0
+      },
+      {
+        "electrons": 11,
+        "twice_spin": 1,
+        "multiplets": 6,
+        "complete_multiplets": 6,
+        "input_support_added": 0
+      },
+      {
+        "electrons": 12,
+        "twice_spin": 0,
+        "multiplets": 1,
+        "complete_multiplets": 1,
+        "input_support_added": 0
+      }
+    ],
+    [
+      {
+        "electrons": 6,
+        "twice_spin": 0,
+        "multiplets": 49,
+        "complete_multiplets": 175,
+        "input_support_added": 1
+      },
+      {
+        "electrons": 7,
+        "twice_spin": 1,
+        "multiplets": 83,
+        "complete_multiplets": 210,
+        "input_support_added": 3
+      },
+      {
+        "electrons": 8,
+        "twice_spin": 0,
+        "multiplets": 86,
+        "complete_multiplets": 105,
+        "input_support_added": 6
+      },
+      {
+        "electrons": 8,
+        "twice_spin": 2,
+        "multiplets": 83,
+        "complete_multiplets": 105,
+        "input_support_added": 3
+      },
+      {
+        "electrons": 9,
+        "twice_spin": 1,
+        "multiplets": 70,
+        "complete_multiplets": 70,
+        "input_support_added": 8
+      },
+      {
+        "electrons": 9,
+        "twice_spin": 3,
+        "multiplets": 20,
+        "complete_multiplets": 20,
+        "input_support_added": 1
+      },
+      {
+        "electrons": 10,
+        "twice_spin": 0,
+        "multiplets": 21,
+        "complete_multiplets": 21,
+        "input_support_added": 5
+      },
+      {
+        "electrons": 10,
+        "twice_spin": 2,
+        "multiplets": 15,
+        "complete_multiplets": 15,
+        "input_support_added": 0
+      },
+      {
+        "electrons": 11,
+        "twice_spin": 1,
+        "multiplets": 6,
+        "complete_multiplets": 6,
+        "input_support_added": 0
+      },
+      {
+        "electrons": 12,
+        "twice_spin": 0,
+        "multiplets": 1,
+        "complete_multiplets": 1,
+        "input_support_added": 0
+      }
+    ]
+  ],
+  "history": [
+    {
+      "adaptive_update": 0,
+      "energy_hartree": -148.85869602339162,
+      "full_state_residual": 0.10566320034497872,
+      "projected_state_residual": 7.796367853474772e-09,
+      "projected_dimension": 8522,
+      "added_local_multiplets": [
+        11,
+        11
+      ]
+    },
+    {
+      "adaptive_update": 1,
+      "energy_hartree": -148.86079908169714,
+      "full_state_residual": 0.16299052039238535,
+      "projected_state_residual": 6.0612420642833394e-09,
+      "projected_dimension": 9812,
+      "added_local_multiplets": [
+        10,
+        10
+      ]
+    },
+    {
+      "adaptive_update": 2,
+      "energy_hartree": -148.86204765900857,
+      "full_state_residual": 0.06788964311845821,
+      "projected_state_residual": 8.943294533547445e-09,
+      "projected_dimension": 10906,
+      "added_local_multiplets": [
+        9,
+        9
+      ]
+    },
+    {
+      "adaptive_update": 3,
+      "energy_hartree": -148.8623117182702,
+      "full_state_residual": 0.025353896227037827,
+      "projected_state_residual": 9.229153557518157e-09,
+      "projected_dimension": 11756,
+      "added_local_multiplets": [
+        9,
+        9
+      ]
+    },
+    {
+      "adaptive_update": 4,
+      "energy_hartree": -148.8623491286201,
+      "full_state_residual": 0.023538515582521517,
+      "projected_state_residual": 8.011020513927164e-09,
+      "projected_dimension": 12622,
+      "added_local_multiplets": [
+        9,
+        9
+      ]
+    },
+    {
+      "adaptive_update": 5,
+      "energy_hartree": -148.86240261382684,
+      "full_state_residual": 0.012033077949749553,
+      "projected_state_residual": 7.997817808271546e-09,
+      "projected_dimension": 13504,
+      "added_local_multiplets": [
+        9,
+        9
+      ]
+    },
+    {
+      "adaptive_update": 6,
+      "energy_hartree": -148.86240937342947,
+      "full_state_residual": 0.006798184751589975,
+      "projected_state_residual": 9.392979109206725e-09,
+      "projected_dimension": 14402,
+      "added_local_multiplets": [
+        9,
+        9
+      ]
+    },
+    {
+      "adaptive_update": 7,
+      "energy_hartree": -148.8624111093771,
+      "full_state_residual": 0.005284679681444294,
+      "projected_state_residual": 9.710845357417088e-09,
+      "projected_dimension": 15316,
+      "added_local_multiplets": [
+        9,
+        9
+      ]
+    },
+    {
+      "adaptive_update": 8,
+      "energy_hartree": -148.86241344423615,
+      "full_state_residual": 0.004310839704300939,
+      "projected_state_residual": 9.907449348013424e-09,
+      "projected_dimension": 16246,
+      "added_local_multiplets": [
+        9,
+        9
+      ]
+    },
+    {
+      "adaptive_update": 9,
+      "energy_hartree": -148.86241460671295,
+      "full_state_residual": 0.003527206888811944,
+      "projected_state_residual": 7.817845780461157e-09,
+      "projected_dimension": 17192,
+      "added_local_multiplets": [
+        9,
+        9
+      ]
+    },
+    {
+      "adaptive_update": 10,
+      "energy_hartree": -148.86241523063387,
+      "full_state_residual": 0.002802276259726332,
+      "projected_state_residual": 8.329917114341218e-09,
+      "projected_dimension": 18154,
+      "added_local_multiplets": [
+        9,
+        9
+      ]
+    },
+    {
+      "adaptive_update": 11,
+      "energy_hartree": -148.8624156334964,
+      "full_state_residual": 0.00182281009615327,
+      "projected_state_residual": 9.899446814958802e-09,
+      "projected_dimension": 19132,
+      "added_local_multiplets": [
+        9,
+        9
+      ]
+    },
+    {
+      "adaptive_update": 12,
+      "energy_hartree": -148.86241588034218,
+      "full_state_residual": 0.0015665225704189654,
+      "projected_state_residual": 9.850460671989358e-09,
+      "projected_dimension": 20126,
+      "added_local_multiplets": [
+        9,
+        9
+      ]
+    },
+    {
+      "adaptive_update": 13,
+      "energy_hartree": -148.86241604351503,
+      "full_state_residual": 0.0010679846158417852,
+      "projected_state_residual": 6.44380633253622e-09,
+      "projected_dimension": 21136,
+      "added_local_multiplets": [
+        9,
+        9
+      ]
+    },
+    {
+      "adaptive_update": 14,
+      "energy_hartree": -148.86241611439394,
+      "full_state_residual": 0.0008669996577267264,
+      "projected_state_residual": 8.591794348338312e-09,
+      "projected_dimension": 22162,
+      "added_local_multiplets": [
+        9,
+        9
+      ]
+    },
+    {
+      "adaptive_update": 15,
+      "energy_hartree": -148.86241615106098,
+      "full_state_residual": 0.0006642993287166392,
+      "projected_state_residual": 6.639556497295119e-09,
+      "projected_dimension": 23204,
+      "added_local_multiplets": [
+        9,
+        9
+      ]
+    },
+    {
+      "adaptive_update": 16,
+      "energy_hartree": -148.86241617432233,
+      "full_state_residual": 0.0005822424057426485,
+      "projected_state_residual": 9.273051198924132e-09,
+      "projected_dimension": 24262,
+      "added_local_multiplets": [
+        9,
+        9
+      ]
+    },
+    {
+      "adaptive_update": 17,
+      "energy_hartree": -148.86241619132315,
+      "full_state_residual": 0.0004201606708090258,
+      "projected_state_residual": 6.3209552970743554e-09,
+      "projected_dimension": 25336,
+      "added_local_multiplets": [
+        9,
+        9
+      ]
+    },
+    {
+      "adaptive_update": 18,
+      "energy_hartree": -148.86241619858728,
+      "full_state_residual": 0.00037689805328543826,
+      "projected_state_residual": 8.65183799648212e-09,
+      "projected_dimension": 26426,
+      "added_local_multiplets": [
+        9,
+        9
+      ]
+    },
+    {
+      "adaptive_update": 19,
+      "energy_hartree": -148.8624162059923,
+      "full_state_residual": 0.000289297605014028,
+      "projected_state_residual": 8.791204344347124e-09,
+      "projected_dimension": 27532,
+      "added_local_multiplets": [
+        9,
+        9
+      ]
+    },
+    {
+      "adaptive_update": 20,
+      "energy_hartree": -148.86241620924642,
+      "full_state_residual": 0.0002471117848494924,
+      "projected_state_residual": 9.216076415075523e-09,
+      "projected_dimension": 28654,
+      "added_local_multiplets": [
+        9,
+        9
+      ]
+    },
+    {
+      "adaptive_update": 21,
+      "energy_hartree": -148.86241621118953,
+      "full_state_residual": 0.000189608394947132,
+      "projected_state_residual": 9.781260692504991e-09,
+      "projected_dimension": 29792,
+      "added_local_multiplets": [
+        9,
+        9
+      ]
+    },
+    {
+      "adaptive_update": 22,
+      "energy_hartree": -148.86241621256755,
+      "full_state_residual": 0.00016217802723751004,
+      "projected_state_residual": 9.009528097486563e-09,
+      "projected_dimension": 30946,
+      "added_local_multiplets": [
+        9,
+        9
+      ]
+    },
+    {
+      "adaptive_update": 23,
+      "energy_hartree": -148.86241621343066,
+      "full_state_residual": 0.00013591660883837688,
+      "projected_state_residual": 7.755701073303996e-09,
+      "projected_dimension": 32116,
+      "added_local_multiplets": [
+        7,
+        7
+      ]
+    },
+    {
+      "adaptive_update": 24,
+      "energy_hartree": -148.86241621403062,
+      "full_state_residual": 0.00010453569939292223,
+      "projected_state_residual": 9.380082939391989e-09,
+      "projected_dimension": 32574,
+      "added_local_multiplets": [
+        7,
+        7
+      ]
+    },
+    {
+      "adaptive_update": 25,
+      "energy_hartree": -148.86241621449028,
+      "full_state_residual": 8.78981013467543e-05,
+      "projected_state_residual": 9.194597524612691e-09,
+      "projected_dimension": 33032,
+      "added_local_multiplets": [
+        7,
+        7
+      ]
+    },
+    {
+      "adaptive_update": 26,
+      "energy_hartree": -148.86241621470248,
+      "full_state_residual": 6.731211675793022e-05,
+      "projected_state_residual": 8.799190451361366e-09,
+      "projected_dimension": 33490,
+      "added_local_multiplets": [
+        7,
+        7
+      ]
+    },
+    {
+      "adaptive_update": 27,
+      "energy_hartree": -148.86241621493411,
+      "full_state_residual": 5.7907193873279165e-05,
+      "projected_state_residual": 9.038997499360387e-09,
+      "projected_dimension": 33948,
+      "added_local_multiplets": [
+        7,
+        7
+      ]
+    },
+    {
+      "adaptive_update": 28,
+      "energy_hartree": -148.86241621507205,
+      "full_state_residual": 4.373123111103825e-05,
+      "projected_state_residual": 7.3970303120033425e-09,
+      "projected_dimension": 34406,
+      "added_local_multiplets": [
+        7,
+        7
+      ]
+    },
+    {
+      "adaptive_update": 29,
+      "energy_hartree": -148.86241621514512,
+      "full_state_residual": 3.4353770990439096e-05,
+      "projected_state_residual": 9.136572845147834e-09,
+      "projected_dimension": 34864,
+      "added_local_multiplets": [
+        7,
+        7
+      ]
+    },
+    {
+      "adaptive_update": 30,
+      "energy_hartree": -148.86241621519298,
+      "full_state_residual": 2.82117295463236e-05,
+      "projected_state_residual": 9.045001281913762e-09,
+      "projected_dimension": 35322,
+      "added_local_multiplets": [
+        7,
+        7
+      ]
+    },
+    {
+      "adaptive_update": 31,
+      "energy_hartree": -148.86241621523368,
+      "full_state_residual": 2.0704512074612433e-05,
+      "projected_state_residual": 8.864505427546942e-09,
+      "projected_dimension": 35780,
+      "added_local_multiplets": [
+        7,
+        7
+      ]
+    },
+    {
+      "adaptive_update": 32,
+      "energy_hartree": -148.86241621525386,
+      "full_state_residual": 1.5931884767530044e-05,
+      "projected_state_residual": 9.842731625401449e-09,
+      "projected_dimension": 36238
+    }
+  ],
+  "saved_state_recovery_error": null
+}

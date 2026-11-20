@@ -1,0 +1,62 @@
+{
+    "created_utc":  "2026-11-17T10:49:47.355788+00:00",
+    "device":  "cuda",
+    "status":  "failed",
+    "protocol":  {
+                     "purpose":  "One bounded arbitrary-input-density functional diagnostic excluding the molecular potential from its interface",
+                     "id":  "BeH2_631g_1.65_new",
+                     "input_density":  "Saved minus-potential-path noninteracting ensemble density; an oracle-density diagnostic, not a new blind chemistry claim",
+                     "universal_input_keys":  [
+                                                  "kinetic",
+                                                  "eri",
+                                                  "operators",
+                                                  "bits",
+                                                  "electrons"
+                                              ],
+                     "maximum_dual_updates":  40,
+                     "density_residual_tolerance":  1E-07,
+                     "state_residual_tolerance_hartree":  1E-08,
+                     "maximum_ritz_dimension":  256,
+                     "numerical_backend":  "Existing preallocated Ritz state/image storage; same mathematical search and tolerances after the separately recorded incomplete-solve interruption",
+                     "global_spin":  "Project every trial vector and operator image into S=0 using the exact finite-sector polynomial in S squared; initialization alone does not enforce spin during inverse-potential searches",
+                     "kinetic_entropy_allowance_hartree":  1E-05,
+                     "initialization":  "Canonical natural-orbital singlet seed; noninteracting density dual minus input-density Hartree/exchange potential; no h, nuclear charges or labels",
+                     "dual_coordinates":  "Fixed positive Gaussian occupation covariance from the input density; no learned parameters or hyperparameter sweeps",
+                     "assessment":  "Only after the search stops, compare F with the saved physical-potential-path universal value; reject unconverged scalar/potential outputs",
+                     "limits":  [
+                                    "Six-electron even-spin-unpolarized finite-basis research backend",
+                                    "Implicit universal search rather than an amortized predictor",
+                                    "Oracle input density, not self-consistent prediction",
+                                    "Singlet sector and shared physical Hamiltonian primitives",
+                                    "No broad chemistry score or speed work"
+                                ]
+                 },
+    "error":  "RuntimeError: Interacting potential solve failed its state residual: 2.5211328836083376e-05; S2-state norm: 7.208640327629373e-16",
+    "history":  [
+                    {
+                        "update":  0,
+                        "universal_functional_hartree":  20.15446907228543,
+                        "density_residual":  3.781804505938203,
+                        "state_residual":  9.4352942631460639E-09,
+                        "ground_state_evaluations":  1
+                    },
+                    {
+                        "update":  1,
+                        "universal_functional_hartree":  20.588414779926847,
+                        "density_residual":  3.6288736233797483,
+                        "state_residual":  9.06003905015121E-09,
+                        "ground_state_evaluations":  2
+                    },
+                    {
+                        "update":  2,
+                        "universal_functional_hartree":  21.428625633147455,
+                        "density_residual":  3.522441874433189,
+                        "state_residual":  8.697746195218914E-09,
+                        "ground_state_evaluations":  3
+                    }
+                ],
+    "converged":  false,
+    "xc_energy_available":  false,
+    "external_potential_passed_to_model":  false,
+    "new_reference_generated":  false
+}

@@ -1,0 +1,29 @@
+{
+  "created_utc": "2026-11-17T23:36:37.235252+00:00",
+  "affinity": [
+    0
+  ],
+  "project_bytes": 21219453299,
+  "project_gb": 21.2195,
+  "volume_free_gb": 103.636,
+  "reserved_growth_gb": 0.0,
+  "hard_limit_bytes": 40000000000,
+  "working_ceiling_bytes": 32000000000,
+  "external_accounted_paths": [
+    "C:/Users/breth/AppData/Local/Temp/wsl-crashes",
+    "C:/Users/breth/AppData/Local/Temp/swap.vhdx",
+    "C:/Windows/Temp/swap.vhdx"
+  ],
+  "legacy_external_upper_bound_bytes": 1073741824,
+  "wsl_runtime": {
+    "distribution": "XCResearch",
+    "memory_limit_gib": 6,
+    "swap_limit_gib": 1,
+    "swap_file": "C:/Users/breth/myrepo/.research/wsl-swap.vhdx",
+    "virtual_processors_available": 4,
+    "compute_affinity": "taskset core 0; one host core and one numerical-library thread",
+    "recovery_record": "auxiliary_environment_recovery_20261117.json"
+  },
+  "additional_drive_assumed": false,
+  "scientific_numerical_work_device": "CUDA only"
+}

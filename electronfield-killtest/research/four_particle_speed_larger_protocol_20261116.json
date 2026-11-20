@@ -1,0 +1,19 @@
+{
+  "authority": "Latest user instruction: speed up while testing larger",
+  "method": "Exact matrix-free antisymmetric four-particle/hole tensor, cached operator images in Ritz completion",
+  "scope": "Numerical backend for own research; not a learned prediction or general-electron breakthrough claim",
+  "device": "CUDA float64, one-core host orchestration; no CPU timing workload",
+  "cached_equivalence_and_timing_cases": ["H2O_closed_0.957", "H2S_closed_1.336"],
+  "larger_basis": "cc-pvdz",
+  "larger_cases": [
+    {"id": "LiH_neutral_1.595", "atom": "Li 0 0 0; H 0 0 1.595", "charge": 0, "spin": 0, "electrons": 4},
+    {"id": "LiH_neutral_2.50", "atom": "Li 0 0 0; H 0 0 2.50", "charge": 0, "spin": 0, "electrons": 4},
+    {"id": "Be_neutral", "atom": "Be 0 0 0", "charge": 0, "spin": 0, "electrons": 4}
+  ],
+  "maximum_ritz_dimension": 192,
+  "state_residual_tolerance": 1e-8,
+  "equivalence_tolerance_hartree": 1e-9,
+  "timing": "CUDA events, 5 warmup calls, 50 timed calls; report kernel time separately from setup/solver time",
+  "assessment": "Reuse old cached physical operators and predictions for equivalence/timing only, without recomputing their references. New larger-basis labels use Hamiltonian residual stopping, never reference-energy errors.",
+  "limitations": ["Exactly four particles or four holes", "Larger cc-pVDZ tests have four electrons", "Finite basis, not CBS", "No claim of universal density-only XC or challenge performance"]
+}

@@ -1,0 +1,20 @@
+{
+  "candidate_id": "physical_state_development_exact_N1_component_20261117",
+  "purpose": "First actual public benchmark predictions within the exact N=1 physical component; full coverage/failures retained, not a substitute for complete-suite assessment",
+  "basis": "def2-qzvp",
+  "seed": 17112071,
+  "selection": "Every required public structure with physical_electrons == 1; use no reaction references or reference-energy errors for selection",
+  "inputs": "data/gmtkn55_pipeline/prediction_inputs.json",
+  "coverage_inputs": "data/gmtkn55_pipeline/current_candidate_coverage.json",
+  "minimum_overlap_eigenvalue": 1e-10,
+  "orbital_residual_tolerance_hartree": 1e-9,
+  "physical_tolerance": 1e-8,
+  "source_files": ["xc3d/gpu_gmtkn55_n1_predictions.py", "xc3d/gpu_verify_gmtkn55_coordinates.py"],
+  "physical_identity": "With exactly one electron, two-electron interaction vanishes identically. The lowest eigenstate of the full one-electron Hamiltonian in the stated basis is a physical spin-1/2 state. This is an established exact limit, not new generalization or a breakthrough.",
+  "baseline_or_frontier_method_run": false,
+  "public_reference_values_excluded_from_predictor": true,
+  "other_structures": "Keep all original unsupported/uncomputed entries and reasons; do not report a full score or extrapolate this selected exact domain",
+  "runtime": "CUDA one-electron integrals, eigensolves, densities, nuclear energy and checks only; one host core for molecule/basis metadata and I/O; no CPU SCF, integrals or fallback",
+  "speed_work_authorized": false,
+  "scope": "One exact physical component's target-basis public reactions; not a completed general XC functional, broad chemistry prediction, CBS or organizer-private test pass"
+}

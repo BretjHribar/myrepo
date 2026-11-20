@@ -1,0 +1,9 @@
+{
+  "purpose": "Complete the remaining peroxide physical residual using the saved state and exact saved local subspaces",
+  "trigger": "Original 32-update prediction stopped at 1.593e-5 Hartree, above its unchanged 1e-5 residual target",
+  "maximum_additional_updates": 8,
+  "full_state_residual_target_hartree": 1e-5,
+  "source": "Original model checkpoint; restore subspaces directly, repeat no local eigensolve or previous fit",
+  "reference_use": "Existing label only for assessment after completion; never a stopping condition",
+  "limits": "Post-label development convergence completion; preserve the original prespecified 32-update result separately"
+}

@@ -1,0 +1,15 @@
+{
+  "purpose": "Verify the complete intermediate charge/spin section and exact two-site physical Hamiltonian before sector enrichment",
+  "seed": 17112057,
+  "sites": 4,
+  "electrons": 4,
+  "twice_spin": 0,
+  "center": 1,
+  "channels": 8,
+  "operator_tolerance_hartree": 1e-9,
+  "state_tolerance": 1e-10,
+  "ritz_maximum_dimension": 64,
+  "ritz_residual_tolerance_hartree": 1e-10,
+  "ritz_energy_tolerance_hartree": 1e-8,
+  "scope": "New CG path basis, sparse operator contraction, exact split and local eigenproblem; no chemical-accuracy or frontier-method benchmark"
+}

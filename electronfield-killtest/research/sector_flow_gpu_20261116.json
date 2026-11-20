@@ -1,0 +1,110 @@
+{
+  "created_utc": "2026-11-16T23:37:49.409390+00:00",
+  "device": "cuda",
+  "scope": "Changed multi-sector physical correlation flow; three-electron development evidence only",
+  "training_targets": "Variational Hamiltonian expectation, no reference-energy fit",
+  "cases": [
+    {
+      "id": "H3_neutral_1.00",
+      "nelec": [
+        2,
+        1
+      ],
+      "energy_hartree": -1.638646521156205,
+      "reference_hartree": -1.6449265469125076,
+      "error_kcal": 3.940775659043965,
+      "antisymmetry_residual": 4.718447854656915e-16,
+      "variational_bound_satisfied": true,
+      "physical_state_block": 8,
+      "parameters": 27,
+      "history": [
+        {
+          "step": 1,
+          "error_kcal": 18.553757650387613,
+          "gradient_norm": 0.13348569215619308,
+          "seconds": 4.953315987
+        },
+        {
+          "step": 100,
+          "error_kcal": 4.038004475099908,
+          "gradient_norm": 0.0004631284291142385,
+          "seconds": 17.347755625
+        },
+        {
+          "step": 200,
+          "error_kcal": 3.9866731918451523,
+          "gradient_norm": 0.00041770604524015147,
+          "seconds": 26.529819633
+        },
+        {
+          "step": 300,
+          "error_kcal": 3.949590113249812,
+          "gradient_norm": 0.00043876940795416664,
+          "seconds": 34.631950997000004
+        },
+        {
+          "step": 400,
+          "error_kcal": 3.940775659043965,
+          "gradient_norm": 0.00043984006049263867,
+          "seconds": 42.683649394
+        }
+      ],
+      "seconds": 42.699382111999995
+    },
+    {
+      "id": "H3_neutral_1.80",
+      "nelec": [
+        2,
+        1
+      ],
+      "energy_hartree": -1.5208681377719315,
+      "reference_hartree": -1.537763436574059,
+      "error_kcal": 10.601960064395774,
+      "antisymmetry_residual": 5.551115123125783e-16,
+      "variational_bound_satisfied": true,
+      "physical_state_block": 8,
+      "parameters": 27,
+      "history": [
+        {
+          "step": 1,
+          "error_kcal": 30.20514782891864,
+          "gradient_norm": 0.004416849941478305,
+          "seconds": 0.06948800600000027
+        },
+        {
+          "step": 100,
+          "error_kcal": 11.93365232752076,
+          "gradient_norm": 0.0014497061052857697,
+          "seconds": 7.798905589
+        },
+        {
+          "step": 200,
+          "error_kcal": 11.160692033387761,
+          "gradient_norm": 0.0015173251098462538,
+          "seconds": 15.296441305000002
+        },
+        {
+          "step": 300,
+          "error_kcal": 10.71568466538958,
+          "gradient_norm": 0.0016347011666808966,
+          "seconds": 22.957511576
+        },
+        {
+          "step": 400,
+          "error_kcal": 10.601960064395774,
+          "gradient_norm": 0.001640891033801388,
+          "seconds": 30.806827950000013
+        }
+      ],
+      "seconds": 30.848280505000005
+    }
+  ],
+  "failures": [],
+  "steps": 400,
+  "summary": {
+    "cases": 2,
+    "mae_kcal": 7.271367861719869,
+    "maximum_error_kcal": 10.601960064395774
+  },
+  "peak_cuda_bytes": 66890240
+}

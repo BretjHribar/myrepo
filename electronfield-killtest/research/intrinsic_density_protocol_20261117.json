@@ -1,0 +1,12 @@
+{
+  "purpose": "Assess an external-potential-independent density frame and its on-shell constrained-search/kinetic completion",
+  "construction": "All resolved eigenmodes of the orbital-product Coulomb Gram operator, plus exact number; no nuclear positions, charges, external h or labels enter frame construction",
+  "relative_null_threshold": 1e-13,
+  "cases": ["BeH2_631g_1.65_new", "BeH2_631g_2.75_new"],
+  "input": "Reuse the saved new larger-basis physical states; no interacting optimization or reference generation is repeated",
+  "kinetic_entropy_allowance_hartree": 1e-5,
+  "kinetic_density_residual_tolerance": 1e-8,
+  "external_span_tolerance_hartree": 1e-7,
+  "checks": ["Represented density Coulomb Gram range", "Fixed-number one-body density and occupations", "Orbital-gauge covariance of the full retained subspace", "External-potential span assessed only after frame construction", "Canonical noninteracting kinetic search and same-density total energy"],
+  "limits": ["Finite-basis frame resolution, not a fixed continuum implementation", "An on-shell certificate does not implement arbitrary-density interacting search", "No off-shell functional derivative claim from this experiment", "No learned inference, broad chemistry score or speed work"]
+}

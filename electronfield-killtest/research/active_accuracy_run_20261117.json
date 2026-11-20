@@ -1,0 +1,71 @@
+{
+  "updated_utc": "2026-11-17T23:48:20.673477+00:00",
+  "branch": "research/electronfield-killtest-public",
+  "goal_status": "active: full public GMTKN55 tests and initial measured assessment first; accuracy goal unvalidated",
+  "scientific_device": "CUDA only",
+  "host_numerical_jobs": 0,
+  "maximum_host_orchestration_cores": 1,
+  "active_gpu_jobs": 1,
+  "unified_exec_session_id": 58560,
+  "entrypoint": "xc3d.gpu_verify_coulomb_factor_source",
+  "authoritative_report": "coulomb_factor_source_checks_gpu_20261117.json",
+  "protocol": "coulomb_factor_source_protocol_20261117.json",
+  "reference_only_correctness_amendment": "tensor_bh_reference_policy_20261117.json",
+  "last_observed_stage": "Bounded actual target-basis Coulomb-factor validation and larger public input probes running; previous full-score gap unchanged",
+  "completed_prediction_count_at_observation": 0,
+  "generated_reference_count_at_observation": 0,
+  "checkpoint_root": ".research/data/tensor_bh_accuracy",
+  "resume_rule": "Goal is active. Prioritize complete public-suite executable scope and actual predictions; one CUDA numerical job. Original BH can resume unchanged only as calibration, not as a substitute for full-suite tests.",
+  "new_passed_checks": [
+    "two_site_tensor_checks_gpu_20261117.json",
+    "sector_enrichment_checks_gpu_20261117.json",
+    "tensor_water_sector_gpu_20261117.json",
+    "bounded_spin_split_checks_gpu_20261117.json",
+    "two_site_forward_checks_gpu_20261117.json"
+  ],
+  "retained_failures": [
+    "tensor_water_forward_gpu_20261117.json",
+    "tensor_gauge_recovery_gpu_20261117.json"
+  ],
+  "accepted_coordinate_repair": "tensor_gauge_direct_recovery_gpu_20261117.json",
+  "consolidated_status_needs_refresh_after_gpu_job": true,
+  "status_generator": "xc3d.summarize_accuracy_20261117",
+  "latest_project_storage_gb": 21.2572,
+  "working_ceiling_gb": 32,
+  "hard_limit_gb": 40,
+  "additional_drive_assumed": false,
+  "speed_work_authorized": false,
+  "frontier_replication_performed": false,
+  "locked_confirmation_panel_exposed": false,
+  "automatic_resume_authorized": true,
+  "gpu_released_verified": false,
+  "queued_unexecuted_test": null,
+  "public_benchmark_data_audit": "Pinned source/coordinate/parser and CUDA-scoring checks passed for all 55 sets / 1505 reactions; no actual model accuracy score",
+  "public_data_transfer_completed": true,
+  "active_host_io_jobs": 0,
+  "current_gpu_worker_timeout_seconds": 3600,
+  "prepared_start_guard_numerically_validated": true,
+  "completed_public_pipeline_checks": [
+    "gmtkn55_coordinate_checks_gpu_20261117.json",
+    "gmtkn55_runner_checks_gpu_20261117.json"
+  ],
+  "completed_domain_checks": [
+    "ritz_start_guard_checks_gpu_20261117.json",
+    "doublet_embedding_checks_gpu_20261117.json"
+  ],
+  "current_full_public_assessment": {
+    "report": "gmtkn55_N1_component_score_gpu_20261117.json",
+    "candidate_scope": "exact N1 component only, not a finished general XC model",
+    "measured_reactions": 5,
+    "total_reactions": 1505,
+    "accepted_structure_predictions": 11,
+    "unsupported_structures": 2417,
+    "uncomputed_structures": 14,
+    "wtmad2_kcal_per_mol": null,
+    "full_suite_point_estimate_kcal_per_mol": null,
+    "private_tests_passed": false
+  },
+  "bh_calibration_status": "interrupted checkpoint retained; not resumed in current full-suite work; original protocol unchanged",
+  "new_density_square_operator_check": "density_square_operator_checks_gpu_20261117.json; passed independent operator checks, not broad chemical accuracy",
+  "next_required_work": "Implement a bounded large-basis GPU integral-factor source and complete physical domains; establish actual broader molecular predictions. A supplied-product identity or N1 result does not repair full coverage."
+}

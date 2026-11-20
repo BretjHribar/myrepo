@@ -1,0 +1,12 @@
+{
+  "reason_for_changed_construction": "Pure-state interacting and gapped-determinant kinetic searches failed density representability on the first water case; allow physical ensembles",
+  "reference_energy_in_objective_or_stopping": false,
+  "maximum_subspace_dimension": 192,
+  "stationarity_tolerance": 1e-7,
+  "entropy_energy_tolerance_hartree": 1e-5,
+  "many_body_statistics": "Canonical mixture within the exact N=10, S=0 sector generated from the physical seed",
+  "kinetic_statistics": "0<=D<=2, exact expected trace N constrained by a number potential; fractional D admits a fixed-N canonical representation",
+  "dual_continuation": [0.1, 1, 10, 100, 1000, 10000, 100000, "beta from entropy bound"],
+  "assessment": "Reject energies if either density constraint fails; reject potentials if state stationarity fails. Reuse the existing water reference only for post-prediction assessment.",
+  "scope": "Changed physical construction on development water; no out-of-sample or complete-basis claim"
+}

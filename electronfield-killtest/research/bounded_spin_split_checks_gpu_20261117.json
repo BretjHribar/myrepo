@@ -1,0 +1,40 @@
+{
+  "created_utc": "2026-11-17T15:53:56.250188+00:00",
+  "device": "cuda",
+  "protocol": {
+    "purpose": "Verify physical norm loss, spin symmetry and the explicit resource cap in a new bounded two-site split",
+    "seed": 17112060,
+    "sites": 4,
+    "electrons": 4,
+    "center": 1,
+    "channels": 8,
+    "maximum_bond_dimension": 4,
+    "identity_tolerance": 1e-10,
+    "scope": "One independent state-space truncation check; no Hamiltonian benchmark or chemical score"
+  },
+  "status": "completed",
+  "failures": [],
+  "result": {
+    "passed": true,
+    "split": {
+      "middle_bond_dimension": 4,
+      "discarded_squared_norm": 0.11757954660005458,
+      "maximum_bond_dimension": 4
+    },
+    "independent_discarded_norm_error": 9.71445146547012e-17,
+    "independent_retained_norm_error": 1.2906342661267445e-15,
+    "independent_fidelity_error": 6.661338147750939e-16,
+    "physical_checks_after_normalization": {
+      "passed": true,
+      "number_error": 0.0,
+      "spin_squared": 0.0,
+      "target_spin_squared": 0.0,
+      "spin_error": 0.0,
+      "norm_error": 0.0,
+      "minimum_spatial_occupation": 0.001655282343570415,
+      "maximum_spatial_occupation": 1.9925599482725054
+    }
+  },
+  "passed": true,
+  "peak_cuda_bytes": 17580544
+}

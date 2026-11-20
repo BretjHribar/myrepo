@@ -1,0 +1,17 @@
+{
+  "purpose": "Accuracy and basis-scope transfer of the charge/spin state before any speed work",
+  "frozen_before_new_reference_generation": true,
+  "cases": [
+    {"id": "BeH2_631g_1.65_new", "atom": "Be 0 0 0; H 0 0 1.65; H 0 0 -1.65", "charge": 0, "spin": 0, "electrons": 6, "basis": "6-31g", "first_block_atoms": 1},
+    {"id": "BeH2_631g_2.75_new", "atom": "Be 0 0 0; H 0 0 2.75; H 0 0 -2.75", "charge": 0, "spin": 0, "electrons": 6, "basis": "6-31g", "first_block_atoms": 1}
+  ],
+  "model": "Unchanged charge/spin multiplets, input Schmidt support, full fermionic interactions and residual-based completion",
+  "maximum_adaptive_updates": 64,
+  "full_state_residual_target_hartree": 1e-5,
+  "maximum_reference_ritz_dimension": 384,
+  "reference_residual_tolerance_hartree": 1e-8,
+  "stopping": "Physical Hamiltonian residual or declared capacity; never reference-energy error",
+  "reference_use": "Generate each new full same-basis reference only after its prediction is saved; no frontier method runs",
+  "assessment": "Keep both cases and their balanced stretch contrast, including all convergence failures",
+  "limits": ["Six electrons and a larger split-valence basis, not full GMTKN55", "No polarization functions or complete-basis accuracy claim", "A physical state representation, not yet a completed density-only XC functional", "Supplied two-block partition and global fixed-Sz coefficient vector", "No timing optimization or CPU numerical work"]
+}

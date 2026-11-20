@@ -1,0 +1,15 @@
+{
+  "purpose": "Check the scalar/potential contract along independent representable density paths in the larger basis",
+  "cases": ["BeH2_631g_1.65_new", "BeH2_631g_2.75_new"],
+  "frame": "Reuse each previously constructed spatial-product frame; do not change its span",
+  "potential_direction": "Fixed-seed real symmetric traceless random operator projected into that density span and normalized",
+  "direction_seed": 17112028,
+  "potential_step_hartree": 0.001,
+  "maximum_ritz_dimension": 256,
+  "state_residual_tolerance_hartree": 1e-9,
+  "directional_derivative_tolerance_hartree": 1e-5,
+  "kinetic_density_residual_tolerance": 1e-8,
+  "objective": "New plus/minus physical potential states only, with the saved central state as seed; no label objective",
+  "references": "No central optimization repeated and no new correlated reference labels generated",
+  "limits": ["Implicit full finite-basis constrained-search diagnostic", "One fixed path per geometry, not arbitrary-density functional coverage", "No learned model, broad chemistry score, nuclear-force derivative or speed claim"]
+}

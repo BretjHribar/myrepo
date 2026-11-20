@@ -1,0 +1,187 @@
+{
+  "created_utc": "2026-11-17T03:22:51.609080+00:00",
+  "device": "cuda",
+  "protocol": {
+    "purpose": "Accelerate the successful larger-basis coherent state without dropping orbitals or determinants",
+    "cases": [
+      "LiH_neutral_1.595",
+      "LiH_neutral_2.50",
+      "Be_neutral"
+    ],
+    "changes": [
+      "Exact occupied-subspace coordinates and small Cholesky normalization replace full-basis matrix exponentials",
+      "One full Cholesky fast path replaces repeated determinant-by-determinant independence solves; retain the original fallback"
+    ],
+    "initial_state": "Convert the same original Coulomb-response orbital seed, keeping its physical determinant span",
+    "optimization": "Same 400 Adam steps, 0.02 initial learning rate and 0.0002 final rate; same variational objective, no energy labels",
+    "assessment": "Check same saved physical spans before training; report matched state errors, all failures and wall time against the saved rotation/serial-coefficient runs. No seed/mode/iteration sweep.",
+    "acceptance": "Physical scalar/norm retained, reference not degraded, each same-basis error below 1 kcal/mol; report any accuracy change rather than hiding it",
+    "timing_scope": "GPU numerical optimization wall time with one-core host, separately from preparation/startup"
+  },
+  "results": [
+    {
+      "id": "LiH_neutral_1.595",
+      "spatial_orbitals": 19,
+      "basis": "cc-pvdz",
+      "energy_error_kcal": 0.04914497884567455,
+      "previous_error_kcal": 0.06573901150148279,
+      "accuracy_change_kcal": -0.016594032655808236,
+      "below_one_kcal": true,
+      "reference_not_degraded": true,
+      "same_saved_span_energy_error_hartree": 7.105427357601002e-15,
+      "same_saved_span_overlap_squared": 1.0,
+      "independent_final_kernel_error_hartree": 1.1102230246251565e-15,
+      "state_residual": 0.01908531111975346,
+      "training_seconds": 14.197401037999995,
+      "total_seconds": 20.911613246,
+      "previous_total_seconds": 23.343755962000003,
+      "conservative_total_speedup": 1.1163056185508387,
+      "retained_determinants": 13,
+      "proposed_determinants": 13,
+      "reference_energy_fitted": false,
+      "reference_recomputed": false,
+      "history": [
+        {
+          "id": "LiH_neutral_1.595",
+          "step": 1,
+          "energy_hartree": -8.013759633574802,
+          "seconds": 0.5855919709999995
+        },
+        {
+          "id": "LiH_neutral_1.595",
+          "step": 100,
+          "energy_hartree": -8.014191474077089,
+          "seconds": 3.857198197999999
+        },
+        {
+          "id": "LiH_neutral_1.595",
+          "step": 200,
+          "energy_hartree": -8.014598452531843,
+          "seconds": 6.781263582999998
+        },
+        {
+          "id": "LiH_neutral_1.595",
+          "step": 300,
+          "energy_hartree": -8.01464553685608,
+          "seconds": 10.704918478
+        },
+        {
+          "id": "LiH_neutral_1.595",
+          "step": 400,
+          "energy_hartree": -8.014649709271682,
+          "seconds": 14.197200944999999
+        }
+      ]
+    },
+    {
+      "id": "LiH_neutral_2.50",
+      "spatial_orbitals": 19,
+      "basis": "cc-pvdz",
+      "energy_error_kcal": 0.0880423366213904,
+      "previous_error_kcal": 0.07715063292710053,
+      "accuracy_change_kcal": 0.010891703694289864,
+      "below_one_kcal": true,
+      "reference_not_degraded": true,
+      "same_saved_span_energy_error_hartree": 2.6645352591003757e-15,
+      "same_saved_span_overlap_squared": 1.0,
+      "independent_final_kernel_error_hartree": 3.6637359812630166e-15,
+      "state_residual": 0.024859448416402603,
+      "training_seconds": 12.553062045000004,
+      "total_seconds": 12.807865258999996,
+      "previous_total_seconds": 16.989695255,
+      "conservative_total_speedup": 1.3265044626079048,
+      "retained_determinants": 15,
+      "proposed_determinants": 15,
+      "reference_energy_fitted": false,
+      "reference_recomputed": false,
+      "history": [
+        {
+          "id": "LiH_neutral_2.50",
+          "step": 1,
+          "energy_hartree": -7.976836538273484,
+          "seconds": 0.04797488200000544
+        },
+        {
+          "id": "LiH_neutral_2.50",
+          "step": 100,
+          "energy_hartree": -7.9776701913131065,
+          "seconds": 4.012510423000002
+        },
+        {
+          "id": "LiH_neutral_2.50",
+          "step": 200,
+          "energy_hartree": -7.977984630209318,
+          "seconds": 7.001816757
+        },
+        {
+          "id": "LiH_neutral_2.50",
+          "step": 300,
+          "energy_hartree": -7.97809212707891,
+          "seconds": 9.889396273000003
+        },
+        {
+          "id": "LiH_neutral_2.50",
+          "step": 400,
+          "energy_hartree": -7.978097485108891,
+          "seconds": 12.552869275000006
+        }
+      ]
+    },
+    {
+      "id": "Be_neutral",
+      "spatial_orbitals": 14,
+      "basis": "cc-pvdz",
+      "energy_error_kcal": 0.12363943463424697,
+      "previous_error_kcal": 0.17642554961508075,
+      "accuracy_change_kcal": -0.052786114980833784,
+      "below_one_kcal": true,
+      "reference_not_degraded": true,
+      "same_saved_span_energy_error_hartree": 7.105427357601002e-15,
+      "same_saved_span_overlap_squared": 1.0,
+      "independent_final_kernel_error_hartree": 3.552713678800501e-15,
+      "state_residual": 0.03173456768362528,
+      "training_seconds": 12.492176473,
+      "total_seconds": 12.605906545000003,
+      "previous_total_seconds": 20.832699893999994,
+      "conservative_total_speedup": 1.6526138743461518,
+      "retained_determinants": 19,
+      "proposed_determinants": 19,
+      "reference_energy_fitted": false,
+      "reference_recomputed": false,
+      "history": [
+        {
+          "id": "Be_neutral",
+          "step": 1,
+          "energy_hartree": -14.613676234235,
+          "seconds": 0.027222317999999746
+        },
+        {
+          "id": "Be_neutral",
+          "step": 100,
+          "energy_hartree": -14.61696091952447,
+          "seconds": 3.7319811549999997
+        },
+        {
+          "id": "Be_neutral",
+          "step": 200,
+          "energy_hartree": -14.617143851686373,
+          "seconds": 6.3743790910000016
+        },
+        {
+          "id": "Be_neutral",
+          "step": 300,
+          "energy_hartree": -14.617204391835399,
+          "seconds": 9.604064790000002
+        },
+        {
+          "id": "Be_neutral",
+          "step": 400,
+          "energy_hartree": -14.617212474572922,
+          "seconds": 12.491986617999999
+        }
+      ]
+    }
+  ],
+  "failures": [],
+  "peak_cuda_bytes": 32198144
+}

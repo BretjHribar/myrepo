@@ -1,0 +1,14 @@
+{
+  "hypothesis": "E_xc[D]=F_M(q[D])-Ts_M(q[D])-E_H[D], keeping Tr(TD) outside the moment search",
+  "created_before_reference_generation": true,
+  "case": {"id": "H2O_closed_0.957", "atom": "O 0 0 0; H 0 0.757 0.586; H 0 -0.757 0.586", "charge": 0, "spin": 0, "electrons": 10},
+  "basis": "sto-3g",
+  "moments": "Point-charge Coulomb density probes at all nuclear positions, with number gauge and linear dependencies removed; no nuclear-charge weighting in universal objective",
+  "input": "One bounded CUDA HF determinant, complete stated basis",
+  "maximum_subspace_dimension": 192,
+  "stationarity_tolerance": 1e-7,
+  "kinetic_reference": "Noninteracting one-body Legendre dual, gives a lower bound even if unconverged",
+  "stopping": "Density and stationarity residuals; reference energies never used",
+  "assessment": "Report moment residuals, potential-span error, convergence status and energy error against a new same-basis CUDA physical reference after prediction. No replacement or label-driven parameter changes.",
+  "limitations": ["One new development geometry", "Complete minimal basis only", "No model-driven SCF yet", "No general benchmark or world-novelty claim"]
+}

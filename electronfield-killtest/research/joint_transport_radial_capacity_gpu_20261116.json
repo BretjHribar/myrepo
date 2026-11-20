@@ -1,0 +1,9 @@
+{
+  "scope": "Analytic 2x2 transport minimum, with kinetic cost removed entirely; a lower bound on this coarse state's possible energy",
+  "device": "cuda",
+  "case": "He_atom",
+  "required_correlation_hartree": -0.03244661793475734,
+  "most_negative_allowed_correlation_hartree": -0.04481904628149283,
+  "unavoidable_energy_error_floor_kcal": 0.0,
+  "conclusion": "This bound alone does not reject representability"
+}

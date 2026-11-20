@@ -1,0 +1,95 @@
+{
+  "created_utc": "2026-11-17T13:00:57.126331+00:00",
+  "device": "cuda",
+  "protocol": {
+    "purpose": "Verify literal Hamiltonian responses and complete-multiplet truncation for the compositional physical state",
+    "seed": 17112043,
+    "sites": 4,
+    "state_cases": [
+      {
+        "electrons": 4,
+        "twice_spin": 0
+      },
+      {
+        "electrons": 3,
+        "twice_spin": 1
+      }
+    ],
+    "ancilla": 2,
+    "channels_per_sector": 2,
+    "untruncated_maximum_bond": 256,
+    "bounded_maximum_bond": 6,
+    "relative_singular_tolerance": 1e-12,
+    "operator_and_physical_tolerance": 1e-10,
+    "maximum_raw_intermediate_bytes": 1500000000,
+    "no_reference_or_optimization": true,
+    "scope": "New response contraction and symmetry-preserving truncation only; no chemistry, full-system residual bound or speed claim"
+  },
+  "results": [
+    {
+      "case": {
+        "electrons": 4,
+        "twice_spin": 0
+      },
+      "variant": "untruncated",
+      "passed": true,
+      "relative_image_difference": 2.0763292801952502e-14,
+      "number_sector_error": 0.0,
+      "magnetic_sector_error": 0.0,
+      "total_spin_sector_error": 1.8029365440297274e-16,
+      "norm_difference": 0.0,
+      "different_bond_cross_hamiltonian_error_hartree": 1.7763568394002505e-15,
+      "cross_overlap_error": 4.440892098500626e-16,
+      "maximum_state_bond": 152,
+      "capacity_limited": false,
+      "maximum_isometry_error": 2.2651785537438305e-13,
+      "compression_indicator_is_global_error_bound": false
+    },
+    {
+      "case": {
+        "electrons": 4,
+        "twice_spin": 0
+      },
+      "variant": "bounded",
+      "passed": true,
+      "relative_image_difference": 0.9606065174399226,
+      "number_sector_error": 0.0,
+      "magnetic_sector_error": 0.0,
+      "total_spin_sector_error": 2.205583298841918e-16,
+      "norm_difference": 1.1102230246251565e-16,
+      "different_bond_cross_hamiltonian_error_hartree": 1.1102230246251565e-16,
+      "cross_overlap_error": 1.3877787807814457e-17,
+      "maximum_state_bond": 6,
+      "capacity_limited": true,
+      "maximum_isometry_error": 1.556884567146966e-15,
+      "compression_indicator_is_global_error_bound": false
+    },
+    {
+      "case": {
+        "electrons": 3,
+        "twice_spin": 1
+      },
+      "variant": "untruncated",
+      "passed": false,
+      "relative_image_difference": 0.000882999367518105,
+      "number_sector_error": 0.0,
+      "magnetic_sector_error": 0.0,
+      "total_spin_sector_error": 2.5450830011641844e-16,
+      "norm_difference": 1.7763568394002505e-15,
+      "different_bond_cross_hamiltonian_error_hartree": 3.552713678800501e-15,
+      "cross_overlap_error": 4.440892098500626e-16,
+      "maximum_state_bond": 256,
+      "capacity_limited": true,
+      "maximum_isometry_error": 1.5208523775449336e-13,
+      "compression_indicator_is_global_error_bound": false
+    }
+  ],
+  "failures": [
+    {
+      "error": "RuntimeError: Physical tensor response failed its exact-image or sector check"
+    }
+  ],
+  "status": "completed",
+  "passed": false,
+  "peak_cuda_bytes": 533395968
+}

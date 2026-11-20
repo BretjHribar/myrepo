@@ -1,0 +1,101 @@
+{
+  "created_utc": "2026-11-17T00:00:43.304812+00:00",
+  "device": "cuda",
+  "scope": "New rotation-scalar angular operator, after reference-complete spin/charge/orbital flow; three-electron development evidence only",
+  "training_targets": "Physical Hamiltonian expectation; reference energies used for reporting only",
+  "gate_error_bound": "exp(0.3)*0.3^9/9! < 8e-11 per gate",
+  "steps": 300,
+  "cases": [
+    {
+      "id": "H3_neutral_1.00",
+      "nelec": [
+        2,
+        1
+      ],
+      "energy_hartree": -1.6424387690135638,
+      "reference_hartree": -1.6449265469125076,
+      "error_kcal": 1.5611042007950695,
+      "antisymmetry_residual": 6.38378239159465e-16,
+      "doublet_spin_residual": 7.216449660063518e-16,
+      "variational_bound_satisfied": true,
+      "physical_state_block": 2,
+      "parameters": 9,
+      "history": [
+        {
+          "step": 1,
+          "error_kcal": 3.025469184192514,
+          "gradient_norm": 0.007241100390063979,
+          "seconds": 2.637808688
+        },
+        {
+          "step": 100,
+          "error_kcal": 1.5611386023570513,
+          "gradient_norm": 1.9280245553721266e-05,
+          "seconds": 18.031996608
+        },
+        {
+          "step": 200,
+          "error_kcal": 1.5611087601583977,
+          "gradient_norm": 3.141773221469298e-06,
+          "seconds": 30.942627995000002
+        },
+        {
+          "step": 300,
+          "error_kcal": 1.5611042026515702,
+          "gradient_norm": 3.1408758947887874e-06,
+          "seconds": 45.099071465
+        }
+      ],
+      "seconds": 45.113914855000004
+    },
+    {
+      "id": "H3_neutral_1.80",
+      "nelec": [
+        2,
+        1
+      ],
+      "energy_hartree": -1.5363782002233315,
+      "reference_hartree": -1.537763436574059,
+      "error_kcal": 0.8692489338106324,
+      "antisymmetry_residual": 9.697104230710352e-16,
+      "doublet_spin_residual": 1.2299189444675562e-15,
+      "variational_bound_satisfied": true,
+      "physical_state_block": 2,
+      "parameters": 9,
+      "history": [
+        {
+          "step": 1,
+          "error_kcal": 1.6789907863689189,
+          "gradient_norm": 0.003151715124496334,
+          "seconds": 0.1284165040000005
+        },
+        {
+          "step": 100,
+          "error_kcal": 0.869260786933317,
+          "gradient_norm": 9.87708871804235e-06,
+          "seconds": 13.542250705000008
+        },
+        {
+          "step": 200,
+          "error_kcal": 0.8692489951481698,
+          "gradient_norm": 2.3591347844227123e-07,
+          "seconds": 26.301661685000006
+        },
+        {
+          "step": 300,
+          "error_kcal": 0.8692489352357518,
+          "gradient_norm": 2.3249711364840706e-07,
+          "seconds": 40.575232232
+        }
+      ],
+      "seconds": 40.588949041
+    }
+  ],
+  "failures": [],
+  "summary": {
+    "cases": 2,
+    "mae_kcal": 1.215176567302851,
+    "maximum_error_kcal": 1.5611042007950695
+  },
+  "peak_cuda_bytes": 29414912
+}

@@ -1,0 +1,38 @@
+{
+  "scope": "Numerical parameterization audit; no additional fit or benchmark",
+  "device": "cuda",
+  "cases": [
+    {
+      "id": "H3_neutral_1.00",
+      "angular_rank": 1,
+      "maximum_abs_angle": 0.02968981655095393,
+      "fraction_angles_above_95_percent_cap": 0.0,
+      "raw_gradient_norm": 3.1408768209962866e-06,
+      "physical_angle_gradient_norm": 3.182292181423964e-05
+    },
+    {
+      "id": "H3_neutral_1.00",
+      "angular_rank": 2,
+      "maximum_abs_angle": 0.005626100455597051,
+      "fraction_angles_above_95_percent_cap": 0.0,
+      "raw_gradient_norm": 1.0551367139016182e-06,
+      "physical_angle_gradient_norm": 1.0560620011179361e-05
+    },
+    {
+      "id": "H3_neutral_1.80",
+      "angular_rank": 1,
+      "maximum_abs_angle": 0.03293597981287225,
+      "fraction_angles_above_95_percent_cap": 0.0,
+      "raw_gradient_norm": 2.324970562860607e-07,
+      "physical_angle_gradient_norm": 2.437090430979394e-06
+    },
+    {
+      "id": "H3_neutral_1.80",
+      "angular_rank": 2,
+      "maximum_abs_angle": 0.0345473314909431,
+      "fraction_angles_above_95_percent_cap": 0.0,
+      "raw_gradient_norm": 8.732683543407068e-08,
+      "physical_angle_gradient_norm": 9.260863056849993e-07
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "purpose": "Accelerate the successful larger-basis coherent state without dropping orbitals or determinants",
+  "cases": ["LiH_neutral_1.595", "LiH_neutral_2.50", "Be_neutral"],
+  "changes": ["Exact occupied-subspace coordinates and small Cholesky normalization replace full-basis matrix exponentials", "One full Cholesky fast path replaces repeated determinant-by-determinant independence solves; retain the original fallback"],
+  "initial_state": "Convert the same original Coulomb-response orbital seed, keeping its physical determinant span",
+  "optimization": "Same 400 Adam steps, 0.02 initial learning rate and 0.0002 final rate; same variational objective, no energy labels",
+  "assessment": "Check same saved physical spans before training; report matched state errors, all failures and wall time against the saved rotation/serial-coefficient runs. No seed/mode/iteration sweep.",
+  "acceptance": "Physical scalar/norm retained, reference not degraded, each same-basis error below 1 kcal/mol; report any accuracy change rather than hiding it",
+  "timing_scope": "GPU numerical optimization wall time with one-core host, separately from preparation/startup"
+}

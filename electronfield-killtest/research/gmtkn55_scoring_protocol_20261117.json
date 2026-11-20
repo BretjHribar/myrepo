@@ -1,0 +1,18 @@
+{
+  "purpose": "Complete pinned public GMTKN55 evaluation of our own frozen candidates; establish an initial measured score before further sub-1 research",
+  "source_commit": "8d485b37a1ca8837e395042671ca5ba4e0714691",
+  "manifest": "data/gmtkn55_official_v1/manifest.json",
+  "expected_evaluation_sets": 55,
+  "expected_reactions": 1505,
+  "expected_structure_inventory": 2462,
+  "normalization_kcal_per_mol": "57.8167",
+  "normalization_source": "https://github.com/grimme-lab/GMTKN55/blob/8d485b37a1ca8837e395042671ca5ba4e0714691/.calc_WTMAD-2",
+  "normalization_source_git_blob_sha1": "b4b14837e19a6d8d4e8d90a4e7171199d353cf47",
+  "subset_means": "Use pinned .average files, with BH76/.averageRC for BH76RC, exactly as the authors' corrected v1 calculator; also report unrounded means derived from the reference definitions for transparency",
+  "hartree_to_kcal_per_mol": "627.5094740631",
+  "prediction_energy_kind": "total_electronic_plus_nuclear_hartree",
+  "incomplete_prediction_policy": "No full WTMAD-2 unless every reaction has all finite, converged, physically accepted predictions. Missing/failed reactions remain in the full denominator for a clearly labeled nonnegative lower bound, never a claimed passing score.",
+  "partial_estimation_policy": "Do not extrapolate an opportunistic subset to a full-suite point estimate. Report actual coverage and failures; any later sampling estimate needs a prespecified probability design and uncertainty.",
+  "execution": "All scientific arithmetic and benchmark scoring on CUDA float64, one host core, no CPU numerical fallback, no speed experiments, no frontier replication",
+  "private_tests": "Public suite first as explicitly requested; no organizer private files or API available and no private-test pass claim"
+}

@@ -1,5 +1,42 @@
 # Electron-field supervision: a reproducible 1D XC kill test
 
+**Project objective:** win Discovered Materials' [Breaking the Speed–Accuracy Barrier in Quantum Chemistry](https://discoveredmaterials.com/grand-challenges/speed-accuracy-barrier/) challenge through a substantial advance in accuracy, efficiency, and generalization. The [research plan](RESEARCH_PLAN.md) defines the proposed approach, hardware budget, and experiments that must succeed. This folder's 1D results are an early diagnostic; they do not establish competition performance.
+
+**Research direction:** our own research only, with no frontier replication, including sanity checks or benchmark reproductions. The 1D commands below preserve the historical experiment; they are not current work items. Current 3D findings and rejected variants are in [the execution record](research/PROGRESS.md).
+
+**Current 3D work:** [current model and evidence](research/CURRENT_MODEL.md). A new [charge/spin block state](research/CHARGE_SPIN_STATE.md) resolves the earlier restrictions on small same-basis tests, including a new ion, 18-electron peroxide and larger-basis BeH2 geometries. [Spatial density constraints](research/SPATIAL_DENSITY_FUNCTIONAL.md) now have on-shell scalar/potential checks. The present implementation still retains large state spaces and does not establish a general XC functional, complete-basis accuracy or WTMAD-2. The [accuracy gate](research/ACCURACY_GATE.md) takes priority; further speed work is on hold.
+
+The bounded hard-density inverse and both feasible-ensemble searches failed
+and are closed. A changed [auxiliary-density formulation](research/AUXILIARY_DENSITY_STATE.md)
+passes two finite-basis forward development points and fresh XC derivative
+checks. It still uses global Fock vectors, supports a restricted spin/particle
+domain and establishes no complete-basis, learned-transfer or WTMAD-2 result.
+Its regularized KS integration and challenge eligibility are unverified.
+Larger realistic systems with the physical and scalar/derivative checks
+intact remain the next accuracy requirement. Speed stays disabled.
+
+The new [tensor state/action and density interface](research/TENSOR_DENSITY_RESPONSE.md)
+passes physical scope checks on 24-orbital water without a global Fock
+vector. A [conditional tensor XC search](research/CONDITIONAL_TENSOR_FUNCTIONAL.md)
+also passes physical installation and scalar/derivative checks. Surrounding
+tensors remain fixed, global self-consistency is unproved, and reference
+accuracy/WTMAD-2 were not measured.
+
+The new [sector-completion work](research/TENSOR_SECTOR_COMPLETION.md)
+closes a fixed-seed restriction excluding higher excitations. A
+state-preserving water extension and independent variable-sector forward
+checks pass. A frozen larger-basis BH stretch test is checkpointed and
+interrupted, preserving prediction-before-reference ordering. No molecular
+accuracy result is inferred from partial progress.
+
+**Latest user priority:** full public GMTKN55 tests and an initial measured
+assessment first. The [full public parser and GPU scorer](research/GMTKN55_PIPELINE.md)
+pass all 55 sets / 1,505 reactions. The current model fails full-scope
+feasibility. Its exact N=1 component has 11 accepted target-basis structure
+predictions, covering only five reactions; no full-suite WTMAD-2 estimate
+exists. A changed [physical operator](research/DENSITY_SQUARE_OPERATOR.md)
+passes implementation checks, but broad accuracy remains unmeasured.
+
 **Status: exploratory toy-model experiment, not a chemical accuracy result.**
 
 **Current reading:** in this 1D toy, field supervision improves held-out energies, densities and potentials once the fields are actually learned, at the cost of harder SCF convergence. It does not fix stretched-bond static correlation.

@@ -1,0 +1,205 @@
+{
+  "created_utc": "2026-11-17T15:47:28.200950+00:00",
+  "device": "cuda",
+  "protocol": {
+    "status": "active",
+    "purpose": "Test removal of the two-virtual-electron restriction through physical residual charge/spin sector completion",
+    "case_id": "H2O_ccpvdz_tensor_scope_new",
+    "source_input": "data/tensor_scope/H2O_ccpvdz_tensor_scope_new.inputs.pt",
+    "source_state": "data/tensor_forward_water/canonical_recovery.pt",
+    "checkpoint_folder": "data/tensor_sector_water",
+    "seed": 17112059,
+    "center": 4,
+    "electrons": 10,
+    "orbitals": 24,
+    "maximum_bond_dimension": 64,
+    "maximum_added_magnetic_states": 8,
+    "maximum_environment_bytes": 1500000000,
+    "maximum_embedding_bytes": 1500000000,
+    "maximum_local_matrix_bytes": 1500000000,
+    "local_metric_null_tolerance": 1e-12,
+    "ground_degeneracy_tolerance_hartree": 1e-10,
+    "physical_identity_tolerance_hartree": 1e-07,
+    "physical_tolerance": 1e-07,
+    "minimum_new_sector_probability": 1e-12,
+    "support_selection": "One literal Hamiltonian residual in the complete two-site physical N,S basis; SVD after removal of the exact old left support; whole spin multiplets and degenerate singular blocks",
+    "state_retention": "Copy the existing canonical left support and right coefficients, with exact zeros on added channels; verify energy and density before the local variational update",
+    "acceptance": "Unchanged state and physical guards, strict variational energy reduction, and nonzero probability for at least three electrons in initially virtual orbitals",
+    "reference_use": "No correlated reference energies or densities loaded, generated, fitted, selected or used for stopping",
+    "scope": "One missing-sector physical response experiment; not global tensor stationarity, global minimization, chemical accuracy, WTMAD-2 or a breakthrough",
+    "resource_limit": "One CUDA job, one host core, at most 1 GB new project disk; unchanged 40 GB total budget",
+    "speed_work_authorized": false
+  },
+  "status": "completed",
+  "history": [
+    {
+      "phase": "building_literal_operator",
+      "orbitals": 24,
+      "electrons": 10
+    },
+    {
+      "phase": "building_complete_two_site_section",
+      "old_bond_dimension": 56
+    },
+    {
+      "phase": "evaluating_physical_residual",
+      "physical_dimension": 1574,
+      "merged_operator_blocks": 172,
+      "canonical_error": 3.649376311465513e-14
+    },
+    {
+      "phase": "new_sectors_installed_without_changing_state",
+      "old_bond_dimension": 56,
+      "new_bond_dimension": 64,
+      "added_magnetic_states": 8,
+      "maximum_bond_dimension": 64,
+      "old_left_canonical_error": 1.3250102319159078e-14,
+      "relative_squared_retained_state_error": 0.0,
+      "captured_new_direction_squared_norm": 0.00030554861516347273,
+      "available_new_direction_squared_norm": 0.0004073840284853186,
+      "new_direction_fraction": 0.7500260044546252,
+      "added_multiplets": [
+        {
+          "number": 6,
+          "twice_spin": 0,
+          "channels": 2
+        },
+        {
+          "number": 7,
+          "twice_spin": 1,
+          "channels": 3
+        }
+      ],
+      "retained_energy_change_hartree": 0.0,
+      "retained_density_change": 2.2532284466140832e-18
+    },
+    {
+      "phase": "physical_variational_update",
+      "center": 5
+    },
+    {
+      "phase": "sector_test_completed",
+      "physical_sector_test_passed": true,
+      "support": {
+        "old_bond_dimension": 56,
+        "new_bond_dimension": 64,
+        "added_magnetic_states": 8,
+        "maximum_bond_dimension": 64,
+        "old_left_canonical_error": 1.3250102319159078e-14,
+        "relative_squared_retained_state_error": 0.0,
+        "captured_new_direction_squared_norm": 0.00030554861516347273,
+        "available_new_direction_squared_norm": 0.0004073840284853186,
+        "new_direction_fraction": 0.7500260044546252,
+        "added_multiplets": [
+          {
+            "number": 6,
+            "twice_spin": 0,
+            "channels": 2
+          },
+          {
+            "number": 7,
+            "twice_spin": 1,
+            "channels": 3
+          }
+        ],
+        "retained_energy_change_hartree": 0.0,
+        "retained_density_change": 2.2532284466140832e-18
+      },
+      "local_update": {
+        "center": 5,
+        "physical_dimension": 768,
+        "local_variational_gap_hartree": 0.002260107440605452,
+        "electronic_energy_hartree": -85.15107887429055,
+        "local_global_energy_identity_error_hartree": 9.50706180447014e-12,
+        "metric_error": 3.0096796245561287e-12,
+        "input_retention_error": 5.943942602921443e-15
+      },
+      "physical_checks": {
+        "passed": true,
+        "number_error": 8.881784197001252e-15,
+        "spin_squared": -2.3852447794681086e-18,
+        "target_spin_squared": 0.0,
+        "spin_error": 2.3852447794681086e-18,
+        "norm_error": 4.440892098500626e-16,
+        "minimum_spatial_occupation": 0.0001553797289606686,
+        "maximum_spatial_occupation": 1.9999273586627664
+      },
+      "two_site_physical_dimension": 1574,
+      "two_site_residual_norm_hartree": 0.12219116110120598,
+      "source_total_energy_hartree": -76.2129045295776,
+      "physical_total_energy_hartree": -76.2151646370181,
+      "energy_lowering_hartree": 0.0022601074405059762,
+      "old_three_or_more_virtual_electron_probability": 0.0,
+      "new_three_or_more_virtual_electron_probability": 1.1013298453331093e-05,
+      "chemical_accuracy_measured": false,
+      "new_reference_generated_or_loaded": false,
+      "global_tensor_stationarity_certified": false,
+      "full_hilbert_residual_certified": false,
+      "goal_accuracy_achieved": false,
+      "wtmad2_measured": false
+    }
+  ],
+  "failures": [],
+  "result": {
+    "physical_sector_test_passed": true,
+    "support": {
+      "old_bond_dimension": 56,
+      "new_bond_dimension": 64,
+      "added_magnetic_states": 8,
+      "maximum_bond_dimension": 64,
+      "old_left_canonical_error": 1.3250102319159078e-14,
+      "relative_squared_retained_state_error": 0.0,
+      "captured_new_direction_squared_norm": 0.00030554861516347273,
+      "available_new_direction_squared_norm": 0.0004073840284853186,
+      "new_direction_fraction": 0.7500260044546252,
+      "added_multiplets": [
+        {
+          "number": 6,
+          "twice_spin": 0,
+          "channels": 2
+        },
+        {
+          "number": 7,
+          "twice_spin": 1,
+          "channels": 3
+        }
+      ],
+      "retained_energy_change_hartree": 0.0,
+      "retained_density_change": 2.2532284466140832e-18
+    },
+    "local_update": {
+      "center": 5,
+      "physical_dimension": 768,
+      "local_variational_gap_hartree": 0.002260107440605452,
+      "electronic_energy_hartree": -85.15107887429055,
+      "local_global_energy_identity_error_hartree": 9.50706180447014e-12,
+      "metric_error": 3.0096796245561287e-12,
+      "input_retention_error": 5.943942602921443e-15
+    },
+    "physical_checks": {
+      "passed": true,
+      "number_error": 8.881784197001252e-15,
+      "spin_squared": -2.3852447794681086e-18,
+      "target_spin_squared": 0.0,
+      "spin_error": 2.3852447794681086e-18,
+      "norm_error": 4.440892098500626e-16,
+      "minimum_spatial_occupation": 0.0001553797289606686,
+      "maximum_spatial_occupation": 1.9999273586627664
+    },
+    "two_site_physical_dimension": 1574,
+    "two_site_residual_norm_hartree": 0.12219116110120598,
+    "source_total_energy_hartree": -76.2129045295776,
+    "physical_total_energy_hartree": -76.2151646370181,
+    "energy_lowering_hartree": 0.0022601074405059762,
+    "old_three_or_more_virtual_electron_probability": 0.0,
+    "new_three_or_more_virtual_electron_probability": 1.1013298453331093e-05,
+    "chemical_accuracy_measured": false,
+    "new_reference_generated_or_loaded": false,
+    "global_tensor_stationarity_certified": false,
+    "full_hilbert_residual_certified": false,
+    "goal_accuracy_achieved": false,
+    "wtmad2_measured": false
+  },
+  "passed": true,
+  "peak_cuda_bytes": 820369408
+}

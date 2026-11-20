@@ -1,0 +1,262 @@
+{
+  "created_utc": "2026-11-17T12:13:45.350439+00:00",
+  "device": "cuda",
+  "protocol": {
+    "purpose": "Finish the original full-space residuals from the corrected physical checkpoints with one bounded checked response-space restart",
+    "cases": [
+      "BeH2_631g_1.65_new",
+      "BeH2_631g_2.75_new"
+    ],
+    "original_protocol": "research/auxiliary_forward_protocol_20261117.json",
+    "strict_spin_recovery": true,
+    "finish_unconverged_only": true,
+    "initial_checkpoint_folder": "data/auxiliary_strict",
+    "initial_checkpoint_suffix": ".pt",
+    "checkpoint_folder": "data/auxiliary_stationary",
+    "maximum_additional_updates": 32,
+    "maximum_response_restarts": 1,
+    "trigger": "Both saved states meet reduced self-consistency but retain full-space residuals above the unchanged 1e-5 Hartree target",
+    "restart": "Retain the complete occupied ensemble to numerical precision and its original mean-field input; verify density, trace, spin and full-Hamiltonian energy retention",
+    "unchanged": "Physical functional, epsilon=1, maximum space dimension 192, response counts and every accuracy tolerance",
+    "outer_solver": "Exact elimination of the auxiliary coordinate in the same variational functional",
+    "stopping": "Original full stationarity/self-consistency conditions, or capacity; do not repeat an unchanged state after capacity is exhausted",
+    "reference_use": "Existing labels only after the solve stops; no energy-error stopping or new references",
+    "limits": [
+      "Development convergence completion, not a blind test",
+      "No speed work or rank/seed/tolerance sweep",
+      "Global Fock-vector backend and finite bases",
+      "Broad accuracy remains unachieved"
+    ]
+  },
+  "status": "completed",
+  "original_recovered": [
+    {
+      "id": "BeH2_631g_1.65_new",
+      "saved_update": 32,
+      "physical_total_energy_hartree": -15.76919230060123,
+      "potential_self_consistency_residual": 2.7455055841939174e-15,
+      "outside_stationarity_residual": 3.340077508792294e-05,
+      "reduced_gap_hartree": 0.0,
+      "kinetic_converged": true,
+      "kinetic_gap_hartree": 8.881784197001252e-15,
+      "old_optimization_repeated": false,
+      "energy_error_kcal": 1.509021353415427e-07
+    },
+    {
+      "id": "BeH2_631g_2.75_new",
+      "saved_update": 32,
+      "physical_total_energy_hartree": -15.614780296865593,
+      "potential_self_consistency_residual": 3.800157957506347e-15,
+      "outside_stationarity_residual": 0.00177362110726602,
+      "reduced_gap_hartree": 0.0,
+      "kinetic_converged": true,
+      "kinetic_gap_hartree": 2.6645352591003757e-15,
+      "old_optimization_repeated": false,
+      "energy_error_kcal": 0.0005775466935666365
+    }
+  ],
+  "results": [
+    {
+      "id": "BeH2_631g_1.65_new",
+      "prediction_valid": true,
+      "self_consistent": true,
+      "physical_total_energy_hartree": -15.769192300810406,
+      "energy_error_kcal": 1.9641789424003518e-08,
+      "reference_energy_hartree": -15.769192300841707,
+      "number_error": 8.881784197001252e-16,
+      "minimum_physical_occupation": 6.059846581940458e-05,
+      "maximum_physical_occupation": 1.999852443154458,
+      "kinetic_converged": true,
+      "kinetic_gap_hartree": 1.3322676295501878e-14,
+      "ks_commutator_norm": 1.2397324993535543e-07,
+      "global_check": {
+        "converged": true,
+        "state_residual": 8.89606400199653e-09,
+        "full_oracle_frank_wolfe_gap_hartree": 3.054800856716611e-11,
+        "spin_squared_basis_norm": 2.018187984803696e-15,
+        "passed": true,
+        "limit": "Ritz lowest-state evidence, not a rigorous lower bound from an independent Hamiltonian implementation"
+      },
+      "restart_checks": {
+        "passed": true,
+        "old_dimension": 186,
+        "restarted_dimension": 2,
+        "retained_ensemble_channels": 1,
+        "discarded_trace": 2.220446049250313e-16,
+        "ensemble_operator_error": 1.4645299368466257e-15,
+        "universal_energy_change_hartree": 2.842170943040401e-14,
+        "density_change_norm": 3.588695779014123e-15,
+        "input_retention_error": 1.0646134466896923e-16,
+        "saved_occupied_spin_squared_norm": 7.310028444333987e-16,
+        "full_physical_hamiltonian_used": true
+      },
+      "history": [
+        {
+          "update": 0,
+          "physical_total_energy_hartree": -15.76919230077598,
+          "potential_self_consistency_residual": 1.3214644257318697e-07,
+          "outside_stationarity_residual": 1.561047510794952e-05,
+          "reduced_gap_hartree": 4.1966430330830917e-13,
+          "basis_dimension": 20,
+          "physical_energy_identity_error_hartree": 3.0047623215177306e-14
+        },
+        {
+          "update": 1,
+          "physical_total_energy_hartree": -15.769192300810406,
+          "potential_self_consistency_residual": 7.008240517982023e-08,
+          "outside_stationarity_residual": 9.279177187414354e-06,
+          "reduced_gap_hartree": 1.7719159473017498e-13,
+          "basis_dimension": 29,
+          "physical_energy_identity_error_hartree": 1.666662647309625e-14
+        }
+      ],
+      "xc_potential_accepted": true,
+      "new_reference_generated": false,
+      "oracle_density_used_for_prediction": false,
+      "post_interruption_development_completion": true
+    },
+    {
+      "id": "BeH2_631g_2.75_new",
+      "prediction_valid": true,
+      "self_consistent": true,
+      "physical_total_energy_hartree": -15.614781217168328,
+      "energy_error_kcal": 4.800818504638826e-08,
+      "reference_energy_hartree": -15.614781217244834,
+      "number_error": 7.105427357601002e-15,
+      "minimum_physical_occupation": 6.265544886576522e-05,
+      "maximum_physical_occupation": 1.9998554839527412,
+      "kinetic_converged": true,
+      "kinetic_gap_hartree": 6.217248937900877e-15,
+      "ks_commutator_norm": 1.1117200717848628e-08,
+      "global_check": {
+        "converged": true,
+        "state_residual": 8.808004004531027e-09,
+        "full_oracle_frank_wolfe_gap_hartree": 7.52136131154657e-11,
+        "spin_squared_basis_norm": 1.165209291757739e-15,
+        "passed": true,
+        "limit": "Ritz lowest-state evidence, not a rigorous lower bound from an independent Hamiltonian implementation"
+      },
+      "restart_checks": {
+        "passed": true,
+        "old_dimension": 191,
+        "restarted_dimension": 2,
+        "retained_ensemble_channels": 1,
+        "discarded_trace": 2.220446049250313e-16,
+        "ensemble_operator_error": 2.5002519286511362e-15,
+        "universal_energy_change_hartree": 1.0658141036401503e-14,
+        "density_change_norm": 2.3469707816564022e-15,
+        "input_retention_error": 1.2882479115733805e-16,
+        "saved_occupied_spin_squared_norm": 6.188138371229228e-16,
+        "full_physical_hamiltonian_used": true
+      },
+      "history": [
+        {
+          "update": 0,
+          "physical_total_energy_hartree": -15.614780896774743,
+          "potential_self_consistency_residual": 6.8651586163146056e-06,
+          "outside_stationarity_residual": 0.0009396282017479728,
+          "reduced_gap_hartree": 1.2434497875801753e-14,
+          "basis_dimension": 20,
+          "physical_energy_identity_error_hartree": 1.0709723132016458e-14
+        },
+        {
+          "update": 1,
+          "physical_total_energy_hartree": -15.614781124364583,
+          "potential_self_consistency_residual": 1.0260199923433153e-05,
+          "outside_stationarity_residual": 0.0005001308403433625,
+          "reduced_gap_hartree": 2.8821389719269064e-12,
+          "basis_dimension": 38,
+          "physical_energy_identity_error_hartree": 3.0819792409823364e-14
+        },
+        {
+          "update": 2,
+          "physical_total_energy_hartree": -15.614781188765924,
+          "potential_self_consistency_residual": 2.4185883363890882e-05,
+          "outside_stationarity_residual": 0.0002616512435561905,
+          "reduced_gap_hartree": 6.492140158798065e-12,
+          "basis_dimension": 56,
+          "physical_energy_identity_error_hartree": 1.3234386156422853e-15
+        },
+        {
+          "update": 3,
+          "physical_total_energy_hartree": -15.614781206761666,
+          "potential_self_consistency_residual": 6.0180199589916515e-06,
+          "outside_stationarity_residual": 0.00015450464487730926,
+          "reduced_gap_hartree": 4.134914632913933e-12,
+          "basis_dimension": 74,
+          "physical_energy_identity_error_hartree": 1.7864060958789256e-14
+        },
+        {
+          "update": 4,
+          "physical_total_energy_hartree": -15.614781213403258,
+          "potential_self_consistency_residual": 3.2459217395839008e-06,
+          "outside_stationarity_residual": 9.148507642110323e-05,
+          "reduced_gap_hartree": 8.344880342292527e-12,
+          "basis_dimension": 92,
+          "physical_energy_identity_error_hartree": 4.5514861914952535e-14
+        },
+        {
+          "update": 5,
+          "physical_total_energy_hartree": -15.61478121559767,
+          "potential_self_consistency_residual": 2.0843055633202975e-06,
+          "outside_stationarity_residual": 5.047773934181312e-05,
+          "reduced_gap_hartree": 3.6122216329204093e-12,
+          "basis_dimension": 110,
+          "physical_energy_identity_error_hartree": 9.20135813953596e-15
+        },
+        {
+          "update": 6,
+          "physical_total_energy_hartree": -15.614781216355745,
+          "potential_self_consistency_residual": 1.3224215390524014e-06,
+          "outside_stationarity_residual": 3.4472265323496095e-05,
+          "reduced_gap_hartree": 2.8368418725222e-12,
+          "basis_dimension": 128,
+          "physical_energy_identity_error_hartree": 1.0226342546463778e-14
+        },
+        {
+          "update": 7,
+          "physical_total_energy_hartree": -15.6147812167852,
+          "potential_self_consistency_residual": 1.4483622414488261e-06,
+          "outside_stationarity_residual": 2.19448828580254e-05,
+          "reduced_gap_hartree": 7.498002219108457e-12,
+          "basis_dimension": 146,
+          "physical_energy_identity_error_hartree": 2.404293977041736e-14
+        },
+        {
+          "update": 8,
+          "physical_total_energy_hartree": -15.614781217017118,
+          "potential_self_consistency_residual": 1.5601571225318507e-06,
+          "outside_stationarity_residual": 1.6095020327184642e-05,
+          "reduced_gap_hartree": 3.242295321115307e-12,
+          "basis_dimension": 164,
+          "physical_energy_identity_error_hartree": 3.7062805123144584e-14
+        },
+        {
+          "update": 9,
+          "physical_total_energy_hartree": -15.614781217132396,
+          "potential_self_consistency_residual": 6.14628969420413e-07,
+          "outside_stationarity_residual": 1.057157347649454e-05,
+          "reduced_gap_hartree": 8.209433133288258e-12,
+          "basis_dimension": 182,
+          "physical_energy_identity_error_hartree": 1.4801414764174944e-14
+        },
+        {
+          "update": 10,
+          "physical_total_energy_hartree": -15.614781217168328,
+          "potential_self_consistency_residual": 1.1014992358895052e-08,
+          "outside_stationarity_residual": 6.74509161781446e-06,
+          "reduced_gap_hartree": 9.098055642198233e-12,
+          "basis_dimension": 191,
+          "physical_energy_identity_error_hartree": 1.7824233422335762e-14
+        }
+      ],
+      "xc_potential_accepted": true,
+      "new_reference_generated": false,
+      "oracle_density_used_for_prediction": false,
+      "post_interruption_development_completion": true
+    }
+  ],
+  "failures": [],
+  "peak_cuda_bytes": 1662845952,
+  "balanced_stretch_contrast_error_kcal": 2.8366395622384743e-08
+}

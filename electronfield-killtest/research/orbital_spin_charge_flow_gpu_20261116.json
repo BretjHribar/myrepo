@@ -1,0 +1,112 @@
+{
+  "created_utc": "2026-11-16T23:47:58.289054+00:00",
+  "device": "cuda",
+  "scope": "Density-directed orbital, spin and charge correlation operators; three-electron mechanism test, not broad chemical validation",
+  "training_targets": "Variational Hamiltonian expectation only; reference energies used for reporting",
+  "steps": 400,
+  "cases": [
+    {
+      "id": "H3_neutral_1.00",
+      "nelec": [
+        2,
+        1
+      ],
+      "energy_hartree": -1.6403452752475056,
+      "reference_hartree": -1.6449265469125076,
+      "error_kcal": 2.874791372756506,
+      "antisymmetry_residual": 7.355227538141662e-16,
+      "doublet_spin_residual": 9.124645483638005e-16,
+      "variational_bound_satisfied": true,
+      "physical_state_block": 8,
+      "parameters": 27,
+      "history": [
+        {
+          "step": 1,
+          "error_kcal": 18.55375765038789,
+          "gradient_norm": 0.133485692156192,
+          "seconds": 3.454872632999999
+        },
+        {
+          "step": 100,
+          "error_kcal": 3.347114600343479,
+          "gradient_norm": 0.000701557194608665,
+          "seconds": 29.151078356
+        },
+        {
+          "step": 200,
+          "error_kcal": 3.1088663280238173,
+          "gradient_norm": 0.0007714060401556235,
+          "seconds": 53.317039624
+        },
+        {
+          "step": 300,
+          "error_kcal": 2.9185445467678894,
+          "gradient_norm": 0.0008103501038319376,
+          "seconds": 76.031330141
+        },
+        {
+          "step": 400,
+          "error_kcal": 2.8747913747623746,
+          "gradient_norm": 0.0007877334786217395,
+          "seconds": 100.385044495
+        }
+      ],
+      "seconds": 100.429705076
+    },
+    {
+      "id": "H3_neutral_1.80",
+      "nelec": [
+        2,
+        1
+      ],
+      "energy_hartree": -1.5340631739685577,
+      "reference_hartree": -1.537763436574059,
+      "error_kcal": 2.321949841239902,
+      "antisymmetry_residual": 1.043327750582801e-15,
+      "doublet_spin_residual": 9.688430613330468e-16,
+      "variational_bound_satisfied": true,
+      "physical_state_block": 8,
+      "parameters": 27,
+      "history": [
+        {
+          "step": 1,
+          "error_kcal": 30.2051478289192,
+          "gradient_norm": 0.004416849941478278,
+          "seconds": 0.24311386299999072
+        },
+        {
+          "step": 100,
+          "error_kcal": 3.1599015855959203,
+          "gradient_norm": 0.0005987151083449001,
+          "seconds": 22.362272227999995
+        },
+        {
+          "step": 200,
+          "error_kcal": 2.5750881674048736,
+          "gradient_norm": 0.00042107895937687056,
+          "seconds": 43.560599816999996
+        },
+        {
+          "step": 300,
+          "error_kcal": 2.362941423517056,
+          "gradient_norm": 0.0003792925362951976,
+          "seconds": 65.54103749800001
+        },
+        {
+          "step": 400,
+          "error_kcal": 2.3219498426229417,
+          "gradient_norm": 0.00036789387848069574,
+          "seconds": 89.187379231
+        }
+      ],
+      "seconds": 89.233748316
+    }
+  ],
+  "failures": [],
+  "summary": {
+    "cases": 2,
+    "mae_kcal": 2.5983706069982038,
+    "maximum_error_kcal": 2.874791372756506
+  },
+  "peak_cuda_bytes": 62452224
+}

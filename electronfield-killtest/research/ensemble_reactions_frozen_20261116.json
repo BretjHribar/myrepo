@@ -1,0 +1,400 @@
+{
+  "created_utc": "2026-11-16T21:37:46.405107+00:00",
+  "status": "Development reaction contrasts; not a blind benchmark, GMTKN55, or challenge score",
+  "mode": "frozen",
+  "device": "cuda",
+  "checkpoint": "research/ensemble_screened_20261116.pt",
+  "basis": "def2-tzvp",
+  "grid_level": 1,
+  "molecules": {
+    "AlH3": {
+      "id": "f2a4a280d31f419976d33e9fff793046534c5609",
+      "seen_in_fitting": false,
+      "energy_hartree": -244.15341359433648,
+      "converged": null,
+      "seconds": 0.9718182399999975
+    },
+    "AlH4N": {
+      "id": "9ea89ec0e86e084d91a5bd78fa008837de3295d1",
+      "seen_in_fitting": false,
+      "energy_hartree": -299.5568468931727,
+      "converged": null,
+      "seconds": 0.04973819800000001
+    },
+    "B2H4O": {
+      "id": "8a729b035c5bb77f2411cc5cecea023baf0a4c31",
+      "seen_in_fitting": false,
+      "energy_hartree": -127.33935159969216,
+      "converged": null,
+      "seconds": 0.06019595600000116
+    },
+    "BH3": {
+      "id": "4c10d269767a07c8bacc97412aefb406d26bb885",
+      "seen_in_fitting": true,
+      "energy_hartree": -26.588437047699504,
+      "converged": null,
+      "seconds": 0.03545089200000007
+    },
+    "BH3O": {
+      "id": "49612e3c5dde19fb553ea3d34a3877184aeb2de1",
+      "seen_in_fitting": false,
+      "energy_hartree": -101.89131555720482,
+      "converged": null,
+      "seconds": 0.04257344699999521
+    },
+    "BH4N": {
+      "id": "5f012c81b7b209c23589d1fcc38e995ca249d8af",
+      "seen_in_fitting": true,
+      "energy_hartree": -82.0156063890308,
+      "converged": null,
+      "seconds": 0.04496502800000002
+    },
+    "C2H2": {
+      "id": "ca2cc2cc8b5c808ceecf9a9317da90bb3a84d4af",
+      "seen_in_fitting": false,
+      "energy_hartree": -77.30756549353693,
+      "converged": null,
+      "seconds": 0.03544980299999878
+    },
+    "C2H4": {
+      "id": "b532b5d380913eedf01c4bd931cf433c8fb2dfd4",
+      "seen_in_fitting": false,
+      "energy_hartree": -78.56113319813667,
+      "converged": null,
+      "seconds": 0.04083064200000308
+    },
+    "C2H6": {
+      "id": "723341563033309e88b05e76a4207983911e20f2",
+      "seen_in_fitting": false,
+      "energy_hartree": -79.79531935874128,
+      "converged": null,
+      "seconds": 0.052836308999999915
+    },
+    "CH4": {
+      "id": "7ba71c46d511e9f2cc3495cf3ebee78aa731c52a",
+      "seen_in_fitting": false,
+      "energy_hartree": -40.50069736793614,
+      "converged": null,
+      "seconds": 0.03484454099999823
+    },
+    "CH4O": {
+      "id": "dab9dad2de3e49029fe8facbfa84de6a09811892",
+      "seen_in_fitting": false,
+      "energy_hartree": -115.70588545344077,
+      "converged": null,
+      "seconds": 0.04124364100000122
+    },
+    "CH5N": {
+      "id": "364d7debcb270b93d3cf72f5f1395bf5f5e5d499",
+      "seen_in_fitting": false,
+      "energy_hartree": -95.83310701281891,
+      "converged": null,
+      "seconds": 0.052417441999999426
+    },
+    "CO": {
+      "id": "4fc04f04bd33c4b20d1840267d1eb751ad143194",
+      "seen_in_fitting": false,
+      "energy_hartree": -113.30347913870956,
+      "converged": null,
+      "seconds": 0.03911956599999655
+    },
+    "CO2": {
+      "id": "ed3342d64657317decebdebd302188a154497f1a",
+      "seen_in_fitting": false,
+      "energy_hartree": -188.5853965201682,
+      "converged": null,
+      "seconds": 0.03743283100000383
+    },
+    "H2": {
+      "id": "57bea1f3b0d8dc08d5bbae1a67f148f61b1152d8",
+      "seen_in_fitting": false,
+      "energy_hartree": -1.176330545768371,
+      "converged": null,
+      "seconds": 0.027604474000000323
+    },
+    "H2O": {
+      "id": "bd63948b2dbb0bc6b9678d1c1c288980b0e85767",
+      "seen_in_fitting": false,
+      "energy_hartree": -76.42509747622242,
+      "converged": null,
+      "seconds": 0.02945152600000256
+    },
+    "N2": {
+      "id": "1b93a16272e861bc7c88a755368fec40150a515c",
+      "seen_in_fitting": false,
+      "energy_hartree": -109.51784754906143,
+      "converged": null,
+      "seconds": 0.029011404000002017
+    },
+    "NH3": {
+      "id": "e04ef516ad033825f7e5229f6f6fd2683351d8a2",
+      "seen_in_fitting": false,
+      "energy_hartree": -56.549352934064224,
+      "converged": null,
+      "seconds": 0.04160346599999798
+    },
+    "Si2H6O": {
+      "id": "8e716cf2a5445cfef70bcacadc784dda3f6f00c6",
+      "seen_in_fitting": false,
+      "energy_hartree": -657.7799431098549,
+      "converged": null,
+      "seconds": 0.07866236400000304
+    },
+    "SiH4": {
+      "id": "c7c93d76ccc3a71827b74f5a3494fc49434ebc2a",
+      "seen_in_fitting": false,
+      "energy_hartree": -291.82825706581315,
+      "converged": null,
+      "seconds": 0.04713475599999839
+    },
+    "SiH4O": {
+      "id": "beb65f6722de274bfe02ee3887b3d6e44bf717e3",
+      "seen_in_fitting": false,
+      "energy_hartree": -367.1003835790962,
+      "converged": null,
+      "seconds": 0.05831091700000002
+    },
+    "SiH5N": {
+      "id": "06b29055c02fd0696645ead7f1600b97e53e584f",
+      "seen_in_fitting": false,
+      "energy_hartree": -347.2070923449092,
+      "converged": null,
+      "seconds": 0.051528275999999096
+    }
+  },
+  "reactions": [
+    {
+      "name": "B_hydride_hydrolysis",
+      "stoichiometry": {
+        "BH3": -1,
+        "H2O": -1,
+        "BH3O": 1,
+        "H2": 1
+      },
+      "reference_hartree": -0.04918925205552807,
+      "constituents_seen_in_fitting": [
+        "BH3"
+      ],
+      "pbe_input_error_kcal": -3.249340555080607,
+      "all_energies_returned": true,
+      "all_scf_converged": null,
+      "predicted_hartree": -0.054111579051268066,
+      "error_kcal": -3.088806823952804
+    },
+    {
+      "name": "Si_hydride_hydrolysis",
+      "stoichiometry": {
+        "SiH4": -1,
+        "H2O": -1,
+        "SiH4O": 1,
+        "H2": 1
+      },
+      "reference_hartree": -0.024519391024620113,
+      "constituents_seen_in_fitting": [],
+      "pbe_input_error_kcal": 1.3903167293030148,
+      "all_energies_returned": true,
+      "all_scf_converged": null,
+      "predicted_hartree": -0.02335958282902162,
+      "error_kcal": 0.7277906307609
+    },
+    {
+      "name": "Al_hydride_amination",
+      "stoichiometry": {
+        "AlH3": -1,
+        "NH3": -1,
+        "AlH4N": 1,
+        "H2": 1
+      },
+      "reference_hartree": -0.033103351383327956,
+      "constituents_seen_in_fitting": [],
+      "pbe_input_error_kcal": 1.2363889809549398,
+      "all_energies_returned": true,
+      "all_scf_converged": null,
+      "predicted_hartree": -0.030410910540352276,
+      "error_kcal": 1.6895321371517853
+    },
+    {
+      "name": "B_hydride_amination",
+      "stoichiometry": {
+        "BH3": -1,
+        "NH3": -1,
+        "BH4N": 1,
+        "H2": 1
+      },
+      "reference_hartree": -0.05070987211907199,
+      "constituents_seen_in_fitting": [
+        "BH3",
+        "BH4N"
+      ],
+      "pbe_input_error_kcal": -2.8031541405895886,
+      "all_energies_returned": true,
+      "all_scf_converged": null,
+      "predicted_hartree": -0.054146953035436596,
+      "error_kcal": -2.1568008379233907
+    },
+    {
+      "name": "Si_hydride_amination",
+      "stoichiometry": {
+        "SiH4": -1,
+        "NH3": -1,
+        "SiH5N": 1,
+        "H2": 1
+      },
+      "reference_hartree": -0.00867638036256993,
+      "constituents_seen_in_fitting": [],
+      "pbe_input_error_kcal": 1.8046985640665771,
+      "all_energies_returned": true,
+      "all_scf_converged": null,
+      "predicted_hartree": -0.005812890800198645,
+      "error_kcal": 1.7968668290880954
+    },
+    {
+      "name": "B_hydroxide_condensation",
+      "stoichiometry": {
+        "BH3O": -2,
+        "B2H4O": 1,
+        "H2O": 1
+      },
+      "reference_hartree": 0.01216086050818005,
+      "constituents_seen_in_fitting": [],
+      "pbe_input_error_kcal": 3.842787963114716,
+      "all_energies_returned": true,
+      "all_scf_converged": null,
+      "predicted_hartree": 0.018182038495055508,
+      "error_kcal": 3.7783462314045977
+    },
+    {
+      "name": "Si_hydroxide_condensation",
+      "stoichiometry": {
+        "SiH4O": -2,
+        "Si2H6O": 1,
+        "H2O": 1
+      },
+      "reference_hartree": -0.008994270375854041,
+      "constituents_seen_in_fitting": [],
+      "pbe_input_error_kcal": 2.9358043090505452,
+      "all_energies_returned": true,
+      "all_scf_converged": null,
+      "predicted_hartree": -0.004273427884896819,
+      "error_kcal": 2.962373388337416
+    },
+    {
+      "name": "methane_water_rearrangement",
+      "stoichiometry": {
+        "CH4": -1,
+        "H2O": -1,
+        "CH4O": 1,
+        "H2": 1
+      },
+      "reference_hartree": 0.048387392022019665,
+      "constituents_seen_in_fitting": [],
+      "pbe_input_error_kcal": -2.5884265671383795,
+      "all_energies_returned": true,
+      "all_scf_converged": null,
+      "predicted_hartree": 0.04357884494941722,
+      "error_kcal": -3.017408844233002
+    },
+    {
+      "name": "methane_ammonia_rearrangement",
+      "stoichiometry": {
+        "CH4": -1,
+        "NH3": -1,
+        "CH5N": 1,
+        "H2": 1
+      },
+      "reference_hartree": 0.042322701768587406,
+      "constituents_seen_in_fitting": [],
+      "pbe_input_error_kcal": -1.0702633467530764,
+      "all_energies_returned": true,
+      "all_scf_converged": null,
+      "predicted_hartree": 0.040612743413079855,
+      "error_kcal": -1.0730150682264485
+    },
+    {
+      "name": "ethylene_hydrogenation",
+      "stoichiometry": {
+        "C2H4": -1,
+        "H2": -1,
+        "C2H6": 1
+      },
+      "reference_hartree": -0.06323874264263021,
+      "constituents_seen_in_fitting": [],
+      "pbe_input_error_kcal": -0.9472338379395724,
+      "all_energies_returned": true,
+      "all_scf_converged": null,
+      "predicted_hartree": -0.057855614836237024,
+      "error_kcal": 3.377963698264564
+    },
+    {
+      "name": "acetylene_hydrogenation",
+      "stoichiometry": {
+        "C2H2": -1,
+        "H2": -1,
+        "C2H4": 1
+      },
+      "reference_hartree": -0.07846926327908546,
+      "constituents_seen_in_fitting": [],
+      "pbe_input_error_kcal": -3.060476154326664,
+      "all_energies_returned": true,
+      "all_scf_converged": null,
+      "predicted_hartree": -0.07723715883137494,
+      "error_kcal": 0.7731572138958883
+    },
+    {
+      "name": "ammonia_formation",
+      "stoichiometry": {
+        "N2": -1,
+        "H2": -3,
+        "NH3": 2
+      },
+      "reference_hartree": -0.06313008263808939,
+      "constituents_seen_in_fitting": [],
+      "pbe_input_error_kcal": -2.1777317299221957,
+      "all_energies_returned": true,
+      "all_scf_converged": null,
+      "predicted_hartree": -0.05186668176190601,
+      "error_kcal": 7.067890759264973
+    },
+    {
+      "name": "carbon_monoxide_hydrogenation",
+      "stoichiometry": {
+        "CO": -1,
+        "H2": -3,
+        "CH4": 1,
+        "H2O": 1
+      },
+      "reference_hartree": -0.10428365435782128,
+      "constituents_seen_in_fitting": [],
+      "pbe_input_error_kcal": -2.2375347527495855,
+      "all_energies_returned": true,
+      "all_scf_converged": null,
+      "predicted_hartree": -0.09332406814388428,
+      "error_kcal": 6.877244180365258
+    },
+    {
+      "name": "carbon_dioxide_hydrogenation",
+      "stoichiometry": {
+        "CO2": -1,
+        "H2": -4,
+        "CH4": 1,
+        "H2O": 2
+      },
+      "reference_hartree": -0.09315150389262927,
+      "constituents_seen_in_fitting": [],
+      "pbe_input_error_kcal": 12.124817665719279,
+      "all_energies_returned": true,
+      "all_scf_converged": null,
+      "predicted_hartree": -0.06017361713930569,
+      "error_kcal": 20.69393637020965
+    }
+  ],
+  "summary": {
+    "reactions": 14,
+    "molecules": 22,
+    "reaction_failures": 0,
+    "all_returned_reaction_mae_kcal": 4.2200809295056265,
+    "pbe_input_reaction_mae_kcal": 2.9620696640506243,
+    "median_molecular_seconds": 0.042088456499996596,
+    "timing_note": "Frozen mode is correction evaluation only; SCF mode includes full molecular calculation"
+  }
+}
