@@ -115,6 +115,64 @@ point.
 - No dispersion-specific term yet beyond what the response spectrum carries.
 - No timing has been measured on a CPU; speed work is still on hold.
 
+## Bugs found and fixed on the way (kept because they changed numbers)
+
+- **Frozen core chosen by energy order.** A heavy atom's frozen semicore shell
+  can lie above a light atom's active valence shell (Pb 5d above O 2s). The
+  dimer and its fragments then froze different orbitals and two HEAVY28
+  reactions were wrong by 39 and 51 kcal/mol. The core is now chosen by which
+  element each orbital lives on (Mulliken population above one half). A recheck
+  of all 1,053 structures processed before the fix found only those two
+  affected; both were recomputed [measured].
+- **No proper restricted state.** For `INV24/PCl3_TS`, restricted PBE has no
+  aufbau solution (an occupied orbital above an empty one), so the response
+  quantities were meaningless (largest eigenvalue 3e5). Rule now in the SCF
+  pass: if a closed-shell structure does not converge or has a non-positive gap,
+  use the spin-symmetry-broken unrestricted solution started from a 45-degree
+  mix of the frontier pair. For this structure it is 0.050 Hartree lower, with
+  gaps of 0.043 Hartree and S^2 = 0.99 [measured]. Superseded records are kept
+  under `superseded/`.
+- **Level-shifted SCF landing on the wrong state** (singlet C2, 0.1 Hartree too
+  high). A second-order solver stage now runs before any level shift.
+
 ## Results
 
-Filled in as runs complete. See `PROGRESS.md` for the dated log.
+All numbers below are **partial coverage** and are weighted mean absolute
+errors over the reactions available, in kcal/mol. They equal WTMAD-2 only at
+1,505 of 1,505 reactions. No full-suite score exists yet.
+
+Run card for the table: run `pbe_qzvp_g3` with passes `corr_v1` and `semi_v1`;
+evidence level development (fit and validation both on GMTKN55). Energies are
+driven by PBE orbitals from a GPU PBE/def2-QZVP SCF (density-fitted Coulomb,
+grid level 3), then exact exchange, RPA response spectrum, shifted PT2, singles
+and semilocal integrals as described above; evaluated after the SCF, not
+self-consistently; no dispersion-specific term; no reference energy enters any
+ingredient. Data: pinned GMTKN55 v1, 562 of 1,505 reactions (every reaction
+whose structures have at most about 450 basis functions), 5 of 55 subsets
+complete. Engine: gpu4pyscf 1.9.2 on one RTX 4060. No timing or cost claim.
+
+| Model | Fitted parameters | In-sample | CV, random folds within subsets | CV, whole subset held out |
+|---|---|---|---|---|
+| PBE (input, nothing fitted) | 0 | 10.99 | n/a | n/a |
+| Exact exchange only | 0 | 36.37 | n/a | n/a |
+| Exact exchange + RPA (nothing fitted) | 0 | 8.52 | n/a | n/a |
+| + fixed semilocal components, shifted PT2, singles | 27 | 1.58 | 1.81 | 3.57 |
+| + learned spectral function (5 + 5 terms) | 36 | 1.29 | 1.52 | 2.40 |
+| + regime-resolved semilocal integrals | 97 | 0.85 | 1.17 | 2.46 |
+
+Reading, with its limits:
+
+- The fitted models are far below PBE on these reactions, and the 97-parameter
+  model is near 1.2 when validated on held-out reactions of the same types.
+- Holding out a whole reaction type roughly doubles the error. Transfer to
+  chemistry of an unseen kind is the weaker result and the more relevant one
+  for a hidden test.
+- These 562 reactions are the small-molecule ones. The heavily weighted
+  noncovalent and conformer subsets are mostly not in yet, so this says little
+  about the final WTMAD-2.
+- A diagnostic fit on atomization energies alone reaches about 0.6 kcal/mol
+  held-out error with the same ingredients, against about 1.9 under one global
+  fit. The information is in the ingredients; one global set of coefficients is
+  the compromise.
+
+See `PROGRESS.md` for the dated log.

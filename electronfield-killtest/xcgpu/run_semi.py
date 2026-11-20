@@ -123,6 +123,7 @@ def main():
     ap.add_argument("--dataset", default="gmtkn55")
     ap.add_argument("--scf-tag", required=True)
     ap.add_argument("--tag", default="semi_v1")
+    ap.add_argument("--limit", type=int, default=0, help="use only the first N rows of the dataset order")
     ap.add_argument("--ids", default="")
     ap.add_argument("--max-nao", type=int, default=10**9)
     ap.add_argument("--no-grid", action="store_true")
@@ -133,6 +134,8 @@ def main():
     (out / "results").mkdir(parents=True, exist_ok=True)
     (out / "grid").mkdir(parents=True, exist_ok=True)
     rows = dataset_structures(args.dataset)
+    if args.limit:
+        rows = rows[:args.limit]
     if args.ids:
         wanted = set(args.ids.split(","))
         rows = [r for r in rows if r["id"] in wanted]

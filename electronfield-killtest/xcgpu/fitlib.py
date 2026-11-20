@@ -87,9 +87,10 @@ def band_integrals(per_freq, w, omega):
     return torch.stack([torch.stack([-(w * g * per_freq[k]).sum() / (2 * np.pi) for k in range(BAND_ORDER)]) for g in bands])
 
 
-def structure_table(scf_tag="pbe_qzvp_g3", corr_tag="corr_v1", semi_tag="semi_v1", knots=Q_KNOTS, refresh=False):
+def structure_table(scf_tag="pbe_qzvp_g3", corr_tag="corr_v1", semi_tag="semi_v1", knots=Q_KNOTS, refresh=False,
+                    dataset="gmtkn55"):
     """Feature records for every structure with all three passes complete. Cached on the bulk drive."""
-    root = BULK / "gmtkn55" / scf_tag
+    root = BULK / dataset / scf_tag
     cache = root / f"table_{corr_tag}_{semi_tag}.json"
     fresh = {"knots": list(knots), "version": TABLE_VERSION, "rows": {}}
     table = json.loads(cache.read_text()) if cache.exists() and not refresh else fresh
@@ -100,11 +101,14 @@ def structure_table(scf_tag="pbe_qzvp_g3", corr_tag="corr_v1", semi_tag="semi_v1
     for scf_path in sorted((root / "results").glob("*.json")):
         name = scf_path.stem
         sid = name.replace("__", "/", 1)
-        if sid in rows and rows[sid].get("grid") is not None:
-            continue
         cpath, spath = root / corr_tag / "results" / (name + ".json"), root / semi_tag / "results" / (name + ".json")
         if not cpath.exists() or not spath.exists():
+            rows.pop(sid, None)
             continue
+        stamp = [scf_path.stat().st_mtime, cpath.stat().st_mtime, spath.stat().st_mtime]
+        if sid in rows and rows[sid].get("grid") is not None and rows[sid].get("stamp") == stamp:
+            continue
+        rows.pop(sid, None)
         scf, corr, semi = (json.loads(p.read_text()) for p in (scf_path, cpath, spath))
         bad = [k for k, r in (("scf", scf), ("corr", corr), ("semi", semi)) if r.get("error")] or \
               ([] if scf.get("converged") else ["scf_not_converged"])
@@ -145,7 +149,7 @@ def structure_table(scf_tag="pbe_qzvp_g3", corr_tag="corr_v1", semi_tag="semi_v1
             "e_c_rpa": float(rpa), "pt2": corr.get("pt2"), "singles": corr.get("singles"),
             "spec_tot": tot.tolist(), "spec_spin": spin.tolist(), "semi": semi["energies"],
             "poly_tot": ptot.tolist(), "poly_spin": pspin.tolist(), "sigma_max": sig_max,
-            "band_tot": btot.tolist(), "band_spin": bspin.tolist(), "grid": grid,
+            "band_tot": btot.tolist(), "band_spin": bspin.tolist(), "grid": grid, "stamp": stamp,
             "min_gap": corr.get("min_excitation_hartree"), "nao": scf["nao"],
             "s2_dev": (scf.get("s_squared", 0) - scf.get("s_squared_exact", 0)) if scf.get("unpaired") else 0.0,
         }
@@ -352,3 +356,11 @@ def fit_and_validate(prob, lam, seeds=(0, 1, 2), folds=5):
     out["cv_leave_subset_out"] = prob.wtmad2(e)
     out["cv_lso_err"] = e
     return out
+
+
+def structure_energy_terms(rows, ids, feature_keys, base):
+    """Base energies (n,) and feature matrix (n, p) in Hartree for the given structure ids."""
+    e0 = torch.tensor([base_energy(rows[i], base) for i in ids], dtype=torch.float64, device=DEV)
+    f = torch.tensor([[feature_value(rows[i], k) for k in feature_keys] for i in ids],
+                     dtype=torch.float64, device=DEV).reshape(len(ids), len(feature_keys))
+    return e0, f

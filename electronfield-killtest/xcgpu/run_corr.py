@@ -379,11 +379,14 @@ def main():
     ap.add_argument("--dataset", default="gmtkn55")
     ap.add_argument("--scf-tag", required=True)
     ap.add_argument("--tag", default="corr_v1")
+    ap.add_argument("--limit", type=int, default=0, help="use only the first N rows of the dataset order")
     ap.add_argument("--ids", default="")
     ap.add_argument("--max-nao", type=int, default=10**9)
     ap.add_argument("--du", type=float, default=0.6)
     ap.add_argument("--pad", type=float, default=40.0)
     ap.add_argument("--follow", action="store_true", help="keep scanning until every listed structure has an SCF result")
+    ap.add_argument("--shard", default="", help="i/n: process only rows whose position in the size-ordered list is i modulo n")
+    ap.add_argument("--min-nao", type=int, default=0)
     ap.add_argument("--recheck-core", action="store_true",
                     help="for results made with energy-ordered cores: keep them if the element-based choice is identical, else archive and redo")
     args = ap.parse_args()
@@ -392,10 +395,15 @@ def main():
     (out / "results").mkdir(parents=True, exist_ok=True)
     (out / "spectra").mkdir(parents=True, exist_ok=True)
     rows = dataset_structures(args.dataset)
+    if args.limit:
+        rows = rows[:args.limit]
     if args.ids:
         wanted = set(args.ids.split(","))
         rows = [r for r in rows if r["id"] in wanted]
-    rows = [r for r in rows if r["nao"] <= args.max_nao]
+    rows = [r for r in rows if args.min_nao <= r["nao"] <= args.max_nao]
+    if args.shard:
+        i, n = (int(x) for x in args.shard.split("/"))
+        rows = rows[i::n]
     card = {"tag": args.tag, "scf_tag": args.scf_tag, "aux_jk": AUX_JK, "aux_ri": AUX_RI, "pt2_shifts": PT2_SHIFTS,
             "frequency_grid": {"kind": "trapezoid in ln(omega) with end corrections", "du": args.du, "pad": args.pad},
             "frozen_core": "chemical core; s-block metals keep outer semicore active",
@@ -445,7 +453,15 @@ def main():
                 res, arrays = {"id": row["id"], "error": "SCF input not converged"}, None
             else:
                 try:
-                    res, arrays = run_one(args.dataset, row, scf_dir, args.du, args.pad, scf.get("grid_level", 3))
+                    try:
+                        res, arrays = run_one(args.dataset, row, scf_dir, args.du, args.pad, scf.get("grid_level", 3))
+                    except MemoryError as too_big:
+                        if "GPU budget" not in str(too_big):
+                            raise
+                        free()
+                        from . import corr_large   # blocked path for structures that do not fit on the GPU
+                        res, arrays = corr_large.run_one_large(args.dataset, row, scf_dir, args.du, args.pad,
+                                                               scf.get("grid_level", 3))
                     res["e_xc_scf"] = scf["scf_summary"].get("exc")
                     res["e_xc_mismatch"] = abs(res["e_xc_recomputed"] - res["e_xc_scf"])
                 except Exception as exc:

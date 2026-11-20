@@ -164,13 +164,18 @@ def main():
     ap.add_argument("--xc", default="pbe")
     ap.add_argument("--grid-level", type=int, default=3)
     ap.add_argument("--conv-tol", type=float, default=1e-9)
+    ap.add_argument("--limit", type=int, default=0, help="use only the first N rows of the dataset order")
     ap.add_argument("--ids", default="", help="comma-separated structure ids (default: all required)")
     ap.add_argument("--max-nao", type=int, default=10**9)
     ap.add_argument("--min-nao", type=int, default=0)
     ap.add_argument("--no-orbitals", action="store_true")
+    ap.add_argument("--pace-with", default="", help="sub-folder (e.g. corr_v1) whose result count this run must not lead by more than --max-lead")
+    ap.add_argument("--max-lead", type=int, default=40)
     args = ap.parse_args()
 
     rows = dataset_structures(args.dataset)
+    if args.limit:
+        rows = rows[:args.limit]
     if args.ids:
         wanted = set(args.ids.split(","))
         rows = [r for r in rows if r["id"] in wanted]
@@ -187,6 +192,11 @@ def main():
         dest = outdir / "results" / (row["id"].replace("/", "__") + ".json")
         if dest.exists():
             continue
+        if args.pace_with:
+            # stay just ahead of the slower follow-up pass so complete reactions arrive steadily
+            follow = outdir / args.pace_with / "results"
+            while len(list((outdir / "results").glob("*.json"))) - len(list(follow.glob("*.json"))) > args.max_lead:
+                time.sleep(20)
         try:
             res = run_one(args.dataset, row, outdir, args.xc, args.grid_level, args.conv_tol, not args.no_orbitals)
         except Exception as exc:  # keep every failure visible

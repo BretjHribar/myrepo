@@ -18,8 +18,8 @@
     "must_account_for_peak_temporary_expansion": true
   },
   "cpu": {
-    "allocated_logical_cores": 1,
-    "scope": "Host orchestration and I/O only; no CPU numerical work",
+    "allocated_logical_cores": 3,
+    "scope": "Host orchestration and I/O only; no CPU numerical work. Three cores since 2026-11-20 ('you can use 2 more CPU slots'), one thread per process",
     "numerical_work_allowed": false,
     "cpu_reference_scf_and_fallbacks_allowed": false,
     "max_numerical_library_threads": 1,
@@ -27,7 +27,8 @@
     "torch_interop_threads": 1,
     "data_loader_workers": 0,
     "one_core_affinity_or_quota_required_for_compute_jobs": true,
-    "concurrent_cpu_heavy_project_jobs": 1
+    "concurrent_cpu_heavy_project_jobs": 3,
+    "launcher": "tools/linux_gpu_core.sh <0|1|2> ..."
   },
   "gpu": {
     "device_index": 0,
